@@ -1,0 +1,254 @@
+/* --- 1. CONFIGURAÇÕES GLOBAIS (RESET BÁSICO) --- */
+/* Isso garante que todos os navegadores comecem "do zero" */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Faz o padding não alterar o tamanho final dos elementos */
+}
+
+body {
+    font-family:'Playfairdisplay'; /* Uma fonte padrão e limpa */
+    line-height: 1.6;
+    background-color: #f9f9f9; /* Um cinza bem claro para o fundo */
+    color: #060606;
+}
+
+.logo {
+    width: 199px;
+    height: auto;
+   
+}
+
+img {
+    max-width: 100%; /* Garante que as imagens nunca "vazem" do seu container */
+    display: block;
+}
+
+a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: #023975; /* Um azul padrão para links */ /*--------- cor da parte da nav bar */
+}
+
+/* Define um espaçamento padrão para todas as seções */
+section {
+    padding: 40px 20px; /* 40px em cima/baixo, 20px nas laterais */
+    text-align: center; /* Centraliza títulos de seção */
+}
+
+section h2 {
+    margin-bottom: 20px; /* Espaço abaixo dos títulos H2 */
+}
+
+
+/* --- 2. CABEÇALHO E NAVEGAÇÃO --- */
+header {
+    display: flex; /* A MÁGICA: alinha os filhos (logo, nav, area-cliente) lado a lado */
+    justify-content: space-between; /* Espaça eles (um na esquerda, um no meio, um na direita) */
+    align-items: center; /* Centraliza verticalmente */
+    padding: 15px;
+    background-color: #ffffff;
+    border-bottom: 2px solid #eee; /* Linha sutil abaixo do header */
+}
+
+.navegacao-principal ul {
+    display: flex; /* Alinha os links do menu lado a lado */
+    list-style: none; /* Remove as "bolinhas" da lista */
+}
+
+.navegacao-principal li {
+    margin-left: 20px; /* Espaçamento entre os itens do menu */
+}
+
+.area-cliente a {
+    margin-left: 10px;
+}
+
+/* --- 3. SEÇÃO HERO E BARRA DE BUSCA --- */
+.hero {
+    background-color: #082569; /* Um azul-escuro para o banner */
+    color: white; /* Texto branco */
+    padding: 60px 20px;
+}
+
+.busca-pacotes {
+    display: flex; /* Alinha os campos de busca lado a lado */
+    justify-content: center; /* Centraliza o formulário */
+    align-items: flex-end; /* Alinha os itens pela base (bom para labels e inputs) */
+    gap: 15px; /* Espaço entre cada item do formulário */
+    margin-top: 25px;
+    flex-wrap: wrap; /* Permite que o form quebre em telas pequenas */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column; /* Coloca a label em cima do input */
+    align-items: flex-start; /* Alinha a label à esquerda */
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-size: 0.9em;
+}
+
+/* Botão genérico */
+button, .btn-buscar {
+    padding: 10px 20px;
+    background-color: #bb0303; /* Laranja (chama atenção para "ação") */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+/* --- 4. CARROSSEL DE DESTINOS (O MAIS IMPORTANTE) --- */
+.secao-carrossel {
+    background-color: #e8dddd; /* Fundo levemente cinza para destacar os cards */
+}
+
+/* Esconde os botões de seta por enquanto, já que não temos JS */
+.carrossel-btn {
+    display: none;
+}
+
+.carrossel-track {
+    display: flex; /* A MÁGICA: Coloca todos os cards lado a lado */
+    overflow-x: auto; /* A MÁGICA BÁSICA: Permite rolar horizontalmente com o mouse/trackpad */
+    
+    /* Isso faz a barra de rolagem ficar mais bonita (opcional) */
+    scrollbar-width: thin; 
+    scrollbar-color: #bfbfbf #f4f4f4;
+    
+    padding: 20px 10px; /* Um espaço para os cards "respirarem" */
+    gap: 20px; /* Espaço entre cada card */
+}
+
+.destino-card {
+    /* Define o tamanho de cada card */
+    flex: 0 0 300px; /* NÃO estica, NÃO encolhe, e tem 300px de largura */
+    
+    background-color: #ffffff;
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra suave */
+    overflow: hidden; /* Garante que a imagem com canto arredondado funcione */
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.destino-card img {
+    width: 100%;
+    height: 200px; /* Altura fixa para todas as imagens */
+    object-fit: cover; /* Faz a imagem cobrir o espaço sem distorcer */
+}
+
+.card-info {
+    padding: 15px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-info h3 {
+    margin-bottom: 10px;
+}
+
+.card-descricao {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.preco-novo {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #249a3f; /* Verde para o preço */
+    display: block; /* Faz ocupar a própria linha */
+    margin-top: 10px;
+}
+
+.preco-antigo {
+    font-size: 0.9em;
+    color: #888;
+    text-decoration: line-through;
+}
+
+.btn-ver-pacote {
+    display: inline-block;
+    width: 100%; /* Faz o botão ocupar 100% do card */
+    text-align: center;
+
+    background-color: #15569c;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: auto;
+    font-weight: bold;
+}
+
+
+/* --- 5. OUTRAS SEÇÕES (BENEFÍCIOS E NEWSLETTER) --- */
+.beneficios-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+    flex-wrap: wrap; /* Permite quebrar em telas menores */
+}
+
+.beneficio-item {
+    flex-basis: 280px; /* Cada item tenta ter 280px */
+}
+
+.secao-newsletter {
+    background-color: #eef; /* Um azul bem clarinho */
+}
+
+.form-newsletter input[type="email"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 250px;
+    margin-right: 10px;
+}
+
+
+/* --- 6. RODAPÉ --- */
+footer {
+    background-color: #2b2727;
+    color: #f4f4f4;
+    padding: 40px 20px;
+    margin-top: 30px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around; /* Espalha as colunas */
+    gap: 20px;
+    flex-wrap: wrap; /* Quebra de linha em telas pequenas */
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.footer-container h4 {
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.footer-container ul {
+    list-style: none;
+}
+
+.footer-container a {
+    color: #f4f4f4;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.footer-copyright {
+    text-align: center;
+    border-top: 1px solid #555;
+    padding-top: 20px;
+    font-size: 0.9em;
+}
