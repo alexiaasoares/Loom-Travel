@@ -3,97 +3,301 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Faz o padding não alterar o tamanho final dos elementos */
+    box-sizing: border-box;
+    /* Faz o padding não alterar o tamanho final dos elementos */
 }
 
 body {
-    font-family:'Playfairdisplay'; /* Uma fonte padrão e limpa */
+    font-family: 'poppins';
     line-height: 1.6;
-    background-color: #f9f9f9; /* Um cinza bem claro para o fundo */
+    background-color: #f9f9f9;
+    /* Um cinza bem claro para o fundo */
     color: #060606;
 }
 
 .logo {
     width: 199px;
     height: auto;
-   
+
 }
 
 img {
-    max-width: 100%; /* Garante que as imagens nunca "vazem" do seu container */
+    max-width: 100%;
+    /* Garante que as imagens nunca "vazem" do seu container */
     display: block;
 }
 
 a {
-    text-decoration: none; /* Remove o sublinhado dos links */
-    color: #023975; /* Um azul padrão para links */ /*--------- cor da parte da nav bar */
+    text-decoration: none;
+    /* Remove o sublinhado dos links */
+    color: #023975;
+    /* Um azul padrão para links */
+    /*--------- cor da parte da nav bar */
 }
 
 /* Define um espaçamento padrão para todas as seções */
 section {
-    padding: 40px 20px; /* 40px em cima/baixo, 20px nas laterais */
-    text-align: center; /* Centraliza títulos de seção */
+    padding: 40px 20px;
+    /* 40px em cima/baixo, 20px nas laterais */
+    text-align: center;
+    /* Centraliza títulos de seção */
 }
 
 section h2 {
-    margin-bottom: 20px; /* Espaço abaixo dos títulos H2 */
+    margin-bottom: 20px;
+    /* Espaço abaixo dos títulos H2 */
 }
 
 
 /* --- 2. CABEÇALHO E NAVEGAÇÃO --- */
 header {
-    display: flex; /* A MÁGICA: alinha os filhos (logo, nav, area-cliente) lado a lado */
-    justify-content: space-between; /* Espaça eles (um na esquerda, um no meio, um na direita) */
-    align-items: center; /* Centraliza verticalmente */
+    display: flex;
+    /* A MÁGICA: alinha os filhos (logo, nav, header-utils) lado a lado */
+    justify-content: space-between;
+    /* Espaça eles (um na esquerda, um no meio, um na direita) */
+    align-items: center;
+    /* Centraliza verticalmente */
     padding: 15px;
     background-color: #ffffff;
-    border-bottom: 2px solid #eee; /* Linha sutil abaixo do header */
+    border-bottom: 2px solid #eee;
+    /* Linha sutil abaixo do header */
+    position: fixed;
+    z-index: 500;
+    width: 100%;
 }
 
 .navegacao-principal ul {
-    display: flex; /* Alinha os links do menu lado a lado */
-    list-style: none; /* Remove as "bolinhas" da lista */
+    display: flex;
+    /* Alinha os links do menu lado a lado */
+    list-style: none;
+    /* Remove as "bolinhas" da lista */
 }
 
 .navegacao-principal li {
-    margin-left: 20px; /* Espaçamento entre os itens do menu */
+    margin-left: 20px;
+    /* Espaçamento entre os itens do menu */
 }
 
-.area-cliente a {
-    margin-left: 10px;
+/* --- EFEITO HOVER NAVEGAÇÃO (OPÇÃO 2: SUBLINHADO MODERNO) --- */
+
+/* Base do link da navegação (Pai) */
+.navegacao-principal a {
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    color: #023975;
+    padding-bottom: 5px; /* Espaço para o sublinhado */
+    
+    position: relative; /* Essencial para o sublinhado funcionar */
+    overflow: hidden; /* Garante que o sublinhado não "vaze" */
+    transition: color 0.3s ease;
 }
+
+/* O sublinhado (Filho) - começa escondido */
+.navegacao-principal a::after {
+    content: ''; /* Sempre necessário */
+    position: absolute; /* Posição relativa ao 'a' */
+    bottom: 0; /* Fica na parte de baixo */
+    left: 0; /* Começa na esquerda */
+    
+    width: 100%; /* Ocupa toda a largura */
+    height: 2px; /* Grossura da linha */
+    background-color: #bb0303; /* Cor da linha (vermelho) */
+    
+    /* A Mágica da Animação (começa com largura 0) */
+    transform: scaleX(0);
+    transform-origin: left; /* Animação cresce da esquerda para a direita */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* O efeito ao passar o mouse */
+.navegacao-principal a:hover {
+    color: #bb0303; /* Muda a cor do texto também */
+}
+
+.navegacao-principal a:hover::after {
+    transform: scaleX(1); /* Faz a linha crescer para 100% */
+}
+
+/* ▼▼▼ REGRAS NOVAS ADICIONADAS AQUI ▼▼▼ */
+
+/* Novo contêiner para pesquisa e perfil */
+.header-utils {
+    display: flex;
+    align-items: center; /* Alinha a pesquisa e o perfil verticalmente */
+    gap: 15px; /* Espaçamento entre a pesquisa e o ícone de perfil */
+}
+
+/* Estilização da Barra de Pesquisa */
+.header-search {
+    display: flex; /* Alinha o input e o botão */
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 25px; /* Deixa bem redondo */
+    overflow: hidden; /* Para esconder as bordas do input */
+    background-color: #f7f7f7;
+}
+
+.header-search input[type="search"] {
+    border: none;
+    outline: none;
+    padding: 8px 12px; /* Altura do campo */
+    font-size: 0.9rem;
+    font-family: 'Lato', sans-serif; /* Fonte mais legível para input */
+    background-color: transparent;
+    width: 180px; /* Largura padrão */
+    transition: width 0.3s ease-in-out;
+}
+
+/* Efeito de expandir a barra quando clicada */
+.header-search input[type="search"]:focus {
+    width: 240px; 
+}
+
+/* Remove o 'x' de limpar do input de pesquisa */
+.header-search input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.header-search button[type="submit"] {
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding-right: 12px; /* Espaçamento do ícone */
+    color: #555;
+    font-size: 0.9rem; /* Tamanho do ícone de lupa */
+    display: flex; /* Ajuda a centralizar o ícone */
+    align-items: center;
+}
+
+.header-search button[type="submit"]:hover {
+    color: #023975; /* Usando sua cor de link */
+}
+
+/* Estilização e Posição do Ícone de Perfil */
+/* (Substitui suas regras .area-cliente a e .btn-login .fa-user) */
+.area-cliente .btn-login {
+    font-size: 1.2rem; /* SEU TAMANHO DE ÍCONE ORIGINAL */
+    color: #333;
+    text-decoration: none;
+    
+    /* Efeito de círculo para alinhar perfeitamente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px; /* Largura do círculo */
+    height: 36px; /* Altura do círculo */
+    border-radius: 50%; /* Transforma em círculo */
+    background-color: #f0f0f0;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.area-cliente .btn-login:hover {
+    background-color: #e0e0e0;
+    color: #023975; /* Usando sua cor de link */
+}
+
+/* ▲▲▲ FIM DAS NOVAS REGRAS ▲▲▲ */
+
 
 /* --- 3. SEÇÃO HERO E BARRA DE BUSCA --- */
 .hero {
-    background-color: #082569; /* Um azul-escuro para o banner */
-    color: white; /* Texto branco */
-    padding: 60px 20px;
+    background-color: #082569;
+    /* Um azul-escuro para o banner */
+    color: white;
+    /* Texto branco */
+    padding: 111px 20px 20px;
+    /* O padding-top compensa o header fixo */
 }
 
+/* --- 3. SEÇÃO HERO E BARRA DE BUSCA (ESTILIZADA) --- */
+.hero {
+    background-color: #082569;
+    color: white;
+    padding: 111px 20px 20px;
+}
+
+/* O contêiner principal do formulário */
 .busca-pacotes {
-    display: flex; /* Alinha os campos de busca lado a lado */
-    justify-content: center; /* Centraliza o formulário */
-    align-items: flex-end; /* Alinha os itens pela base (bom para labels e inputs) */
-    gap: 15px; /* Espaço entre cada item do formulário */
+    display: flex; 
+    justify-content: center;
+    align-items: flex-end;
+    gap: 15px; /* Mude aqui para mais/menos espaço entre os itens */
     margin-top: 25px;
-    flex-wrap: wrap; /* Permite que o form quebre em telas pequenas */
+    flex-wrap: wrap;
+
+    /* NOVO: Adiciona um fundo e bordas arredondadas ao formulário */
+    background-color: rgba(0, 0, 0, 0.2); /* Fundo escuro semi-transparente */
+    padding: 25px;
+    border-radius: 8px;
 }
 
 .form-group {
     display: flex;
-    flex-direction: column; /* Coloca a label em cima do input */
-    align-items: flex-start; /* Alinha a label à esquerda */
+    flex-direction: column;
+    align-items: flex-start;
 }
 
+/* Os labels (Destino, Ida, Volta) */
 .form-group label {
     margin-bottom: 5px;
     font-size: 0.9em;
+    font-weight: bold; /* NOVO: Deixa o label mais forte */
+    
+    /* NOVO: Usei 'Lato' aqui porque 'Sedgwick Ave' é muito difícil de ler em textos pequenos */
+    font-family: 'Lato', sans-serif; 
+}
+
+/* ======================================================= */
+/* ▼▼▼ A MÁGICA ESTÁ AQUI ▼▼▼ */
+/* Estilização dos campos de input (Destino, Ida, Volta) */
+/* ======================================================= */
+.busca-pacotes input[type="text"],
+.busca-pacotes input[type="date"] {
+    font-family: 'Lato', sans-serif; /* Fonte legível */
+    font-size: 1rem; /* Tamanho do texto dentro do campo */
+    color: #333; /* Cor do texto digitado */
+    padding: 10px 12px; /* Deixa o campo mais alto */
+    border: 1px solid #ccc; /* Borda sutil */
+    border-radius: 5px; /* Cantos arredondados */
+    min-width: 200px; /* Largura mínima para cada campo */
+    box-sizing: border-box; /* Garante que o padding não quebre o layout */
+}
+
+/* (Opcional) Remove o ícone padrão do calendário em campos de data */
+.busca-pacotes input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+
+/* O botão "Buscar Pacotes" */
+button,
+.btn-buscar {
+    padding: 10px 20px;
+    background-color: #bb0303; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif; /* NOVO: Fonte */
+    height: 44px; /* NOVO: Alinha a altura com os inputs */
+    transition: background-color 0.2s ease; /* NOVO: Efeito de hover */
+}
+
+/* NOVO: Efeito hover no botão */
+.btn-buscar:hover {
+    background-color: #a00202; /* Um vermelho mais escuro */
 }
 
 /* Botão genérico */
-button, .btn-buscar {
+button,
+.btn-buscar {
     padding: 10px 20px;
-    background-color: #bb0303; /* Laranja (chama atenção para "ação") */
+    background-color: #bb0303;
+    /* Laranja (chama atenção para "ação") */
     color: white;
     border: none;
     border-radius: 5px;
@@ -104,7 +308,8 @@ button, .btn-buscar {
 
 /* --- 4. CARROSSEL DE DESTINOS (O MAIS IMPORTANTE) --- */
 .secao-carrossel {
-    background-color: #e8dddd; /* Fundo levemente cinza para destacar os cards */
+    background-color: #e8dddd;
+    /* Fundo levemente cinza para destacar os cards */
 }
 
 /* Esconde os botões de seta por enquanto, já que não temos JS */
@@ -113,34 +318,46 @@ button, .btn-buscar {
 }
 
 .carrossel-track {
-    display: flex; /* A MÁGICA: Coloca todos os cards lado a lado */
-    overflow-x: auto; /* A MÁGICA BÁSICA: Permite rolar horizontalmente com o mouse/trackpad */
-    
+    display: flex;
+    /* A MÁGICA: Coloca todos os cards lado a lado */
+    overflow-x: auto;
+    /* A MÁGICA BÁSICA: Permite rolar horizontalmente com o mouse/trackpad */
+
     /* Isso faz a barra de rolagem ficar mais bonita (opcional) */
-    scrollbar-width: thin; 
+    scrollbar-width: thin;
     scrollbar-color: #bfbfbf #f4f4f4;
-    
-    padding: 20px 10px; /* Um espaço para os cards "respirarem" */
-    gap: 20px; /* Espaço entre cada card */
+
+    padding: 20px 10px;
+    /* Um espaço para os cards "respirarem" */
+    gap: 20px;
+    /* Espaço entre cada card */
 }
 
 .destino-card {
     /* Define o tamanho de cada card */
-    flex: 0 0 300px; /* NÃO estica, NÃO encolhe, e tem 300px de largura */
-    
+    flex: 0 0 300px;
+    /* NÃO estica, NÃO encolhe, e tem 300px de largura */
+
     background-color: #ffffff;
-    border-radius: 8px; /* Cantos arredondados */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra suave */
-    overflow: hidden; /* Garante que a imagem com canto arredondado funcione */
+    border-radius: 8px;
+    /* Cantos arredondados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+    overflow: hidden;
+    /* Garante que a imagem com canto arredondado funcione */
     text-align: left;
     display: flex;
     flex-direction: column;
+
+
 }
 
 .destino-card img {
     width: 100%;
-    height: 200px; /* Altura fixa para todas as imagens */
-    object-fit: cover; /* Faz a imagem cobrir o espaço sem distorcer */
+    height: 200px;
+    /* Altura fixa para todas as imagens */
+    object-fit: cover;
+    /* Faz a imagem cobrir o espaço sem distorcer */
 }
 
 .card-info {
@@ -148,6 +365,7 @@ button, .btn-buscar {
     flex: 1;
     display: flex;
     flex-direction: column;
+    
 }
 
 .card-info h3 {
@@ -163,8 +381,10 @@ button, .btn-buscar {
 .preco-novo {
     font-size: 1.3em;
     font-weight: bold;
-    color: #249a3f; /* Verde para o preço */
-    display: block; /* Faz ocupar a própria linha */
+    color: #249a3f;
+    /* Verde para o preço */
+    display: block;
+    /* Faz ocupar a própria linha */
     margin-top: 10px;
 }
 
@@ -174,9 +394,16 @@ button, .btn-buscar {
     text-decoration: line-through;
 }
 
+/* SUAS REGRAS ANTIGAS PARA O ÍCONE FORAM REMOVIDAS
+   .area-cliente a { ... } 
+   .btn-login .fa-user { ... }
+   ELAS FORAM SUBSTITUÍDAS PELO NOVO .area-cliente .btn-login LÁ EM CIMA
+*/
+
 .btn-ver-pacote {
     display: inline-block;
-    width: 100%; /* Faz o botão ocupar 100% do card */
+    width: 100%;
+    /* Faz o botão ocupar 100% do card */
     text-align: center;
 
     background-color: #15569c;
@@ -194,15 +421,18 @@ button, .btn-buscar {
     justify-content: center;
     gap: 30px;
     margin-top: 20px;
-    flex-wrap: wrap; /* Permite quebrar em telas menores */
+    flex-wrap: wrap;
+    /* Permite quebrar em telas menores */
 }
 
 .beneficio-item {
-    flex-basis: 280px; /* Cada item tenta ter 280px */
+    flex-basis: 280px;
+    /* Cada item tenta ter 280px */
 }
 
 .secao-newsletter {
-    background-color: #eef; /* Um azul bem clarinho */
+    background-color: #eef;
+    /* Um azul bem clarinho */
 }
 
 .form-newsletter input[type="email"] {
@@ -224,9 +454,11 @@ footer {
 
 .footer-container {
     display: flex;
-    justify-content: space-around; /* Espalha as colunas */
+    justify-content: space-around;
+    /* Espalha as colunas */
     gap: 20px;
-    flex-wrap: wrap; /* Quebra de linha em telas pequenas */
+    flex-wrap: wrap;
+    /* Quebra de linha em telas pequenas */
     margin-bottom: 20px;
     text-align: left;
 }
