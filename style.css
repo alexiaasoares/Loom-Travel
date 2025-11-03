@@ -333,6 +333,64 @@ button,
     /* Espaço entre cada card */
 }
 
+/* Container dos 3 cards */
+.container-cards {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* Estilo de cada card (com imagem lateralizada) */
+.card-destino {
+  display: flex;
+  width: 380px; /* Largura controlada para caber 3 em linha */
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.card-destino img {
+  width: 40%; /* Imagem ocupa 40% da largura do card */
+  height: 100%;
+  object-fit: cover;
+}
+
+.info-destino {
+  width: 60%; /* Informações ocupam 60% */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.info-destino h2 {
+  color: #2c3e50;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.info-destino p {
+  color: #555;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.destaque {
+  background-color: #3498db;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  display: inline-block;
+  align-self: flex-start;
+}
+
+
 .destino-card {
     /* Define o tamanho de cada card */
     flex: 0 0 300px;
@@ -483,4 +541,31 @@ footer {
     border-top: 1px solid #555;
     padding-top: 20px;
     font-size: 0.9em;
+}
+
+.faixa {
+  background-color: #fff;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  padding: 5px 0;
+  border-top: 2px solid #f0f0f0;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.texto-rolando {
+  display: inline-block;
+  color: red;
+  font-weight: bold;
+  font-size: 14px;
+  animation: rolar 15s linear infinite;
+}
+
+@keyframes rolar {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }

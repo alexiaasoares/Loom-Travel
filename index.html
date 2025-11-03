@@ -1,389 +1,560 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sua Agência de Viagens - Explore o Brasil 01</title>
-    <meta name="description"
-        content="Encontre os melhores pacotes de viagem para o Nordeste, Sudeste, Sul, Norte e Centro-Oeste.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta
+      name="description"
+      content="Encontre os melhores pacotes de viagem para o Nordeste, Sudeste, Sul, Norte e Centro-Oeste."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sedgwick+Ave&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-</head>
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sedgwick+Ave&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
-
+  <body>
     <header>
-        <div class="logo">
-            <img src="assets/logoloom.png" alt="Affs cansei">
+      <div class="logo">
+        <img src="assets/logoloom.png" alt="Affs cansei" />
+      </div>
+      <nav class="navegacao-principal">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/destinos">Destinos</a></li>
+          <li><a href="/promocoes">Promoções</a></li>
+          <li><a href="/sobre">Sobre Nós</a></li>
+          <li><a href="/contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="faixa">
+        <div class="texto-rolando">
+          SEU TRAJETO EM NOSSAS MÃOS • SEU TRAJETO EM NOSSAS MÃOS • SEU TRAJETO
+          EM NOSSAS MÃOS
         </div>
-        <nav class="navegacao-principal">
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/destinos">Destinos</a></li>
-                <li><a href="/promocoes">Promoções</a></li>
-                <li><a href="/sobre">Sobre Nós</a></li>
-                <li><a href="/contato">Contato</a></li>
-            </ul>
-        </nav>
+      </div>
 
-        <div class="header-utils">
+      <div class="header-utils">
+        <form class="header-search" action="/buscar" method="get" role="search">
+          <input
+            type="search"
+            name="q"
+            placeholder="Pesquisar destinos..."
+            aria-label="Pesquisar destinos"
+          />
+          <button type="submit" aria-label="Buscar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
 
-            <form class="header-search" action="/buscar" method="get" role="search">
-                <input type="search" name="q" placeholder="Pesquisar destinos..." aria-label="Pesquisar destinos">
-                <button type="submit" aria-label="Buscar">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
-            </form>
-
-            <div class="area-cliente">
-                <a href="/login" class="btn-login" title="Login" aria-label="Página de Login">
-                    <i class="fa-solid fa-user"></i>
-                </a>
-            </div>
+        <div class="area-cliente">
+          <a
+            href="/login"
+            class="btn-login"
+            title="Login"
+            aria-label="Página de Login"
+          >
+            <i class="fa-solid fa-user"></i>
+          </a>
         </div>
+      </div>
     </header>
     <main>
 
-        <section class="hero">
-            <div class="hero-content">
-                <h2>Encontre sua próxima aventura</h2>
-                <p>Busque os melhores destinos com preços incríveis.</p>
+      <section class="hero">
+        <div class="hero-content">
+          <h2>Encontre sua próxima aventura</h2>
+          <p>Busque os melhores destinos com preços incríveis.</p>
 
-                <form class="busca-pacotes">
-                    <div class="form-group">
-                        <label for="destino">Destino</label>
-                        <input type="text" id="destino" placeholder="Para onde você quer ir?">
-                    </div>
-                    <div class="form-group">
-                        <label for="data-ida">Ida</label>
-                        <input type="date" id="data-ida">
-                    </div>
-                    <div class="form-group">
-                        <label for="data-volta">Volta</label>
-                        <input type="date" id="data-volta">
-                    </div>
-                    <button type="submit" class="btn-buscar">Buscar Pacotes</button>
-                </form>
+          <form class="busca-pacotes">
+            <div class="form-group">
+              <label for="destino">Destino</label>
+              <input
+                type="text"
+                id="destino"
+                placeholder="Para onde você quer ir?"
+              />
             </div>
-        </section>
-
-        <section id="destinos-nordeste" class="secao-carrossel">
-            <h2>Descubra o Nordeste</h2>
-            <p>As praias mais incríveis e a cultura mais rica do Brasil inteiro.</p>
-
-            <div class="carrossel-track">
-
-                <article class="destino-card">
-                    <img src="assets/salvador.jpg" alt="Vista do Pelourinho em Salvador, Bahia">
-                    <div class="card-info">
-                        <h3>Salvador, Bahia</h3>
-                        <p class="card-descricao">História, axé e acarajé. 3 dias com city tour.</p>
-                        <span class="preco-novo">A partir de R$ 950</span>
-                        <a href="/pacote/salvador" class="btn-ver-pacote">Ver Pacote</a>
-                    </div>
-                </article>
-
-                <article class="destino-card">
-                    <img src="assets/porto de galinhas.jpg" alt="Piscinas naturais em Porto de Galinhas, Pernambuco">
-                    <div class="card-info">
-                        <h3>Porto de Galinhas, PE</h3>
-                        <p class="card-descricao">Piscinas naturais e resorts incríveis. 5 dias.</p>
-                        <span class="preco-antigo">De R$ 2.200</span>
-                        <span class="preco-novo">A partir de R$ 1.899</span>
-                        <a href="/pacote/porto-de-galinhas" class="btn-ver-pacote">Ver Pacote</a>
-                    </div>
-                </article>
-
-                <article class="destino-card">
-                    <img src="assets/OIP.webp" alt="Dunas e lagoas dos Lençóis Maranhenses, Maranhão">
-                    <div class="card-info">
-                        <h3>Lençóis Maranhenses, MA</h3>
-                        <p class="card-descricao">Um deserto de dunas e lagoas azuis. 4 dias.</p>
-                        <span class="preco-novo">A partir de R$ 2.400</span>
-                        <a href="/pacote/lencois" class="btn-ver-pacote">Ver Pacote</a>
-                    </div>
-                </article>
-
-                <article class="destino-card">
-                    <img src="assets/fortaleza.jpg" alt="Praia de Iracema em Fortaleza, Ceará">
-                    <div class="card-info">
-                        <h3>Fortaleza, Ceará</h3>
-                        <p class="card-descricao">Sol o ano todo, praias urbanas e Beach Park.</p>
-                        <span class="preco-novo">A partir de R$ 1.300</span>
-                        <a href="/pacote/fortaleza" class="btn-ver-pacote">Ver Pacote</a>
-                    </div>
-                </article>
-
-                <article class="destino-card">
-                    <img src="assets/jeri.jpg" alt="Redes na lagoa em Jericoacoara, Ceará">
-                    <div class="card-info">
-                        <h3>Jericoacoara, Ceará</h3>
-                        <p class="card-descricao">O paraíso das lagoas e dunas. 5 dias.</p>
-                        <span class="preco-antigo">De R$ 3.000</span>
-                        <span class="preco-novo">A partir de R$ 2.650</span>
-                        <a href="/pacote/jericoacoara" class="btn-ver-pacote">Ver Pacote</a>
-                    </div>
-                </article>
-
-                <article class="destino-card">
-                    <img src="assets/maceio.jpg" alt="Praia de Ponta Verde em Maceió, Alagoas">
-                    <div class="card-info">
-                        <h3>Maceió, Alagoas</h3>
-                        <p class="card-descricao">O Caribe brasileiro, com águas cristalinas.</p>
-                        <span class="preco-novo">A partir de R$ 1.700</span>
-                        <a href="/pacote/maceio" class="btn-ver-pacote">Ver Pacote</a>
-                    </div>
-                </article>
-
-                <article class="destino-card">
-                    <img src="assets/maragogi2.webp" alt="Piscinas naturais de Maragogi, Alagoas">
-                    <div class="card-info">
-                        <h3>Maragogi, Alagoas</h3>
-                        <p class="card-descricao">Mergulhe nas famosas galés. 4 dias.</p>
-                        <span class="preco-novo">A partir de R$ 1.900</span>
-                        <a href="/pacote/maragogi" class="btn-ver-pacote">Ver Pacote</a>
-                    </div>
-                </article>
-
-                <article class="destino-card">
-                    <img src="assets/portoseg.webp" alt="Centro histórico de Porto Seguro, Bahia">
-                    <div class="card-info">
-                        <h3>Porto Seguro, Bahia</h3>
-                        <p class="card-descricao">Onde o Brasil nasceu. História e festa.</p>
-                        <span class="preco-novo">A partir de R$ 1.100</span>
-                        <a href="/pacote/porto-seguro" class="btn-ver-pacote">Ver Pacote</a>
-                    </div>
-                </article>
-
-                <article class="destino-card">
-                    <img src="assets/olinda.jpg" alt="Marco Zero em Recife, Pernambuco">
-                    <div class="card-info">
-                        <h3>Recife e Olinda, PE</h3>
-                        <p class="card-descricao">Cultura, frevo e o charme de Olinda.</p>
-                        <span class="preco-novo">A partir de R$ 1.250</span>
-                        <a href="/pacote/recife" class="btn-ver-pacote">Ver Pacote</a>
-                    </div>
-                </article>
-
-                <article class="destino-card">
-                    <img src="assets/morroSp.jpg" alt="Praias de Morro de São Paulo, Bahia">
-                    <div class="card-info">
-                        <h3>Morro de São Paulo, BA</h3>
-                        <p class="card-descricao">Ilha paradisíaca sem carros. 5 dias.</p>
-                        <span class="preco-antigo">De R$ 2.400</span>
-                        <span class="preco-novo">A partir de R$ 2.100</span>
-                        <a href="/pacote/morro-sp" class="btn-ver-pacote">Ver Pacote</a>
-                    </div>
-                </article>
-
+            <div class="form-group">
+              <label for="data-ida">Ida</label>
+              <input type="date" id="data-ida" />
             </div>
-        </section>
-
-        <section id="destinos-sudeste" class="secao-carrossel">
-            <h2>Explore o Sudeste</h2>
-            <p>Da metrópole à praia, da montanha à história.</p>
-
-            <div class="carrossel-track">
-
-                <article class="destino-card">
-                    <img src="assets/Rio.webp" alt="Cristo Redentor no Rio de Janeiro">
-                    <div class="card-info">
-                        <h3>Rio de Janeiro, RJ</h3>
-                        <p class="card-descricao">A cidade maravilhosa. Inclui 4 dias e city tour.</p>
-                        <span class="preco-novo">A partir de R$ 899</span>
-                        <a href="/pacote/rio-de-janeiro" class="btn-ver-pacote">Ver Pacote</a>
-                    </div>
-                </article>
-
-                <article class="destino-card">
-                    <img src="assets/SaoPaulo.webp" alt="Avenida Paulista em São Paulo">
-                    <div class="card-info">
-                        <h3>São Paulo, SP</h3>
-                        <p class="card-descricao">Gastronomia, cultura e negócios. 3 dias.</p>
-                        <span class="preco-novo">A partir de R$ 750</span>
-                        <a href="/pacote/sao-paulo" class="btn-ver-pacote">Ver Pacote</a>
-                    </div>
-                </article>
-
-                <article class="destino-card">
-                    <img src="assets/ouroPreto.jpg" alt="Igrejas históricas de Ouro Preto, Minas Gerais">
-                    <div class="card-info">
-                        <h3>Ouro Preto, MG</h3>
-                        <p class="card-descricao">Viagem no tempo pelas cidades históricas.</p>
-                        <span class="preco-novo">A partir de R$ 1.100</span>
-                        <a href="/pacote/ouro-preto" class="btn-ver-pacote">Ver Pacote</a>
-                    </div>
-                </article>
-
-                <article class="destino-card">
-                    <img src="assets/buzios.webp" alt="Rua das Pedras em Búzios, Rio de Janeiro">
-                    <div class="card-info">
-                        <h3>Búzios, RJ</h3>
-                        <p class="card-descricao">Charme e praias paradisíacas na Região dos Lagos.</p>
-                        <span class="preco-novo">A partir de R$ 1.200</span>
-                        <a href="/pacote/buzios" class="btn-ver-pacote">Ver Pacote</a>
-                    </div>
-                </article>
-
+            <div class="form-group">
+              <label for="data-volta">Volta</label>
+              <input type="date" id="data-volta" />
             </div>
-        </section>
+            <button type="submit" class="btn-buscar">Buscar Pacotes</button>
+          </form>
+        </div>
+      </section>
 
-        <section id="destinos-sul" class="secao-carrossel">
-            <h2>Viva o Charme do Sul</h2>
-            <p>Paisagens europeias, serras e cataratas.</p>
+      <section id="destinos-procurados" class="secao-carrossel">
+        <h2>Mais Procurados</h2>
+        <p>Venha conhecer os melhores destinos do mundo, com a Loom.</p>
 
-            <div class="carrossel-track">
+         <div class="container-cards">
+            <div class="card-destino">
+    <!-- Imagem da paisagem -->
+    <img src="assets/disney.png" alt="Paisagem de montanhas" />
 
-                <article class="destino-card">
-                    <img src="assets/foz.webp" alt="Cataratas do Iguaçu em Foz do Iguaçu, Paraná">
-                    <div class="card-info">
-                        <h3>Foz do Iguaçu, PR</h3>
-                        <p class="card-descricao">A força das cataratas. Inclui 3 dias.</p>
-                        <span class="preco-novo">A partir de R$ 1.300</span>
-                        <a href="/pacote/foz-do-iguacu" class="btn-ver-pacote">Ver Pacote</a>
-                    </div>
-                </article>
+    <!-- Informações do destino -->
+    <div class="info-destino">
+      <h2>Disney, EUA</h2>
+      <p>Viva a magia com hospedagem temática, ingressos para os parques e benefícios exclusivos. Diversão garantida para todas as idades.</p>
+      <span class="destaque">A partir de R$ 5000</span>
+    </div>
+  </div>
 
-                <article class="destino-card">
-                    <img src="assets/gramado.webp" alt="Rua coberta em Gramado, Rio Grande do Sul">
-                    <div class="card-info">
-                        <h3>Gramado, RS</h3>
-                        <p class="card-descricao">O chocolate e o frio da Serra Gaúcha. 5 dias.</p>
-                        <span class="preco-antigo">De R$ 2.500</span>
-                        <span class="preco-novo">A partir de R$ 2.150</span>
-                        <a href="/pacote/gramado" class="btn-ver-pacote">Ver Pacote</a>
-                    </div>
-                </article>
 
-                <article class="destino-card">
-                    <img src="assets/floripa.jpg" alt="Ponte Hercílio Luz em Florianópolis, Santa Catarina">
-                    <div class="card-info">
-                        <h3>Florianópolis, SC</h3>
-                        <p class="card-descricao">A "Ilha da Magia" e suas 42 praias.</p>
-                        <span class="preco-novo">A partir de R$ 1.400</span>
-                        <a href="/pacote/florianopolis" class="btn-ver-pacote">Ver Pacote</a>
-                    </div>
-                </article>
+          <div class="card-destino">
+    <!-- Imagem da paisagem -->
+    <img src="assets/paris.png" alt="Paisagem de montanhas" />
 
+    <!-- Informações do destino -->
+    <div class="info-destino">
+      <h2>Paris, França</h2>
+      <p>Explore a elegância parisiense com hospedagem charmosa, passeios guiados e experiências gastronômicas inesquecíveis.</p>
+      <span class="destaque">A partir de R$ 899</span>
+    </div>
+  </div>
+
+    <div class="card-destino">
+    <!-- Imagem da paisagem -->
+    <img src="assets/peru.png" alt="Paisagem de montanhas" />
+
+    <!-- Informações do destino -->
+    <div class="info-destino">
+      <h2>Machu Picchu, Peru</h2>
+      <p>Aventure-se pelos Andes com trilhas guiadas, transporte panorâmico e imersão na cultura inca.
+        Esse pacote oferece uma jornada transformadora em meio às montanhas sagradas do Peru.
+      </p>
+      <span class="destaque">A partir de R$ 899</span>
+    </div>
+  </div>
+</div>
+
+         
+
+      <section id="destinos-nordeste" class="secao-carrossel">
+        <h2>Descubra o Nordeste</h2>
+        <p>As praias mais incríveis e a cultura mais rica do Brasil inteiro.</p>
+
+        <div class="carrossel-track">
+          <article class="destino-card">
+            <img
+              src="assets/salvador.jpg"
+              alt="Vista do Pelourinho em Salvador, Bahia"
+            />
+            <div class="card-info">
+              <h3>Salvador, Bahia</h3>
+              <p class="card-descricao">
+                História, axé e acarajé. 3 dias com city tour.
+              </p>
+              <span class="preco-novo">A partir de R$ 950</span>
+              <a href="/pacote/salvador" class="btn-ver-pacote">Ver Pacote</a>
             </div>
-        </section>
+          </article>
 
-        <section id="destinos-norte" class="secao-carrossel">
-            <h2>A Imensidão do Norte</h2>
-            <p>A selva amazônica, rios gigantes e sabores únicos.</p>
-
-            <div class="carrossel-track">
-
-                <article class="destino-card">
-                    <img src="assets/manaus.webp" alt="Encontro das águas em Manaus, Amazonas">
-                    <div class="card-info">
-                        <h3>Manaus, AM</h3>
-                        <p class="card-descricao">O coração da Amazônia e o Encontro das Águas.</p>
-                        <span class="preco-novo">A partir de R$ 1.800</span>
-                        <a href="/pacote/manaus" class="btn-ver-pacote">Ver Pacote</a>
-                    </div>
-                </article>
-
-                <article class="destino-card">
-                    <img src="assets/belem.webp" alt="Mercado Ver-o-Peso em Belém, Pará">
-                    <div class="card-info">
-                        <h3>Belém, PA</h3>
-                        <p class="card-descricao">Sabores, açaí e o mercado Ver-o-Peso.</p>
-                        <span class="preco-novo">A partir de R$ 1.600</span>
-                        <a href="/pacote/belem" class="btn-ver-pacote">Ver Pacote</a>
-                    </div>
-                </article>
-
-                <article class="destino-card">
-                    <img src="assets/alter.webp" alt="Praia em Alter do Chão, Pará">
-                    <div class="card-info">
-                        <h3>Alter do Chão, PA</h3>
-                        <p class="card-descricao">O Caribe Amazônico, praias de rio.</p>
-                        <span class="preco-antigo">De R$ 2.600</span>
-                        <span class="preco-novo">A partir de R$ 2.300</span>
-                        <a href="/pacote/alter-do-chao" class="btn-ver-pacote">Ver Pacote</a>
-                    </div>
-                </article>
-
+          <article class="destino-card">
+            <img
+              src="assets/porto de galinhas.jpg"
+              alt="Piscinas naturais em Porto de Galinhas, Pernambuco"
+            />
+            <div class="card-info">
+              <h3>Porto de Galinhas, PE</h3>
+              <p class="card-descricao">
+                Piscinas naturais e resorts incríveis. 5 dias.
+              </p>
+              <span class="preco-antigo">De R$ 2.200</span>
+              <span class="preco-novo">A partir de R$ 1.899</span>
+              <a href="/pacote/porto-de-galinhas" class="btn-ver-pacote"
+                >Ver Pacote</a
+              >
             </div>
-        </section>
+          </article>
 
-        <section id="destinos-centro-oeste" class="secao-carrossel">
-            <h2>Aventura no Centro-Oeste</h2>
-            <p>O Pantanal, chapadas e águas cristalinas.</p>
-
-            <div class="carrossel-track">
-
-                <article class="destino-card">
-                    <img src="assets/bonito.jpg" alt="Flutuação em rio cristalino de Bonito, Mato Grosso do Sul">
-                    <div class="card-info">
-                        <h3>Bonito, MS</h3>
-                        <p class="card-descricao">Flutuação em rios transparentes e grutas.</p>
-                        <span class="preco-novo">A partir de R$ 2.200</span>
-                        <a href="/pacote/bonito" class="btn-ver-pacote">Ver Pacote</a>
-                    </div>
-                </article>
-
-                <article class="destino-card">
-                    <img src="assets/chapada.webp" alt="Cachoeira na Chapada dos Veadeiros, Goiás">
-                    <div class="card-info">
-                        <h3>Chapada dos Veadeiros, GO</h3>
-                        <p class="card-descricao">Cachoeiras, trilhas e misticismo.</p>
-                        <span class="preco-novo">A partir de R$ 1.700</span>
-                        <a href="/pacote/chapada-veadeiros" class="btn-ver-pacote">Ver Pacote</a>
-                    </div>
-                </article>
-
-                <article class="destino-card">
-                    <img src="assets/pantanal.webp" alt="Onça pintada no Pantanal">
-                    <div class="card-info">
-                        <h3>Pantanal, MT/MS</h3>
-                        <p class="card-descricao">A maior planície alagada do mundo. Safári.</p>
-                        <span class="preco-novo">A partir de R$ 3.100</span>
-                        <a href="/pacote/pantanal" class="btn-ver-pacote">Ver Pacote</a>
-                    </div>
-                </article>
-
+          <article class="destino-card">
+            <img
+              src="assets/OIP.webp"
+              alt="Dunas e lagoas dos Lençóis Maranhenses, Maranhão"
+            />
+            <div class="card-info">
+              <h3>Lençóis Maranhenses, MA</h3>
+              <p class="card-descricao">
+                Um deserto de dunas e lagoas azuis. 4 dias.
+              </p>
+              <span class="preco-novo">A partir de R$ 2.400</span>
+              <a href="/pacote/lencois" class="btn-ver-pacote">Ver Pacote</a>
             </div>
-        </section>
+          </article>
 
-        <section id="beneficios" class="secao-beneficios">
-            <h2>Por que viajar com a gente?</h2>
-            <p>
+          <article class="destino-card">
+            <img
+              src="assets/fortaleza.jpg"
+              alt="Praia de Iracema em Fortaleza, Ceará"
+            />
+            <div class="card-info">
+              <h3>Fortaleza, Ceará</h3>
+              <p class="card-descricao">
+                Sol o ano todo, praias urbanas e Beach Park.
+              </p>
+              <span class="preco-novo">A partir de R$ 1.300</span>
+              <a href="/pacote/fortaleza" class="btn-ver-pacote">Ver Pacote</a>
+            </div>
+          </article>
 
-                Na Loom, tratamos suas viagens com a seriedade que elas merecem. Como especialistas em
-                criar experiências memoráveis, nosso compromisso é oferecer pacotes com os mais altos padrões de
-                qualidade, segurança e conforto, selecionados rigorosamente por nossa equipe. Garantimos total
-                transparência em nossos serviços e oferecemos suporte dedicado do planejamento ao seu retorno, cuidando
-                de toda a burocracia. Escolha a tranquilidade e a confiança de ter profissionais experientes cuidando de
-                cada detalhe da sua próxima aventura.</p>
-        </section>
+          <article class="destino-card">
+            <img
+              src="assets/jeri.jpg"
+              alt="Redes na lagoa em Jericoacoara, Ceará"
+            />
+            <div class="card-info">
+              <h3>Jericoacoara, Ceará</h3>
+              <p class="card-descricao">
+                O paraíso das lagoas e dunas. 5 dias.
+              </p>
+              <span class="preco-antigo">De R$ 3.000</span>
+              <span class="preco-novo">A partir de R$ 2.650</span>
+              <a href="/pacote/jericoacoara" class="btn-ver-pacote"
+                >Ver Pacote</a
+              >
+            </div>
+          </article>
 
-        <section id="newsletter" class="secao-newsletter">
-            <h2>Receba ofertas exclusivas!</h2>
-        </section>
+          <article class="destino-card">
+            <img
+              src="assets/maceio.jpg"
+              alt="Praia de Ponta Verde em Maceió, Alagoas"
+            />
+            <div class="card-info">
+              <h3>Maceió, Alagoas</h3>
+              <p class="card-descricao">
+                O Caribe brasileiro, com águas cristalinas.
+              </p>
+              <span class="preco-novo">A partir de R$ 1.700</span>
+              <a href="/pacote/maceio" class="btn-ver-pacote">Ver Pacote</a>
+            </div>
+          </article>
 
+          <article class="destino-card">
+            <img
+              src="assets/maragogi2.webp"
+              alt="Piscinas naturais de Maragogi, Alagoas"
+            />
+            <div class="card-info">
+              <h3>Maragogi, Alagoas</h3>
+              <p class="card-descricao">Mergulhe nas famosas galés. 4 dias.</p>
+              <span class="preco-novo">A partir de R$ 1.900</span>
+              <a href="/pacote/maragogi" class="btn-ver-pacote">Ver Pacote</a>
+            </div>
+          </article>
+
+          <article class="destino-card">
+            <img
+              src="assets/portoseg.webp"
+              alt="Centro histórico de Porto Seguro, Bahia"
+            />
+            <div class="card-info">
+              <h3>Porto Seguro, Bahia</h3>
+              <p class="card-descricao">
+                Onde o Brasil nasceu. História e festa.
+              </p>
+              <span class="preco-novo">A partir de R$ 1.100</span>
+              <a href="/pacote/porto-seguro" class="btn-ver-pacote"
+                >Ver Pacote</a
+              >
+            </div>
+          </article>
+
+          <article class="destino-card">
+            <img
+              src="assets/olinda.jpg"
+              alt="Marco Zero em Recife, Pernambuco"
+            />
+            <div class="card-info">
+              <h3>Recife e Olinda, PE</h3>
+              <p class="card-descricao">Cultura, frevo e o charme de Olinda.</p>
+              <span class="preco-novo">A partir de R$ 1.250</span>
+              <a href="/pacote/recife" class="btn-ver-pacote">Ver Pacote</a>
+            </div>
+          </article>
+
+          <article class="destino-card">
+            <img
+              src="assets/morroSp.jpg"
+              alt="Praias de Morro de São Paulo, Bahia"
+            />
+            <div class="card-info">
+              <h3>Morro de São Paulo, BA</h3>
+              <p class="card-descricao">Ilha paradisíaca sem carros. 5 dias.</p>
+              <span class="preco-antigo">De R$ 2.400</span>
+              <span class="preco-novo">A partir de R$ 2.100</span>
+              <a href="/pacote/morro-sp" class="btn-ver-pacote">Ver Pacote</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="destinos-sudeste" class="secao-carrossel">
+        <h2>Explore o Sudeste</h2>
+        <p>Da metrópole à praia, da montanha à história.</p>
+
+        <div class="carrossel-track">
+          <article class="destino-card">
+            <img
+              src="assets/Rio.webp"
+              alt="Cristo Redentor no Rio de Janeiro"
+            />
+            <div class="card-info">
+              <h3>Rio de Janeiro, RJ</h3>
+              <p class="card-descricao">
+                A cidade maravilhosa. Inclui 4 dias e city tour.
+              </p>
+              <span class="preco-novo">A partir de R$ 899</span>
+              <a href="/pacote/rio-de-janeiro" class="btn-ver-pacote"
+                >Ver Pacote</a
+              >
+            </div>
+          </article>
+
+          <article class="destino-card">
+            <img
+              src="assets/SaoPaulo.webp"
+              alt="Avenida Paulista em São Paulo"
+            />
+            <div class="card-info">
+              <h3>São Paulo, SP</h3>
+              <p class="card-descricao">
+                Gastronomia, cultura e negócios. 3 dias.
+              </p>
+              <span class="preco-novo">A partir de R$ 750</span>
+              <a href="/pacote/sao-paulo" class="btn-ver-pacote">Ver Pacote</a>
+            </div>
+          </article>
+
+          <article class="destino-card">
+            <img
+              src="assets/ouroPreto.jpg"
+              alt="Igrejas históricas de Ouro Preto, Minas Gerais"
+            />
+            <div class="card-info">
+              <h3>Ouro Preto, MG</h3>
+              <p class="card-descricao">
+                Viagem no tempo pelas cidades históricas.
+              </p>
+              <span class="preco-novo">A partir de R$ 1.100</span>
+              <a href="/pacote/ouro-preto" class="btn-ver-pacote">Ver Pacote</a>
+            </div>
+          </article>
+
+          <article class="destino-card">
+            <img
+              src="assets/buzios.webp"
+              alt="Rua das Pedras em Búzios, Rio de Janeiro"
+            />
+            <div class="card-info">
+              <h3>Búzios, RJ</h3>
+              <p class="card-descricao">
+                Charme e praias paradisíacas na Região dos Lagos.
+              </p>
+              <span class="preco-novo">A partir de R$ 1.200</span>
+              <a href="/pacote/buzios" class="btn-ver-pacote">Ver Pacote</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="destinos-sul" class="secao-carrossel">
+        <h2>Viva o Charme do Sul</h2>
+        <p>Paisagens europeias, serras e cataratas.</p>
+
+        <div class="carrossel-track">
+          <article class="destino-card">
+            <img
+              src="assets/foz.webp"
+              alt="Cataratas do Iguaçu em Foz do Iguaçu, Paraná"
+            />
+            <div class="card-info">
+              <h3>Foz do Iguaçu, PR</h3>
+              <p class="card-descricao">
+                A força das cataratas. Inclui 3 dias.
+              </p>
+              <span class="preco-novo">A partir de R$ 1.300</span>
+              <a href="/pacote/foz-do-iguacu" class="btn-ver-pacote"
+                >Ver Pacote</a
+              >
+            </div>
+          </article>
+
+          <article class="destino-card">
+            <img
+              src="assets/gramado.webp"
+              alt="Rua coberta em Gramado, Rio Grande do Sul"
+            />
+            <div class="card-info">
+              <h3>Gramado, RS</h3>
+              <p class="card-descricao">
+                O chocolate e o frio da Serra Gaúcha. 5 dias.
+              </p>
+              <span class="preco-antigo">De R$ 2.500</span>
+              <span class="preco-novo">A partir de R$ 2.150</span>
+              <a href="/pacote/gramado" class="btn-ver-pacote">Ver Pacote</a>
+            </div>
+          </article>
+
+          <article class="destino-card">
+            <img
+              src="assets/floripa.jpg"
+              alt="Ponte Hercílio Luz em Florianópolis, Santa Catarina"
+            />
+            <div class="card-info">
+              <h3>Florianópolis, SC</h3>
+              <p class="card-descricao">A "Ilha da Magia" e suas 42 praias.</p>
+              <span class="preco-novo">A partir de R$ 1.400</span>
+              <a href="/pacote/florianopolis" class="btn-ver-pacote"
+                >Ver Pacote</a
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="destinos-norte" class="secao-carrossel">
+        <h2>A Imensidão do Norte</h2>
+        <p>A selva amazônica, rios gigantes e sabores únicos.</p>
+
+        <div class="carrossel-track">
+          <article class="destino-card">
+            <img
+              src="assets/manaus.webp"
+              alt="Encontro das águas em Manaus, Amazonas"
+            />
+            <div class="card-info">
+              <h3>Manaus, AM</h3>
+              <p class="card-descricao">
+                O coração da Amazônia e o Encontro das Águas.
+              </p>
+              <span class="preco-novo">A partir de R$ 1.800</span>
+              <a href="/pacote/manaus" class="btn-ver-pacote">Ver Pacote</a>
+            </div>
+          </article>
+
+          <article class="destino-card">
+            <img
+              src="assets/belem.webp"
+              alt="Mercado Ver-o-Peso em Belém, Pará"
+            />
+            <div class="card-info">
+              <h3>Belém, PA</h3>
+              <p class="card-descricao">
+                Sabores, açaí e o mercado Ver-o-Peso.
+              </p>
+              <span class="preco-novo">A partir de R$ 1.600</span>
+              <a href="/pacote/belem" class="btn-ver-pacote">Ver Pacote</a>
+            </div>
+          </article>
+
+          <article class="destino-card">
+            <img src="assets/alter.webp" alt="Praia em Alter do Chão, Pará" />
+            <div class="card-info">
+              <h3>Alter do Chão, PA</h3>
+              <p class="card-descricao">O Caribe Amazônico, praias de rio.</p>
+              <span class="preco-antigo">De R$ 2.600</span>
+              <span class="preco-novo">A partir de R$ 2.300</span>
+              <a href="/pacote/alter-do-chao" class="btn-ver-pacote"
+                >Ver Pacote</a
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="destinos-centro-oeste" class="secao-carrossel">
+        <h2>Aventura no Centro-Oeste</h2>
+        <p>O Pantanal, chapadas e águas cristalinas.</p>
+
+        <div class="carrossel-track">
+          <article class="destino-card">
+            <img
+              src="assets/bonito.jpg"
+              alt="Flutuação em rio cristalino de Bonito, Mato Grosso do Sul"
+            />
+            <div class="card-info">
+              <h3>Bonito, MS</h3>
+              <p class="card-descricao">
+                Flutuação em rios transparentes e grutas.
+              </p>
+              <span class="preco-novo">A partir de R$ 2.200</span>
+              <a href="/pacote/bonito" class="btn-ver-pacote">Ver Pacote</a>
+            </div>
+          </article>
+
+          <article class="destino-card">
+            <img
+              src="assets/chapada.webp"
+              alt="Cachoeira na Chapada dos Veadeiros, Goiás"
+            />
+            <div class="card-info">
+              <h3>Chapada dos Veadeiros, GO</h3>
+              <p class="card-descricao">Cachoeiras, trilhas e misticismo.</p>
+              <span class="preco-novo">A partir de R$ 1.700</span>
+              <a href="/pacote/chapada-veadeiros" class="btn-ver-pacote"
+                >Ver Pacote</a
+              >
+            </div>
+          </article>
+
+          <article class="destino-card">
+            <img src="assets/pantanal.webp" alt="Onça pintada no Pantanal" />
+            <div class="card-info">
+              <h3>Pantanal, MT/MS</h3>
+              <p class="card-descricao">
+                A maior planície alagada do mundo. Safári.
+              </p>
+              <span class="preco-novo">A partir de R$ 3.100</span>
+              <a href="/pacote/pantanal" class="btn-ver-pacote">Ver Pacote</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="beneficios" class="secao-beneficios">
+        <h2>Por que viajar com a gente?</h2>
+        <p>
+          Na Loom, tratamos suas viagens com a seriedade que elas merecem. Como
+          especialistas em criar experiências memoráveis, nosso compromisso é
+          oferecer pacotes com os mais altos padrões de qualidade, segurança e
+          conforto, selecionados rigorosamente por nossa equipe. Garantimos
+          total transparência em nossos serviços e oferecemos suporte dedicado
+          do planejamento ao seu retorno, cuidando de toda a burocracia. Escolha
+          a tranquilidade e a confiança de ter profissionais experientes
+          cuidando de cada detalhe da sua próxima aventura.
+        </p>
+      </section>
+
+      <section id="newsletter" class="secao-newsletter">
+        <h2>Receba ofertas exclusivas!</h2>
+      </section>
     </main>
 
     <footer>
-        <div class="footer-container">
-        </div>
-        <div class="footer-copyright">
-            <p>&copy; 2025 Sua Agência de Viagens. Todos os direitos reservados.</p>
-        </div>
+      <div class="footer-container"></div>
+      <div class="footer-copyright">
+        <p>&copy; 2025 Sua Agência de Viagens. Todos os direitos reservados.</p>
+      </div>
     </footer>
 
     <script src="script.js"></script>
-hssshshshshsjsjs
-
-</body>
-
+    hssshshshshsjsjs
+  </body>
 </html>
