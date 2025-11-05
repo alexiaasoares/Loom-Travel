@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loom - Cadastro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sedgwick+Ave&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/Loom-Travel/css/cadastro.css">
+    <style>
+        .social-buttons {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            margin-top: 10px;
+            height: 50px;
+        }
+
+        .social-buttons button {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #e0e0e0;
+        }
+
+        .social-buttons img {
+            height: 20px;
+            margin-right: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="imagem">
+            <img src="/Loom-Travel/assets/fotofamilia.png" alt="Família na praia">
+        </div>
+
+        <div class="formulario">
+            <img src="/Loom-Travel/assets/logoloom.png" alt="Logo Loom" class="logo">
+            <h2>Login</h2>
+
+            <form>
+                <input type="email" placeholder="E-mail" required>
+                <div class="input-senha">
+                    <input type="password" placeholder="Senha" required>
+                    <span class="icone">👁️</span>
+                </div>
+
+                <button type="submit" class="entrar">
+                    <a href="index.html">Entrar</a>
+                </button>
+
+                <p class="ou">ou</p>
+
+                <div class="social-buttons">
+                    <button type="button" class="google">
+                        <a href="index.html"><img src="/Loom-Travel/assets/google.svg" alt="Google"></a>
+                    </button>
+
+                    <button type="button" class="apple">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple"> Login com Apple
+                    </button>
+                </div>
+
+                <button type="button" class="login">
+                    <a href="/Loom-Travel/pages/cadastro.html">Não tem login? Cadastre-se!</a>
+                </button>
+            </form>
+
+            <p class="footer">Seu Trajeto <span>em Nossas Mãos</span></p>
+        </div>
+    </div>
+</body>
+
+</html>
