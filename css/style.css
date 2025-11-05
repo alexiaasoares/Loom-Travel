@@ -1,5 +1,17 @@
 /* --- 1. CONFIGURAÇÕES GLOBAIS (RESET BÁSICO) --- */
 /* Isso garante que todos os navegadores comecem "do zero" */
+
+/* CÓDIGOS PALETA DE CORES:
+
+
+ --cor-principal-azul: #365DB5;
+ --cor-detalhes-vermelho: #F12B23;
+ --cor-secundária-branco: #FFFFFF;
+ --cor-fundo-azul-claro - #EFF4FF
+ }
+
+
+*/
 * {
     margin: 0;
     padding: 0;
