@@ -48,7 +48,6 @@ section h2 {
     /* Espaço abaixo dos títulos H2 */
 }
 
-
 /* --- 2. CABEÇALHO E NAVEGAÇÃO --- */
 header {
     display: flex;
@@ -64,6 +63,26 @@ header {
     position: fixed;
     z-index: 500;
     width: 100%;
+
+    /* Fundo de imagem do mundo na navba */
+    background-image: url('/assets/navbar.png');
+    background-size: cover;
+    background-position: center;
+}
+
+/* cada item da navbar */
+.navegacao-principal ul li {
+    margin-left: 80px;
+}
+
+.navegacao-principal ul li a {
+    font-weight: bold;
+}
+
+/* nav bar */
+.navegacao-principal  {
+    margin-right: 200px;
+    padding-right: 400px;
 }
 
 .navegacao-principal ul {
@@ -82,40 +101,51 @@ header {
 
 /* Base do link da navegação (Pai) */
 .navegacao-principal a {
-    font-family: 'Lato', sans-serif;
-    font-weight: bold;
     color: #023975;
-    padding-bottom: 5px; /* Espaço para o sublinhado */
-    
-    position: relative; /* Essencial para o sublinhado funcionar */
-    overflow: hidden; /* Garante que o sublinhado não "vaze" */
+    padding-bottom: 5px;
+    /* Espaço para o sublinhado */
+
+    position: relative;
+    /* Essencial para o sublinhado funcionar */
+    overflow: hidden;
+    /* Garante que o sublinhado não "vaze" */
     transition: color 0.3s ease;
 }
 
 /* O sublinhado (Filho) - começa escondido */
 .navegacao-principal a::after {
-    content: ''; /* Sempre necessário */
-    position: absolute; /* Posição relativa ao 'a' */
-    bottom: 0; /* Fica na parte de baixo */
-    left: 0; /* Começa na esquerda */
-    
-    width: 100%; /* Ocupa toda a largura */
-    height: 2px; /* Grossura da linha */
-    background-color: #bb0303; /* Cor da linha (vermelho) */
-    
+    content: '';
+    /* Sempre necessário */
+    position: absolute;
+    /* Posição relativa ao 'a' */
+    bottom: 0;
+    /* Fica na parte de baixo */
+    left: 0;
+    /* Começa na esquerda */
+
+    width: 100%;
+    /* Ocupa toda a largura */
+    height: 2px;
+    /* Grossura da linha */
+    background-color: #bb0303;
+    /* Cor da linha (vermelho) */
+
     /* A Mágica da Animação (começa com largura 0) */
     transform: scaleX(0);
-    transform-origin: left; /* Animação cresce da esquerda para a direita */
+    transform-origin: left;
+    /* Animação cresce da esquerda para a direita */
     transition: transform 0.3s ease-in-out;
 }
 
 /* O efeito ao passar o mouse */
 .navegacao-principal a:hover {
-    color: #bb0303; /* Muda a cor do texto também */
+    color: #bb0303;
+    /* Muda a cor do texto também */
 }
 
 .navegacao-principal a:hover::after {
-    transform: scaleX(1); /* Faz a linha crescer para 100% */
+    transform: scaleX(1);
+    /* Faz a linha crescer para 100% */
 }
 
 /* ▼▼▼ REGRAS NOVAS ADICIONADAS AQUI ▼▼▼ */
@@ -123,34 +153,43 @@ header {
 /* Novo contêiner para pesquisa e perfil */
 .header-utils {
     display: flex;
-    align-items: center; /* Alinha a pesquisa e o perfil verticalmente */
-    gap: 15px; /* Espaçamento entre a pesquisa e o ícone de perfil */
+    align-items: center;
+    /* Alinha a pesquisa e o perfil verticalmente */
+    gap: 15px;
+    /* Espaçamento entre a pesquisa e o ícone de perfil */
 }
 
 /* Estilização da Barra de Pesquisa */
 .header-search {
-    display: flex; /* Alinha o input e o botão */
+    display: flex;
+    /* Alinha o input e o botão */
     align-items: center;
     border: 1px solid #ccc;
-    border-radius: 25px; /* Deixa bem redondo */
-    overflow: hidden; /* Para esconder as bordas do input */
+    border-radius: 25px;
+    /* Deixa bem redondo */
+    overflow: hidden;
+    /* Para esconder as bordas do input */
     background-color: #f7f7f7;
+    width: 450px;
 }
 
 .header-search input[type="search"] {
     border: none;
     outline: none;
-    padding: 8px 12px; /* Altura do campo */
+    padding: 8px 12px;
+    /* Altura do campo */
     font-size: 0.9rem;
-    font-family: 'Lato', sans-serif; /* Fonte mais legível para input */
+    font-family: 'Lato', sans-serif;
+    /* Fonte mais legível para input */
     background-color: transparent;
-    width: 180px; /* Largura padrão */
+    width: 180px;
+    /* Largura padrão */
     transition: width 0.3s ease-in-out;
 }
 
 /* Efeito de expandir a barra quando clicada */
 .header-search input[type="search"]:focus {
-    width: 240px; 
+    width: 240px;
 }
 
 /* Remove o 'x' de limpar do input de pesquisa */
@@ -164,38 +203,49 @@ header {
     border: none;
     outline: none;
     cursor: pointer;
-    padding-right: 12px; /* Espaçamento do ícone */
+    padding-right: 12px;
+    /* Espaçamento do ícone */
     color: #555;
-    font-size: 0.9rem; /* Tamanho do ícone de lupa */
-    display: flex; /* Ajuda a centralizar o ícone */
+    font-size: 0.9rem;
+    /* Tamanho do ícone de lupa */
+    display: flex;
+    /* Ajuda a centralizar o ícone */
     align-items: center;
 }
 
 .header-search button[type="submit"]:hover {
-    color: #023975; /* Usando sua cor de link */
+    color: #023975;
+    /* Usando sua cor de link */
 }
+
+
 
 /* Estilização e Posição do Ícone de Perfil */
 /* (Substitui suas regras .area-cliente a e .btn-login .fa-user) */
 .area-cliente .btn-login {
-    font-size: 1.2rem; /* SEU TAMANHO DE ÍCONE ORIGINAL */
+    font-size: 1.2rem;
+    /* SEU TAMANHO DE ÍCONE ORIGINAL */
     color: #333;
     text-decoration: none;
-    
+
     /* Efeito de círculo para alinhar perfeitamente */
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 36px; /* Largura do círculo */
-    height: 36px; /* Altura do círculo */
-    border-radius: 50%; /* Transforma em círculo */
+    width: 36px;
+    /* Largura do círculo */
+    height: 36px;
+    /* Altura do círculo */
+    border-radius: 50%;
+    /* Transforma em círculo */
     background-color: #f0f0f0;
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .area-cliente .btn-login:hover {
     background-color: #e0e0e0;
-    color: #023975; /* Usando sua cor de link */
+    color: #023975;
+    /* Usando sua cor de link */
 }
 
 /* ▲▲▲ FIM DAS NOVAS REGRAS ▲▲▲ */
@@ -211,17 +261,24 @@ header {
 
 /* O contêiner principal do formulário */
 .busca-pacotes {
-    display: flex; 
+    display: flex;
     justify-content: center;
     align-items: flex-end;
-    gap: 15px; /* Mude aqui para mais/menos espaço entre os itens */
+    gap: 15px;
+    /* Mude aqui para mais/menos espaço entre os itens */
     margin-top: 25px;
     flex-wrap: wrap;
 
     /* NOVO: Adiciona um fundo e bordas arredondadas ao formulário */
-    background-color: rgba(0, 0, 0, 0.2); /* Fundo escuro semi-transparente */
+    background-color: rgba(0, 0, 0, 0.2);
+    /* Fundo escuro semi-transparente */
     padding: 25px;
     border-radius: 8px;
+}
+
+#lupa {
+    width: 50px;
+    margin-left: 190px;
 }
 
 .form-group {
@@ -234,10 +291,17 @@ header {
 .form-group label {
     margin-bottom: 5px;
     font-size: 0.9em;
-    font-weight: bold; /* NOVO: Deixa o label mais forte */
-    
+    font-weight: bold;
+    /* NOVO: Deixa o label mais forte */
+
     /* NOVO: Usei 'Lato' aqui porque 'Sedgwick Ave' é muito difícil de ler em textos pequenos */
-    font-family: 'Lato', sans-serif; 
+    font-family: 'Lato', sans-serif;
+}
+
+/* slogan - marquee*/
+#slogan {
+height: 15px;
+background-color: white;
 }
 
 /* ======================================================= */
@@ -246,14 +310,22 @@ header {
 /* ======================================================= */
 .busca-pacotes input[type="text"],
 .busca-pacotes input[type="date"] {
-    font-family: 'Lato', sans-serif; /* Fonte legível */
-    font-size: 1rem; /* Tamanho do texto dentro do campo */
-    color: #333; /* Cor do texto digitado */
-    padding: 10px 12px; /* Deixa o campo mais alto */
-    border: 1px solid #ccc; /* Borda sutil */
-    border-radius: 5px; /* Cantos arredondados */
-    min-width: 200px; /* Largura mínima para cada campo */
-    box-sizing: border-box; /* Garante que o padding não quebre o layout */
+    font-family: 'Lato', sans-serif;
+    /* Fonte legível */
+    font-size: 1rem;
+    /* Tamanho do texto dentro do campo */
+    color: #333;
+    /* Cor do texto digitado */
+    padding: 10px 12px;
+    /* Deixa o campo mais alto */
+    border: 1px solid #ccc;
+    /* Borda sutil */
+    border-radius: 5px;
+    /* Cantos arredondados */
+    min-width: 200px;
+    /* Largura mínima para cada campo */
+    box-sizing: border-box;
+    /* Garante que o padding não quebre o layout */
 }
 
 /* (Opcional) Remove o ícone padrão do calendário em campos de data */
@@ -267,20 +339,24 @@ header {
 button,
 .btn-buscar {
     padding: 10px 20px;
-    background-color: #bb0303; 
+    background-color: #bb0303;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
-    font-family: 'Lato', sans-serif; /* NOVO: Fonte */
-    height: 44px; /* NOVO: Alinha a altura com os inputs */
-    transition: background-color 0.2s ease; /* NOVO: Efeito de hover */
+    font-family: 'Lato', sans-serif;
+    /* NOVO: Fonte */
+    height: 44px;
+    /* NOVO: Alinha a altura com os inputs */
+    transition: background-color 0.2s ease;
+    /* NOVO: Efeito de hover */
 }
 
 /* NOVO: Efeito hover no botão */
 .btn-buscar:hover {
-    background-color: #a00202; /* Um vermelho mais escuro */
+    background-color: #a00202;
+    /* Um vermelho mais escuro */
 }
 
 /* Botão genérico */
@@ -320,59 +396,62 @@ button,
 
 /* Container dos 3 cards */
 .container-cards {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  flex-wrap: wrap;
-  max-width: 1600px;
-  margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    max-width: 1600px;
+    margin: 0 auto;
 }
 
 /* Estilo de cada card (com imagem lateralizada) */
 .card-destino {
-  display: flex;
-  width: 380px; /* Largura controlada para caber 3 em linha */
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
+    display: flex;
+    width: 380px;
+    /* Largura controlada para caber 3 em linha */
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
 .card-destino img {
-  width: 40%; /* Imagem ocupa 40% da largura do card */
-  height: 100%;
-  object-fit: cover;
+    width: 40%;
+    /* Imagem ocupa 40% da largura do card */
+    height: 100%;
+    object-fit: cover;
 }
 
 .info-destino {
-  width: 60%; /* Informações ocupam 60% */
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+    width: 60%;
+    /* Informações ocupam 60% */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .info-destino h2 {
-  color: #2c3e50;
-  font-size: 18px;
-  margin-bottom: 10px;
+    color: #2c3e50;
+    font-size: 18px;
+    margin-bottom: 10px;
 }
 
 .info-destino p {
-  color: #555;
-  font-size: 14px;
-  line-height: 1.5;
-  margin-bottom: 12px;
+    color: #555;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 12px;
 }
 
 .destaque {
-  background-color: #3498db;
-  color: white;
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 13px;
-  display: inline-block;
-  align-self: flex-start;
+    background-color: #3498db;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    display: inline-block;
+    align-self: flex-start;
 
   
   margin: 0 auto;
@@ -411,7 +490,7 @@ button,
     flex: 1;
     display: flex;
     flex-direction: column;
-    
+
 }
 
 .card-info h3 {
@@ -528,33 +607,29 @@ footer {
 }
 
 .faixa {
-  background-color: #fff;
-  overflow: hidden;
-  white-space: nowrap;
-  position: relative;
-  padding: 5px 0;
-  border-top: 2px solid #f0f0f0;
-  border-bottom: 2px solid #f0f0f0;
+    background-color: #fff;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    padding: 5px 0;
+    border-top: 2px solid #f0f0f0;
+    border-bottom: 2px solid #f0f0f0;
 }
 
 .texto-rolando {
-  display: inline-block;
-  color: red;
-  font-weight: bold;
-  font-size: 14px;
-  animation: rolar 15s linear infinite;
+    display: inline-block;
+    color: red;
+    font-weight: bold;
+    font-size: 14px;
+    animation: rolar 15s linear infinite;
 }
 
 @keyframes rolar {
-  from {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
+    from {
+        transform: translateX(100%);
+    }
 
-
-html {
-  scroll-behavior: smooth;
+    to {
+        transform: translateX(-100%);
+    }
 }
