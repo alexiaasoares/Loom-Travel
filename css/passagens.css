@@ -19,7 +19,7 @@ body {
 
 }
 
-mg {
+img {
     max-width: 100%;
     /* Garante que as imagens nunca "vazem" do seu container */
     display: block;
@@ -194,4 +194,91 @@ header {
 .area-cliente .btn-login:hover {
     background-color: #e0e0e0;
     color: #023975; /* Usando sua cor de link */
+}
+
+main {
+  padding: 2rem;
+}
+
+.category {
+  margin-bottom: 2rem;
+}
+
+h2 {
+  color: #0077cc;
+  margin-bottom: 1rem;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 1rem;
+  width: 300px;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.card p {
+  margin: 0.5rem 0;
+}
+
+.card .price {
+  font-weight: bold;
+  color: #0077cc;
+}
+footer {
+    background-color: #2b2727;
+    color: #f4f4f4;
+    padding: 40px 20px;
+    margin-top: 30px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    /* Espalha as colunas */
+    gap: 20px;
+    flex-wrap: wrap;
+    /* Quebra de linha em telas pequenas */
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.footer-container h4 {
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.footer-container ul {
+    list-style: none;
+}
+
+.footer-container a {
+    color: #f4f4f4;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.footer-copyright {
+    text-align: center;
+    border-top: 1px solid #555;
+    padding-top: 20px;
+    font-size: 0.9em;
+}
+
+.card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
 }
