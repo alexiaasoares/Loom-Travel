@@ -22,7 +22,7 @@
 body {
     font-family: 'poppins';
     line-height: 1.6;
-    background-color: #f9f9f9;
+    background-color: white;
     /* Um cinza bem claro para o fundo */
     color: #060606;
 }
@@ -213,15 +213,6 @@ header {
 /* ▲▲▲ FIM DAS NOVAS REGRAS ▲▲▲ */
 
 
-/* --- 3. SEÇÃO HERO E BARRA DE BUSCA --- */
-.hero {
-    background-color: #082569;
-    /* Um azul-escuro para o banner */
-    color: white;
-    /* Texto branco */
-    padding: 111px 20px 20px;
-    /* O padding-top compensa o header fixo */
-}
 
 /* --- 3. SEÇÃO HERO E BARRA DE BUSCA (ESTILIZADA) --- */
 .hero {
@@ -318,12 +309,6 @@ button,
 }
 
 
-/* --- 4. CARROSSEL DE DESTINOS (O MAIS IMPORTANTE) --- */
-.secao-carrossel {
-    background-color: #e8dddd;
-    /* Fundo levemente cinza para destacar os cards */
-}
-
 /* Esconde os botões de seta por enquanto, já que não temos JS */
 .carrossel-btn {
     display: none;
@@ -400,6 +385,9 @@ button,
   font-size: 13px;
   display: inline-block;
   align-self: flex-start;
+
+  
+  margin: 0 auto;
 }
 
 
@@ -500,10 +488,6 @@ button,
     /* Cada item tenta ter 280px */
 }
 
-.secao-newsletter {
-    background-color: #eef;
-    /* Um azul bem clarinho */
-}
 
 .form-newsletter input[type="email"] {
     padding: 10px;
@@ -580,4 +564,9 @@ footer {
   to {
     transform: translateX(-100%);
   }
+}
+
+
+html {
+  scroll-behavior: smooth;
 }
