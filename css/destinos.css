@@ -442,3 +442,6 @@ footer {
     font-size: 0.9em;
 }
  
+.secao-filtros-avancados h2, label {
+  color: white;
+}
