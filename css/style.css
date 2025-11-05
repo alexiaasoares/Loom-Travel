@@ -633,3 +633,7 @@ footer {
         transform: translateX(-100%);
     }
 }
+
+html {
+  scroll-behavior: smooth;
+}
