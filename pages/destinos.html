@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Destinos | Loom Viagens</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sedgwick+Ave&display=swap%22
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  <link rel="stylesheet" href="destinos.css" />
+</head>
+<body>
+ 
+  <!-- NAV BAR -->
+  <header>
+     <div class="logo">
+        <img src="assets/logoloom.png" alt="Affs cansei" />
+      </div>
+      <nav class="navegacao-principal">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="destinos.html">Destinos</a></li>
+          <li><a href="/promocoes">Promoções</a></li>
+          <li><a href="#sobre">Sobre Nós</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+ 
+ 
+ 
+      <div class="header-utils">
+        <form class="header-search" action="/buscar" method="get" role="search">
+          <input
+            type="search"
+            name="q"
+            placeholder="Pesquisar destinos..."
+            aria-label="Pesquisar destinos"
+          />
+          <button type="submit" aria-label="Buscar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+ 
+        <div class="area-cliente">
+          <a
+            href="/login"
+            class="btn-login"
+            title="Login"
+            aria-label="Página de Login"
+          >
+            <i class="fa-solid fa-user"></i>
+          </a>
+        </div>
+      </div>
+    </header>
+        <div class="faixa">
+        <div class="texto-rolando">
+          SEU TRAJETO EM NOSSAS MÃOS • SEU TRAJETO EM NOSSAS MÃOS • SEU TRAJETO EM NOSSAS MÃOS • SEU TRAJETO EM NOSSAS MÃOS • SEU TRAJETO EM NOSSAS MÃOS • SEU TRAJETO EM NOSSAS MÃOS • SEU TRAJETO EM NOSSAS MÃOS • SEU TRAJETO EM NOSSAS MÃOS • SEU TRAJETO EM NOSSAS MÃOS • SEU TRAJETO EM NOSSAS MÃOS
+        </div>
+      </div>
+  </header>
+ 
+  <!-- FILTROS -->
+  <section class="secao-filtros-avancados">
+  <h2>🔎 Encontre seu pacote ideal</h2>
+  <form class="form-filtros">
+    <div class="grupo-filtro">
+      <label for="origem">Origem:</label>
+      <input type="text" id="origem" placeholder="Ex: São Paulo" />
+    </div>
+ 
+    <div class="grupo-filtro">
+      <label for="destino">Destino:</label>
+      <input type="text" id="destino" placeholder="Ex: Aparecida" />
+    </div>
+ 
+    <div class="grupo-filtro">
+      <label for="dataIda">Ida:</label>
+      <input type="date" id="dataIda" />
+    </div>
+ 
+    <div class="grupo-filtro">
+      <label for="dataVolta">Volta:</label>
+      <input type="date" id="dataVolta" />
+    </div>
+ 
+    <div class="grupo-filtro">
+      <label for="quartos">Quartos:</label>
+      <select id="quartos">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </div>
+  </form>
+  <br>
+  <button type="submit" class="btn-buscar">Buscar</button>
+</section>
+ 
+ 
+  <!-- DESTINOS INTERNACIONAIS -->
+  <section id="destinos" class="secao-destinos">
+    <h2>🌍 Explore nossos destinos</h2>
+    <h3>Internacionais</h3>
+    <br>
+    <div class="container-cards" id="listaDestinos">
+      <div class="card-destino">
+    <!-- Imagem da paisagem -->
+    <img src="assets/disney.png" alt="Paisagem de montanhas" />
+ 
+    <!-- Informações do destino -->
+    <div class="info-destino">
+      <h2>Disney, EUA</h2>
+      <p>Viva a magia com hospedagem temática, ingressos para os parques e benefícios exclusivos. Diversão garantida para todas as idades.</p>
+      <span class="destaque">A partir de R$ 5000</span>
+    </div>
+  </div>
+ 
+ 
+          <div class="card-destino">
+    <!-- Imagem da paisagem -->
+    <img src="assets/paris.png" alt="Paisagem de montanhas" />
+ 
+    <!-- Informações do destino -->
+    <div class="info-destino">
+      <h2>Paris, França</h2>
+      <p>Explore a elegância parisiense com hospedagem charmosa, passeios guiados e experiências gastronômicas inesquecíveis.</p>
+      <span class="destaque">A partir de R$ 899</span>
+    </div>
+  </div>
+ 
+    <div class="card-destino">
+    <!-- Imagem da paisagem -->
+    <img src="assets/peru.png" alt="Paisagem de montanhas" />
+ 
+    <!-- Informações do destino -->
+    <div class="info-destino">
+      <h2>Machu Picchu, Peru</h2>
+      <p>Aventure-se pelos Andes com trilhas guiadas, transporte panorâmico e imersão na cultura inca.
+        Esse pacote oferece uma jornada transformadora em meio às montanhas sagradas do Peru.
+      </p>
+      <span class="destaque">A partir de R$ 899</span>
+    </div>
+  </div>
+ 
+  <div class="card-destino">
+    <!-- Imagem da paisagem -->
+    <img src="assets/disney.png" alt="Paisagem de montanhas" />
+ 
+    <!-- Informações do destino -->
+    <div class="info-destino">
+      <h2>Disney, EUA</h2>
+      <p>Viva a magia com hospedagem temática, ingressos para os parques e benefícios exclusivos. Diversão garantida para todas as idades.</p>
+      <span class="destaque">A partir de R$ 5000</span>
+    </div>
+  </div>
+ 
+ 
+          <div class="card-destino">
+    <!-- Imagem da paisagem -->
+    <img src="assets/paris.png" alt="Paisagem de montanhas" />
+ 
+    <!-- Informações do destino -->
+    <div class="info-destino">
+      <h2>Paris, França</h2>
+      <p>Explore a elegância parisiense com hospedagem charmosa, passeios guiados e experiências gastronômicas inesquecíveis.</p>
+      <span class="destaque">A partir de R$ 899</span>
+    </div>
+  </div>
+ 
+    <div class="card-destino">
+    <!-- Imagem da paisagem -->
+    <img src="assets/peru.png" alt="Paisagem de montanhas" />
+ 
+    <!-- Informações do destino -->
+    <div class="info-destino">
+      <h2>Machu Picchu, Peru</h2>
+      <p>Aventure-se pelos Andes com trilhas guiadas, transporte panorâmico e imersão na cultura inca.
+        Esse pacote oferece uma jornada transformadora em meio às montanhas sagradas do Peru.
+      </p>
+      <span class="destaque">A partir de R$ 899</span>
+    </div>
+  </div>
+  <div class="card-destino">
+    <!-- Imagem da paisagem -->
+    <img src="assets/disney.png" alt="Paisagem de montanhas" />
+ 
+    <!-- Informações do destino -->
+    <div class="info-destino">
+      <h2>Disney, EUA</h2>
+      <p>Viva a magia com hospedagem temática, ingressos para os parques e benefícios exclusivos. Diversão garantida para todas as idades.</p>
+      <span class="destaque">A partir de R$ 5000</span>
+    </div>
+  </div>
+ 
+ 
+          <div class="card-destino">
+    <!-- Imagem da paisagem -->
+    <img src="assets/paris.png" alt="Paisagem de montanhas" />
+ 
+    <!-- Informações do destino -->
+    <div class="info-destino">
+      <h2>Paris, França</h2>
+      <p>Explore a elegância parisiense com hospedagem charmosa, passeios guiados e experiências gastronômicas inesquecíveis.</p>
+      <span class="destaque">A partir de R$ 899</span>
+    </div>
+  </div>
+ 
+    </div>
+      </section>
+ 
+<!--DESTINOS NACIONAIS-->
+<section id="destinos" class="secao-destinos">
+    <h3>Nacionais</h3>
+    <br>
+    <div class="container-cards" id="listaDestinos">
+      <div class="card-destino">
+    <!-- Imagem da paisagem -->
+    <img src="assets/disney.png" alt="Paisagem de montanhas" />
+ 
+    <!-- Informações do destino -->
+    <div class="info-destino">
+      <h2>Disney, EUA</h2>
+      <p>Viva a magia com hospedagem temática, ingressos para os parques e benefícios exclusivos. Diversão garantida para todas as idades.</p>
+      <span class="destaque">A partir de R$ 5000</span>
+    </div>
+  </div>
+ 
+ 
+          <div class="card-destino">
+    <!-- Imagem da paisagem -->
+    <img src="assets/paris.png" alt="Paisagem de montanhas" />
+ 
+    <!-- Informações do destino -->
+    <div class="info-destino">
+      <h2>Paris, França</h2>
+      <p>Explore a elegância parisiense com hospedagem charmosa, passeios guiados e experiências gastronômicas inesquecíveis.</p>
+      <span class="destaque">A partir de R$ 899</span>
+    </div>
+  </div>
+ 
+    <div class="card-destino">
+    <!-- Imagem da paisagem -->
+    <img src="assets/peru.png" alt="Paisagem de montanhas" />
+ 
+    <!-- Informações do destino -->
+    <div class="info-destino">
+      <h2>Machu Picchu, Peru</h2>
+      <p>Aventure-se pelos Andes com trilhas guiadas, transporte panorâmico e imersão na cultura inca.
+        Esse pacote oferece uma jornada transformadora em meio às montanhas sagradas do Peru.
+      </p>
+      <span class="destaque">A partir de R$ 899</span>
+    </div>
+  </div>
+ 
+  <div class="card-destino">
+    <!-- Imagem da paisagem -->
+    <img src="assets/disney.png" alt="Paisagem de montanhas" />
+ 
+    <!-- Informações do destino -->
+    <div class="info-destino">
+      <h2>Disney, EUA</h2>
+      <p>Viva a magia com hospedagem temática, ingressos para os parques e benefícios exclusivos. Diversão garantida para todas as idades.</p>
+      <span class="destaque">A partir de R$ 5000</span>
+    </div>
+  </div>
+ 
+ 
+          <div class="card-destino">
+    <!-- Imagem da paisagem -->
+    <img src="assets/paris.png" alt="Paisagem de montanhas" />
+ 
+    <!-- Informações do destino -->
+    <div class="info-destino">
+      <h2>Paris, França</h2>
+      <p>Explore a elegância parisiense com hospedagem charmosa, passeios guiados e experiências gastronômicas inesquecíveis.</p>
+      <span class="destaque">A partir de R$ 899</span>
+    </div>
+  </div>
+ 
+    <div class="card-destino">
+    <!-- Imagem da paisagem -->
+    <img src="assets/peru.png" alt="Paisagem de montanhas" />
+ 
+    <!-- Informações do destino -->
+    <div class="info-destino">
+      <h2>Machu Picchu, Peru</h2>
+      <p>Aventure-se pelos Andes com trilhas guiadas, transporte panorâmico e imersão na cultura inca.
+        Esse pacote oferece uma jornada transformadora em meio às montanhas sagradas do Peru.
+      </p>
+      <span class="destaque">A partir de R$ 899</span>
+    </div>
+  </div>
+  <div class="card-destino">
+    <!-- Imagem da paisagem -->
+    <img src="assets/disney.png" alt="Paisagem de montanhas" />
+ 
+    <!-- Informações do destino -->
+    <div class="info-destino">
+      <h2>Disney, EUA</h2>
+      <p>Viva a magia com hospedagem temática, ingressos para os parques e benefícios exclusivos. Diversão garantida para todas as idades.</p>
+      <span class="destaque">A partir de R$ 5000</span>
+    </div>
+  </div>
+ 
+ 
+          <div class="card-destino">
+    <!-- Imagem da paisagem -->
+    <img src="assets/paris.png" alt="Paisagem de montanhas" />
+ 
+    <!-- Informações do destino -->
+    <div class="info-destino">
+      <h2>Paris, França</h2>
+      <p>Explore a elegância parisiense com hospedagem charmosa, passeios guiados e experiências gastronômicas inesquecíveis.</p>
+      <span class="destaque">A partir de R$ 899</span>
+    </div>
+  </div>
+ 
+    </div>
+    </section>
+ 
+  <footer>
+    <div class="footer-container">
+      <div>
+        <h4>Institucional</h4>
+        <ul>
+          <li><a href="#">Sobre nós</a></li>
+          <li><a href="#">Termos de uso</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Ajuda</h4>
+        <ul>
+          <li><a href="#">Central de atendimento</a></li>
+          <li><a href="#">Política de privacidade</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      &copy; 2025 Loom Viagens. Todos os direitos reservados.
+    </div>
+  </footer>
+ 
+
+</body>
+</html>
