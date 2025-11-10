@@ -22,9 +22,13 @@
 body {
     font-family: 'poppins';
     line-height: 1.6;
-    background-color: white;
+    background-color: #EFF4FF;
     /* Um cinza bem claro para o fundo */
     color: #060606;
+}
+
+h2 {
+    color: #365db5;
 }
 
 .logo {
@@ -89,11 +93,17 @@ header {
 
 .navegacao-principal ul li a {
     font-weight: bold;
+    font-size: 20px;
+}
+
+img {
+    width: 88.5%;
+    margin: 0 auto;
 }
 
 /* nav bar */
 .navegacao-principal  {
-    margin-right: 200px;
+    margin-right: 100px;
     padding-right: 400px;
 }
 
@@ -409,7 +419,7 @@ button,
 /* Container dos 3 cards */
 .container-cards {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     gap: 25px;
     flex-wrap: wrap;
     max-width: 1600px;
@@ -633,7 +643,22 @@ footer {
     color: red;
     font-weight: bold;
     font-size: 14px;
-    animation: rolar 15s linear infinite;
+    animation: rolar 40s linear infinite;
+}
+
+/* Tútilo das seções */
+.titulos {
+    justify-content: center;
+
+
+}
+
+.paginaInicial {
+    padding: 50px;
+}
+
+.paginaInicial img {
+    border-radius: 11px;
 }
 
 @keyframes rolar {
@@ -649,3 +674,129 @@ footer {
 html {
   scroll-behavior: smooth;
 }
+
+.carrossel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  margin-top: 30px;
+}
+
+.carrossel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 10;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.carrossel-btn.esquerda {
+  left: 10px;
+}
+
+.carrossel-btn.direita {
+  right: 10px;
+}
+
+.carrossel-track {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 20px 10px;
+}
+ 
+.carrossel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  margin: 30px auto; /* Centraliza */
+  max-width: 1600px;  /* Igual ao container-cards */
+  padding: 0 20px;    /* Espaço lateral */
+}
+/* aluguel de carro */
+
+.escrita-carros {
+    text-align: center;
+    color: #365DB5;
+    padding: 15px;
+    
+}
+
+.jeep-carro {
+    border-radius: 25px;
+    height: 300px;
+    width: 420px;
+    margin: 20px;
+
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.fb {
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  margin-top: 0;
+  padding: 0;
+}
+
+.fb h2,
+.fb h3 {
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.oii {
+  margin: 0;
+  padding: 0;
+  background-color: red;
+  border-left: 1px solid black;
+  display: flex;
+  align-items: center;
+}
+
+.jeep-carro {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+
+  border: none;
+}
+
+.ecp {
+  margin: 0;
+  padding: 10px 0 0 10px;
+}
+
+.segunda-escrita {
+  padding-left: 5px;
+}
+
+.fundo {
+  background-color: #365DB5;
+}
+
+.escrita-carros {
+  padding: 10px;
+} 
+
+.fundinho {
+    background-attachment: fixed;
+}
+
