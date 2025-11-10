@@ -19,7 +19,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/passagens.css" />
   </head>
 
   <body>
@@ -29,11 +29,10 @@
       </div>
       <nav class="navegacao-principal">
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="destinos.html">Destinos</a></li>
-          <li><a href="/promocoes">Promoções</a></li>
-          <li><a href="#sobre">Sobre Nós</a></li>
-          <li><a href="#contato">Contato</a></li>
+          <li><a href="">PACOTES</a></li>
+          <li><a href="">ALUGUEL</a></li>
+          <li><a href="">LUGARES</a></li>
+          <li><a href="">PASSAGENS</a></li>
         </ul>
       </nav>
 
@@ -46,7 +45,7 @@
             aria-label="Pesquisar destinos"
           />
           <button type="submit" aria-label="Buscar">
-            <i class="fa-solid fa-magnifying-glass"></i>
+            <img src="/assets/lupa.png" id="lupa" alt="" srcset="">
           </button>
         </form>
 
@@ -57,32 +56,239 @@
             title="Login"
             aria-label="Página de Login"
           >
-            <i class="fa-solid fa-user"></i>
+            <img src="/assets/login.png" alt="" srcset="">
           </a>
         </div>
       </div>
     </header>
 
-      <div class="faixa" style="padding-top: 80px;">
-        <div class="texto-rolando">
-          SEU TRAJETO EM NOSSAS MÃOS • SEU TRAJETO EM NOSSAS MÃOS • SEU TRAJETO EM NOSSAS MÃOS • SEU TRAJETO EM NOSSAS MÃOS • SEU TRAJETO EM NOSSAS MÃOS • SEU TRAJETO EM NOSSAS MÃOS •</div>
+    <main>
+     <!-- ▬▬▬▬▬▬▬▬▬ FAIXA DE AVISO ▬▬▬▬▬▬▬▬▬ -->
+    <div class="faixa">
+      <span class="texto-rolando">
+        🌎 Promoções imperdíveis em passagens aéreas, rodoviárias e marítimas!
+        Reserve já sua viagem! ✈️🚌🚢
+      </span>
+    </div>
+
+    <!-- ▬▬▬▬▬▬▬▬▬ HERO ▬▬▬▬▬▬▬▬▬ -->
+     <section class="hero">
+        <div class="hero-content">
+          <h2>Encontre sua próxima aventura</h2>
+          <p>Busque as melhores passagens, para seu destino dos sonhos!</p>
+
+          <form class="busca-pacotes">
+            <div class="form-group">
+              <label for="destino">Destino</label>
+              <input
+                type="text"
+                id="destino"
+                placeholder="Para onde você quer ir?"
+              />
+            </div>
+            <div class="form-group">
+              <label for="data-ida">Ida</label>
+              <input type="date" id="data-ida" />
+            </div>
+            <div class="form-group">
+              <label for="data-volta">Volta</label>
+              <input type="date" id="data-volta" />
+            </div>
+            <button type="submit" class="btn-buscar">Buscar Passagens</button>
+          </form>
+        </div>
+      </section>
+
+    <!-- ▬▬▬▬▬▬▬▬▬ SEÇÃO DE PASSAGENS ▬▬▬▬▬▬▬▬▬ -->
+    <section id="passagens">
+  <h2>Sugestões de Passagens Aéreas</h2>
+
+  <div class="container-cards tickets">
+
+    <!-- ✈️ PASSAGENS AÉREAS -->
+    <div class="ticket">
+      <div class="ticket-header">
+        <i class="fa-solid fa-plane-departure"></i>
+        <h3>Passagem Aérea</h3>
       </div>
+      <div class="ticket-body">
+        <div class="ticket-info">
+          <p><strong>Origem:</strong> São Paulo (GRU)</p>
+          <p><strong>Destino:</strong> Salvador (SSA)</p>
+          <p><strong>Data:</strong> 15/12/2025</p>
+        </div>
+        <div class="ticket-price">
+          <span>R$499,90</span>
+          <button class="btn-comprar">Comprar</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="ticket">
+      <div class="ticket-header">
+        <i class="fa-solid fa-plane"></i>
+        <h3>Passagem Aérea</h3>
+      </div>
+      <div class="ticket-body">
+        <div class="ticket-info">
+          <p><strong>Origem:</strong> Rio de Janeiro (GIG)</p>
+          <p><strong>Destino:</strong> Fortaleza (FOR)</p>
+          <p><strong>Data:</strong> 20/12/2025</p>
+        </div>
+        <div class="ticket-price">
+          <span>R$569,90</span>
+          <button class="btn-comprar">Comprar</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="ticket">
+      <div class="ticket-header">
+        <i class="fa-solid fa-plane-arrival"></i>
+        <h3>Passagem Aérea</h3>
+      </div>
+      <div class="ticket-body">
+        <div class="ticket-info">
+          <p><strong>Origem:</strong> Brasília (BSB)</p>
+          <p><strong>Destino:</strong> Recife (REC)</p>
+          <p><strong>Data:</strong> 05/01/2026</p>
+        </div>
+        <div class="ticket-price">
+          <span>R$459,90</span>
+          <button class="btn-comprar">Comprar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- 🚌 PASSAGENS DE ÔNIBUS -->
+    <section id="passagens">
+  <h2>Sugestões de Passagens de Ônibus</h2>
 
 
+     <div class="container-cards tickets">
+    <div class="ticket">
+      <div class="ticket-header bus">
+        <i class="fa-solid fa-bus"></i>
+        <h3>Passagem de Ônibus</h3>
+      </div>
+      <div class="ticket-body">
+        <div class="ticket-info">
+          <p><strong>Origem:</strong> Rio de Janeiro (RJ)</p>
+          <p><strong>Destino:</strong> Belo Horizonte (MG)</p>
+          <p><strong>Data:</strong> 10/12/2025</p>
+        </div>
+        <div class="ticket-price">
+          <span>R$149,90</span>
+          <button class="btn-comprar">Comprar</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="ticket">
+      <div class="ticket-header bus">
+        <i class="fa-solid fa-bus-simple"></i>
+        <h3>Passagem de Ônibus</h3>
+      </div>
+      <div class="ticket-body">
+        <div class="ticket-info">
+          <p><strong>Origem:</strong> Curitiba (PR)</p>
+          <p><strong>Destino:</strong> Florianópolis (SC)</p>
+          <p><strong>Data:</strong> 08/12/2025</p>
+        </div>
+        <div class="ticket-price">
+          <span>R$129,90</span>
+          <button class="btn-comprar">Comprar</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="ticket">
+      <div class="ticket-header bus">
+        <i class="fa-solid fa-bus"></i>
+        <h3>Passagem de Ônibus</h3>
+      </div>
+      <div class="ticket-body">
+        <div class="ticket-info">
+          <p><strong>Origem:</strong> São Paulo (SP)</p>
+          <p><strong>Destino:</strong> Campinas (SP)</p>
+          <p><strong>Data:</strong> 25/11/2025</p>
+        </div>
+        <div class="ticket-price">
+          <span>R$59,90</span>
+          <button class="btn-comprar">Comprar</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+    <!-- 🚢 PASSAGENS MARÍTIMAS -->
+
+     <section id="passagens">
+  <h2>Sugestões de Passagens Marítimas</h2>
+
+
+    <div class="container-cards tickets">
+    <div class="ticket">
+      <div class="ticket-header ship">
+        <i class="fa-solid fa-ship"></i>
+        <h3>Passagem Marítima</h3>
+      </div>
+      <div class="ticket-body">
+        <div class="ticket-info">
+          <p><strong>Origem:</strong> Santos (SP)</p>
+          <p><strong>Destino:</strong> Ilha Bela (SP)</p>
+          <p><strong>Data:</strong> 22/12/2025</p>
+        </div>
+        <div class="ticket-price">
+          <span>R$899,90</span>
+          <button class="btn-comprar">Comprar</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="ticket">
+      <div class="ticket-header ship">
+        <i class="fa-solid fa-anchor"></i>
+        <h3>Passagem Marítima</h3>
+      </div>
+      <div class="ticket-body">
+        <div class="ticket-info">
+          <p><strong>Origem:</strong> Rio de Janeiro (RJ)</p>
+          <p><strong>Destino:</strong> Búzios (RJ)</p>
+          <p><strong>Data:</strong> 29/12/2025</p>
+        </div>
+        <div class="ticket-price">
+          <span>R$749,90</span>
+          <button class="btn-comprar">Comprar</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="ticket">
+      <div class="ticket-header ship">
+        <i class="fa-solid fa-ship"></i>
+        <h3>Passagem Marítima</h3>
+      </div>
+      <div class="ticket-body">
+        <div class="ticket-info">
+          <p><strong>Origem:</strong> Fortaleza (CE)</p>
+          <p><strong>Destino:</strong> Natal (RN)</p>
+          <p><strong>Data:</strong> 03/01/2026</p>
+        </div>
+        <div class="ticket-price">
+          <span>R$679,90</span>
+          <button class="btn-comprar">Comprar</button>
+        </div>
+      </div>
+    </div>
+  </div>
   
+</section>
 
+    </main>
 
-
-
-
-
-
-
-
-
-
-
-  <footer>
+     <footer>
     <div id="contato" class="footer-container">
       <div>
         <h4>Institucional</h4>
@@ -104,7 +310,7 @@
     </div>
   </footer>
 
-  <script src="/Javascript/passagens.js"></script>
+    <script src="script.js"></script>
 
   </body>
 </html>
