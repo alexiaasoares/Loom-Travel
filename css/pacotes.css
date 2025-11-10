@@ -314,22 +314,22 @@ button,
     gap: 8px;
 }
 .form-section > label,
-.origins-destinations {
+.origins-destinations > label {
     font-size: 11px;
     font-weight: bold;
-    color: #555;
     margin-bottom: 5px;
 }
 .origins-destinations {
     display: flex;
-    gap: 15px;
+    gap: 173px;
 }
 .origins-destinations label {
-    font-weight: normal;
+    font-weight: bold;
     display: flex;
     align-items: center;
     gap: 4px;
 }
+
 .input-group {
     display: flex;
     gap: 10px;
@@ -404,26 +404,9 @@ button,
     width: 14px;
     height: 14px;
 }
-.hero {
-    background-image: linear-gradient(to right, rgba(58, 91, 158, 0.95), rgba(74, 105, 184, 0.8)), url('https://images.unsplash.com/photo-1519677100203-a0e668c9c140?w=1200&h=300&fit=crop');
-    background-size: cover;
-    background-position: center;
+.banner {
+    width: 100%;
     border-radius: 10px;
-    padding: 50px;
-    text-align: center;
-    color: white;
-    margin-bottom: 25px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 0 0 50% 50% / 30px;
-}
-.hero h1 {
-    font-size: 36px;
-    font-weight: 300;
-}
-.hero h1 strong {
-    font-weight: 900;
-    color: #E63946;
 }
 .promotions {
     position: relative;
