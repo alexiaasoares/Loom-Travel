@@ -27,6 +27,10 @@ body {
     color: #060606;
 }
 
+h2 {
+    color: #365db5;
+}
+
 .logo {
     width: 199px;
     height: auto;
@@ -77,7 +81,7 @@ header {
     width: 100%;
 
     /* Fundo de imagem do mundo na navba */
-    background-image: url('/Loom-Travel/assets/navbar.png');
+    background-image: url('/assets/navbar.png');
     background-size: cover;
     background-position: center;
 }
@@ -89,11 +93,17 @@ header {
 
 .navegacao-principal ul li a {
     font-weight: bold;
+    font-size: 20px;
+}
+
+img {
+    width: 88.5%;
+    margin: 0 auto;
 }
 
 /* nav bar */
 .navegacao-principal  {
-    margin-right: 200px;
+    margin-right: 100px;
     padding-right: 400px;
 }
 
@@ -409,7 +419,7 @@ button,
 /* Container dos 3 cards */
 .container-cards {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     gap: 25px;
     flex-wrap: wrap;
     max-width: 1600px;
@@ -638,7 +648,17 @@ footer {
 
 /* Tútilo das seções */
 .titulos {
-    justify-content: left;
+    justify-content: center;
+
+
+}
+
+.paginaInicial {
+    padding: 50px;
+}
+
+.paginaInicial img {
+    border-radius: 11px;
 }
 
 @keyframes rolar {
@@ -653,4 +673,52 @@ footer {
 
 html {
   scroll-behavior: smooth;
+}
+
+.carrossel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  margin-top: 30px;
+}
+
+.carrossel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 10;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.carrossel-btn.esquerda {
+  left: 10px;
+}
+
+.carrossel-btn.direita {
+  right: 10px;
+}
+
+.carrossel-track {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 20px 10px;
+}
+ 
+.carrossel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  margin: 30px auto; /* Centraliza */
+  max-width: 1600px;  /* Igual ao container-cards */
+  padding: 0 20px;    /* Espaço lateral */
 }

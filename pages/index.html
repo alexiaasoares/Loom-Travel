@@ -14,13 +14,14 @@
     href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sedgwick+Ave&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-  <link rel="stylesheet" href="/Loom-Travel/css/style.css" />
+  <link rel="stylesheet" href="/css/style.css" />
 </head>
 
 <body>
+
   <header>
     <div class="logo">
-      <img src="/Loom-Travel/assets/logoloom.png" alt="Logo Loom" />
+      <img src="/assets/logoloom.png" alt="Logo Loom" />
     </div>
     <nav class="navegacao-principal">
       <ul>
@@ -35,67 +36,86 @@
       <form class="header-search" action="/buscar" method="get" role="search">
         <input type="search" name="q" placeholder="Pesquisar destinos..." aria-label="Pesquisar destinos" />
         <button type="submit" aria-label="Buscar">
-          <img src="/Loom-Travel/assets/lupa.png" id="lupa" alt="" srcset="">
+          <img src="/assets/lupa.png" id="lupa" alt="" srcset="">
         </button>
       </form>
 
       <div class="area-cliente">
         <a href="login.html" class="btn-login" title="Login" aria-label="Página de Login">
-          <img class="login-img" src="/Loom-Travel/assets/login.png" alt="" srcset="">
+          <img class="login-img" src="/assets/login.png" alt="" srcset="">
         </a>
       </div>
     </div>
   </header>
 
-<main>
- 
+  <main>
+
     <section id="destinos-procurados" class="secao-carrossel"></section>
-      <h2 class="titulos"> Mais Procurados </h2>
-      <div class="container-cards">
-        <div class="card-destino">
-          <!-- Imagem da paisagem -->
-          <img src="/Loom-Travel/assets/disney.png" alt="DISNEYLAND" />
- 
-          <!-- Informações do destino -->
-          <div class="info-destino">
-            <h2>Disney, EUA</h2>
-            <p>Viva a magia com hospedagem temática, ingressos para os parques e benefícios exclusivos. Diversão
-              garantida para todas as idades.</p>
-            <span class="destaque">A partir de R$ 5000</span>
-          </div>
-        </div>
- 
- 
-        <div class="card-destino">
-          <!-- Imagem da paisagem -->
-          <img src="/assets/paris.png" alt="Paisagem da Torre Eifel" />
- 
-          <!-- Informações do destino -->
-          <div class="info-destino">
-            <h2>Paris, França</h2>
-            <p>Explore a elegância parisiense com hospedagem charmosa, passeios guiados e experiências gastronômicas
-              inesquecíveis.</p>
-            <span class="destaque">A partir de R$ 899</span>
-          </div>
-        </div>
- 
-        <div class="card-destino">
-          <!-- Imagem da paisagem -->
-          <img src="/assets/peru.png" alt="Paisagem das montanhas" />
- 
-          <!-- Informações do destino -->
-          <div class="info-destino">
-            <h2>Machu Picchu, Peru</h2>
-            <p>Aventure-se pelos Andes com trilhas guiadas, transporte panorâmico e imersão na cultura inca.
-              Esse pacote oferece uma jornada transformadora em meio às montanhas sagradas do Peru.
-            </p>
-            <span class="destaque">A partir de R$ 899</span>
-          </div>
-        </div>
+
+    <section class="paginaInicial">
+      <img src="/assets/banner.png" class="banner" alt="">
+      <br>
+   
+<h2 class="titulos"> Mais Procurados </h2>
+
+<div class="carrossel-container">
+  <button class="carrossel-btn esquerda" aria-label="Ver anterior">&#10094;</button>
+
+  <div class="carrossel-track" id="carrosselTrack">
+    <div class="card-destino">
+      <img src="/assets/disney.png" alt="Disney" />
+      <div class="info-destino">
+        <h2>DISNEY</h2>
+        <p>FAÇA UMA VIAGEM DOS SONHOS PARA O MUNDO ENCANTADO COM A LoM</p>
+        <a href="#" class="btn-ver-pacote">VER MAIS</a>
       </div>
- 
+    </div>
+
+    <div class="card-destino">
+      <img src="/assets/paris.png" alt="Paris" />
+      <div class="info-destino">
+        <h2>PARIS</h2>
+        <p>VIAJE PARA A CIDADE MAIS ROMÂNTICA DO MUNDO COM A LoM</p>
+        <a href="#" class="btn-ver-pacote">VER MAIS</a>
+      </div>
+    </div>
+
+    <div class="card-destino">
+      <img src="/assets/peru.png" alt="Machu Picchu" />
+      <div class="info-destino">
+        <h2>MACHU PICCHU</h2>
+        <p>CONHEÇA UMA DAS MARAVILHAS DO MUNDO COM A LoM</p>
+        <a href="#" class="btn-ver-pacote">VER MAIS</a>
+      </div>
+    </div>
+
+    <div class="card-destino">
+      <img src="/assets/gramado.png" alt="Gramado" />
+      <div class="info-destino">
+        <h2>GRAMADO</h2>
+        <p>CONHEÇA UM DOS DESTINOS MAIS FAMOSOS DO LUGAR</p>
+        <a href="#" class="btn-ver-pacote">VER MAIS</a>
+      </div>
+    </div>
+
+    <div class="card-destino">
+      <img src="/assets/nordeste.png" alt="Nordeste" />
+      <div class="info-destino">
+        <h2>NORDESTE</h2>
+        <p>SE ENCANTE COM AS PRAIAS DO NORDESTE</p>
+        <a href="#" class="btn-ver-pacote">VER MAIS</a>
+      </div>
+    </div>
+  </div>
+
+  <button class="carrossel-btn direita" aria-label="Ver próximo">&#10095;</button>
+</div>
+
+
+    </section>
+
   </main>
- 
+
   <footer>
     <div id="contato" class="footer-container">
       <div>
@@ -117,9 +137,9 @@
       &copy; 2025 Loom Viagens. Todos os direitos reservados. teste
     </div>
   </footer>
- 
+
   <script src="script.js"></script>
- 
+
 </body>
- 
+
 </html>
