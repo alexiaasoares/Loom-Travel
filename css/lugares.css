@@ -14,6 +14,10 @@
     /* Faz o padding não alterar o tamanho final dos elementos teste */ 
 }
 
+.muquinha {
+  color: red;
+}
+
 body {
     font-family: 'poppins';
     line-height: 1.6;
