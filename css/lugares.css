@@ -8,15 +8,23 @@
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Faz o padding não alterar o tamanho final dos elementos */
 }
 
 body {
-  background-color: var(--fundo-claro);
-  color: #333;
+    font-family: 'poppins';
+    line-height: 1.6;
+    background-color: white;
+    /* Um cinza bem claro para o fundo */
+    color: #060606;
+}
+.logo {
+    width: 199px;
+    height: auto;
+
 }
 
 /* Cabeçalho */
