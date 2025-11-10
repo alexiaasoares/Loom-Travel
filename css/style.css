@@ -722,3 +722,81 @@ html {
   max-width: 1600px;  /* Igual ao container-cards */
   padding: 0 20px;    /* Espaço lateral */
 }
+/* aluguel de carro */
+
+.escrita-carros {
+    text-align: center;
+    color: #365DB5;
+    padding: 15px;
+    
+}
+
+.jeep-carro {
+    border-radius: 25px;
+    height: 300px;
+    width: 420px;
+    margin: 20px;
+
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.fb {
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  margin-top: 0;
+  padding: 0;
+}
+
+.fb h2,
+.fb h3 {
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.oii {
+  margin: 0;
+  padding: 0;
+  background-color: red;
+  border-left: 1px solid black;
+  display: flex;
+  align-items: center;
+}
+
+.jeep-carro {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+
+  border: none;
+}
+
+.ecp {
+  margin: 0;
+  padding: 10px 0 0 10px;
+}
+
+.segunda-escrita {
+  padding-left: 5px;
+}
+
+.fundo {
+  background-color: #365DB5;
+}
+
+.escrita-carros {
+  padding: 10px;
+} 
+
+.fundinho {
+    background-attachment: fixed;
+}
+
