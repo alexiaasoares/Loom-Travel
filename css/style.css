@@ -22,7 +22,7 @@
 body {
     font-family: 'poppins';
     line-height: 1.6;
-    background-color: white;
+    background-color: #EFF4FF;
     /* Um cinza bem claro para o fundo */
     color: #060606;
 }
@@ -77,7 +77,7 @@ header {
     width: 100%;
 
     /* Fundo de imagem do mundo na navba */
-    background-image: url('/assets/navbar.png');
+    background-image: url('/Loom-Travel/assets/navbar.png');
     background-size: cover;
     background-position: center;
 }
@@ -633,7 +633,12 @@ footer {
     color: red;
     font-weight: bold;
     font-size: 14px;
-    animation: rolar 15s linear infinite;
+    animation: rolar 40s linear infinite;
+}
+
+/* Tútilo das seções */
+.titulos {
+    justify-content: left;
 }
 
 @keyframes rolar {
