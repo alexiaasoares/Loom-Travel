@@ -29,11 +29,13 @@ header {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
+
 .logo {
-  font-size: 2rem;
-  font-weight: bold;
-  color: var(--cor-destaque);
+    width: 199px;
+    height: auto;
 }
+
+
 
 .logo span {
   color: var(--cor-principal);
@@ -323,3 +325,52 @@ footer {
   color: white;
   margin-top: 30px;
 }
+
+/* Incluir no pacote */
+
+.container {
+    background-color: #f0f5ff; 
+    border: 3px solid #2a6be7; /* Borda */
+    border-radius: 15px;
+    padding: 20px;
+    margin: 0 auto;
+  
+}
+
+.container h2 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 20px;
+    
+}
+
+
+.options-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.option-btn {
+    background-color: #3a5bc7; /* Azul médio */
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.option-btn:hover {
+    background-color: #2a4aa5; /* Azul mais escuro ao passar o mouse */
+}
+
+/* Botão final e sobre nós */
+
+
+   
