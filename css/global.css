@@ -1,0 +1,839 @@
+/* 
+   🌐 Loom Viagens — global.css
+   ✅ Unificado | ✅ Responsivo | ✅ Acessível | ✅ Reutilizável
+   🎨 Paleta: azul (#365DB5), vermelho (#F12B23), branco, azul-claro (#EFF4FF)
+   📱 Mobile-first + desktop enhancements
+*/
+
+/* ─────────────────────────────────────────────────────── */
+/* 1. VARIÁVEIS GLOBAIS */
+/* ─────────────────────────────────────────────────────── */
+:root {
+  /* Cores principais */
+  --cor-principal-azul: #365DB5;
+  --cor-detalhes-vermelho: #F12B23;
+  --cor-secundaria-branco: #FFFFFF;
+  --cor-fundo-azul-claro: #EFF4FF;
+  --cor-texto: #060606;
+  --cor-texto-secundario: #555;
+  --cor-link: #023975;
+  --cor-hover: #bb0303;
+  --cor-preco-promo: #249a3f;
+  --cor-preco-antigo: #888;
+  --cor-sombra: rgba(0, 0, 0, 0.1);
+  --cor-sombra-forte: rgba(0, 0, 0, 0.15);
+
+  /* Fontes */
+  --fonte-principal: 'Poppins', sans-serif;
+  --fonte-titulos: 'Playfair Display', serif;
+  --fonte-input: 'Lato', sans-serif;
+
+  /* Espaçamentos */
+  --espaco-xs: 5px;
+  --espaco-sm: 10px;
+  --espaco-md: 20px;
+  --espaco-lg: 40px;
+  --espaco-xl: 60px;
+
+  /* Bordas e sombras */
+  --borda-radius-sm: 5px;
+  --borda-radius-md: 8px;
+  --borda-radius-lg: 12px;
+  --borda-radius-full: 50%;
+  --sombra-card: 0 6px 20px var(--cor-sombra);
+  --sombra-card-leve: 0 4px 8px var(--cor-sombra);
+
+  /* Transições */
+  --transicao-padrao: 0.3s ease;
+  --transicao-rapida: 0.2s ease;
+}
+
+/* ─────────────────────────────────────────────────────── */
+/* 2. RESET E CONFIGURAÇÕES BASE */
+/* ─────────────────────────────────────────────────────── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--fonte-principal);
+  line-height: 1.6;
+  color: var(--cor-texto);
+  background-color: var(--cor-secundaria-branco);
+  overflow-x: hidden; /* evita scroll horizontal acidental */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: var(--cor-link);
+  transition: color var(--transicao-padrao);
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select {
+  font-family: inherit;
+}
+
+/* ─────────────────────────────────────────────────────── */
+/* 3. LAYOUT GERAL */
+/* ─────────────────────────────────────────────────────── */
+.main-container {
+  padding-top: 100px; /* compensa header fixo */
+  min-height: calc(100vh - 100px);
+}
+
+/* Seções comuns */
+section {
+  padding: var(--espaco-lg) var(--espaco-md);
+  text-align: center;
+}
+
+section h2,
+section h3 {
+  margin-bottom: var(--espaco-md);
+  color: var(--cor-texto);
+}
+
+section h2 {
+  font-family: var(--fonte-titulos);
+  font-size: 2rem;
+}
+
+section h3 {
+  font-size: 1.5rem;
+  margin-top: var(--espaco-lg);
+}
+
+/* ─────────────────────────────────────────────────────── */
+/* 4. CABEÇALHO (HEADER) — FIXO EM TODAS AS PÁGINAS */
+/* ─────────────────────────────────────────────────────── */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--espaco-sm) var(--espaco-md);
+  background-color: var(--cor-secundaria-branco);
+  border-bottom: 2px solid #eee;
+  background-image: url('/assets/navbar.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.logo {
+  width: 199px;
+  height: auto;
+}
+
+/* Navegação principal */
+.navegacao-principal ul {
+  display: flex;
+  gap: var(--espaco-md);
+}
+
+.navegacao-principal a {
+  font-weight: bold;
+  color: var(--cor-link);
+  position: relative;
+  padding-bottom: 5px;
+  overflow: hidden;
+}
+
+.navegacao-principal a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--cor-detalhes-vermelho);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transicao-padrao);
+}
+
+.navegacao-principal a:hover,
+.navegacao-principal a:focus {
+  color: var(--cor-hover);
+}
+
+.navegacao-principal a:hover::after,
+.navegacao-principal a:focus::after {
+  transform: scaleX(1);
+}
+
+/* Área de utilitários (busca + login) */
+.header-utils {
+  display: flex;
+  align-items: center;
+  gap: var(--espaco-md);
+}
+
+/* Barra de busca */
+.header-search {
+  display: flex;
+  align-items: center;
+  background-color: #f7f7f7;
+  border-radius: 25px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  width: 300px;
+  transition: width var(--transicao-padrao);
+}
+
+.header-search:focus-within {
+  width: 360px;
+}
+
+.header-search input[type="search"] {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: var(--espaco-sm) var(--espaco-md);
+  font-family: var(--fonte-input);
+  font-size: 0.95rem;
+  background: transparent;
+}
+
+.header-search input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+.header-search button {
+  background: transparent;
+  border: none;
+  padding: var(--espaco-sm) var(--espaco-md);
+  color: #555;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-search button:hover,
+.header-search button:focus {
+  color: var(--cor-link);
+}
+
+/* Ícone de login/perfil */
+.area-cliente .btn-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--borda-radius-full);
+  background-color: #f0f0f0;
+  color: #333;
+  font-size: 1.2rem;
+  transition: background-color var(--transicao-rapida), color var(--transicao-rapida);
+}
+
+.area-cliente .btn-login:hover,
+.area-cliente .btn-login:focus {
+  background-color: #e0e0e0;
+  color: var(--cor-link);
+}
+
+/* ─────────────────────────────────────────────────────── */
+/* 5. FAIXA MARQUEE (SLOGAN) */
+/* ─────────────────────────────────────────────────────── */
+.faixa {
+  background-color: var(--cor-secundaria-branco);
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  padding: 5px 0;
+  border-top: 2px solid #f0f0f0;
+  border-bottom: 2px solid #f0f0f0;
+  margin-top: 100px; /* compensa header fixo */
+}
+
+.texto-rolando {
+  display: inline-block;
+  color: var(--cor-detalhes-vermelho);
+  font-weight: bold;
+  font-size: 14px;
+  font-family: var(--fonte-principal);
+  animation: rolar 15s linear infinite;
+}
+
+@keyframes rolar {
+  from { transform: translateX(100%); }
+  to { transform: translateX(-100%); }
+}
+
+/* ─────────────────────────────────────────────────────── */
+/* 6. COMPONENTES REUTILIZÁVEIS */
+/* ─────────────────────────────────────────────────────── */
+
+/* Botões */
+.btn {
+  padding: var(--espaco-sm) var(--espaco-md);
+  border: none;
+  border-radius: var(--borda-radius-sm);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color var(--transicao-rapida);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary {
+  background-color: var(--cor-detalhes-vermelho);
+  color: white;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #d12017;
+}
+
+.btn-secondary {
+  background-color: var(--cor-principal-azul);
+  color: white;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background-color: #2a4a8f;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--cor-principal-azul);
+  color: var(--cor-principal-azul);
+}
+
+/* Formulários */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--espaco-xs);
+  width: 100%;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: bold;
+  font-family: var(--fonte-input);
+  color: var(--cor-texto);
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: var(--espaco-sm);
+  border: 1px solid #ccc;
+  border-radius: var(--borda-radius-sm);
+  font-family: var(--fonte-input);
+  font-size: 1rem;
+}
+
+/* ─────────────────────────────────────────────────────── */
+/* 7. CARDS (DESTINOS, SERVIÇOS, ETC.) */
+/* ─────────────────────────────────────────────────────── */
+.card {
+  background: var(--cor-secundaria-branco);
+  border-radius: var(--borda-radius-lg);
+  box-shadow: var(--sombra-card);
+  overflow: hidden;
+  transition: transform var(--transicao-padrao), box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--sombra-card-leve), 0 10px 25px var(--cor-sombra-forte);
+}
+
+/* Card horizontal (imagem à esquerda) */
+.card--horizontal {
+  display: flex;
+  width: 100%;
+  max-width: 380px;
+}
+
+.card--horizontal img {
+  width: 40%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card--horizontal .card__content {
+  width: 60%;
+  padding: var(--espaco-md);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card__content h2,
+.card__content h3 {
+  margin-bottom: var(--espaco-xs);
+  color: var(--cor-texto);
+}
+
+.card__content p {
+  font-size: 0.9rem;
+  color: var(--cor-texto-secundario);
+  margin-bottom: var(--espaco-sm);
+  line-height: 1.5;
+}
+
+.card__badge {
+  display: inline-block;
+  background-color: var(--cor-principal-azul);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  margin-top: auto;
+}
+
+/* Card vertical (imagem acima, conteúdo abaixo) */
+.card--vertical {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 300px;
+}
+
+.card--vertical img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card--vertical .card__content {
+  padding: var(--espaco-md);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card__content .preco-novo {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--cor-preco-promo);
+  display: block;
+  margin: var(--espaco-xs) 0;
+}
+
+.card__content .preco-antigo {
+  font-size: 0.9rem;
+  color: var(--cor-preco-antigo);
+  text-decoration: line-through;
+  display: block;
+  margin-bottom: var(--espaco-xs);
+}
+
+.btn--card {
+  width: 100%;
+  margin-top: auto;
+  text-align: center;
+  background-color: var(--cor-principal-azul);
+  color: white;
+  padding: var(--espaco-sm);
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+/* Grid de cards */
+.grid-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--espaco-md);
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* ─────────────────────────────────────────────────────── */
+/* 8. CARROSSEL (COM SETAS — PRONTO PARA JS OU CSS PURO) */
+/* ─────────────────────────────────────────────────────── */
+.carousel {
+  position: relative;
+  margin: var(--espaco-lg) auto;
+  max-width: 1600px;
+  padding: 0 var(--espaco-md);
+}
+
+.carousel__track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: var(--espaco-md);
+  padding: var(--espaco-md) 0;
+  scrollbar-width: thin;
+  scrollbar-color: #ccc #f4f4f4;
+}
+
+.carousel__track::-webkit-scrollbar {
+  height: 6px;
+}
+
+.carousel__track::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
+
+.carousel__track > * {
+  scroll-snap-align: start;
+  flex: 0 0 300px;
+}
+
+/* Botões de navegação (estilo oculto por padrão — ative com JS ou hover se quiser) */
+.carousel__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  font-size: 1.2rem;
+  color: var(--cor-texto);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity var(--transicao-padrao), background var(--transicao-rapida);
+  z-index: 10;
+}
+
+.carousel:hover .carousel__btn {
+  opacity: 1;
+}
+
+.carousel__btn:hover {
+  background: white;
+}
+
+.carousel__btn--prev { left: 10px; }
+.carousel__btn--next { right: 10px; }
+
+/* Para telas pequenas, deixar o carrossel mais responsivo */
+@media (max-width: 768px) {
+  .carousel__track > * {
+    flex: 0 0 calc(100% - 40px);
+  }
+}
+
+/* ─────────────────────────────────────────────────────── */
+/* 9. PÁGINAS ESPECÍFICAS (login/cadastro) */
+/* ─────────────────────────────────────────────────────── */
+.page-auth {
+  display: flex;
+  min-height: 100vh;
+}
+
+.page-auth .imagem,
+.page-auth .formulario {
+  flex: 1;
+  padding: var(--espaco-lg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-auth .imagem img {
+  max-width: 100%;
+  max-height: 80vh;
+}
+
+.page-auth .formulario {
+  background-color: var(--cor-fundo-azul-claro);
+}
+
+.page-auth .logo {
+  width: 180px;
+  margin-bottom: var(--espaco-md);
+}
+
+.page-auth h2 {
+  margin-bottom: var(--espaco-lg);
+  font-family: var(--fonte-titulos);
+}
+
+.page-auth form {
+  width: 100%;
+  max-width: 400px;
+}
+
+.page-auth .input-senha {
+  position: relative;
+  width: 100%;
+  margin-bottom: var(--espaco-md);
+}
+
+.page-auth .input-senha input {
+  width: 100%;
+  padding: var(--espaco-sm) var(--espaco-md);
+  border: 1px solid #ccc;
+  border-radius: var(--borda-radius-sm);
+  font-family: var(--fonte-input);
+}
+
+.page-auth .input-senha .icone {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #555;
+}
+
+.page-auth .ou {
+  text-align: center;
+  margin: var(--espaco-md) 0;
+  position: relative;
+  color: #777;
+}
+
+.page-auth .ou::before,
+.page-auth .ou::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background: #ccc;
+}
+
+.page-auth .ou::before { left: 0; }
+.page-auth .ou::after { right: 0; }
+
+.page-auth .btn-social {
+  width: 100%;
+  padding: var(--espaco-sm);
+  margin-bottom: var(--espaco-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--espaco-sm);
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: var(--borda-radius-sm);
+}
+
+.page-auth .btn-social img {
+  height: 20px;
+}
+
+.page-auth .footer {
+  margin-top: auto;
+  text-align: center;
+  color: var(--cor-texto);
+  font-size: 0.9rem;
+}
+
+.page-auth .footer span {
+  color: var(--cor-detalhes-vermelho);
+  font-weight: bold;
+}
+
+
+/* 
+   🌐 Página Home — home.css
+   ✅ Baseado no global.css | ✅ Responsivo | ✅ Acessível
+   📱 Mobile-first
+*/
+
+/* ─────────────────────────────────────────────────────── */
+/* 1. Estilos específicos da Home */
+/* ─────────────────────────────────────────────────────── */
+
+.ALoom {
+  text-align: center;
+}
+
+.ALoom img {
+  max-width: 300px;
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* ─────────────────────────────────────────────────────── */
+/* 2. Container de Cards (6 ícones em grade) */
+/* ─────────────────────────────────────────────────────── */
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--espaco-md);
+  max-width: 900px;
+  margin: var(--espaco-xl) auto var(--espaco-lg);
+  padding: 0 var(--espaco-md);
+}
+
+.card-link {
+  display: block;
+  background: var(--cor-secundaria-branco);
+  border-radius: var(--borda-radius-md);
+  box-shadow: var(--sombra-card-leve);
+  overflow: hidden;
+  transition: transform var(--transicao-padrao), box-shadow var(--transicao-padrao);
+  aspect-ratio: 1 / 1;
+  position: relative;
+}
+
+.card-link:hover,
+.card-link:focus {
+  transform: translateY(-6px);
+  box-shadow: var(--sombra-card);
+  outline: 2px solid var(--cor-detalhes-vermelho);
+}
+
+.card-link img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity var(--transicao-rapida);
+}
+
+.card-link:hover img,
+.card-link:focus img {
+  opacity: 0.9;
+}
+
+/* Garantir acessibilidade visual para foco */
+.card-link:focus-visible {
+  outline: 3px solid var(--cor-detalhes-vermelho);
+  outline-offset: 4px;
+}
+
+/* ─────────────────────────────────────────────────────── */
+/* 3. Responsividade dos Cards */
+/* ─────────────────────────────────────────────────────── */
+
+
+/* ─────────────────────────────────────────────────────── */
+/* 10. RODAPÉ (FOOTER) */
+/* ─────────────────────────────────────────────────────── */
+footer {
+  background-color: #2b2727;
+  color: #f4f4f4;
+  padding: var(--espaco-lg) var(--espaco-md);
+  margin-top: var(--espaco-xl);
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: var(--espaco-md);
+  margin-bottom: var(--espaco-md);
+  text-align: left;
+}
+
+.footer-container h4 {
+  margin-bottom: var(--espaco-sm);
+  color: white;
+}
+
+.footer-container a {
+  color: #f4f4f4;
+  display: block;
+  margin-bottom: 5px;
+  transition: color var(--transicao-rapida);
+}
+
+.footer-container a:hover,
+.footer-container a:focus {
+  color: var(--cor-detalhes-vermelho);
+}
+
+.footer-copyright {
+  text-align: center;
+  border-top: 1px solid #555;
+  padding-top: var(--espaco-md);
+  font-size: 0.9rem;
+}
+
+/* ─────────────────────────────────────────────────────── */
+/* 11. RESPONSIVIDADE (MOBILE-FIRST) */
+/* ─────────────────────────────────────────────────────── */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  header {
+    padding: var(--espaco-sm) var(--espaco-sm);
+  }
+  .logo { width: 160px; }
+  .header-search { width: 250px; }
+  .header-search:focus-within { width: 300px; }
+  .navegacao-principal ul { gap: var(--espaco-sm); }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .main-container { padding-top: 90px; }
+  .faixa { margin-top: 90px; }
+
+  .header-utils {
+    gap: var(--espaco-sm);
+  }
+
+  .header-search {
+    width: 200px;
+  }
+
+  section {
+    padding: var(--espaco-md) var(--espaco-sm);
+  }
+
+  .grid-cards,
+  .carousel__track {
+    gap: var(--espaco-sm);
+  }
+
+  .card--horizontal {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .card--horizontal img,
+  .card--horizontal .card__content {
+    width: 100%;
+  }
+
+  .busca-pacotes {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--espaco-sm);
+  }
+
+  .btn-buscar {
+    align-self: stretch;
+    height: auto;
+  }
+}
+
