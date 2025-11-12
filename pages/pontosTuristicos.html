@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
- 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,25 +8,27 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="/css/pontosTuristicos.css">
 </head>
- 
+
 <body>
     <header>
-      <div class="logo">
-      <img src="/assets/logoloom.png" alt="Logo Loom" />
-    </div>
-    <nav class="navegacao-principal">
-      <ul>
-        <li><a href="pacotes.html">PACOTES</a></li>
-        <li><a href="alugueis.html">ALUGUEL</a></li>
-        <li><a href="lugares.html">LUGARES</a></li>
-        <li><a href="passagens.html">PASSAGENS</a></li>
-      </ul>
-    </nav>
- 
+        <div class="logo">
+            <img src="/assets/logoloom.png" alt="Logo Loom" />
+        </div>
+        <nav class="navegacao-principal">
+            <ul>
+                <li><a href="pacotes.html">PACOTES</a></li>
+                <li><a href="alugueis.html">ALUGUEL</a></li>
+                <li><a href="lugares.html">LUGARES</a></li>
+                <li><a href="passagens.html">PASSAGENS</a></li>
+            </ul>
+        </nav>
+
         <div class="header-utils">
             <form class="header-search" action="/buscar" method="get" role="search">
                 <input type="search" name="q" placeholder="Pesquisar destinos..." aria-label="Pesquisar destinos" />
@@ -34,7 +36,7 @@
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
             </form>
- 
+
             <div class="area-cliente">
                 <a href="/pages/login.html" class="btn-login" title="Login" aria-label="Página de Login">
                     <i class="fa-solid fa-user"></i>
@@ -42,136 +44,201 @@
             </div>
         </div>
     </header>
- 
-  <section id="destinos-procurados" class="secao-carrossel">
-  <h2 class="titulo">Pontos Turísticos Mais Visitados</h2>
-  <p>Explore os destinos mais icônicos do mundo com a Loom.</p>
+    <main>
 
-  <div class="container-cards">
-    <!-- 1 -->
-    <div class="card-destino">
-      <img src="/assets/torre-eiffel.webp" alt="Torre Eiffel" />
-      <div class="info-destino">
-        <h2>Torre Eiffel</h2>
-        <p>Paris, França</p>
-        <button class="destaque">Ver Mais</button>
-      </div>
-    </div>
+        <section id="destinos-procurados" class="secao-carrossel">
+            <h2 class="titulo">Pontos Turísticos Mais Visitados</h2>
+            <p>Explore os destinos mais icônicos do mundo com a Loom.</p>
 
-    <!-- 2 -->
-    <div class="card-destino">
-      <img src="/assets/estatua-da-liberdade.webp" alt="Estátua da Liberdade" />
-      <div class="info-destino">
-        <h2>Estátua da Liberdade</h2>
-        <p>Nova York, Estados Unidos</p>
-        <button class="destaque">Ver Mais</button>
-      </div>
-    </div>
+            <div class="container-cards">
+                <!-- 1 -->
+                <div class="card-destino">
+                    <img src="/assets/torre-eiffel.webp" alt="Torre Eiffel" />
+                    <div class="info-destino">
+                        <h2>Torre Eiffel</h2>
+                        <p>Paris, França</p>
+                        <button class="destaque">Ver Mais</button>
+                    </div>
+                </div>
 
-    <!-- 3 -->
-    <div class="card-destino">
-      <img src="/assets/coliseu.webp" alt="Coliseu" />
-      <div class="info-destino">
-        <h2>Coliseu</h2>
-        <p>Roma, Itália</p>
-        <button class="destaque">Ver Mais</button>
-      </div>
-    </div>
+                <!-- 2 -->
+                <div class="card-destino">
+                    <img src="/assets/estatua-da-liberdade.webp" alt="Estátua da Liberdade" />
+                    <div class="info-destino">
+                        <h2>Estátua da Liberdade</h2>
+                        <p>Nova York, Estados Unidos</p>
+                        <button class="destaque">Ver Mais</button>
+                    </div>
+                </div>
 
-    <!-- 4 -->
-    <div class="card-destino">
-      <img src="/assets/machu-picchu.jpg" alt="Machu Picchu" />
-      <div class="info-destino">
-        <h2>Machu Picchu</h2>
-        <p>Peru</p>
-        <button class="destaque">Ver Mais</button>
-      </div>
-    </div>
+                <!-- 3 -->
+                <div class="card-destino">
+                    <img src="/assets/coliseu.webp" alt="Coliseu" />
+                    <div class="info-destino">
+                        <h2>Coliseu</h2>
+                        <p>Roma, Itália</p>
+                        <button class="destaque">Ver Mais</button>
+                    </div>
+                </div>
 
-    <!-- 5 -->
-    <div class="card-destino">
-      <img src="/assets/taj-mahal.png" alt="Taj Mahal" />
-      <div class="info-destino">
-        <h2>Taj Mahal</h2>
-        <p>Índia</p>
-        <button class="destaque">Ver Mais</button>
-      </div>
-    </div>
+                <!-- 4 -->
+                <div class="card-destino">
+                    <img src="/assets/machu-picchu.jpg" alt="Machu Picchu" />
+                    <div class="info-destino">
+                        <h2>Machu Picchu</h2>
+                        <p>Peru</p>
+                        <button class="destaque">Ver Mais</button>
+                    </div>
+                </div>
 
-    <!-- 6 -->
-    <div class="card-destino">
-      <img src="/assets/muralha-da-china.jpg" alt="Grande Muralha da China" />
-      <div class="info-destino">
-        <h2>Grande Muralha da China</h2>
-        <p>China</p>
-        <button class="destaque">Ver Mais</button>
-      </div>
-    </div>
+                <!-- 5 -->
+                <div class="card-destino">
+                    <img src="/assets/taj-mahal.png" alt="Taj Mahal" />
+                    <div class="info-destino">
+                        <h2>Taj Mahal</h2>
+                        <p>Índia</p>
+                        <button class="destaque">Ver Mais</button>
+                    </div>
+                </div>
 
-    <!-- 7 -->
-    <div class="card-destino">
-      <img src="/assets/piramides-gize.jpg" alt="Pirâmides de Gizé" />
-      <div class="info-destino">
-        <h2>Pirâmides de Gizé</h2>
-        <p>Egito</p>
-        <button class="destaque">Ver Mais</button>
-      </div>
-    </div>
+                <!-- 6 -->
+                <div class="card-destino">
+                    <img src="/assets/muralha-da-china.jpg" alt="Grande Muralha da China" />
+                    <div class="info-destino">
+                        <h2>Grande Muralha da China</h2>
+                        <p>China</p>
+                        <button class="destaque">Ver Mais</button>
+                    </div>
+                </div>
 
-    <!-- 8 -->
-    <div class="card-destino">
-      <img src="/assets/Sagrada-Familia.jpeg" alt="Sagrada Família" />
-      <div class="info-destino">
-        <h2>Igreja da Sagrada Família</h2>
-        <p>Barcelona, Espanha</p>
-        <button class="destaque">Ver Mais</button>
-      </div>
-    </div>
+                <!-- 7 -->
+                <div class="card-destino">
+                    <img src="/assets/piramides-gize.jpg" alt="Pirâmides de Gizé" />
+                    <div class="info-destino">
+                        <h2>Pirâmides de Gizé</h2>
+                        <p>Egito</p>
+                        <button class="destaque">Ver Mais</button>
+                    </div>
+                </div>
 
-    <!-- 9 -->
-    <div class="card-destino">
-      <img src="/assets/stonehenge.webp" alt="Stonehenge" />
-      <div class="info-destino">
-        <h2>Stonehenge</h2>
-        <p>Reino Unido</p>
-        <button class="destaque">Ver Mais</button>
-      </div>
-    </div>
+                <!-- 8 -->
+                <div class="card-destino">
+                    <img src="/assets/Sagrada-Familia.jpeg" alt="Sagrada Família" />
+                    <div class="info-destino">
+                        <h2>Igreja da Sagrada Família</h2>
+                        <p>Barcelona, Espanha</p>
+                        <button class="destaque">Ver Mais</button>
+                    </div>
+                </div>
 
-    <!-- 10 -->
-    <div class="card-destino">
-      <img src="/assets/cristo-redentor.webp" alt="Cristo Redentor" />
-      <div class="info-destino">
-        <h2>Cristo Redentor</h2>
-        <p>Rio de Janeiro, Brasil</p>
-        <button class="destaque">Ver Mais</button>
-      </div>
-    </div>
+                <!-- 9 -->
+                <div class="card-destino">
+                    <img src="/assets/stonehenge.webp" alt="Stonehenge" />
+                    <div class="info-destino">
+                        <h2>Stonehenge</h2>
+                        <p>Reino Unido</p>
+                        <button class="destaque">Ver Mais</button>
+                    </div>
+                </div>
 
-    <!-- 11 -->
-    <div class="card-destino">
-      <img src="/assets/Catedral-de-Milao.webp" alt="Catedral de Milão" />
-      <div class="info-destino">
-        <h2>Catedral de Milão</h2>
-        <p>Milão, Itália</p>
-        <button class="destaque">Ver Mais</button>
-      </div>
-    </div>
+                <!-- 10 -->
+                <div class="card-destino">
+                    <img src="/assets/cristo-redentor.webp" alt="Cristo Redentor" />
+                    <div class="info-destino">
+                        <h2>Cristo Redentor</h2>
+                        <p>Rio de Janeiro, Brasil</p>
+                        <button class="destaque">Ver Mais</button>
+                    </div>
+                </div>
 
-    <!-- 12 -->
-    <div class="card-destino">
-      <img src="/assets/acropole.jpg" alt="Acrópole" />
-      <div class="info-destino">
-        <h2>Acrópole</h2>
-        <p>Atenas, Grécia</p>
-        <button class="destaque">Ver Mais</button>
-      </div>
-    </div>
-  </div>
+                <!-- 11 -->
+                <div class="card-destino">
+                    <img src="/assets/Catedral-de-Milao.webp" alt="Catedral de Milão" />
+                    <div class="info-destino">
+                        <h2>Catedral de Milão</h2>
+                        <p>Milão, Itália</p>
+                        <button class="destaque">Ver Mais</button>
+                    </div>
+                </div>
 
-  <button>▼</button>
-</section>
+                <!-- 12 -->
+                <div class="card-destino">
+                    <img src="/assets/acropole.jpg" alt="Acrópole" />
+                    <div class="info-destino">
+                        <h2>Acrópole</h2>
+                        <p>Atenas, Grécia</p>
+                        <button class="destaque">Ver Mais</button>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <button>▼</button>
+        </section>
+    </main>
 
+    <footer class="main-footer">
+        <div class="footer-container">
+            <!-- Seção Institucional -->
+            <div class="footer-section">
+                <h4>Institucional</h4>
+                <ul>
+                    <li><a href="#">Sobre Nós</a></li>
+                    <li><a href="#">Nossa História</a></li>
+                    <li><a href="#">Trabalhe Conosco</a></li>
+                    <li><a href="#">Imprensa</a></li>
+                </ul>
+            </div>
+
+            <!-- Seção Ajuda e Suporte -->
+            <div class="footer-section">
+                <h4>Ajuda e Suporte</h4>
+                <ul>
+                    <li><a href="#">Central de Atendimento</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Cancelamentos e Reembolsos</a></li>
+                </ul>
+            </div>
+
+            <!-- Seção Contato -->
+            <div class="footer-section">
+                <h4>Contato</h4>
+                <ul>
+                    <li>Email: contato@loomviagens.com.br</li>
+                    <li>Telefone: (11) 99999-9999</li>
+                    <li>WhatsApp: (11) 98888-7777</li>
+                    <li>Horário de Atendimento: Seg-Sex 9h às 18h</li>
+                </ul>
+            </div>
+
+            <!-- Seção Newsletter -->
+            <div class="footer-section">
+                <h4>Receba Novidades</h4>
+                <p>Inscreva-se e receba promoções exclusivas!</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Seu melhor e-mail" required />
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Redes Sociais -->
+        <div class="footer-social">
+            <h4>Siga-nos</h4>
+            <div class="social-icons">
+                <a href="#" aria-label="Siga-nos no Facebook" target="_blank">📘</a>
+                <a href="#" aria-label="Siga-nos no Instagram" target="_blank">📷</a>
+                <a href="#" aria-label="Siga-nos no LinkedIn" target="_blank">💼</a>
+                <a href="#" aria-label="Siga-nos no YouTube" target="_blank">▶️</a>
+            </div>
+        </div>
+
+        <!-- Informações Legais -->
+        <div class="footer-legal">
+            <p>© 2025 Loom Viagens. Todos os direitos reservados.</p>
+            <p>CNPJ: 00.000.000/0001-00 | Rua Exemplo, 123 - São Paulo/SP</p>
+        </div>
+    </footer>
 </body>
- 
+
 </html>
