@@ -1,17 +1,3 @@
-/* --- 1. CONFIGURAÇÕES GLOBAIS (RESET BÁSICO) --- */
-/* Isso garante que todos os navegadores comecem "do zero" */
-
-/* CÓDIGOS PALETA DE CORES:
-
-
- --cor-principal-azul: #365DB5;
- --cor-detalhes-vermelho: #F12B23;
- --cor-secundária-branco: #FFFFFF;
- --cor-fundo-azul-claro - #EFF4FF
- }
-
-
-*/
 * {
     margin: 0;
     padding: 0;
@@ -27,14 +13,14 @@ body {
     color: #060606;
 }
 
-h2 {
-    color: #365db5;
-}
-
 .logo {
     width: 199px;
     height: auto;
+}
 
+#lupa {
+    width: 50px;
+    margin-left: 190px;
 }
 
 img {
@@ -79,11 +65,33 @@ header {
     position: fixed;
     z-index: 500;
     width: 100%;
-
     /* Fundo de imagem do mundo na navba */
     background-image: url('/assets/navbar.png');
     background-size: cover;
     background-position: center;
+    margin-left: 100px;
+    width: 90%;
+}
+
+header .logo {
+    flex-shrink: 0;
+}
+
+button,
+.btn-buscar {
+    padding: 10px 20px;
+    background-color: #bb0303;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+    /* NOVO: Fonte */
+    height: 44px;
+    /* NOVO: Alinha a altura com os inputs */
+    transition: background-color 0.2s ease;
+    /* NOVO: Efeito de hover */
 }
 
 /* cada item da navbar */
@@ -93,18 +101,14 @@ header {
 
 .navegacao-principal ul li a {
     font-weight: bold;
-    font-size: 20px;
-}
-
-img {
-    width: 88.5%;
-    margin: 0 auto;
 }
 
 /* nav bar */
-.navegacao-principal  {
-    margin-right: 100px;
-    padding-right: 400px;
+.navegacao-principal {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    /* centraliza os links */
 }
 
 .navegacao-principal ul {
@@ -120,13 +124,11 @@ img {
 }
 
 /* --- EFEITO HOVER NAVEGAÇÃO (OPÇÃO 2: SUBLINHADO MODERNO) --- */
-
 /* Base do link da navegação (Pai) */
 .navegacao-principal a {
     color: #023975;
     padding-bottom: 5px;
     /* Espaço para o sublinhado */
-
     position: relative;
     /* Essencial para o sublinhado funcionar */
     overflow: hidden;
@@ -144,14 +146,12 @@ img {
     /* Fica na parte de baixo */
     left: 0;
     /* Começa na esquerda */
-
     width: 100%;
     /* Ocupa toda a largura */
     height: 2px;
     /* Grossura da linha */
     background-color: #bb0303;
     /* Cor da linha (vermelho) */
-
     /* A Mágica da Animação (começa com largura 0) */
     transform: scaleX(0);
     transform-origin: left;
@@ -171,7 +171,6 @@ img {
 }
 
 /* ▼▼▼ REGRAS NOVAS ADICIONADAS AQUI ▼▼▼ */
-
 /* Novo contêiner para pesquisa e perfil */
 .header-utils {
     display: flex;
@@ -240,8 +239,6 @@ img {
     /* Usando sua cor de link */
 }
 
-
-
 /* Estilização e Posição do Ícone de Perfil */
 /* (Substitui suas regras .area-cliente a e .btn-login .fa-user) */
 .area-cliente .btn-login {
@@ -249,7 +246,6 @@ img {
     /* SEU TAMANHO DE ÍCONE ORIGINAL */
     color: #333;
     text-decoration: none;
-
     /* Efeito de círculo para alinhar perfeitamente */
     display: flex;
     align-items: center;
@@ -296,11 +292,6 @@ img {
     /* Fundo escuro semi-transparente */
     padding: 25px;
     border-radius: 8px;
-}
-
-#lupa {
-    width: 50px;
-    margin-left: 190px;
 }
 
 .form-group {

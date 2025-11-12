@@ -1,44 +1,51 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>LooM - Pacotes de Viagens</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sedgwick+Ave&display=swap%22
-      rel="stylesheet">
-  <link rel="stylesheet" href="/css/lugares.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sua Agência de Viagens - Explore o Brasil 01</title>
+  <meta name="description"
+    content="Encontre os melhores pacotes de viagem para o Nordeste, Sudeste, Sul, Norte e Centro-Oeste." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sedgwick+Ave&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="/css/lugares.css" />
 </head>
+
 <body>
- 
+
 
 
   <header>
-    <div class="logo">
-      <img src="/assets/logoloom.png" alt="Logo Loom" />
+    <div class="logo"> <img src="/assets/logoloom.png" alt="Logo Loom" onclick="window.location.href='index.html'" />
     </div>
     <nav class="navegacao-principal">
       <ul>
         <li><a href="pacotes.html">PACOTES</a></li>
-        <li><a href="alugueis.html">ALUGUEL</a></li>
+        <li><a href="aloomgueis.html">ALUGUEL</a></li>
         <li><a href="lugares.html">LUGARES</a></li>
         <li><a href="passagens.html">PASSAGENS</a></li>
       </ul>
     </nav>
-    <div class="busca-usuario">
-      <input type="text" class="busca" placeholder="Pesquisar...">
-      <div class="icone-usuario">👤</div>
+    <div class="header-utils">
+      <form class="header-search" action="/buscar" method="get" role="search"> <input type="search" name="q"
+          placeholder="Pesquisar destinos..." aria-label="Pesquisar destinos" /> <button type="submit"
+          aria-label="Buscar"> <img src="/assets/lupa.png" id="lupa" alt="" srcset=""> </button> </form>
+      <div class="area-cliente"> <a href="login.html" class="btn-login" title="Login" aria-label="Página de Login"> <img
+            class="login-img" src="/assets/login.png" alt="" srcset=""> </a> </div>
     </div>
-  </header>
+  </header> <br><br><br><br>
 
 
-  
-  <!-- Adicionar marquee -->
 
-  <div class="destaque">SEU TRAJETO EM NOSSAS MÃOS</div>
+
+
+
   <main class="container">
 
 
@@ -149,73 +156,89 @@
     </section>
 
 
-     <div class="container">
-        <h2>INCLUIR NO PACOTE</h2>
-        <div class="options-grid">
-            <button class="option-btn">PASSEIO CULTURAL</button>
-            <button class="option-btn">PASSEIO COM FOTOS</button>
-            <button class="option-btn">BICICLETA</button>
-            <button class="option-btn">CLUBES</button>
-            <button class="option-btn">TURISMO RELIGIOSO</button>
-            <button class="option-btn">PASSEIO COM FOTOS</button>
-        </div>
+    <div class="container">
+      <h2>INCLUIR NO PACOTE</h2>
+      <div class="options-grid">
+        <button class="option-btn">PASSEIO CULTURAL</button>
+        <button class="option-btn">PASSEIO COM FOTOS</button>
+        <button class="option-btn">BICICLETA</button>
+        <button class="option-btn">CLUBES</button>
+        <button class="option-btn">TURISMO RELIGIOSO</button>
+        <button class="option-btn">PASSEIO COM FOTOS</button>
+        <!--  Botões e sobre nós  -->
+        <br><br><br>
+        <button class="close-button">FECHAR PACOTE</button>
+      </div>
     </div>
+    </main>
 
-
-     <!--  Botão final e sobre nós  -->
-     <div class="footer-section">
-
-        <!-- Botão "FECHAR PACOTE" -->
-        <div class="close-package-btn">
-            <button class="btn-blue">FECHAR PACOTE</button>
+    <footer class="main-footer">
+      <div class="footer-container">
+        <!-- Seção Institucional -->
+        <div class="footer-section">
+          <h4>Institucional</h4>
+          <ul>
+            <li><a href="#">Sobre Nós</a></li>
+            <li><a href="#">Nossa História</a></li>
+            <li><a href="#">Trabalhe Conosco</a></li>
+            <li><a href="#">Imprensa</a></li>
+          </ul>
         </div>
 
-        <!-- Seção "SOBRE NÓS" -->
-        <div class="about-us-section">
-            <h2>SOBRE NÓS</h2>
-            <div class="content-wrapper">
-                <div class="text-column">
-                    <p>A Loom nasceu do desejo de transformar a dinâmica de viajar. 
-                      Acreditamos que cada viagem é uma história esperando para ser vivida — 
-                      e nosso nome carrega a ideia de tecer experiências, como um tear que 
-                      entrelaça destinos, pessoas e memórias pelo mundo. Assumimos o compromisso 
-                      de cuidar de cada detalhe do início ao fim de sua jornada, criamos roteiros
-                       que conectam você aos lugares mais incríveis com conforto, segurança e eficiência.</p>
-                    <p>Mais do que oferecer destinos, criamos caminhos que conectam pessoas a experiências reais e marcantes. Na Loom, você não escolhe apenas um lugar — você escolhe uma viagem feita sob medida, com um preço especial, carinho e propósito. E pode confiar: seu trajeto está em boas mãos.</p>
-                </div>
-                <div class="partners-column">
-                    <h3>PARCEIRAS</h3>
-                    <div class="partners-logos">
-                        <img src="https://via.placeholder.com/100x40?text=COMETA" alt="Cometa">
-                        <img src="https://via.placeholder.com/100x40?text=Azul" alt="Azul">
-                        <img src="https://via.placeholder.com/100x40?text=MSC" alt="MSC Cruises">
-                        <img src="https://via.placeholder.com/100x40?text=Ricardo+Turismo" alt="Ricardo Turismo">
-                    </div>
-                </div>
-            </div>
+        <!-- Seção Ajuda e Suporte -->
+        <div class="footer-section">
+          <h4>Ajuda e Suporte</h4>
+          <ul>
+            <li><a href="#">Central de Atendimento</a></li>
+            <li><a href="#">Política de Privacidade</a></li>
+            <li><a href="#">Termos de Uso</a></li>
+            <li><a href="#">Cancelamentos e Reembolsos</a></li>
+          </ul>
         </div>
 
-        <!-- Rodapé com os contatos -->
-        <div class="contact-footer">
-            <div class="contact-info">
-                <p><span>📱</span> @loom</p>
-                <p><span>🌐</span> loom</p>
-                <p><span>✉️</span> loom.travel@empresa.br</p>
-                <p><span>🌐</span> www.loom.com.br</p>
-                <p><span>📞</span> 11 98465-8654</p>
-            </div>
+        <!-- Seção Contato -->
+        <div class="footer-section">
+          <h4>Contato</h4>
+          <ul>
+            <li>Email: contato@loomviagens.com.br</li>
+            <li>Telefone: (11) 99999-9999</li>
+            <li>WhatsApp: (11) 98888-7777</li>
+            <li>Horário de Atendimento: Seg-Sex 9h às 18h</li>
+          </ul>
         </div>
 
-    </div>
+        <!-- Seção Newsletter -->
+        <div class="footer-section">
+          <h4>Receba Novidades</h4>
+          <p>Inscreva-se e receba promoções exclusivas!</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Seu melhor e-mail" required />
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+      </div>
 
-  </main>
+      <!-- Redes Sociais -->
+      <div class="footer-social">
+        <h4>Siga-nos</h4>
+        <div class="social-icons">
+          <a href="#" aria-label="Siga-nos no Facebook" target="_blank">📘</a>
+          <a href="#" aria-label="Siga-nos no Instagram" target="_blank">📷</a>
+          <a href="#" aria-label="Siga-nos no LinkedIn" target="_blank">💼</a>
+          <a href="#" aria-label="Siga-nos no YouTube" target="_blank">▶️</a>
+        </div>
+      </div>
+
+      <!-- Informações Legais -->
+      <div class="footer-legal">
+        <p>© 2025 Loom Viagens. Todos os direitos reservados.</p>
+        <p>CNPJ: 00.000.000/0001-00 | Rua Exemplo, 123 - São Paulo/SP</p>
+      </div>
+    </footer>
 
 
+    
 
-
-  <!-- Rodapé -->
-  <footer>
-    © 2025 LooM - Todos os direitos reservados.
-  </footer>
 </body>
+
 </html>
