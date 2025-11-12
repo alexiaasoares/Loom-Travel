@@ -207,7 +207,6 @@ button,
 .btn-buscar {
     padding: 10px 20px;
     background-color: #bb0303;
-    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -329,14 +328,9 @@ button,
     font-family: 'Lato', sans-serif;
     /* Fonte mais legível para input */
     background-color: transparent;
-    width: 180px;
+    width: 410px;
     /* Largura padrão */
     transition: width 0.3s ease-in-out;
-}
-
-/* Efeito de expandir a barra quando clicada */
-.header-search input[type="search"]:focus {
-    width: 240px;
 }
 
 /* Remove o 'x' de limpar do input de pesquisa */
