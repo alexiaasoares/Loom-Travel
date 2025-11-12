@@ -89,12 +89,14 @@ header {
 
 .navegacao-principal ul li a {
     font-weight: bold;
+
 }
 
 /* nav bar */
 .navegacao-principal  {
     margin-right: 200px;
     padding-right: 400px;
+
 }
 
 .navegacao-principal ul {
@@ -122,6 +124,7 @@ header {
     overflow: hidden;
     /* Garante que o sublinhado não "vaze" */
     transition: color 0.3s ease;
+
 }
 
 /* O sublinhado (Filho) - começa escondido */
@@ -306,13 +309,11 @@ header {
     font-weight: bold;
     /* NOVO: Deixa o label mais forte */
 
-    /* NOVO: Usei 'Lato' aqui porque 'Sedgwick Ave' é muito difícil de ler em textos pequenos */
-    font-family: 'Lato', sans-serif;
 }
 
 .busca-pacotes input[type="text"],
 .busca-pacotes input[type="date"] {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Inter', sans-serif;
     /* Fonte legível */
     font-size: 1rem;
     /* Tamanho do texto dentro do campo */
@@ -347,7 +348,7 @@ button,
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Inter', sans-serif;
     /* NOVO: Fonte */
     height: 44px;
     /* NOVO: Alinha a altura com os inputs */
