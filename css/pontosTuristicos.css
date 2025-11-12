@@ -64,140 +64,193 @@ header {
     position: fixed;
     z-index: 500;
     width: 100%;
+
+    /* Fundo de imagem do mundo na navba */
+    background-image: url('/assets/navbar.png');
+    background-size: cover;
+    background-position: center;
 }
- 
+
+/* cada item da navbar */
+.navegacao-principal ul li {
+    margin-left: 80px;
+}
+
+.navegacao-principal ul li a {
+    font-weight: 800;
+    font-family: 'Inter';
+}
+
+/* nav bar */
+.navegacao-principal  {
+    margin-right: 200px;
+    padding-right: 400px;
+}
+
 .navegacao-principal ul {
     display: flex;
     /* Alinha os links do menu lado a lado */
     list-style: none;
     /* Remove as "bolinhas" da lista */
 }
- 
+
 .navegacao-principal li {
     margin-left: 20px;
     /* Espaçamento entre os itens do menu */
 }
- 
+
 /* --- EFEITO HOVER NAVEGAÇÃO (OPÇÃO 2: SUBLINHADO MODERNO) --- */
- 
+
 /* Base do link da navegação (Pai) */
 .navegacao-principal a {
-    font-family: 'Lato', sans-serif;
-    font-weight: bold;
     color: #023975;
-    padding-bottom: 5px; /* Espaço para o sublinhado */
-   
-    position: relative; /* Essencial para o sublinhado funcionar */
-    overflow: hidden; /* Garante que o sublinhado não "vaze" */
+    padding-bottom: 5px;
+    /* Espaço para o sublinhado */
+
+    position: relative;
+    /* Essencial para o sublinhado funcionar */
+    overflow: hidden;
+    /* Garante que o sublinhado não "vaze" */
     transition: color 0.3s ease;
 }
- 
+
 /* O sublinhado (Filho) - começa escondido */
 .navegacao-principal a::after {
-    content: ''; /* Sempre necessário */
-    position: absolute; /* Posição relativa ao 'a' */
-    bottom: 0; /* Fica na parte de baixo */
-    left: 0; /* Começa na esquerda */
-   
-    width: 100%; /* Ocupa toda a largura */
-    height: 2px; /* Grossura da linha */
-    background-color: #bb0303; /* Cor da linha (vermelho) */
-   
+    content: '';
+    /* Sempre necessário */
+    position: absolute;
+    /* Posição relativa ao 'a' */
+    bottom: 0;
+    /* Fica na parte de baixo */
+    left: 0;
+    /* Começa na esquerda */
+
+    width: 100%;
+    /* Ocupa toda a largura */
+    height: 2px;
+    /* Grossura da linha */
+    background-color: #bb0303;
+    /* Cor da linha (vermelho) */
+
     /* A Mágica da Animação (começa com largura 0) */
     transform: scaleX(0);
-    transform-origin: left; /* Animação cresce da esquerda para a direita */
+    transform-origin: left;
+    /* Animação cresce da esquerda para a direita */
     transition: transform 0.3s ease-in-out;
 }
- 
+
 /* O efeito ao passar o mouse */
 .navegacao-principal a:hover {
-    color: #bb0303; /* Muda a cor do texto também */
+    color: #bb0303;
+    /* Muda a cor do texto também */
 }
- 
+
 .navegacao-principal a:hover::after {
-    transform: scaleX(1); /* Faz a linha crescer para 100% */
+    transform: scaleX(1);
+    /* Faz a linha crescer para 100% */
 }
- 
+
 /* ▼▼▼ REGRAS NOVAS ADICIONADAS AQUI ▼▼▼ */
- 
+
 /* Novo contêiner para pesquisa e perfil */
 .header-utils {
     display: flex;
-    align-items: center; /* Alinha a pesquisa e o perfil verticalmente */
-    gap: 15px; /* Espaçamento entre a pesquisa e o ícone de perfil */
+    align-items: center;
+    /* Alinha a pesquisa e o perfil verticalmente */
+    gap: 15px;
+    /* Espaçamento entre a pesquisa e o ícone de perfil */
 }
- 
+
 /* Estilização da Barra de Pesquisa */
 .header-search {
-    display: flex; /* Alinha o input e o botão */
+    display: flex;
+    /* Alinha o input e o botão */
     align-items: center;
     border: 1px solid #ccc;
-    border-radius: 25px; /* Deixa bem redondo */
-    overflow: hidden; /* Para esconder as bordas do input */
+    border-radius: 25px;
+    /* Deixa bem redondo */
+    overflow: hidden;
+    /* Para esconder as bordas do input */
     background-color: #f7f7f7;
+    width: 450px;
 }
- 
+
 .header-search input[type="search"] {
     border: none;
     outline: none;
-    padding: 8px 12px; /* Altura do campo */
+    padding: 8px 12px;
+    /* Altura do campo */
     font-size: 0.9rem;
-    font-family: 'Lato', sans-serif; /* Fonte mais legível para input */
+
+    /* Fonte mais legível para input */
     background-color: transparent;
-    width: 180px; /* Largura padrão */
+    width: 180px;
+    /* Largura padrão */
     transition: width 0.3s ease-in-out;
+    font-family: 'Inter', sans-serif;
 }
- 
+
 /* Efeito de expandir a barra quando clicada */
 .header-search input[type="search"]:focus {
     width: 240px;
 }
- 
+
 /* Remove o 'x' de limpar do input de pesquisa */
 .header-search input[type="search"]::-webkit-search-cancel-button {
     -webkit-appearance: none;
     appearance: none;
 }
- 
+
 .header-search button[type="submit"] {
     background: transparent;
     border: none;
     outline: none;
     cursor: pointer;
-    padding-right: 12px; /* Espaçamento do ícone */
+    padding-right: 12px;
+    /* Espaçamento do ícone */
     color: #555;
-    font-size: 0.9rem; /* Tamanho do ícone de lupa */
-    display: flex; /* Ajuda a centralizar o ícone */
+    font-size: 0.9rem;
+    /* Tamanho do ícone de lupa */
+    display: flex;
+    /* Ajuda a centralizar o ícone */
     align-items: center;
 }
- 
+
 .header-search button[type="submit"]:hover {
-    color: #023975; /* Usando sua cor de link */
+    color: #023975;
+    /* Usando sua cor de link */
 }
- 
+
+
+
 /* Estilização e Posição do Ícone de Perfil */
 /* (Substitui suas regras .area-cliente a e .btn-login .fa-user) */
 .area-cliente .btn-login {
-    font-size: 1.2rem; /* SEU TAMANHO DE ÍCONE ORIGINAL */
+    font-size: 1.2rem;
+    /* SEU TAMANHO DE ÍCONE ORIGINAL */
     color: #333;
     text-decoration: none;
-   
+
     /* Efeito de círculo para alinhar perfeitamente */
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 36px; /* Largura do círculo */
-    height: 36px; /* Altura do círculo */
-    border-radius: 50%; /* Transforma em círculo */
+    width: 36px;
+    /* Largura do círculo */
+    height: 36px;
+    /* Altura do círculo */
+    border-radius: 50%;
+    /* Transforma em círculo */
     background-color: #f0f0f0;
     transition: background-color 0.2s ease, color 0.2s ease;
 }
- 
+
 .area-cliente .btn-login:hover {
     background-color: #e0e0e0;
-    color: #023975; /* Usando sua cor de link */
+    color: #023975;
+    /* Usando sua cor de link */
 }
- 
+
 /*lugares*/
  
 .secao-carrossel {
@@ -268,6 +321,7 @@ header {
   display: inline-block;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: 'Inter';
 }
 
 .destaque:hover {
@@ -276,9 +330,32 @@ header {
 }
 
 
-.secao-carrossel h2 {
+.titulo {
     color: #023975;
-    
+    margin-top: 55px;
+    font-family: 'Poppins', sans-serif;
 }
 
+button {
+  background-color: rgba(51, 51, 51, 0.05);
+  border-radius: 8px;
+  border-width: 0;
+  color: #333333;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 10px 12px;
+  text-align: center;
+  transition: all 200ms;
+  vertical-align: baseline;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
 
