@@ -207,68 +207,78 @@ header {
  
  
 /* Container dos 3 cards */
+/* Container dos cards em grade */
 .container-cards {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 25px;
-  flex-wrap: wrap;
-  max-width: 1600px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 10px;
+  padding: 20px;
 }
- 
-/* Estilo de cada card (com imagem lateralizada) */
+
+/* Estilo de cada card */
 .card-destino {
-  display: flex;
-  width: 380px; /* Largura controlada para caber 3 em linha */
   background: white;
   border-radius: 12px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-}
- 
-.card-destino img {
-  width: 40%; /* Imagem ocupa 40% da largura do card */
-  height: 100%;
-  object-fit: cover;
-}
- 
-.info-destino {
-  width: 100%; /* Informações ocupam 100% */
-  padding: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  height: 150px;
+  align-items: center;
+  transition: transform 0.3s ease;
 }
- 
+
+.card-destino:hover {
+  transform: scale(1.03);
+}
+
+/* Imagem do card */
+.card-destino img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Informações do destino */
+.info-destino {
+  padding: 15px;
+  text-align: center;
+}
+
 .info-destino h2 {
   color: #2c3e50;
   font-size: 18px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
- 
+
 .info-destino p {
   color: #555;
   font-size: 14px;
-  line-height: 1.5;
   margin-bottom: 12px;
 }
- 
+
 .destaque {
   background-color: transparent;
-  color: red;
+  color: #bb0303;
   padding: 6px 12px;
+  border: 1px solid #bb0303;
   border-radius: 20px;
   font-size: 13px;
   display: inline-block;
-  align-self: flex-start;
-  margin: 0 auto;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+.destaque:hover {
+  background-color: #bb0303;
+  color: white;
+}
+
 
 .secao-carrossel h2 {
     color: #023975;
     
 }
- 
+
+
