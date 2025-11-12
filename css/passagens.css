@@ -443,57 +443,141 @@ button,
 
 
 /* --- 6. RODAPÉ --- */
-footer {
-    background-color: #2b2727;
-    color: #f4f4f4;
-    padding: 40px 20px;
-    margin-top: 30px;
+.main-footer {
+  background-color: #1c1c1c;
+  color: #f0f0f0;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', sans-serif;
 }
-
+ 
+/* Container principal */
 .footer-container {
-    display: flex;
-    justify-content: space-around;
-    /* Espalha as colunas */
-    gap: 20px;
-    flex-wrap: wrap;
-    /* Quebra de linha em telas pequenas */
-    margin-bottom: 20px;
-    text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-
-.footer-container h4 {
-    margin-bottom: 15px;
-    color: #ffffff;
+ 
+/* Seções individuais */
+.footer-section {
+  flex: 1 1 220px;
+  min-width: 200px;
 }
-
-.footer-container ul {
-    list-style: none;
+ 
+.footer-section h4 {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  color: #ffffff;
 }
-
-.footer-container a {
-    color: #f4f4f4;
-    display: block;
-    margin-bottom: 5px;
+ 
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
-
-.footer-copyright {
+ 
+.footer-section ul li {
+  margin-bottom: 10px;
+  font-size: 0.95em;
+}
+ 
+.footer-section ul li a {
+  color: #cccccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+ 
+.footer-section ul li a:hover {
+  color: #ffffff;
+}
+ 
+/* Newsletter */
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+ 
+.newsletter-form input[type="email"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.95em;
+}
+ 
+.newsletter-form button {
+  padding: 10px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+ 
+.newsletter-form button:hover {
+  background-color: #e60000;
+}
+ 
+/* Redes sociais */
+.footer-social {
+  text-align: center;
+  margin-top: 40px;
+}
+ 
+.footer-social h4 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+ 
+.social-icons a {
+  font-size: 1.5em;
+  margin: 0 10px;
+  color: #f0f0f0;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+ 
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+ 
+/* Informações legais */
+.footer-legal {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.85em;
+  color: #aaaaaa;
+}
+ 
+/* Responsividade */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    border-top: 1px solid #555;
-    padding-top: 20px;
-    font-size: 0.9em;
+  }
+ 
+  .footer-section {
+    flex: 1 1 100%;
+  }
+ 
+  .newsletter-form {
+    align-items: center;
+  }
+ 
+  .newsletter-form input,
+  .newsletter-form button {
+    width: 100%;
+    max-width: 300px;
+  }
 }
-
-
-@keyframes rolar {
-    from {
-        transform: translateX(100%);
-    }
-
-    to {
-        transform: translateX(-100%);
-    }
-}
-
+ 
+ 
+ 
 html {
   scroll-behavior: smooth;
 }
