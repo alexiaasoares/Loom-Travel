@@ -520,7 +520,7 @@ html {
 
 .ticket::before,
 .ticket::after {
-  content: "";
+
   position: absolute;
   top: 50%;
   width: 20px;
