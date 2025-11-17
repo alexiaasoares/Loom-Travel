@@ -55,12 +55,11 @@ a {
 section {
     padding: 40px 20px;
     /* 40px em cima/baixo, 20px nas laterais */
-    text-align: center;
     /* Centraliza títulos de seção */
 }
 
 section h2 {
-    margin-bottom: 20px;
+    margin-bottom: -15px;
     /* Espaço abaixo dos títulos H2 */
 }
 
@@ -118,15 +117,10 @@ button,
 
 /* nav bar */
 .navegacao-principal {
-<<<<<<< HEAD
-    margin-right: 200px;
-    padding-right: 400px;
-=======
     flex: 1;
     display: flex;
     justify-content: center;
     /* centraliza os links */
->>>>>>> d808f5d005a22e4525b5fff7ff8667fea77f11ff
 }
 
 .navegacao-principal ul {
@@ -226,6 +220,7 @@ button,
     transition: width 0.3s ease-in-out;
 }
 
+/* Efeito de expandir a barra quando clicada */
 
 /* Remove o 'x' de limpar do input de pesquisa */
 .header-search input[type="search"]::-webkit-search-cancel-button {
@@ -245,7 +240,7 @@ button,
     /* Tamanho do ícone de lupa */
     display: flex;
     /* Ajuda a centralizar o ícone */
-    align-items: left;
+    align-items: center;
 }
 
 .header-search button[type="submit"]:hover {
@@ -279,8 +274,6 @@ button,
     color: #023975;
     /* Usando sua cor de link */
 }
-
-
 /* ▲▲▲ FIM DAS NOVAS REGRAS ▲▲▲ */
 
 
@@ -430,7 +423,7 @@ button,
 /* Container dos 3 cards */
 .container-cards {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     gap: 25px;
     flex-wrap: wrap;
     max-width: 1600px;
@@ -444,6 +437,7 @@ button,
     /* Largura controlada para caber 3 em linha */
     background: white;
     border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
 
@@ -658,17 +652,7 @@ footer {
 
 /* Tútilo das seções */
 .titulos {
-    justify-content: center;
-
-
-}
-
-.paginaInicial {
-    padding: 50px;
-}
-
-.paginaInicial img {
-    border-radius: 11px;
+    justify-content: left;
 }
 
 @keyframes rolar {
@@ -685,54 +669,8 @@ html {
     scroll-behavior: smooth;
 }
 
-.carrossel-container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  margin-top: 30px;
-}
 
-.carrossel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(255, 255, 255, 0.8);
-  border: none;
-  font-size: 2rem;
-  cursor: pointer;
-  z-index: 10;
-  padding: 10px;
-  border-radius: 50%;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-}
 
-.carrossel-btn.esquerda {
-  left: 10px;
-}
-
-.carrossel-btn.direita {
-  right: 10px;
-}
-
-.carrossel-track {
-  display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  padding: 20px 10px;
-}
- 
-.carrossel-container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  margin: 30px auto; /* Centraliza */
-  max-width: 1600px;  /* Igual ao container-cards */
-  padding: 0 20px;    /* Espaço lateral */
-}
->>>>>>> d808f5d005a22e4525b5fff7ff8667fea77f11ff
 /* aluguel de carro */
 
 .escrita-carros {
@@ -858,8 +796,6 @@ html {
 
     justify-content: space-around;
 
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-
 }
 
 
@@ -873,10 +809,8 @@ html {
     border-radius: 8px;
 
     overflow: hidden;
+
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-
-
-
 
 
 
@@ -901,7 +835,6 @@ html {
 
     flex-direction: row-reverse;
 
-
 }
 
 
@@ -913,7 +846,15 @@ html {
     display: flex;
 }
 
+.col1 {
+    border: 1px solid orage;
+    max-width: 500px;
+}
 
+.col2 {
+    border: 1px solid pink;
+    max-width: 500px;
+}
 
 .cardContent img {
     max-width: 377px;
@@ -1064,18 +1005,30 @@ html {
     }
 }
 
+section {
+    display: flex;
+}
+
 .imagem-direita img {
     width: 97%;
-    margin-top: 176px;
-    height: 464px;
-    border-radius: 25px;
+    margin-top: 81px;
+    height: 500px;
+    border-radius: 15px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+<<<<<<< HEAD
+=======
+    
+
+
+>>>>>>> 1fcbc9506a5f09c2f9978974c0104c792f90f43d
 }
 
 .nome-carros {
+    padding-left: 785px;
     color: #365DB5;
-    font-family: arial;
-    font-size: large;
-    padding: 30px;
-  
+    text-align: center;
+}
+
+.margin {
+    margin-top: -90px;
 }

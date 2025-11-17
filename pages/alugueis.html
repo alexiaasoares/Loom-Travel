@@ -2,6 +2,8 @@
 
 <html lang="pt-br">
 
+
+
 <head>
 
     <meta charset="UTF-8" />
@@ -22,6 +24,9 @@
         font-family: 'Segoe UI', sans-serif;
 
         background: #f5f5f5;
+
+        color: #333;
+
     }
 
 
@@ -39,6 +44,119 @@
         padding: 40px;
 
     }
+<<<<<<< HEAD
+=======
+
+
+
+    /* Container com bordas arredondadas */
+
+    .container {
+
+        display: flex;
+
+        flex-wrap: wrap;
+
+        max-width: 900px;
+
+        background: white;
+
+        border-radius: 15px;
+
+        overflow: hidden;
+
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    }
+
+
+
+    /* Painéis */
+
+    .left-panel,
+
+    .right-panel {
+
+        flex: 1;
+
+        padding: 20px;
+
+    }
+
+
+
+    .left-panel {
+
+        background: linear-gradient(to right, #b30000, #ff4d4d);
+
+        color: white;
+
+        text-align: center;
+
+        border-top-left-radius: 15px;
+
+        border-bottom-left-radius: 15px;
+
+    }
+
+
+
+    .left-panel img {
+
+        max-width: 100%;
+
+        height: auto;
+
+        margin-bottom: 20px;
+
+    }
+
+
+
+    .left-panel h1 {
+
+        font-size: 2em;
+
+        margin: 0;
+
+    }
+
+
+
+    .right-panel {
+
+        background-color: #fff;
+
+        border-top-right-radius: 15px;
+
+        border-bottom-right-radius: 15px;
+
+    }
+
+
+
+    .right-panel ul {
+
+        list-style: none;
+
+        padding: 0;
+
+    }
+
+
+
+    .right-panel li {
+
+        font-size: 1.1em;
+
+        margin: 10px 0;
+
+        border-bottom: 1px solid #ddd;
+
+        padding-bottom: 5px;
+
+    }
+>>>>>>> 1fcbc9506a5f09c2f9978974c0104c792f90f43d
 </style>
 
 
@@ -46,66 +164,43 @@
 <body class="fundo">
 
     <header>
-
-        <div class="logo">
-
-            <img src="/Loom-Travel/assets/logoloom.png" alt="Logo Loom" />
-
-        </div>
-        <nav class="navegacao-principal">
-            <ul>
-                <li><a href="pacotes.html">PACOTES</a></li>
-                <li><a href="aloomgueis.html">ALUGUEL</a></li>
-                <li><a href="passagens.html">PASSAGENS</a></li>
-                <li><a href="pontosTuristicos.html">PONTOS TURÍSTICOS</a></li>
-            </ul>
-        </nav>
-        <div class="header-utils">
-
-            <form class="header-search" action="/buscar" method="get" role="search">
-
-                <input type="search" name="q" placeholder="Pesquisar destinos..." aria-label="Pesquisar destinos" />
-
-                <button type="submit" aria-label="Buscar">
-
-                    <img src="/Loom-Travel/assets/undefined.jpg" id="lupa" alt="Buscar" />
-
-                </button>
-
-            </form>
-
-            <div class="area-cliente">
-
-                <a href="login.html" class="btn-login" title="Login" aria-label="Página de Login">
-
-                    <img src="/Loom-Travel/assets/undefined.png" alt="Login" />
-
-                </a>
-
-            </div>
-
-        </div>
-
-
-    </header>
+    <div class="logo"> <img src="/assets/logoloom.png" alt="Logo Loom" onclick="window.location.href='index.html'" />
+    </div>
+    <nav class="navegacao-principal">
+      <ul>
+        <li><a href="pacotes.html">PACOTES</a></li>
+        <li><a href="aloomgueis.html">ALUGUEL</a></li>
+        <li><a href="passagens.html">PASSAGENS</a></li>
+        <li><a href="pontosTuristicos.html">PONTOS TURÍSTICOS</a></li>
+      </ul>
+    </nav>
+    <div class="header-utils">
+      <form class="header-search" action="/buscar" method="get" role="search"> <input type="search" name="q"
+          placeholder="Pesquisar destinos..." aria-label="Pesquisar destinos" /> <i
+          class="fa-solid fa-magnifying-glass fa-xl" style="color: #3d5ab2;"></i> </form>
+      <div class="area-cliente"> <a href="login.html" class="btn-login" title="Login" aria-label="Página de Login"> <i
+            class="fa-solid fa-circle-user fa-xl" style="color: #3d5ab2;"></i></a> </div>
+    </div>
+  </header>  <br><br><br><br>
 
     <section>
 
-        <div class="tudo-carros">
-            <br><br><br>
-
+     <div class="tudo-carros">
+            <div>
+                <h1 class="nome-carros">CARROS</h1>
+            </div>
 
             <br><br><br>
 
             <!-- Primeiro card -->
-
+        <div class="margin">
             <div class="wrapper">
 
                 <div class="container-card-horizontal">
 
                     <div class="card--horizontal">
 
-                        <img src="/assets/carro-2.png" alt="jeep-compass">
+                        <img src="/assets/carro-2.png" alt="mobi 2025">
 
                     </div>
 
@@ -113,7 +208,7 @@
 
                         <ul>
 
-                            <li><strong>Modelo:</strong> jeep-compass</li>
+                            <li><strong>Modelo:</strong> Mobi</li>
 
                             <li><strong>Ano:</strong> 2025</li>
 
@@ -170,7 +265,6 @@
                         </ul>
 
                     </div>
-
                 </div>
 
             </div>
@@ -227,18 +321,22 @@
 
             </div>
         </div>
+<<<<<<< HEAD
             <div class="nome-carros">
             <h1>CARROS</h1>
         </div>
+=======
+    </div>
+
+>>>>>>> 1fcbc9506a5f09c2f9978974c0104c792f90f43d
         <!-- Imgagem da spin  -->
         <div class="imagem-direita">
             <img src="/assets/5.png">
         </div>
-        </div>
 
     </section>
 
-    <!-- FOOTER -->
+
 
     <!-- FOOTER -->
 

@@ -88,7 +88,6 @@ header .logo {
 
 button,
 .btn-buscar {
-<<<<<<< HEAD
   padding: 10px 20px;
   background-color: #bb0303;
   color: white;
@@ -102,20 +101,6 @@ button,
   /* NOVO: Alinha a altura com os inputs */
   transition: background-color 0.2s ease;
   /* NOVO: Efeito de hover */
-=======
-    padding: 10px 20px;
-    background-color: #bb0303;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    font-family: 'Lato', sans-serif;
-    /* NOVO: Fonte */
-    height: 44px;
-    /* NOVO: Alinha a altura com os inputs */
-    transition: background-color 0.2s ease;
-    /* NOVO: Efeito de hover */
->>>>>>> fdbc310a114fd534ebd98c22ab3fa3a3560ecf45
 }
 
 /* cada item da navbar */
@@ -219,7 +204,6 @@ button,
 }
 
 .header-search input[type="search"] {
-<<<<<<< HEAD
   border: none;
   outline: none;
   padding: 8px 12px;
@@ -238,21 +222,6 @@ button,
   width: 240px;
 }
 
-=======
-    border: none;
-    outline: none;
-    padding: 8px 12px;
-    /* Altura do campo */
-    font-size: 0.9rem;
-    font-family: 'Lato', sans-serif;
-    /* Fonte mais legível para input */
-    background-color: transparent;
-    width: 410px;
-    /* Largura padrão */
-    transition: width 0.3s ease-in-out;
-}
- 
->>>>>>> fdbc310a114fd534ebd98c22ab3fa3a3560ecf45
 /* Remove o 'x' de limpar do input de pesquisa */
 .header-search input[type="search"]::-webkit-search-cancel-button {
   -webkit-appearance: none;
@@ -309,7 +278,7 @@ button,
 
 
 .muquinha {
-  color: red;
+  color: rgb(103, 90, 90);
 }
 
 
@@ -495,8 +464,11 @@ button,
 
 .lista-transportes {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 930px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .item-transporte {
@@ -675,7 +647,7 @@ footer {
 
 .close-button {
   justify-content: center;
-  background-color: #3a5bc7;
+  background-color: #142d81;
   color: white;
   border: none;
   padding: 10px 25px;
@@ -878,4 +850,18 @@ main {
 
 .pai {
   display: flex;
+}
+
+
+
+
+#fotoAparecida {
+  width: 6700px;
+  height: 100 px;
+}
+
+.ver-mais {
+ text-align: left; 
+ margin: 37px;
+
 }
