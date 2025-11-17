@@ -209,6 +209,7 @@ button,
     transition: width 0.3s ease-in-out;
 }
 
+/* Efeito de expandir a barra quando clicada */
 
 /* Remove o 'x' de limpar do input de pesquisa */
 .header-search input[type="search"]::-webkit-search-cancel-button {
@@ -345,7 +346,7 @@ button,
 
 .titulo {
     color: #023975;
-    margin-top: 55px;
+    margin-top: 15px;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -373,6 +374,13 @@ button{
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+}
+
+button:hover {
+  background: #f1f5f8;
+  box-shadow: 0 6px 8px -2px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease; 
+  transform: scale(1.03);
 }
 
 .main-footer {
