@@ -823,18 +823,22 @@ button,
   max-width: 900px;
   margin: var(--espaco-xl) auto var(--espaco-lg);
   padding: 0 var(--espaco-md);
+  
 }
 
-.card-link {
-  display: block;
-  background: var(--cor-secundaria-branco);
-  border-radius: var(--borda-radius-md);
-  box-shadow: var(--sombra-card-leve);
-  overflow: hidden;
-  transition: transform var(--transicao-padrao), box-shadow var(--transicao-padrao);
-  aspect-ratio: 1 / 1;
-  position: relative;
+.card-aluguel {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+  background-color: var(--cor-secundaria-branco);
+  border-radius: 15px;
+
 }
+  
+    
+
 
 .card-link:hover,
 .card-link:focus {
@@ -843,23 +847,7 @@ button,
   outline: 2px solid var(--cor-detalhes-vermelho);
 }
 
-.card-link img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: opacity var(--transicao-rapida);
-}
 
-.card-link:hover img,
-.card-link:focus img {
-  opacity: 0.9;
-}
-
-/* Garantir acessibilidade visual para foco */
-.card-link:focus-visible {
-  outline: 3px solid var(--cor-detalhes-vermelho);
-  outline-offset: 4px;
-}
 
 /* ─────────────────────────────────────────────────────── */
 /* 3. Responsividade dos Cards */
