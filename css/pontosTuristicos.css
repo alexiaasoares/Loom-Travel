@@ -209,6 +209,7 @@ button,
     transition: width 0.3s ease-in-out;
 }
 
+/* Efeito de expandir a barra quando clicada */
 
 /* Remove o 'x' de limpar do input de pesquisa */
 .header-search input[type="search"]::-webkit-search-cancel-button {
