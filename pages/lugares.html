@@ -22,7 +22,7 @@
     <div class="logo"> <img src="/assets/logoloom.png" alt="Logo Loom" onclick="window.location.href='index.html'" />
     </div>
     <nav class="navegacao-principal">
- <ul>
+      <ul>
         <li><a href="pacotes.html">PACOTES</a></li>
         <li><a href="aloomgueis.html">ALUGUEL</a></li>
         <li><a href="passagens.html">PASSAGENS</a></li>
@@ -58,94 +58,109 @@
             <div class="origins-destinations"> <label> ORIGEM</label> <label> DESTINO</label> </div>
             <div class="input-group">
               <div class="input-wrapper">
-                <div class="icon icon-pin"></div> <input type="text" placeholder="SÃO PAULO, CO...">
+                <div class="icon icon-pin"><i class="fa-regular fa-circle" style="color: #3d5ab2;"></i></div> <input
+                  type="text" placeholder="SÃO PAULO, CO...">
               </div>
-              <div class="icon icon-swap"></div>
+              <div class="icon icon-swap"><i class="fa-solid fa-arrow-right-arrow-left fa-lg"
+                  style="color: #3d5ab2;"></i></div>
               <div class="input-wrapper">
-                <div class="icon icon-pin"></div> <input type="text" placeholder="INSIRA UMA CI...">
+                <div class="icon icon-pin"><i class="fa-solid fa-location-dot fa-lg" style="color: #3d5ab2;"></i></div>
+                <input type="text" placeholder="INSIRA UMA CI...">
               </div>
             </div>
           </div>
           <div class="form-section dates"> <label>DATAS</label>
             <div class="input-group">
               <div class="input-wrapper">
-                <div class="icon icon-calendar"></div> <input type="text" placeholder="ENTRADA">
+                <div class="icon icon-calendar"><i class="fa-solid fa-calendar" style="color: #3d5ab2;"></i></div>
+                <input type="text" placeholder="ENTRADA">
               </div>
               <div class="input-wrapper">
-                <div class="icon icon-calendar"></div> <input type="text" placeholder="SAÍDA">
+                <div class="icon icon-calendar"><i class="fa-solid fa-calendar" style="color: #3d5ab2;"></i></div>
+                <input type="text" placeholder="SAÍDA">
               </div>
             </div>
           </div>
           <div class="form-section rooms"> <label>QUARTOS</label>
             <div class="input-group">
               <div class="input-wrapper">
-                <div class="icon icon-person"></div> <input type="text" placeholder="1">
+
+                <div class="icon icon-person"><i class="fa-solid fa-bed fa-sm" style="color: #3d5ab2;"></i></div><input
+                  type="text" placeholder="1">
               </div>
               <div class="input-wrapper">
-                <div class="icon icon-people"></div> <input type="text" placeholder="2">
+                <div class="icon icon-people"><i class="fa-solid fa-person fa-lg" style="color: #3d5ab2;"></i></div>
+                <input type="text" placeholder="2">
               </div>
             </div>
-          </div> <button type="submit" class="search-button">
+          </div> <button type="submit" class="search-button"><i class="fa-solid fa-magnifying-glass fa-xl"
+              style="color: #ffffff;"></i>
             <div class="icon icon-search">BUSCAR</div>
           </button>
         </form>
         <div class="search-options"> <a href="#">
-            <div class="icon icon-pencil"></div> ALTERAR A CIDADE OU DATAS
+            <div class="icon icon-pencil"><i class="fa-solid fa-pencil" style="color: #3d5ab2;"></i></div> ALTERAR A
+            CIDADE OU DATAS
           </a> <a href="#">
-            <div class="icon icon-plus"></div> INCLUIR SEGUNDO DESTINO
+            <div class="icon icon-plus"><i class="fa-solid fa-circle-plus fa-lg" style="color: #3d5ab2;"></i></div>
+            INCLUIR SEGUNDO DESTINO
           </a> </div>
       </div>
-    </div>
+
+      <!-- Transportes -->
+      <div class="pai">
+        <div class="img">
+          <img src="/assets/relogio.png" id="fotoAparecida" alt="Imagem Aparecida">
+        </div>
+        <div class="tio">
+          <section class="caixa-transportes">
+            <h3>TRANSPORTES</h3>
+            <div class="lista-transportes">
+              <div class="item-transporte">
+                <div class="simbolo">C</div>
+                <div class="info">
+                  <div class="data-ida">IDA: 28/11</div>
+                  <div class="preco">COMETA R$ 100</div>
+                </div>
+              </div>
+              <div class="item-transporte">
+                <div class="simbolo">C</div>
+                <div class="info">
+                  <div class="data-ida">IDA: 02/12</div>
+                  <div class="preco">COMETA R$ 98</div>
+                </div>
+              </div>
+              <div class="item-transporte">
+                <div class="simbolo">C</div>
+                <div class="info">
+                  <div class="data-ida">IDA: 02/12</div>
+                  <div class="preco">COMETA R$ 98</div>
+                </div>
+              </div>
+              <div class="item-transporte">
+                <div class="simbolo">C</div>
+                <div class="info">
+                  <div class="data-ida">IDA: 02/12</div>
+                  <div class="preco">COMETA R$ 98</div>
+                </div>
+              </div>
+              <div class="item-transporte">
+                <div class="simbolo">C</div>
+                <div class="info">
+                  <div class="data-ida">IDA: 02/12</div>
+                  <div class="preco">COMETA R$ 98</div>
+                </div>
+              </div>
+              <div class="ver-mais">VER MAIS</div>
+          </section>
 
 
-    <!-- Transportes -->
-    <div class="pai">
-      <div class="img">
-        <img src="/assets/relogio.png" alt="Imagem Aparecida">
-      </div>
-      <div class="tio">
-        <section class="caixa-transportes">
-          <h3>TRANSPORTES</h3>
-          <div class="lista-transportes">
-            <div class="item-transporte">
-              <div class="simbolo">C</div>
-              <div class="info">
-                <div class="data-ida">IDA: 28/11</div>
-                <div class="preco">COMETA R$ 100</div>
-              </div>
-            </div>
-            <div class="item-transporte">
-              <div class="simbolo">C</div>
-              <div class="info">
-                <div class="data-ida">IDA: 02/12</div>
-                <div class="preco">COMETA R$ 98</div>
-              </div>
-            </div>
-            <div class="item-transporte">
-              <div class="simbolo">C</div>
-              <div class="info">
-                <div class="data-ida">IDA: 02/12</div>
-                <div class="preco">COMETA R$ 98</div>
-              </div>
-            </div>
-            <div class="item-transporte">
-              <div class="simbolo">C</div>
-              <div class="info">
-                <div class="data-ida">IDA: 03/12</div>
-                <div class="preco">COMETA R$ 111</div>
-              </div>
-            </div>
+          <!-- Banner de aluguel de carro -->
+          <div class="banner-carro">
+            <img src="/assets/carros.png" alt="carros">
           </div>
-          <div class="ver-mais">VER MAIS</div>
-        </section>
-
-
-        <!-- Banner de aluguel de carro -->
-        <div class="banner-carro">
-          <img src="/assets/carros.png" alt="carros">
         </div>
       </div>
-    </div>
 
     <!-- Estadias -->
     <section class="caixa-estadias">
@@ -168,26 +183,6 @@
           <div class="nome-estadia">CASA EM JARDIM PARAÍBA</div>
         </div>
       </div>
-    </section>
-
-
-    <div class="incluir-pacote">
-      <h3>INCLUIR NO PACOTE</h3>
-      <br>
-      <div class="options-grid">
-        <button class="option-btn">PASSEIO CULTURAL</button>
-        <button class="option-btn">PASSEIO COM FOTOS</button>
-        <button class="option-btn">BICICLETA</button>
-        <button class="option-btn">CLUBES</button>
-        <button class="option-btn">TURISMO RELIGIOSO</button>
-        <button class="option-btn">PASSEIO COM FOTOS</button>
-        <br><br>
-        <button class="close-button">FECHAR PACOTE</button>
-        <!--  Botões e sobre nós  -->
-        <br><br><br>
-
-      </div>
-    </div>
   </main>
   <br><br><br>
 

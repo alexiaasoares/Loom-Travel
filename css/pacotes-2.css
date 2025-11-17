@@ -653,7 +653,6 @@ html {
 .container {
     max-width: 1300px;
     align-items: center;
-    text-align: center;
 }
 
 .pacote-viagem {
@@ -675,4 +674,19 @@ html {
 
 li {
     list-style: none;
+}
+
+.pix-section {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* espaço entre o QR e o valor */
+}
+
+.price {
+  font-size: 1.2em;
+  color: green;
+}
+
+.centro {
+    text-align: center;
 }
