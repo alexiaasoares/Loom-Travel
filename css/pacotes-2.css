@@ -22,7 +22,7 @@
 body {
     font-family: 'poppins';
     line-height: 1.6;
-    background-color: #EFF4FF;
+    background-color: white;
     /* Um cinza bem claro para o fundo */
     color: #060606;
 }
@@ -30,11 +30,7 @@ body {
 .logo {
     width: 199px;
     height: auto;
-}
 
-#lupa {
-    width: 50px;
-    margin-left: 190px;
 }
 
 img {
@@ -79,32 +75,11 @@ header {
     position: fixed;
     z-index: 500;
     width: 100%;
+
     /* Fundo de imagem do mundo na navba */
     background-image: url('/assets/navbar.png');
     background-size: cover;
     background-position: center;
-    margin-left: 100px;
-    width: 90%;
-}
-
-header .logo {
-    flex-shrink: 0;
-}
-
-button,
-.btn-buscar {
-    padding: 10px 20px;
-    background-color: #bb0303;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    font-family: 'Lato', sans-serif;
-    /* NOVO: Fonte */
-    height: 44px;
-    /* NOVO: Alinha a altura com os inputs */
-    transition: background-color 0.2s ease;
-    /* NOVO: Efeito de hover */
 }
 
 /* cada item da navbar */
@@ -118,15 +93,8 @@ button,
 
 /* nav bar */
 .navegacao-principal {
-<<<<<<< HEAD
     margin-right: 200px;
     padding-right: 400px;
-=======
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    /* centraliza os links */
->>>>>>> d808f5d005a22e4525b5fff7ff8667fea77f11ff
 }
 
 .navegacao-principal ul {
@@ -142,11 +110,13 @@ button,
 }
 
 /* --- EFEITO HOVER NAVEGAÇÃO (OPÇÃO 2: SUBLINHADO MODERNO) --- */
+
 /* Base do link da navegação (Pai) */
 .navegacao-principal a {
     color: #023975;
     padding-bottom: 5px;
     /* Espaço para o sublinhado */
+
     position: relative;
     /* Essencial para o sublinhado funcionar */
     overflow: hidden;
@@ -164,12 +134,14 @@ button,
     /* Fica na parte de baixo */
     left: 0;
     /* Começa na esquerda */
+
     width: 100%;
     /* Ocupa toda a largura */
     height: 2px;
     /* Grossura da linha */
     background-color: #bb0303;
     /* Cor da linha (vermelho) */
+
     /* A Mágica da Animação (começa com largura 0) */
     transform: scaleX(0);
     transform-origin: left;
@@ -189,6 +161,7 @@ button,
 }
 
 /* ▼▼▼ REGRAS NOVAS ADICIONADAS AQUI ▼▼▼ */
+
 /* Novo contêiner para pesquisa e perfil */
 .header-utils {
     display: flex;
@@ -221,11 +194,15 @@ button,
     font-family: 'Lato', sans-serif;
     /* Fonte mais legível para input */
     background-color: transparent;
-    width: 410px;
+    width: 180px;
     /* Largura padrão */
     transition: width 0.3s ease-in-out;
 }
 
+/* Efeito de expandir a barra quando clicada */
+.header-search input[type="search"]:focus {
+    width: 240px;
+}
 
 /* Remove o 'x' de limpar do input de pesquisa */
 .header-search input[type="search"]::-webkit-search-cancel-button {
@@ -245,13 +222,15 @@ button,
     /* Tamanho do ícone de lupa */
     display: flex;
     /* Ajuda a centralizar o ícone */
-    align-items: left;
+    align-items: center;
 }
 
 .header-search button[type="submit"]:hover {
     color: #023975;
     /* Usando sua cor de link */
 }
+
+
 
 /* Estilização e Posição do Ícone de Perfil */
 /* (Substitui suas regras .area-cliente a e .btn-login .fa-user) */
@@ -260,6 +239,7 @@ button,
     /* SEU TAMANHO DE ÍCONE ORIGINAL */
     color: #333;
     text-decoration: none;
+
     /* Efeito de círculo para alinhar perfeitamente */
     display: flex;
     align-items: center;
@@ -279,7 +259,6 @@ button,
     color: #023975;
     /* Usando sua cor de link */
 }
-
 
 /* ▲▲▲ FIM DAS NOVAS REGRAS ▲▲▲ */
 
@@ -430,7 +409,7 @@ button,
 /* Container dos 3 cards */
 .container-cards {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     gap: 25px;
     flex-wrap: wrap;
     max-width: 1600px;
@@ -444,6 +423,7 @@ button,
     /* Largura controlada para caber 3 em linha */
     background: white;
     border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
 
@@ -653,22 +633,7 @@ footer {
     color: red;
     font-weight: bold;
     font-size: 14px;
-    animation: rolar 40s linear infinite;
-}
-
-/* Tútilo das seções */
-.titulos {
-    justify-content: center;
-
-
-}
-
-.paginaInicial {
-    padding: 50px;
-}
-
-.paginaInicial img {
-    border-radius: 11px;
+    animation: rolar 15s linear infinite;
 }
 
 @keyframes rolar {
@@ -685,404 +650,29 @@ html {
     scroll-behavior: smooth;
 }
 
-<<<<<<< HEAD
-
-
-=======
-.carrossel-container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  margin-top: 30px;
-}
-
-.carrossel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(255, 255, 255, 0.8);
-  border: none;
-  font-size: 2rem;
-  cursor: pointer;
-  z-index: 10;
-  padding: 10px;
-  border-radius: 50%;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-}
-
-.carrossel-btn.esquerda {
-  left: 10px;
-}
-
-.carrossel-btn.direita {
-  right: 10px;
-}
-
-.carrossel-track {
-  display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  padding: 20px 10px;
-}
- 
-.carrossel-container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  margin: 30px auto; /* Centraliza */
-  max-width: 1600px;  /* Igual ao container-cards */
-  padding: 0 20px;    /* Espaço lateral */
-}
->>>>>>> d808f5d005a22e4525b5fff7ff8667fea77f11ff
-/* aluguel de carro */
-
-.escrita-carros {
-    text-align: center;
-    color: #365DB5;
-    padding: 15px;
-
-}
-
-.jeep-carro {
-    border-radius: 25px;
-    height: 300px;
-    width: 420px;
-    margin: 20px;
-
-
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.fb {
-    display: flex;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bolder;
-    margin-top: 0;
-    padding: 0;
-}
-
-.fb h2,
-.fb h3 {
-    line-height: 1;
-    margin: 0;
-    padding: 0;
-}
-
-.oii {
-    margin: 0;
-    padding: 0;
-    background-color: red;
-    border-left: 1px solid black;
-    display: flex;
+.container {
+    max-width: 1300px;
     align-items: center;
-}
-
-.jeep-carro {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin: 0;
-
-    border: none;
-}
-
-.ecp {
-    margin: 0;
-    padding: 10px 0 0 10px;
-}
-
-.segunda-escrita {
-    padding-left: 5px;
-}
-
-.fundo {
-    background-color: #EFF4FF;
-}
-
-.escrita-carros {
-    padding: 10px;
-}
-
-.fundinho {
-    background-attachment: fixed;
-}
-
-/* Card horizontal (imagem à esquerda) */
-.card--horizontal {
-
-    display: flex;
-
-    width: 380px;
-
-    /* Largura controlada para caber 3 em linha */
-
-    background: white;
-
-    border-radius: 12px;
-
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-
-    overflow: hidden;
-
-}
-
-
-
-.card--horizontal img {
-
-    width: 100%;
-
-    height: 100%;
-
-
-
-}
-
-
-
-.card--horizontal .card__content {
-
-    width: 60%;
-
-    padding: var(--espaco-md);
-
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: center;
-
-    justify-content: space-around;
-
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-
-}
-
-
-
-.container-card-horizontal {
-
-    display: flex;
-
-    background-color: #fff;
-
-    border-radius: 8px;
-
-    overflow: hidden;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-
-
-
-
-
-
-
-}
-
-
-
-.container-card {
-
-    max-width: 1000px;
-
-    border: 1px solid blue;
-
-    width: 100%;
-
-    margin: 0 auto;
-
-    display: flex;
-
-    flex-wrap: wrap;
-
-    flex-direction: row-reverse;
-
-
-}
-
-
-
-.cardContent {
-
-    border: 1px solid red;
-
-    display: flex;
-}
-
-
-
-.cardContent img {
-    max-width: 377px;
-}
-
-.card--horizontal ul {
-    list-style: none;
-    padding: 30px;
-}
-
-.container-card-horizontal-4 {
-    padding: 30px;
-    width: 10px;
-
-}
-
-/* FOOTER GERAL */
-.main-footer {
-    background-color: #1c1c1c;
-    color: #f0f0f0;
-    padding: 40px 20px;
-    font-family: 'Segoe UI', sans-serif;
-}
-
-/* Container principal */
-.footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Seções individuais */
-.footer-section {
-    flex: 1 1 220px;
-    min-width: 200px;
-}
-
-.footer-section h4 {
-    font-size: 1.2em;
-    margin-bottom: 15px;
-    color: #ffffff;
-}
-
-.footer-section ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer-section ul li {
-    margin-bottom: 10px;
-    font-size: 0.95em;
-}
-
-.footer-section ul li a {
-    color: #cccccc;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.footer-section ul li a:hover {
-    color: #ffffff;
-}
-
-/* Newsletter */
-.newsletter-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.newsletter-form input[type="email"] {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    font-size: 0.95em;
-}
-
-.newsletter-form button {
-    padding: 10px;
-    background-color: #ff4d4d;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-.newsletter-form button:hover {
-    background-color: #e60000;
-}
-
-/* Redes sociais */
-.footer-social {
     text-align: center;
-    margin-top: 40px;
 }
 
-.footer-social h4 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
+.pacote-viagem {
+    align-items: center;
+    margin-left: 50px;
+    padding: 10px;
+    width: 1200px;
+    border-right: 25px solid #365DB5;
+    border-left: 25px solid #365DB5;
+    border-top: 20px solid #365DB5;
+    border-bottom: 20px solid #365DB5;
+    border-radius: 20px;
+    overflow: hidden;
 }
 
-.social-icons a {
-    font-size: 1.5em;
-    margin: 0 10px;
-    color: #f0f0f0;
-    text-decoration: none;
-    transition: transform 0.3s ease;
+.pacote-dentro {
+    border-radius: 10px;
 }
 
-.social-icons a:hover {
-    transform: scale(1.2);
-}
-
-/* Informações legais */
-.footer-legal {
-    text-align: center;
-    margin-top: 30px;
-    font-size: 0.85em;
-    color: #aaaaaa;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .footer-section {
-        flex: 1 1 100%;
-    }
-
-    .newsletter-form {
-        align-items: center;
-    }
-
-    .newsletter-form input,
-    .newsletter-form button {
-        width: 100%;
-        max-width: 300px;
-    }
-}
-
-.imagem-direita img {
-    width: 97%;
-    margin-top: 176px;
-    height: 464px;
-    border-radius: 25px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-
-
-
-}
-
-.nome-carros {
-    color: #365DB5;
-    font-family: arial;
-    font-size: large;
-    padding: 30px;
-  
+li {
+    list-style: none;
 }
