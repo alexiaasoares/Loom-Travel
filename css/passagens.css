@@ -63,6 +63,10 @@ section h2 {
     margin-bottom: 20px;
     /* Espaço abaixo dos títulos H2 */
 }
+.text-tickets {
+        color: #023975;
+
+}
 
 /* --- 2. CABEÇALHO E NAVEGAÇÃO --- */
 header {
@@ -281,7 +285,7 @@ button,
 
 /* --- 3. SEÇÃO HERO E BARRA DE BUSCA (ESTILIZADA) --- */
 .hero {
-    background-color: #082569;
+    background-color: #1e49ad;
     color: white;
     padding: 111px 20px 20px;
 }
