@@ -168,12 +168,29 @@ h2 {
   justify-content: center;
 }
 
-h3 {
+.h3 {
   color: #365db5;
   font-weight: bold;
-  
+  text-align: center;
 }
 
 #asiaImg {
   height: 200px;
 } 
+
+.salvador {
+  border: 3px solid black;
+  width: 300px;
+  border-radius: 20px;
+}
+
+.infoSalvador {
+  padding: 10px;
+  margin-left: 20px;
+}
+
+.salvadorInfo {
+  color: #365db5;
+  text-align: center;
+  margin-left: -6%;
+}
