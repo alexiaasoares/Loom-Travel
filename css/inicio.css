@@ -1,3 +1,7 @@
+.banner {
+  margin: 0 auto;
+}
+
 .header-utils {
     margin-right: 50px;
 }
@@ -13,6 +17,10 @@ header {
 
 .banner card-destino {
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+h2 {
+  color: #365db5;
 }
 
 .continentesSilhueta {
