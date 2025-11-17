@@ -343,6 +343,24 @@ button,
   color: white;
 }
 
+.destaque-2 {
+  background-color: transparent;
+  color: #bb0303;
+  padding: 6px 12px;
+  border: 1px solid #bb0303;
+  border-radius: 20px;
+  font-size: 13px;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: 'Inter';
+}
+
+.destaque-2:hover {
+  background-color: #bb0303;
+  color: white;
+}
+
 
 .titulo {
     color: #023975;
