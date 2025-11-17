@@ -1064,10 +1064,6 @@ html {
     }
 }
 
-section {
-    display: flex;
-}
-
 .imagem-direita img {
     width: 97%;
     margin-top: 176px;
