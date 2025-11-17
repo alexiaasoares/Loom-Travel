@@ -232,7 +232,7 @@ img {
     /* Tamanho do ícone de lupa */
     display: flex;
     /* Ajuda a centralizar o ícone */
-    align-items: center;
+    align-items: left;
 }
 
 .header-search button[type="submit"]:hover {

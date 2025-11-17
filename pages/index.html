@@ -9,12 +9,10 @@
     content="Encontre os melhores pacotes de viagem para o Nordeste, Sudeste, Sul, Norte e Centro-Oeste." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sedgwick+Ave&display=swap"
-    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/inicio.css">
 </head>
 
 <body>
@@ -23,12 +21,13 @@
     <div class="logo">
       <img src="/assets/logoloom.png" alt="Logo Loom" />
     </div>
+
     <nav class="navegacao-principal">
       <ul>
-        <li><a href="lugares.html">PACOTES</a></li>
-        <li><a href="">ALUGUEL</a></li>
-        <li><a href="">LUGARES</a></li>
-        <li><a href="passagens.html">PASSAGENS</a></li>
+        <li><a href="#">PACOTES</a></li>
+        <li><a href="#">ALUGUEL</a></li>
+        <li><a href="#">LUGARES</a></li>
+        <li><a href="#">PASSAGENS</a></li>
       </ul>
     </nav>
 
@@ -36,13 +35,13 @@
       <form class="header-search" action="/buscar" method="get" role="search">
         <input type="search" name="q" placeholder="Pesquisar destinos..." aria-label="Pesquisar destinos" />
         <button type="submit" aria-label="Buscar">
-          <img src="/assets/lupa.png" id="lupa" alt="" srcset="">
+          <img src="/assets/lupa.png" id="lupa" alt="">
         </button>
       </form>
 
       <div class="area-cliente">
         <a href="login.html" class="btn-login" title="Login" aria-label="Página de Login">
-          <img class="login-img" src="/assets/login.png" alt="" srcset="">
+          <img class="login-img" src="/assets/login.png" alt="">
         </a>
       </div>
     </div>
@@ -50,51 +49,98 @@
 
   <main>
 
-    <section id="destinos-procurados" class="secao-carrossel"></section>
-      <h2 class="titulos"> Mais Procurados </h2>
-      <div class="container-cards">
+    <br><br><br>
+
+    <section class="paginaInicial">
+      <img src="/assets/banner.png" class="banner" alt="Banner de viagem">
+      <br> <br>
+
+      <h2 class="titulos"> MAIS PROCURADOS </h2>
+
+      <div class="carrossel-track" id="carrosselTrack">
         <div class="card-destino">
-          <!-- Imagem da paisagem -->
-          <img src="/Loom-Travel/assets/disney.png" alt="DISNEYLAND" />
- 
-          <!-- Informações do destino -->
+          <img src="/assets/disney.png" alt="Disney" />
           <div class="info-destino">
-            <h2>Disney, EUA</h2>
-            <p>Viva a magia com hospedagem temática, ingressos para os parques e benefícios exclusivos. Diversão
-              garantida para todas as idades.</p>
-            <span class="destaque">A partir de R$ 5000</span>
+            <h2>DISNEY</h2>
+            <p>FAÇA UMA VIAGEM DOS SONHOS PARA O MUNDO ENCANTADO COM A LoM</p>
+            <a href="#" class="btn-ver-pacote">VER MAIS</a>
           </div>
         </div>
- 
- 
+
         <div class="card-destino">
-          <!-- Imagem da paisagem -->
-          <img src="/assets/paris.png" alt="Paisagem da Torre Eifel" />
- 
-          <!-- Informações do destino -->
+          <img src="/assets/paris.png" alt="Paris" />
           <div class="info-destino">
-            <h2>Paris, França</h2>
-            <p>Explore a elegância parisiense com hospedagem charmosa, passeios guiados e experiências gastronômicas
-              inesquecíveis.</p>
-            <span class="destaque">A partir de R$ 899</span>
+            <h2>PARIS</h2>
+            <p>VIAJE PARA A CIDADE MAIS ROMÂNTICA DO MUNDO COM A LoM</p>
+            <a href="#" class="btn-ver-pacote">VER MAIS</a>
           </div>
         </div>
- 
+
         <div class="card-destino">
-          <!-- Imagem da paisagem -->
-          <img src="/assets/peru.png" alt="Paisagem das montanhas" />
- 
-          <!-- Informações do destino -->
+          <img src="/assets/peru.png" alt="Machu Picchu" />
           <div class="info-destino">
-            <h2>Machu Picchu, Peru</h2>
-            <p>Aventure-se pelos Andes com trilhas guiadas, transporte panorâmico e imersão na cultura inca.
-              Esse pacote oferece uma jornada transformadora em meio às montanhas sagradas do Peru.
-            </p>
-            <span class="destaque">A partir de R$ 899</span>
+            <h2>MACHU PICCHU</h2>
+            <p>CONHEÇA UMA DAS MARAVILHAS DO MUNDO COM A LoM</p>
+            <a href="#" class="btn-ver-pacote">VER MAIS</a>
           </div>
+        </div>
+
+      </div>
+    </section>
+
+    <h2 class="titulos"> CONTINENTES </h2>
+
+    <section>
+
+      <div class="continentes">
+        <br>
+
+
+        <div class="carrossel-track" id="amSul">
+          <img class="continentesSilhueta" src="/assets/americaSul.png" alt="Disney" />
+        </div>
+
+        <div class="carrossel-track" id="amNor">
+          <img class="continentesSilhueta" src="/assets/americaNorte.png" alt="Disney" />
+        </div>
+
+        <div class="carrossel-track" id="asia">
+          <img class="continentesSilhueta" src="/assets/asia.png" alt="Disney" />
+        </div>
+
+
+        <div class="carrossel-track" id="eur">
+          <img class="continentesSilhueta" src="/assets/europa.png" alt="Disney" />
+        </div>
+
+      </div>
+
+      <div class="nomes">
+        <p class="continente" id="asl">AMÉRICA DO SUL</p>
+        <p class="continente" id="an">AMÉRICA DO NORTE</p>
+        <p class="continente" id="as">ÁSIA</p>
+        <p class="continente" id="eup">EUROPA</p>
+      </div>
+    </section>
+
+    <section class="pacotes">
+      <div class="card-pacote">
+        <div class="info">
+          <img src="/assets/salvador.png" alt="Salvador - BA">
+          <h2>SALVADOR - BA</h2>
+          <p>Saída de São Paulo</p>
+          <ul>
+            <li>Transporte</li>
+            <li>Hotel</li>
+            <li>Passeio</li>
+            <li>1-4 pessoas</li>
+            <li>01/11 - 15/11</li>
+          </ul>
+          <div class="preco">R$ 2.329,00</div>
         </div>
       </div>
- 
+    </section>
+
   </main>
 
   <footer>
@@ -115,11 +161,11 @@
       </div>
     </div>
     <div class="footer-copyright">
-      &copy; 2025 Loom Viagens. Todos os direitos reservados. teste
+      &copy; 2025 Loom Viagens. Todos os direitos reservados.
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="/js/script.js"></script>
 
 </body>
 
