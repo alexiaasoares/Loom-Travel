@@ -279,10 +279,12 @@ header {
     gap: 15px;
     /* Mude aqui para mais/menos espaço entre os itens */
     margin-top: 25px;
+    margin-left: 175px;
+    margin-right: 175px;
     flex-wrap: wrap;
 
     /* NOVO: Adiciona um fundo e bordas arredondadas ao formulário */
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: #1e49ad;
     /* Fundo escuro semi-transparente */
     padding: 25px;
     border-radius: 8px;
