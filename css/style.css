@@ -92,7 +92,7 @@ header {
 }
 
 /* nav bar */
-.navegacao-principal  {
+.navegacao-principal {
     margin-right: 200px;
     padding-right: 400px;
 }
@@ -312,8 +312,8 @@ header {
 
 /* slogan - marquee*/
 #slogan {
-height: 15px;
-background-color: white;
+    height: 15px;
+    background-color: white;
 }
 
 /* ======================================================= */
@@ -423,7 +423,6 @@ button,
     /* Largura controlada para caber 3 em linha */
     background: white;
     border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
 
@@ -465,8 +464,8 @@ button,
     display: inline-block;
     align-self: flex-start;
 
-  
-  margin: 0 auto;
+
+    margin: 0 auto;
 }
 
 
@@ -652,15 +651,18 @@ footer {
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
+
+
+
 /* aluguel de carro */
 
 .escrita-carros {
     text-align: center;
     color: #365DB5;
     padding: 15px;
-    
+
 }
 
 .jeep-carro {
@@ -673,62 +675,337 @@ html {
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .fb {
-  display: flex;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bolder;
-  margin-top: 0;
-  padding: 0;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    margin-top: 0;
+    padding: 0;
 }
 
 .fb h2,
 .fb h3 {
-  line-height: 1;
-  margin: 0;
-  padding: 0;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
 }
 
 .oii {
-  margin: 0;
-  padding: 0;
-  background-color: red;
-  border-left: 1px solid black;
-  display: flex;
-  align-items: center;
+    margin: 0;
+    padding: 0;
+    background-color: red;
+    border-left: 1px solid black;
+    display: flex;
+    align-items: center;
 }
 
 .jeep-carro {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin: 0;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
 
-  border: none;
+    border: none;
 }
 
 .ecp {
-  margin: 0;
-  padding: 10px 0 0 10px;
+    margin: 0;
+    padding: 10px 0 0 10px;
 }
 
 .segunda-escrita {
-  padding-left: 5px;
+    padding-left: 5px;
 }
 
 .fundo {
-  background-color: #365DB5;
+    background-color: #EFF4FF;
 }
 
 .escrita-carros {
-  padding: 10px;
-} 
+    padding: 10px;
+}
 
 .fundinho {
     background-attachment: fixed;
 }
 
+/* Card horizontal (imagem à esquerda) */
+.card--horizontal {
+
+    display: flex;
+
+    width: 380px;
+
+    /* Largura controlada para caber 3 em linha */
+
+    background: white;
+
+    border-radius: 12px;
+
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+
+    overflow: hidden;
+
+}
+
+
+
+.card--horizontal img {
+
+    width: 100%;
+
+    height: 100%;
+
+
+
+}
+
+
+
+.card--horizontal .card__content {
+
+    width: 60%;
+
+    padding: var(--espaco-md);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    justify-content: space-around;
+
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+}
+
+
+
+.container-card-horizontal {
+
+    display: flex;
+
+    background-color: #fff;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+
+
+
+
+
+
+}
+
+
+
+.container-card {
+
+    max-width: 1000px;
+
+    border: 1px solid blue;
+
+    width: 100%;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    flex-direction: row-reverse;
+
+
+}
+
+
+
+.cardContent {
+
+    border: 1px solid red;
+
+    display: flex;
+}
+
+
+
+.cardContent img {
+    max-width: 377px;
+}
+
+.card--horizontal ul {
+    list-style: none;
+    padding: 30px;
+}
+
+.container-card-horizontal-4 {
+    padding: 30px;
+    width: 10px;
+
+}
+
+/* FOOTER GERAL */
+.main-footer {
+    background-color: #1c1c1c;
+    color: #f0f0f0;
+    padding: 40px 20px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Container principal */
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Seções individuais */
+.footer-section {
+    flex: 1 1 220px;
+    min-width: 200px;
+}
+
+.footer-section h4 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+    font-size: 0.95em;
+}
+
+.footer-section ul li a {
+    color: #cccccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #ffffff;
+}
+
+/* Newsletter */
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.newsletter-form input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.95em;
+}
+
+.newsletter-form button {
+    padding: 10px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+    background-color: #e60000;
+}
+
+/* Redes sociais */
+.footer-social {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer-social h4 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.social-icons a {
+    font-size: 1.5em;
+    margin: 0 10px;
+    color: #f0f0f0;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+
+/* Informações legais */
+.footer-legal {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.85em;
+    color: #aaaaaa;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-section {
+        flex: 1 1 100%;
+    }
+
+    .newsletter-form {
+        align-items: center;
+    }
+
+    .newsletter-form input,
+    .newsletter-form button {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+section {
+    display: flex;
+}
+
+.imagem-direita img {
+    width: 97%;
+    margin-top: 176px;
+    height: 464px;
+    border-radius: 25px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+
+
+}
+
+.nome-carros {
+    color: #365DB5;
+    font-family: arial;
+    font-size: large;
+    padding: 30px;
+  
+}
