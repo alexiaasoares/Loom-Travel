@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -10,147 +11,254 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sedgwick+Ave&display=swap%22
       rel="stylesheet">
-  <link rel="stylesheet" href="/Loom-Travel/css/lugares.css">
+  <link rel="stylesheet" href="/css/lugares.css">
 </head>
+
 <body>
- 
+
 
 
   <header>
-    <div class="logo"></div>
-    <nav>
-      <ul>
-        <li><a href="#">PACOTES</a></li>
-        <li><a href="#">ALUGUEL</a></li>
-        <li><a href="#">LUGARES</a></li>
-        <li><a href="#">PASSAGENS</a></li>
+    <div class="logo"> <img src="/assets/logoloom.png" alt="Logo Loom" onclick="window.location.href='index.html'" />
+    </div>
+    <nav class="navegacao-principal">
+ <ul>
+        <li><a href="pacotes.html">PACOTES</a></li>
+        <li><a href="aloomgueis.html">ALUGUEL</a></li>
+        <li><a href="passagens.html">PASSAGENS</a></li>
+        <li><a href="pontosTuristicos.html">PONTOS TURÍSTICOS</a></li>
       </ul>
     </nav>
-    <div class="busca-usuario">
-      <input type="text" class="busca" placeholder="Pesquisar...">
-      <div class="icone-usuario">👤</div>
+    <div class="header-utils">
+      <form class="header-search" action="/buscar" method="get" role="search"> <input type="search" name="q"
+          placeholder="Pesquisar destinos..." aria-label="Pesquisar destinos" /> <i
+          class="fa-solid fa-magnifying-glass fa-xl" style="color: #3d5ab2;"></i> </form>
+      <div class="area-cliente"> <a href="login.html" class="btn-login" title="Login" aria-label="Página de Login"> <i
+            class="fa-solid fa-circle-user fa-xl" style="color: #3d5ab2;"></i></a> </div>
     </div>
-  </header>
+  </header> <br><br><br><br>
 
 
-  
-  <!-- Adicionar marquee -->
-   
-  <div class="destaque">SEU TRAJETO EM NOSSAS MÃOS</div>
+
+
+
+
   <main class="container">
 
 
 
     <!-- Parte de busca de pacotes -->
-    <section class="caixa-pacotes">
-      <h2>PACOTES DE VIAGENS</h2>
-      <div class="campos-busca">
-        <div class="grupo-campo">
-          <label>ORIGEM</label>
-          <input type="text" value="SÃO PAULO, CO...">
-        </div>
-        <div class="grupo-campo">
-          <label>DESTINO</label>
-          <input type="text" value="APARECIDA">
-        </div>
-        <div class="grupo-campo">
-          <label>DATAS</label>
-          <div class="datas">
-            <div class="data">ENTRADA</div>
-            <div class="data">SAÍDA</div>
-          </div>
-        </div>
-        <div class="grupo-campo">
-          <label>QUARTOS</label>
-          <div class="hospedes">
-            <span>🛏️</span>
-            <input type="number" value="1" min="1">
-            <span>👥</span>
-            <input type="number" value="2" min="1">
-          </div>
-        </div>
-        <button class="botao-buscar">BUSCAR</button>
+    <div class="search-container">
+      <div class="search-header">
+        <h2>PACOTES DE VIAGENS</h2>
       </div>
-      <div class="opcoes">
-        <div class="opcao">ALTERAR A CIDADE OU DATAS</div>
-        <div class="opcao">INCLUIR SEGUNDO DESTINO</div>
+      <div class="search-body">
+        <form class="search-form">
+          <div class="form-section location">
+            <div class="origins-destinations"> <label> ORIGEM</label> <label> DESTINO</label> </div>
+            <div class="input-group">
+              <div class="input-wrapper">
+                <div class="icon icon-pin"></div> <input type="text" placeholder="SÃO PAULO, CO...">
+              </div>
+              <div class="icon icon-swap"></div>
+              <div class="input-wrapper">
+                <div class="icon icon-pin"></div> <input type="text" placeholder="INSIRA UMA CI...">
+              </div>
+            </div>
+          </div>
+          <div class="form-section dates"> <label>DATAS</label>
+            <div class="input-group">
+              <div class="input-wrapper">
+                <div class="icon icon-calendar"></div> <input type="text" placeholder="ENTRADA">
+              </div>
+              <div class="input-wrapper">
+                <div class="icon icon-calendar"></div> <input type="text" placeholder="SAÍDA">
+              </div>
+            </div>
+          </div>
+          <div class="form-section rooms"> <label>QUARTOS</label>
+            <div class="input-group">
+              <div class="input-wrapper">
+                <div class="icon icon-person"></div> <input type="text" placeholder="1">
+              </div>
+              <div class="input-wrapper">
+                <div class="icon icon-people"></div> <input type="text" placeholder="2">
+              </div>
+            </div>
+          </div> <button type="submit" class="search-button">
+            <div class="icon icon-search">BUSCAR</div>
+          </button>
+        </form>
+        <div class="search-options"> <a href="#">
+            <div class="icon icon-pencil"></div> ALTERAR A CIDADE OU DATAS
+          </a> <a href="#">
+            <div class="icon icon-plus"></div> INCLUIR SEGUNDO DESTINO
+          </a> </div>
       </div>
-    </section>
-
+    </div>
 
 
     <!-- Transportes -->
-    <section class="caixa-transportes">
-      <h3>TRANSPORTES</h3>
-      <div class="lista-transportes">
-        <div class="item-transporte">
-          <div class="simbolo">C</div>
-          <div class="info">
-            <div class="data-ida">IDA: 28/11</div>
-            <div class="preco">COMETA R$ 100</div>
+    <div class="pai">
+      <div class="img">
+        <img src="/assets/relogio.png" alt="Imagem Aparecida">
+      </div>
+      <div class="tio">
+        <section class="caixa-transportes">
+          <h3>TRANSPORTES</h3>
+          <div class="lista-transportes">
+            <div class="item-transporte">
+              <div class="simbolo">C</div>
+              <div class="info">
+                <div class="data-ida">IDA: 28/11</div>
+                <div class="preco">COMETA R$ 100</div>
+              </div>
+            </div>
+            <div class="item-transporte">
+              <div class="simbolo">C</div>
+              <div class="info">
+                <div class="data-ida">IDA: 02/12</div>
+                <div class="preco">COMETA R$ 98</div>
+              </div>
+            </div>
+            <div class="item-transporte">
+              <div class="simbolo">C</div>
+              <div class="info">
+                <div class="data-ida">IDA: 02/12</div>
+                <div class="preco">COMETA R$ 98</div>
+              </div>
+            </div>
+            <div class="item-transporte">
+              <div class="simbolo">C</div>
+              <div class="info">
+                <div class="data-ida">IDA: 03/12</div>
+                <div class="preco">COMETA R$ 111</div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="item-transporte">
-          <div class="simbolo">C</div>
-          <div class="info">
-            <div class="data-ida">IDA: 02/12</div>
-            <div class="preco">COMETA R$ 98</div>
-          </div>
-        </div>
-        <div class="item-transporte">
-          <div class="simbolo">C</div>
-          <div class="info">
-            <div class="data-ida">IDA: 02/12</div>
-            <div class="preco">COMETA R$ 98</div>
-          </div>
-        </div>
-        <div class="item-transporte">
-          <div class="simbolo">C</div>
-          <div class="info">
-            <div class="data-ida">IDA: 03/12</div>
-            <div class="preco">COMETA R$ 111</div>
-          </div>
+          <div class="ver-mais">VER MAIS</div>
+        </section>
+
+
+        <!-- Banner de aluguel de carro -->
+        <div class="banner-carro">
+          <img src="/assets/carros.png" alt="carros">
         </div>
       </div>
-      <div class="ver-mais">VER MAIS</div>
-    </section>
-
-
-    <!-- Banner de aluguel de carro -->
-    <div class="banner-carro">
-      <div class="logo-banner">L<span>o</span>M</div>
-      <div class="texto-banner">ALUGUE UM CARRO CONOSCO!</div>
     </div>
-
 
     <!-- Estadias -->
     <section class="caixa-estadias">
       <h3>ESTADIAS</h3>
       <div class="lista-estadias">
         <div class="item-estadia">
-          <img src="https://via.placeholder.com/300x200?text=Hotel+Porto+Real" alt="Hotel Porto Real">
+          <img src="/assets/hotel.png" alt="Hotel Porto Real">
           <div class="nome-estadia">HOTEL PORTO REAL</div>
         </div>
         <div class="item-estadia">
-          <img src="https://via.placeholder.com/300x200?text=Casa+de+Temporada" alt="Casa de Temporada">
+          <img src="/assets/casinhas.png" alt="Casa de Temporada">
           <div class="nome-estadia">CASA DE TEMPORADA</div>
         </div>
         <div class="item-estadia">
-          <img src="https://via.placeholder.com/300x200?text=Hotel+Cathedral" alt="Hotel Cathedral">
+          <img src="/assets/predio.png" alt="Hotel Cathedral">
           <div class="nome-estadia">HOTEL CATHEDRAL</div>
         </div>
         <div class="item-estadia">
-          <img src="https://via.placeholder.com/300x200?text=Casa+em+Jardim+Paraíba" alt="Casa em Jardim Paraíba">
+          <img src="/assets/piscina.png" alt="Casa em Jardim Paraíba">
           <div class="nome-estadia">CASA EM JARDIM PARAÍBA</div>
         </div>
       </div>
     </section>
+
+
+    <div class="incluir-pacote">
+      <h3>INCLUIR NO PACOTE</h3>
+      <br>
+      <div class="options-grid">
+        <button class="option-btn">PASSEIO CULTURAL</button>
+        <button class="option-btn">PASSEIO COM FOTOS</button>
+        <button class="option-btn">BICICLETA</button>
+        <button class="option-btn">CLUBES</button>
+        <button class="option-btn">TURISMO RELIGIOSO</button>
+        <button class="option-btn">PASSEIO COM FOTOS</button>
+        <br><br>
+        <button class="close-button">FECHAR PACOTE</button>
+        <!--  Botões e sobre nós  -->
+        <br><br><br>
+
+      </div>
+    </div>
   </main>
+  <br><br><br>
 
 
-  <!-- Rodapé -->
-  <footer>
-    © 2025 LooM - Todos os direitos reservados.
+  <footer class="main-footer">
+    <div class="footer-container">
+      <!-- Seção Institucional -->
+      <div class="footer-section">
+        <h4>Institucional</h4>
+        <ul>
+          <li><a href="#">Sobre Nós</a></li>
+          <li><a href="#">Nossa História</a></li>
+          <li><a href="#">Trabalhe Conosco</a></li>
+          <li><a href="#">Imprensa</a></li>
+        </ul>
+      </div>
+
+      <!-- Seção Ajuda e Suporte -->
+      <div class="footer-section">
+        <h4>Ajuda e Suporte</h4>
+        <ul>
+          <li><a href="#">Central de Atendimento</a></li>
+          <li><a href="#">Política de Privacidade</a></li>
+          <li><a href="#">Termos de Uso</a></li>
+          <li><a href="#">Cancelamentos e Reembolsos</a></li>
+        </ul>
+      </div>
+
+      <!-- Seção Contato -->
+      <div class="footer-section">
+        <h4>Contato</h4>
+        <ul>
+          <li>Email: contato@loomviagens.com.br</li>
+          <li>Telefone: (11) 99999-9999</li>
+          <li>WhatsApp: (11) 98888-7777</li>
+          <li>Horário de Atendimento: Seg-Sex 9h às 18h</li>
+        </ul>
+      </div>
+
+      <!-- Seção Newsletter -->
+      <div class="footer-section">
+        <h4>Receba Novidades</h4>
+        <p>Inscreva-se e receba promoções exclusivas!</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Seu melhor e-mail" required />
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Redes Sociais -->
+    <div class="footer-social">
+      <h4>Siga-nos</h4>
+      <div class="social-icons">
+        <a href="#" aria-label="Siga-nos no Facebook" target="_blank">📘</a>
+        <a href="#" aria-label="Siga-nos no Instagram" target="_blank">📷</a>
+        <a href="#" aria-label="Siga-nos no LinkedIn" target="_blank">💼</a>
+        <a href="#" aria-label="Siga-nos no YouTube" target="_blank">▶️</a>
+      </div>
+    </div>
+
+    <!-- Informações Legais -->
+    <div class="footer-legal">
+      <p>© 2025 Loom Viagens. Todos os direitos reservados.</p>
+      <p>CNPJ: 00.000.000/0001-00 | Rua Exemplo, 123 - São Paulo/SP</p>
+    </div>
   </footer>
+
+
+
+
 </body>
+
 </html>

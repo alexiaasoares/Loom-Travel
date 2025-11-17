@@ -30,7 +30,11 @@ body {
 .logo {
     width: 199px;
     height: auto;
+}
 
+#lupa {
+    width: 50px;
+    margin-left: 190px;
 }
 
 img {
@@ -75,11 +79,32 @@ header {
     position: fixed;
     z-index: 500;
     width: 100%;
-
     /* Fundo de imagem do mundo na navba */
-    background-image: url('/Loom-Travel/assets/navbar.png');
+    background-image: url('/assets/navbar.png');
     background-size: cover;
     background-position: center;
+    margin-left: 100px;
+    width: 90%;
+}
+
+header .logo {
+    flex-shrink: 0;
+}
+
+button,
+.btn-buscar {
+    padding: 10px 20px;
+    background-color: #bb0303;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+    /* NOVO: Fonte */
+    height: 44px;
+    /* NOVO: Alinha a altura com os inputs */
+    transition: background-color 0.2s ease;
+    /* NOVO: Efeito de hover */
 }
 
 /* cada item da navbar */
@@ -93,8 +118,15 @@ header {
 
 /* nav bar */
 .navegacao-principal {
+<<<<<<< HEAD
     margin-right: 200px;
     padding-right: 400px;
+=======
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    /* centraliza os links */
+>>>>>>> d808f5d005a22e4525b5fff7ff8667fea77f11ff
 }
 
 .navegacao-principal ul {
@@ -110,13 +142,11 @@ header {
 }
 
 /* --- EFEITO HOVER NAVEGAÇÃO (OPÇÃO 2: SUBLINHADO MODERNO) --- */
-
 /* Base do link da navegação (Pai) */
 .navegacao-principal a {
     color: #023975;
     padding-bottom: 5px;
     /* Espaço para o sublinhado */
-
     position: relative;
     /* Essencial para o sublinhado funcionar */
     overflow: hidden;
@@ -134,14 +164,12 @@ header {
     /* Fica na parte de baixo */
     left: 0;
     /* Começa na esquerda */
-
     width: 100%;
     /* Ocupa toda a largura */
     height: 2px;
     /* Grossura da linha */
     background-color: #bb0303;
     /* Cor da linha (vermelho) */
-
     /* A Mágica da Animação (começa com largura 0) */
     transform: scaleX(0);
     transform-origin: left;
@@ -161,7 +189,6 @@ header {
 }
 
 /* ▼▼▼ REGRAS NOVAS ADICIONADAS AQUI ▼▼▼ */
-
 /* Novo contêiner para pesquisa e perfil */
 .header-utils {
     display: flex;
@@ -194,15 +221,11 @@ header {
     font-family: 'Lato', sans-serif;
     /* Fonte mais legível para input */
     background-color: transparent;
-    width: 180px;
+    width: 410px;
     /* Largura padrão */
     transition: width 0.3s ease-in-out;
 }
 
-/* Efeito de expandir a barra quando clicada */
-.header-search input[type="search"]:focus {
-    width: 240px;
-}
 
 /* Remove o 'x' de limpar do input de pesquisa */
 .header-search input[type="search"]::-webkit-search-cancel-button {
@@ -222,15 +245,13 @@ header {
     /* Tamanho do ícone de lupa */
     display: flex;
     /* Ajuda a centralizar o ícone */
-    align-items: center;
+    align-items: left;
 }
 
 .header-search button[type="submit"]:hover {
     color: #023975;
     /* Usando sua cor de link */
 }
-
-
 
 /* Estilização e Posição do Ícone de Perfil */
 /* (Substitui suas regras .area-cliente a e .btn-login .fa-user) */
@@ -239,7 +260,6 @@ header {
     /* SEU TAMANHO DE ÍCONE ORIGINAL */
     color: #333;
     text-decoration: none;
-
     /* Efeito de círculo para alinhar perfeitamente */
     display: flex;
     align-items: center;
@@ -259,6 +279,7 @@ header {
     color: #023975;
     /* Usando sua cor de link */
 }
+
 
 /* ▲▲▲ FIM DAS NOVAS REGRAS ▲▲▲ */
 
@@ -409,7 +430,7 @@ button,
 /* Container dos 3 cards */
 .container-cards {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     gap: 25px;
     flex-wrap: wrap;
     max-width: 1600px;
@@ -637,7 +658,17 @@ footer {
 
 /* Tútilo das seções */
 .titulos {
-    justify-content: left;
+    justify-content: center;
+
+
+}
+
+.paginaInicial {
+    padding: 50px;
+}
+
+.paginaInicial img {
+    border-radius: 11px;
 }
 
 @keyframes rolar {
@@ -654,8 +685,58 @@ html {
     scroll-behavior: smooth;
 }
 
+<<<<<<< HEAD
 
 
+=======
+.carrossel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  margin-top: 30px;
+}
+
+.carrossel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 10;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.carrossel-btn.esquerda {
+  left: 10px;
+}
+
+.carrossel-btn.direita {
+  right: 10px;
+}
+
+.carrossel-track {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 20px 10px;
+}
+ 
+.carrossel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  margin: 30px auto; /* Centraliza */
+  max-width: 1600px;  /* Igual ao container-cards */
+  padding: 0 20px;    /* Espaço lateral */
+}
+>>>>>>> d808f5d005a22e4525b5fff7ff8667fea77f11ff
 /* aluguel de carro */
 
 .escrita-carros {
