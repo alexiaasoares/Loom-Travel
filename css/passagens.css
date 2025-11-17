@@ -640,7 +640,7 @@ html {
 }
 
 .ticket-header {
-  background: linear-gradient(135deg, #072791, #2e52f3);
+  background: linear-gradient(135deg, #2a45c0, #7387e2);
   color: white;
   display: flex;
   align-items: center;
@@ -679,7 +679,7 @@ html {
 
 .btn-comprar {
     font-family: 'Poppins';
-  background: #000ed7;
+  background: #2c36c7;
   color: white;
   border: none;
   border-radius: 6px;
