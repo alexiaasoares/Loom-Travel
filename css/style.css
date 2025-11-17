@@ -55,7 +55,6 @@ a {
 section {
     padding: 40px 20px;
     /* 40px em cima/baixo, 20px nas laterais */
-    text-align: center;
     /* Centraliza títulos de seção */
 }
 
@@ -815,6 +814,7 @@ html {
 
 
 
+
 }
 
 
@@ -1010,15 +1010,25 @@ section {
 }
 
 .imagem-direita img {
-    width: 100%;
-    margin-top: 176px;
+    width: 97%;
+    margin-top: 81px;
     height: 500px;
-    border-radius: 8px;
+    border-radius: 15px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+<<<<<<< HEAD
+=======
     
 
 
+>>>>>>> 1fcbc9506a5f09c2f9978974c0104c792f90f43d
 }
 
-.nomes-carros {
-    padding-top: 300px;
+.nome-carros {
+    padding-left: 785px;
+    color: #365DB5;
+    text-align: center;
+}
+
+.margin {
+    margin-top: -90px;
 }
