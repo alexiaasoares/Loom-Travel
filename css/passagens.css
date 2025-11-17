@@ -22,16 +22,20 @@
 body {
     font-family: 'poppins';
     line-height: 1.6;
-    background-color: white;
+    background-color: #EFF4FF;
     /* Um cinza bem claro para o fundo */
     color: #060606;
 }
+
 .logo {
     width: 199px;
     height: auto;
-
 }
 
+#lupa {
+    width: 50px;
+    margin-left: 190px;
+}
 
 img {
     max-width: 100%;
@@ -75,11 +79,32 @@ header {
     position: fixed;
     z-index: 500;
     width: 100%;
-
     /* Fundo de imagem do mundo na navba */
     background-image: url('/assets/navbar.png');
     background-size: cover;
     background-position: center;
+    margin-left: 100px;
+    width: 90%;
+}
+
+header .logo {
+    flex-shrink: 0;
+}
+
+button,
+.btn-buscar {
+    padding: 10px 20px;
+    background-color: #bb0303;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+    /* NOVO: Fonte */
+    height: 44px;
+    /* NOVO: Alinha a altura com os inputs */
+    transition: background-color 0.2s ease;
+    /* NOVO: Efeito de hover */
 }
 
 /* cada item da navbar */
@@ -92,9 +117,11 @@ header {
 }
 
 /* nav bar */
-.navegacao-principal  {
-    margin-right: 200px;
-    padding-right: 400px;
+.navegacao-principal {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    /* centraliza os links */
 }
 
 .navegacao-principal ul {
@@ -110,13 +137,11 @@ header {
 }
 
 /* --- EFEITO HOVER NAVEGAÇÃO (OPÇÃO 2: SUBLINHADO MODERNO) --- */
-
 /* Base do link da navegação (Pai) */
 .navegacao-principal a {
     color: #023975;
     padding-bottom: 5px;
     /* Espaço para o sublinhado */
-
     position: relative;
     /* Essencial para o sublinhado funcionar */
     overflow: hidden;
@@ -134,14 +159,12 @@ header {
     /* Fica na parte de baixo */
     left: 0;
     /* Começa na esquerda */
-
     width: 100%;
     /* Ocupa toda a largura */
     height: 2px;
     /* Grossura da linha */
     background-color: #bb0303;
     /* Cor da linha (vermelho) */
-
     /* A Mágica da Animação (começa com largura 0) */
     transform: scaleX(0);
     transform-origin: left;
@@ -161,7 +184,6 @@ header {
 }
 
 /* ▼▼▼ REGRAS NOVAS ADICIONADAS AQUI ▼▼▼ */
-
 /* Novo contêiner para pesquisa e perfil */
 .header-utils {
     display: flex;
@@ -194,15 +216,11 @@ header {
     font-family: 'Lato', sans-serif;
     /* Fonte mais legível para input */
     background-color: transparent;
-    width: 180px;
+    width: 410px;
     /* Largura padrão */
     transition: width 0.3s ease-in-out;
 }
 
-/* Efeito de expandir a barra quando clicada */
-.header-search input[type="search"]:focus {
-    width: 240px;
-}
 
 /* Remove o 'x' de limpar do input de pesquisa */
 .header-search input[type="search"]::-webkit-search-cancel-button {
@@ -230,8 +248,6 @@ header {
     /* Usando sua cor de link */
 }
 
-
-
 /* Estilização e Posição do Ícone de Perfil */
 /* (Substitui suas regras .area-cliente a e .btn-login .fa-user) */
 .area-cliente .btn-login {
@@ -239,7 +255,6 @@ header {
     /* SEU TAMANHO DE ÍCONE ORIGINAL */
     color: #333;
     text-decoration: none;
-
     /* Efeito de círculo para alinhar perfeitamente */
     display: flex;
     align-items: center;
@@ -306,13 +321,11 @@ header {
     font-weight: bold;
     /* NOVO: Deixa o label mais forte */
 
-    /* NOVO: Usei 'Lato' aqui porque 'Sedgwick Ave' é muito difícil de ler em textos pequenos */
-    font-family: 'Lato', sans-serif;
 }
 
 .busca-pacotes input[type="text"],
 .busca-pacotes input[type="date"] {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Inter', sans-serif;
     /* Fonte legível */
     font-size: 1rem;
     /* Tamanho do texto dentro do campo */
@@ -347,7 +360,7 @@ button,
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Inter', sans-serif;
     /* NOVO: Fonte */
     height: 44px;
     /* NOVO: Alinha a altura com os inputs */
@@ -443,57 +456,141 @@ button,
 
 
 /* --- 6. RODAPÉ --- */
-footer {
-    background-color: #2b2727;
-    color: #f4f4f4;
-    padding: 40px 20px;
-    margin-top: 30px;
+.main-footer {
+  background-color: #1c1c1c;
+  color: #f0f0f0;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', sans-serif;
 }
-
+ 
+/* Container principal */
 .footer-container {
-    display: flex;
-    justify-content: space-around;
-    /* Espalha as colunas */
-    gap: 20px;
-    flex-wrap: wrap;
-    /* Quebra de linha em telas pequenas */
-    margin-bottom: 20px;
-    text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-
-.footer-container h4 {
-    margin-bottom: 15px;
-    color: #ffffff;
+ 
+/* Seções individuais */
+.footer-section {
+  flex: 1 1 220px;
+  min-width: 200px;
 }
-
-.footer-container ul {
-    list-style: none;
+ 
+.footer-section h4 {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  color: #ffffff;
 }
-
-.footer-container a {
-    color: #f4f4f4;
-    display: block;
-    margin-bottom: 5px;
+ 
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
-
-.footer-copyright {
+ 
+.footer-section ul li {
+  margin-bottom: 10px;
+  font-size: 0.95em;
+}
+ 
+.footer-section ul li a {
+  color: #cccccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+ 
+.footer-section ul li a:hover {
+  color: #ffffff;
+}
+ 
+/* Newsletter */
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+ 
+.newsletter-form input[type="email"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.95em;
+}
+ 
+.newsletter-form button {
+  padding: 10px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+ 
+.newsletter-form button:hover {
+  background-color: #e60000;
+}
+ 
+/* Redes sociais */
+.footer-social {
+  text-align: center;
+  margin-top: 40px;
+}
+ 
+.footer-social h4 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+ 
+.social-icons a {
+  font-size: 1.5em;
+  margin: 0 10px;
+  color: #f0f0f0;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+ 
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+ 
+/* Informações legais */
+.footer-legal {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.85em;
+  color: #aaaaaa;
+}
+ 
+/* Responsividade */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    border-top: 1px solid #555;
-    padding-top: 20px;
-    font-size: 0.9em;
+  }
+ 
+  .footer-section {
+    flex: 1 1 100%;
+  }
+ 
+  .newsletter-form {
+    align-items: center;
+  }
+ 
+  .newsletter-form input,
+  .newsletter-form button {
+    width: 100%;
+    max-width: 300px;
+  }
 }
-
-
-@keyframes rolar {
-    from {
-        transform: translateX(100%);
-    }
-
-    to {
-        transform: translateX(-100%);
-    }
-}
-
+ 
+ 
+ 
 html {
   scroll-behavior: smooth;
 }
@@ -520,7 +617,7 @@ html {
 
 .ticket::before,
 .ticket::after {
-  content: "";
+
   position: absolute;
   top: 50%;
   width: 20px;
@@ -543,7 +640,7 @@ html {
 }
 
 .ticket-header {
-  background: linear-gradient(135deg, #072791, #2e52f3);
+  background: linear-gradient(135deg, #2a45c0, #7387e2);
   color: white;
   display: flex;
   align-items: center;
@@ -582,7 +679,7 @@ html {
 
 .btn-comprar {
     font-family: 'Poppins';
-  background: #000ed7;
+  background: #2c36c7;
   color: white;
   border: none;
   border-radius: 6px;

@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
+<<<<<<< HEAD
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>LooM - Pacotes de Viagens</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -11,32 +13,52 @@
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sedgwick+Ave&display=swap%22
       rel="stylesheet">
   <link rel="stylesheet" href="/css/lugares.css">
+=======
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sua Agência de Viagens - Explore o Brasil 01</title>
+  <meta name="description"
+    content="Encontre os melhores pacotes de viagem para o Nordeste, Sudeste, Sul, Norte e Centro-Oeste." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sedgwick+Ave&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="/css/lugares.css" />
+>>>>>>> 904326f1f82098534f0ecd21ca92bfdd9a378799
 </head>
+
 <body>
- 
+
 
 
   <header>
-    <div class="logo"></div>
-    <nav>
-      <ul>
-        <li><a href="#">PACOTES</a></li>
-        <li><a href="#">ALUGUEL</a></li>
-        <li><a href="#">LUGARES</a></li>
-        <li><a href="#">PASSAGENS</a></li>
+    <div class="logo"> <img src="/assets/logoloom.png" alt="Logo Loom" onclick="window.location.href='index.html'" />
+    </div>
+    <nav class="navegacao-principal">
+ <ul>
+        <li><a href="pacotes.html">PACOTES</a></li>
+        <li><a href="aloomgueis.html">ALUGUEL</a></li>
+        <li><a href="lugares.html">LUGARES</a></li>
+        <li><a href="passagens.html">PASSAGENS</a></li>
+        <li><a href="pontosTuristicos.html">PONTOS TURÍSTICOS</a></li>
       </ul>
     </nav>
-    <div class="busca-usuario">
-      <input type="text" class="busca" placeholder="Pesquisar...">
-      <div class="icone-usuario">👤</div>
+    <div class="header-utils">
+      <form class="header-search" action="/buscar" method="get" role="search"> <input type="search" name="q"
+          placeholder="Pesquisar destinos..." aria-label="Pesquisar destinos" /> <i
+          class="fa-solid fa-magnifying-glass fa-xl" style="color: #3d5ab2;"></i> </form>
+      <div class="area-cliente"> <a href="login.html" class="btn-login" title="Login" aria-label="Página de Login"> <i
+            class="fa-solid fa-circle-user fa-xl" style="color: #3d5ab2;"></i></a> </div>
     </div>
-  </header>
+  </header> <br><br><br><br>
 
 
-  
-  <!-- Adicionar marquee -->
-   
-  <div class="destaque">SEU TRAJETO EM NOSSAS MÃOS</div>
+
+
+
+
   <main class="container">
 
 
@@ -128,29 +150,108 @@
       <h3>ESTADIAS</h3>
       <div class="lista-estadias">
         <div class="item-estadia">
-          <img src="https://via.placeholder.com/300x200?text=Hotel+Porto+Real" alt="Hotel Porto Real">
+          <img src="/assets/hotel.png" alt="Hotel Porto Real">
           <div class="nome-estadia">HOTEL PORTO REAL</div>
         </div>
         <div class="item-estadia">
-          <img src="https://via.placeholder.com/300x200?text=Casa+de+Temporada" alt="Casa de Temporada">
+          <img src="/assets/casinhas.png" alt="Casa de Temporada">
           <div class="nome-estadia">CASA DE TEMPORADA</div>
         </div>
         <div class="item-estadia">
-          <img src="https://via.placeholder.com/300x200?text=Hotel+Cathedral" alt="Hotel Cathedral">
+          <img src="/assets/predio.png" alt="Hotel Cathedral">
           <div class="nome-estadia">HOTEL CATHEDRAL</div>
         </div>
         <div class="item-estadia">
-          <img src="https://via.placeholder.com/300x200?text=Casa+em+Jardim+Paraíba" alt="Casa em Jardim Paraíba">
+          <img src="/assets/piscina.png" alt="Casa em Jardim Paraíba">
           <div class="nome-estadia">CASA EM JARDIM PARAÍBA</div>
         </div>
       </div>
     </section>
-  </main>
 
 
-  <!-- Rodapé -->
-  <footer>
-    © 2025 LooM - Todos os direitos reservados.
-  </footer>
+    <div class="container">
+      <h2>INCLUIR NO PACOTE</h2>
+      <div class="options-grid">
+        <button class="option-btn">PASSEIO CULTURAL</button>
+        <button class="option-btn">PASSEIO COM FOTOS</button>
+        <button class="option-btn">BICICLETA</button>
+        <button class="option-btn">CLUBES</button>
+        <button class="option-btn">TURISMO RELIGIOSO</button>
+        <button class="option-btn">PASSEIO COM FOTOS</button>
+        <!--  Botões e sobre nós  -->
+        <br><br><br>
+        <button class="close-button">FECHAR PACOTE</button>
+      </div>
+    </div>
+    </main>
+
+    <footer class="main-footer">
+      <div class="footer-container">
+        <!-- Seção Institucional -->
+        <div class="footer-section">
+          <h4>Institucional</h4>
+          <ul>
+            <li><a href="#">Sobre Nós</a></li>
+            <li><a href="#">Nossa História</a></li>
+            <li><a href="#">Trabalhe Conosco</a></li>
+            <li><a href="#">Imprensa</a></li>
+          </ul>
+        </div>
+
+        <!-- Seção Ajuda e Suporte -->
+        <div class="footer-section">
+          <h4>Ajuda e Suporte</h4>
+          <ul>
+            <li><a href="#">Central de Atendimento</a></li>
+            <li><a href="#">Política de Privacidade</a></li>
+            <li><a href="#">Termos de Uso</a></li>
+            <li><a href="#">Cancelamentos e Reembolsos</a></li>
+          </ul>
+        </div>
+
+        <!-- Seção Contato -->
+        <div class="footer-section">
+          <h4>Contato</h4>
+          <ul>
+            <li>Email: contato@loomviagens.com.br</li>
+            <li>Telefone: (11) 99999-9999</li>
+            <li>WhatsApp: (11) 98888-7777</li>
+            <li>Horário de Atendimento: Seg-Sex 9h às 18h</li>
+          </ul>
+        </div>
+
+        <!-- Seção Newsletter -->
+        <div class="footer-section">
+          <h4>Receba Novidades</h4>
+          <p>Inscreva-se e receba promoções exclusivas!</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Seu melhor e-mail" required />
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Redes Sociais -->
+      <div class="footer-social">
+        <h4>Siga-nos</h4>
+        <div class="social-icons">
+          <a href="#" aria-label="Siga-nos no Facebook" target="_blank">📘</a>
+          <a href="#" aria-label="Siga-nos no Instagram" target="_blank">📷</a>
+          <a href="#" aria-label="Siga-nos no LinkedIn" target="_blank">💼</a>
+          <a href="#" aria-label="Siga-nos no YouTube" target="_blank">▶️</a>
+        </div>
+      </div>
+
+      <!-- Informações Legais -->
+      <div class="footer-legal">
+        <p>© 2025 Loom Viagens. Todos os direitos reservados.</p>
+        <p>CNPJ: 00.000.000/0001-00 | Rua Exemplo, 123 - São Paulo/SP</p>
+      </div>
+    </footer>
+
+
+    
+
 </body>
+
 </html>
