@@ -46,7 +46,7 @@ section {
 }
 
 section h2 {
-    margin-bottom: 20px;
+    margin-bottom: -15px;
     /* Espaço abaixo dos títulos H2 */
 }
 
@@ -329,6 +329,11 @@ button,
     gap: 10px;
 }
 
+.fa-regular important,{
+    color: #3d5ab2;
+
+}
+
 .input-wrapper {
     display: flex;
     align-items: center;
@@ -344,6 +349,7 @@ button,
     height: 16px;
     margin-right: 8px;
     opacity: 0.6;
+    margin-top: -9px;
 }
 
 .input-wrapper input {
@@ -364,6 +370,7 @@ button,
     align-self: center;
     opacity: 0.8;
     cursor: pointer;
+    margin-top: -7px;
 }
 
 .search-button {
@@ -371,14 +378,13 @@ button,
     color: white;
     border: none;
     border-radius: 5px;
-    padding: 12px;
+    padding: 22px;
     font-size: 14px;
     font-weight: bold;
     cursor: pointer;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 8px;
+    gap: 13px;
     height: 44px;
 }
 
@@ -407,6 +413,7 @@ button,
 .search-options .icon {
     width: 14px;
     height: 14px;
+    margin-top: -7px;
 }
 
 .banner {
@@ -665,10 +672,8 @@ button,
   top: 50%;
   transform: translateY(-50%);
   background: #fff;
-  border: 2px solid #333;
   border-radius: 50%;
   width: 40px;
-  height: 40px;
   font-size: 1.5rem;
   font-weight: bold;
   cursor: pointer;
@@ -680,10 +685,14 @@ button,
 }
 
 .btn-carrossel:hover {
-  background: #333;
-  color: #fff;
+  background: #faf9f9;
+  color: #000000;
 }
 
-.btn-carrossel.prev { left: 1rem; }
-.btn-carrossel.next { right: 1rem; }
+.btn-carrossel.prev {
+  left: 10px;
+}
 
+.btn-carrossel.next {
+  right: 10px;
+}
