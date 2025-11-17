@@ -26,6 +26,7 @@ h2 {
 .continentesSilhueta {
     width: 70%;
     height: 200px;
+    margin: 0 auto;
 }
 
 .continentes {
@@ -131,4 +132,10 @@ h2 {
 
 #eup{
   margin-left: 50px;
+}
+
+h3 {
+  color: #365db5;
+  font-weight: bold;
+  
 }
