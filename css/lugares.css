@@ -847,13 +847,10 @@ main {
   }
 }
 
-<<<<<<< HEAD
-=======
 .tio {
-  border: 2px solid black;
+  
 }
 
->>>>>>> 80c3181e07a87a3336642c3322dcfac04d281a55
 .img {
   height: 300px;
 
@@ -867,7 +864,7 @@ main {
 
 
 #fotoAparecida {
-  width: 450px;
+  width: 448px;
   height: 530px;
   justify-content: center;
   
