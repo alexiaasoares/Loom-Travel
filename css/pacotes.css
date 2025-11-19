@@ -16,6 +16,7 @@ body {
 .logo {
     width: 199px;
     height: auto;
+    cursor: pointer;
 }
 
 #lupa {
