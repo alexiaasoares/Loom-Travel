@@ -20,7 +20,7 @@
 }
 
 body {
-    font-family: 'poppins';
+    font-family: 'Poppins';
     line-height: 1.6;
     background-color: #EFF4FF;
     /* Um cinza bem claro para o fundo */
@@ -1005,22 +1005,15 @@ html {
     }
 }
 
-section {
-    display: flex;
-}
-
 .imagem-direita img {
     width: 97%;
     margin-top: 81px;
     height: 500px;
     border-radius: 15px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-<<<<<<< HEAD
-=======
     
 
 
->>>>>>> 1fcbc9506a5f09c2f9978974c0104c792f90f43d
 }
 
 .nome-carros {
