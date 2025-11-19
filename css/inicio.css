@@ -102,6 +102,7 @@ h2 {
 
 .titulos {
   text-align: center;
+  color: #365db5;
 }
 
 .card-pacote {
@@ -243,3 +244,5 @@ ul li {
 .btn-ver-pacote:hover {
   background-color: #d60000; /* muda para vermelho ao passar o mouse */
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
