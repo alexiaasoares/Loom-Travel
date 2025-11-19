@@ -16,14 +16,11 @@ body {
 }
 
 .logo {
-<<<<<<< HEAD
   width: 199px;
   height: auto;
-=======
-    width: 199px;
-    height: auto;
-    cursor: pointer;
->>>>>>> 8bd816e0af0d89632090bbc6cfdab5d9c93834f6
+  width: 199px;
+  height: auto;
+  cursor: pointer;
 }
 
 #lupa {
