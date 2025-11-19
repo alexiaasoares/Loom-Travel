@@ -30,6 +30,7 @@ body {
 .logo {
     width: 199px;
     height: auto;
+    cursor: pointer;
 }
 
 #lupa {
@@ -1005,6 +1006,10 @@ html {
     }
 }
 
+section {
+    display: flex;
+}
+
 .imagem-direita img {
     width: 97%;
     margin-top: 81px;
@@ -1018,7 +1023,7 @@ html {
 
 .nome-carros {
     padding-left: 785px;
-    color: #365DB5; 
+    color: #365DB5;
     text-align: center;
 }
 
