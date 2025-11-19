@@ -429,6 +429,13 @@ button,
     flex-wrap: wrap;
     max-width: 1600px;
     margin: 0 auto;
+
+}
+
+
+.container-card-horizontal:hover {
+    transition: transform 0.3s ease-in-out; 
+    
 }
 
 /* Estilo de cada card (com imagem lateralizada) */
@@ -840,22 +847,6 @@ html {
 
 
 
-.cardContent {
-
-    border: 1px solid red;
-
-    display: flex;
-}
-
-.col1 {
-    border: 1px solid orage;
-    max-width: 500px;
-}
-
-.col2 {
-    border: 1px solid pink;
-    max-width: 500px;
-}
 
 .cardContent img {
     max-width: 377px;
@@ -1029,4 +1020,17 @@ section {
 
 .margin {
     margin-top: -90px;
+}
+
+.preço {
+    font-size: 17px;
+    padding-left: 75px;
+    color: #082569;
+}
+
+.wrapper {
+      transition: all 0.3s ease-in-out; /* Apply transition to all properties */
+    }
+.wrapper:hover {
+ transform: translateY(-5px);
 }

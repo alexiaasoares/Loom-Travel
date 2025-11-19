@@ -574,6 +574,10 @@ button,
   font-weight: bold;
 }
 
+.nome-estadia a {
+  color: white;
+  text-decoration: none;
+}
 
 /* Rodapé */
 footer {
@@ -835,6 +839,13 @@ main {
   }
 }
 
+<<<<<<< HEAD
+.tio {
+  
+}
+
+=======
+>>>>>>> c09285d6ca81018372cdb2599e1d658f1565cc65
 .img {
   height: 300px;
 
@@ -848,7 +859,7 @@ main {
 
 
 #fotoAparecida {
-  width: 450px;
+  width: 448px;
   height: 530px;
   justify-content: center;
   
