@@ -218,7 +218,7 @@ button,
     padding: 8px 12px;
     /* Altura do campo */
     font-size: 0.9rem;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Inter', sans-serif;
     /* Fonte mais legível para input */
     background-color: transparent;
     width: 410px;
@@ -280,38 +280,52 @@ button,
     /* Usando sua cor de link */
 }
 
+
+#lupa {
+    width: 50px;
+    margin-left: 190px;
+}
+
+
 /* ▲▲▲ FIM DAS NOVAS REGRAS ▲▲▲ */
 
 
 
 /* --- 3. SEÇÃO HERO E BARRA DE BUSCA (ESTILIZADA) --- */
 .hero {
-    background-color: #1e49ad;
-    color: white;
-    padding: 111px 20px 20px;
+
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
 }
 
-/* O contêiner principal do formulário */
+.hero-card {
+    background:  #1e49ad;
+    width: 85%;              /* largura reduzida */
+    max-width: 1200px;       /* limite estilo “card grande” */
+    border-radius: 14px;     /* bordas iguais ao exemplo */
+    padding: 30px 40px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.hero-content h2,
+.hero-content p {
+    color: white;
+    text-align: center;
+}
+
+/* mantém seu estilo do formulário */
 .busca-pacotes {
     display: flex;
     justify-content: center;
-    align-items: flex-end;
     gap: 15px;
-    /* Mude aqui para mais/menos espaço entre os itens */
     margin-top: 25px;
     flex-wrap: wrap;
-
-    /* NOVO: Adiciona um fundo e bordas arredondadas ao formulário */
-    background-color: rgba(0, 0, 0, 0.2);
-    /* Fundo escuro semi-transparente */
-    padding: 25px;
+    background-color: rgb(255, 255, 255); 
+    padding: 20px;
     border-radius: 8px;
 }
 
-#lupa {
-    width: 50px;
-    margin-left: 190px;
-}
 
 .form-group {
     display: flex;
@@ -358,16 +372,17 @@ button,
 /* O botão "Buscar Pacotes" */
 button,
 .btn-buscar {
+  margin-top: 20px;
     padding: 10px 20px;
-    background-color: #0377bb;
-    color: white;
+    background-color: #cfedff;
+    color: rgb(33, 76, 192);
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
     font-family: 'Inter', sans-serif;
     /* NOVO: Fonte */
-    height: 44px;
+    height: 40px;
     /* NOVO: Alinha a altura com os inputs */
     transition: background-color 0.2s ease;
     /* NOVO: Efeito de hover */
@@ -378,20 +393,6 @@ button,
     background-color: #2c76d6;
     /* Um vermelho mais escuro */
 }
-
-/* Botão genérico */
-button,
-.btn-buscar {
-    padding: 10px 20px;
-    background-color: #033dbb;
-    /* Laranja (chama atenção para "ação") */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
 
 .container-cards {
     display: flex;
