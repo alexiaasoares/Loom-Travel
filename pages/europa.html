@@ -1,24 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-BR"> <!-- Corrigido para "pt-BR", já que seu conteúdo é em português -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loom - Continente Europeu</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&a…
         rel="stylesheet">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-    <link rel="stylesheet" href="/css/pontosTuristicos.css">
+    <link rel="stylesheet" href="/css/europa.css">
 </head>
 <body>
-        <header>
-        <div class="logo"> <img src="/assets/logoloom.png" alt="Logo Loom"
-                onclick="window.location.href='index.html'" />
+    <header>
+        <div class="logo">
+            <img src="/assets/logoloom.png" alt="Logo Loom" onclick="window.location.href='index.html'" />
         </div>
         <nav class="navegacao-principal">
             <ul>
@@ -29,17 +26,159 @@
             </ul>
         </nav>
         <div class="header-utils">
-            <form class="header-search" action="/buscar" method="get" role="search"> <input type="search" name="q"
-                    placeholder="Pesquisar destinos..." aria-label="Pesquisar destinos" /> <i
-                    class="fa-solid fa-magnifying-glass fa-xl" style="color: #3d5ab2;"></i> </form>
-            <div class="area-cliente"> <a href="login.html" class="btn-login" title="Login"
-                    aria-label="Página de Login"> <i class="fa-solid fa-circle-user fa-xl"
-                        style="color: #3d5ab2;"></i></a> </div>
+            <form class="header-search" action="/buscar" method="get" role="search">
+                <input type="search" name="q" placeholder="Pesquisar destinos..." aria-label="Pesquisar destinos" />
+                <i class="fa-solid fa-magnifying-glass fa-xl" style="color: #3d5ab2;"></i>
+            </form>
+            <div class="area-cliente">
+                <a href="login.html" class="btn-login" title="Login" aria-label="Página de Login">
+                    <i class="fa-solid fa-circle-user fa-xl" style="color: #3d5ab2;"></i>
+                </a>
+            </div>
         </div>
-    </header> <br><br><br><br>    
+    </header>
+    <br><br><br><br>
+ 
+    <!-- Carrossel inserido aqui -->
+     <h1 class="titulo">EUROPA</h1>
+     <p>Veja os lugares mais procurados de acordo com sua exigência :</p>
+     <br>
+     <h2 class="titulo">Gastronomia</h2>
+    <section class="secao-carrossel" aria-label="Carrossel de destinos em destaque">
+        <div class="carousel" id="carousel-destinos">
+            <div class="carrossel-track">
+                <div class="carousel-item active">
+                    <img src="/assets/torre-eiffel.webp" alt="Torre Eiffel em Paris, França">
+                    <div class="carousel-caption">
+                        <h3>Paris, França</h3>
+                        <p>A cidade da luz e do romantismo.</p>
+                    </div>
+                </div>
+                
+                <div class="carousel-item">
+                    <img src="/assets/roma.jpg" alt="Coliseu em Roma, Itália">
+                    <div class="carousel-caption">
+                        <h3>Roma, Itália</h3>
+                        <p>Uma jornada pela história do Império Romano.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="/assets/torre-eiffel.webp" alt="Sagrada Família em Barcelona, Espanha">
+                    <div class="carousel-caption">
+                        <h3>Barcelona, Espanha</h3>
+                        <p>Arquitetura única e praias deslumbrantes.</p>
+                    </div>
+                </div>
+            </div>
+ 
+            <!-- Controles de navegação (setas) -->
+            <button class="carousel-control prev" type="button" aria-label="Slide anterior">
+                <span>&#8249;</span>
+            </button>
+            <button class="carousel-control next" type="button" aria-label="Próximo slide">
+                <span>&#8250;</span>
+            </button>
+ 
+            <!-- Indicadores (dots) -->
+            <div class="carousel-indicators">
+                <button type="button" class="indicator active" data-slide-to="0" aria-label="Ir para slide 1"></button>
+                <button type="button" class="indicator" data-slide-to="1" aria-label="Ir para slide 2"></button>
+                <button type="button" class="indicator" data-slide-to="2" aria-label="Ir para slide 3"></button>
+            </div>
+        </div>
+    </section>
 
-                 
+    <h2 class="titulo">Cultura</h2>
+    <section class="secao-carrossel" aria-label="Carrossel de destinos em destaque">
+        <div class="carousel" id="carousel-destinos">
+            <div class="carrossel-track">
+                <div class="carousel-item active">
+                    <img src="/assets/torre-eiffel.webp" alt="Torre Eiffel em Paris, França">
+                    <div class="carousel-caption">
+                        <h3>Paris, França</h3>
+                        <p>A cidade da luz e do romantismo.</p>
+                    </div>
+                </div>
+                
+                <div class="carousel-item">
+                    <img src="/assets/roma.jpg" alt="Coliseu em Roma, Itália">
+                    <div class="carousel-caption">
+                        <h3>Roma, Itália</h3>
+                        <p>Uma jornada pela história do Império Romano.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="/assets/torre-eiffel.webp" alt="Sagrada Família em Barcelona, Espanha">
+                    <div class="carousel-caption">
+                        <h3>Barcelona, Espanha</h3>
+                        <p>Arquitetura única e praias deslumbrantes.</p>
+                    </div>
+                </div>
+            </div>
+ 
+            <!-- Controles de navegação (setas) -->
+            <button class="carousel-control prev" type="button" aria-label="Slide anterior">
+                <span>&#8249;</span>
+            </button>
+            <button class="carousel-control next" type="button" aria-label="Próximo slide">
+                <span>&#8250;</span>
+            </button>
+ 
+            <!-- Indicadores (dots) -->
+            <div class="carousel-indicators">
+                <button type="button" class="indicator active" data-slide-to="0" aria-label="Ir para slide 1"></button>
+                <button type="button" class="indicator" data-slide-to="1" aria-label="Ir para slide 2"></button>
+                <button type="button" class="indicator" data-slide-to="2" aria-label="Ir para slide 3"></button>
+            </div>
+        </div>
+    </section>
 
+    <h2 class="titulo">Lazer</h2>
+     <section class="secao-carrossel" aria-label="Carrossel de destinos em destaque">
+        <div class="carousel" id="carousel-destinos">
+            <div class="carrossel-track">
+                <div class="carousel-item active">
+                    <img src="/assets/torre-eiffel.webp" alt="Torre Eiffel em Paris, França">
+                    <div class="carousel-caption">
+                        <h3>Paris, França</h3>
+                        <p>A cidade da luz e do romantismo.</p>
+                    </div>
+                </div>
+                
+                <div class="carousel-item">
+                    <img src="/assets/roma.jpg" alt="Coliseu em Roma, Itália">
+                    <div class="carousel-caption">
+                        <h3>Roma, Itália</h3>
+                        <p>Uma jornada pela história do Império Romano.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="/assets/torre-eiffel.webp" alt="Sagrada Família em Barcelona, Espanha">
+                    <div class="carousel-caption">
+                        <h3>Barcelona, Espanha</h3>
+                        <p>Arquitetura única e praias deslumbrantes.</p>
+                    </div>
+                </div>
+            </div>
+ 
+            <!-- Controles de navegação (setas) -->
+            <button class="carousel-control prev" type="button" aria-label="Slide anterior">
+                <span>&#8249;</span>
+            </button>
+            <button class="carousel-control next" type="button" aria-label="Próximo slide">
+                <span>&#8250;</span>
+            </button>
+ 
+            <!-- Indicadores (dots) -->
+            <div class="carousel-indicators">
+                <button type="button" class="indicator active" data-slide-to="0" aria-label="Ir para slide 1"></button>
+                <button type="button" class="indicator" data-slide-to="1" aria-label="Ir para slide 2"></button>
+                <button type="button" class="indicator" data-slide-to="2" aria-label="Ir para slide 3"></button>
+            </div>
+        </div>
+    </section>
 
+    <script src="/Javascript/europa.js"></script>
+ 
 </body>
 </html>
