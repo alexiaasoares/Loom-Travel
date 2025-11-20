@@ -48,7 +48,7 @@ h2 {
 
 #amSul {
   width: 13%;
-  margin-right: %;
+  margin-right: 0%;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 1000px;
 }
@@ -63,7 +63,7 @@ h2 {
 
 #asia {
   width: 20%;
-  margin-right: %;
+  margin-right: 0%;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 1000px;
 }
@@ -78,7 +78,7 @@ h2 {
 
 #amNor {
   width: 15%;
-  margin-left: %;
+  margin-left: 0%;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 100px;
 }
@@ -93,7 +93,7 @@ h2 {
 
 #eur {
   width: 20%;
-  margin-left: %;
+  margin-left: 0%;
 }
 
 .logo {

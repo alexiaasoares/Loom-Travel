@@ -18,7 +18,7 @@
     box-sizing: border-box;
     /* Faz o padding não alterar o tamanho final dos elementos */
 }
- 
+
 body {
     font-family: 'poppins';
     line-height: 1.6;
@@ -26,24 +26,24 @@ body {
     /* Um cinza bem claro para o fundo */
     color: #060606;
 }
- 
+
 .logo {
     width: 199px;
     height: auto;
     cursor: pointer;
 }
- 
+
 #lupa {
     width: 50px;
     margin-left: 190px;
 }
- 
+
 img {
     max-width: 100%;
     /* Garante que as imagens nunca "vazem" do seu container */
     display: block;
 }
- 
+
 a {
     text-decoration: none;
     /* Remove o sublinhado dos links */
@@ -51,46 +51,55 @@ a {
     /* Um azul padrão para links */
     /*--------- cor da parte da nav bar */
 }
- 
+
 /* Define um espaçamento padrão para todas as seções */
 section {
     padding: 40px 20px;
     /* 40px em cima/baixo, 20px nas laterais */
+    text-align: center;
     /* Centraliza títulos de seção */
 }
- 
+
 section h2 {
     margin-bottom: -15px;
     /* Espaço abaixo dos títulos H2 */
 }
- 
+
 /* --- 2. CABEÇALHO E NAVEGAÇÃO --- */
 header {
     display: flex;
-    /* A MÁGICA: alinha os filhos (logo, nav, header-utils) lado a lado */
-    justify-content: space-between;
-    /* Espaça eles (um na esquerda, um no meio, um na direita) */
+    /* ALTERADO: Mudei para 'center' para tentar centralizar a NAV. */
+    /* O 'space-between' será substituído por margens automáticas na NAV para o equilíbrio. */
+    justify-content: space-between; /* Mantenho este para separar os blocos */
     align-items: center;
-    /* Centraliza verticalmente */
     padding: 15px;
     background-color: #ffffff;
     border-bottom: 2px solid #eee;
-    /* Linha sutil abaixo do header */
     position: fixed;
     z-index: 500;
     width: 100%;
-    /* Fundo de imagem do mundo na navba */
     background-image: url('/assets/navbar.png');
     background-size: cover;
     background-position: center;
-    margin-left: 100px;
-    width: 90%;
+    /* As correções de margin-left e width 90% já foram feitas na resposta anterior e estão mantidas aqui (implicitamente, removidas). */
 }
- 
+
+/* nav bar */
+.navegacao-principal {
+    /* MANTIDO: Permite que ela ocupe espaço no centro. */
+    flex: 1;
+    display: flex;
+    /* NOVO: Adiciona margens automáticas para empurrar os itens laterais */
+    margin: 0 auto; 
+    /* ALTERADO: Mudei para 'center' (já estava assim, mantido). */
+    justify-content: center; 
+    max-width: 60%; /* Adicionei um limite para não forçar demais as laterais */
+}
+
 header .logo {
     flex-shrink: 0;
 }
- 
+
 button,
 .btn-buscar {
     padding: 10px 20px;
@@ -106,16 +115,16 @@ button,
     transition: background-color 0.2s ease;
     /* NOVO: Efeito de hover */
 }
- 
+
 /* cada item da navbar */
 .navegacao-principal ul li {
     margin-left: 80px;
 }
- 
+
 .navegacao-principal ul li a {
     font-weight: bold;
 }
- 
+
 /* nav bar */
 .navegacao-principal {
     flex: 1;
@@ -123,19 +132,19 @@ button,
     justify-content: center;
     /* centraliza os links */
 }
- 
+
 .navegacao-principal ul {
     display: flex;
     /* Alinha os links do menu lado a lado */
     list-style: none;
     /* Remove as "bolinhas" da lista */
 }
- 
+
 .navegacao-principal li {
     margin-left: 20px;
     /* Espaçamento entre os itens do menu */
 }
- 
+
 /* --- EFEITO HOVER NAVEGAÇÃO (OPÇÃO 2: SUBLINHADO MODERNO) --- */
 /* Base do link da navegação (Pai) */
 .navegacao-principal a {
@@ -148,7 +157,7 @@ button,
     /* Garante que o sublinhado não "vaze" */
     transition: color 0.3s ease;
 }
- 
+
 /* O sublinhado (Filho) - começa escondido */
 .navegacao-principal a::after {
     content: '';
@@ -171,18 +180,18 @@ button,
     /* Animação cresce da esquerda para a direita */
     transition: transform 0.3s ease-in-out;
 }
- 
+
 /* O efeito ao passar o mouse */
 .navegacao-principal a:hover {
     color: #bb0303;
     /* Muda a cor do texto também */
 }
- 
+
 .navegacao-principal a:hover::after {
     transform: scaleX(1);
     /* Faz a linha crescer para 100% */
 }
- 
+
 /* ▼▼▼ REGRAS NOVAS ADICIONADAS AQUI ▼▼▼ */
 /* Novo contêiner para pesquisa e perfil */
 .header-utils {
@@ -192,7 +201,7 @@ button,
     gap: 15px;
     /* Espaçamento entre a pesquisa e o ícone de perfil */
 }
- 
+
 /* Estilização da Barra de Pesquisa */
 .header-search {
     display: flex;
@@ -206,7 +215,7 @@ button,
     background-color: #f7f7f7;
     width: 450px;
 }
- 
+
 .header-search input[type="search"] {
     border: none;
     outline: none;
@@ -220,15 +229,15 @@ button,
     /* Largura padrão */
     transition: width 0.3s ease-in-out;
 }
- 
+
 /* Efeito de expandir a barra quando clicada */
- 
+
 /* Remove o 'x' de limpar do input de pesquisa */
 .header-search input[type="search"]::-webkit-search-cancel-button {
     -webkit-appearance: none;
     appearance: none;
 }
- 
+
 .header-search button[type="submit"] {
     background: transparent;
     border: none;
@@ -243,12 +252,37 @@ button,
     /* Ajuda a centralizar o ícone */
     align-items: center;
 }
- 
+
 .header-search button[type="submit"]:hover {
     color: #023975;
     /* Usando sua cor de link */
 }
- 
+
+.area-cliente {
+    display: flex; /* NOVO: Para alinhar o perfil e o favorito lado a lado */
+    gap: 10px; /* NOVO: Espaçamento entre os ícones */
+    align-items: center;
+}
+
+.area-cliente .btn-favoritos {
+    font-size: 1.2rem;
+    color: #bb0303; /* Cor do ícone de coração */
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.area-cliente .btn-favoritos:hover {
+    background-color: #eb5151; /* Um tom de rosa claro no hover */
+    color: #bb0303;
+}
+
 /* Estilização e Posição do Ícone de Perfil */
 /* (Substitui suas regras .area-cliente a e .btn-login .fa-user) */
 .area-cliente .btn-login {
@@ -269,12 +303,13 @@ button,
     background-color: #f0f0f0;
     transition: background-color 0.2s ease, color 0.2s ease;
 }
- 
+
 .area-cliente .btn-login:hover {
     background-color: #e0e0e0;
     color: #023975;
     /* Usando sua cor de link */
 }
+
 /* ▲▲▲ FIM DAS NOVAS REGRAS ▲▲▲ */
  
  

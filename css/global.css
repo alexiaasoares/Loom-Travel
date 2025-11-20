@@ -127,267 +127,303 @@ section h3 {
 /* 4. CABEÇALHO (HEADER) — FIXO EM TODAS AS PÁGINAS */
 /* ─────────────────────────────────────────────────────── */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  /* Faz o padding não alterar o tamanho final dos elementos */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Faz o padding não alterar o tamanho final dos elementos */
 }
 
 body {
-  font-family: 'poppins';
-  line-height: 1.6;
-  background-color: #EFF4FF;
-  /* Um cinza bem claro para o fundo */
-  color: #060606;
+    font-family: 'poppins';
+    line-height: 1.6;
+    background-color: #EFF4FF;
+    /* Um cinza bem claro para o fundo */
+    color: #060606;
 }
 
 .logo {
-  width: 199px;
-  height: auto;
-  cursor: pointer;
+    width: 199px;
+    height: auto;
+    cursor: pointer;
 }
 
 #lupa {
-  width: 50px;
-  margin-left: 190px;
+    width: 50px;
+    margin-left: 190px;
 }
 
 img {
-  max-width: 100%;
-  /* Garante que as imagens nunca "vazem" do seu container */
-  display: block;
+    max-width: 100%;
+    /* Garante que as imagens nunca "vazem" do seu container */
+    display: block;
 }
 
 a {
-  text-decoration: none;
-  /* Remove o sublinhado dos links */
-  color: #023975;
-  /* Um azul padrão para links */
-  /*--------- cor da parte da nav bar */
+    text-decoration: none;
+    /* Remove o sublinhado dos links */
+    color: #023975;
+    /* Um azul padrão para links */
+    /*--------- cor da parte da nav bar */
 }
 
 /* Define um espaçamento padrão para todas as seções */
 section {
-  padding: 40px 20px;
-  /* 40px em cima/baixo, 20px nas laterais */
-  text-align: center;
-  /* Centraliza títulos de seção */
+    padding: 40px 20px;
+    /* 40px em cima/baixo, 20px nas laterais */
+    text-align: center;
+    /* Centraliza títulos de seção */
 }
 
 section h2 {
-  margin-bottom: 20px;
-  /* Espaço abaixo dos títulos H2 */
+    margin-bottom: -15px;
+    /* Espaço abaixo dos títulos H2 */
 }
 
 /* --- 2. CABEÇALHO E NAVEGAÇÃO --- */
 header {
-  display: flex;
-  /* A MÁGICA: alinha os filhos (logo, nav, header-utils) lado a lado */
-  justify-content: space-between;
-  /* Espaça eles (um na esquerda, um no meio, um na direita) */
-  align-items: center;
-  /* Centraliza verticalmente */
-  padding: 15px;
-  background-color: #ffffff;
-  border-bottom: 2px solid #eee;
-  /* Linha sutil abaixo do header */
-  position: fixed;
-  z-index: 500;
-  width: 100%;
-  /* Fundo de imagem do mundo na navba */
-  background-image: url('/assets/navbar.png');
-  background-size: cover;
-  background-position: center;
-  margin-left: 100px;
-  width: 90%;
-}
-
-header .logo {
-  flex-shrink: 0;
-}
-
-button,
-.btn-buscar {
-  padding: 10px 20px;
-  background-color: #bb0303;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-  font-family: 'Lato', sans-serif;
-  /* NOVO: Fonte */
-  height: 44px;
-  /* NOVO: Alinha a altura com os inputs */
-  transition: background-color 0.2s ease;
-  /* NOVO: Efeito de hover */
-}
-
-/* cada item da navbar */
-.navegacao-principal ul li {
-  margin-left: 80px;
-}
-
-.navegacao-principal ul li a {
-  font-weight: bold;
+    display: flex;
+    /* ALTERADO: Mudei para 'center' para tentar centralizar a NAV. */
+    /* O 'space-between' será substituído por margens automáticas na NAV para o equilíbrio. */
+    justify-content: space-between; /* Mantenho este para separar os blocos */
+    align-items: center;
+    padding: 15px;
+    background-color: #ffffff;
+    border-bottom: 2px solid #eee;
+    position: fixed;
+    z-index: 500;
+    width: 100%;
+    background-image: url('/assets/navbar.png');
+    background-size: cover;
+    background-position: center;
+    /* As correções de margin-left e width 90% já foram feitas na resposta anterior e estão mantidas aqui (implicitamente, removidas). */
 }
 
 /* nav bar */
 .navegacao-principal {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  /* centraliza os links */
+    /* MANTIDO: Permite que ela ocupe espaço no centro. */
+    flex: 1;
+    display: flex;
+    /* NOVO: Adiciona margens automáticas para empurrar os itens laterais */
+    margin: 0 auto; 
+    /* ALTERADO: Mudei para 'center' (já estava assim, mantido). */
+    justify-content: center; 
+    max-width: 60%; /* Adicionei um limite para não forçar demais as laterais */
+}
+
+header .logo {
+    flex-shrink: 0;
+}
+
+button,
+.btn-buscar {
+    padding: 10px 20px;
+    background-color: #bb0303;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+    /* NOVO: Fonte */
+    height: 44px;
+    /* NOVO: Alinha a altura com os inputs */
+    transition: background-color 0.2s ease;
+    /* NOVO: Efeito de hover */
+}
+
+/* cada item da navbar */
+.navegacao-principal ul li {
+    margin-left: 80px;
+}
+
+.navegacao-principal ul li a {
+    font-weight: bold;
+}
+
+/* nav bar */
+.navegacao-principal {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    /* centraliza os links */
 }
 
 .navegacao-principal ul {
-  display: flex;
-  /* Alinha os links do menu lado a lado */
-  list-style: none;
-  /* Remove as "bolinhas" da lista */
+    display: flex;
+    /* Alinha os links do menu lado a lado */
+    list-style: none;
+    /* Remove as "bolinhas" da lista */
 }
 
 .navegacao-principal li {
-  margin-left: 20px;
-  /* Espaçamento entre os itens do menu */
+    margin-left: 20px;
+    /* Espaçamento entre os itens do menu */
 }
 
 /* --- EFEITO HOVER NAVEGAÇÃO (OPÇÃO 2: SUBLINHADO MODERNO) --- */
 /* Base do link da navegação (Pai) */
 .navegacao-principal a {
-  color: #023975;
-  padding-bottom: 5px;
-  /* Espaço para o sublinhado */
-  position: relative;
-  /* Essencial para o sublinhado funcionar */
-  overflow: hidden;
-  /* Garante que o sublinhado não "vaze" */
-  transition: color 0.3s ease;
+    color: #023975;
+    padding-bottom: 5px;
+    /* Espaço para o sublinhado */
+    position: relative;
+    /* Essencial para o sublinhado funcionar */
+    overflow: hidden;
+    /* Garante que o sublinhado não "vaze" */
+    transition: color 0.3s ease;
 }
 
 /* O sublinhado (Filho) - começa escondido */
 .navegacao-principal a::after {
-  content: '';
-  /* Sempre necessário */
-  position: absolute;
-  /* Posição relativa ao 'a' */
-  bottom: 0;
-  /* Fica na parte de baixo */
-  left: 0;
-  /* Começa na esquerda */
-  width: 100%;
-  /* Ocupa toda a largura */
-  height: 2px;
-  /* Grossura da linha */
-  background-color: #bb0303;
-  /* Cor da linha (vermelho) */
-  /* A Mágica da Animação (começa com largura 0) */
-  transform: scaleX(0);
-  transform-origin: left;
-  /* Animação cresce da esquerda para a direita */
-  transition: transform 0.3s ease-in-out;
+    content: '';
+    /* Sempre necessário */
+    position: absolute;
+    /* Posição relativa ao 'a' */
+    bottom: 0;
+    /* Fica na parte de baixo */
+    left: 0;
+    /* Começa na esquerda */
+    width: 100%;
+    /* Ocupa toda a largura */
+    height: 2px;
+    /* Grossura da linha */
+    background-color: #bb0303;
+    /* Cor da linha (vermelho) */
+    /* A Mágica da Animação (começa com largura 0) */
+    transform: scaleX(0);
+    transform-origin: left;
+    /* Animação cresce da esquerda para a direita */
+    transition: transform 0.3s ease-in-out;
 }
 
 /* O efeito ao passar o mouse */
 .navegacao-principal a:hover {
-  color: #bb0303;
-  /* Muda a cor do texto também */
+    color: #bb0303;
+    /* Muda a cor do texto também */
 }
 
 .navegacao-principal a:hover::after {
-  transform: scaleX(1);
-  /* Faz a linha crescer para 100% */
+    transform: scaleX(1);
+    /* Faz a linha crescer para 100% */
 }
 
 /* ▼▼▼ REGRAS NOVAS ADICIONADAS AQUI ▼▼▼ */
 /* Novo contêiner para pesquisa e perfil */
 .header-utils {
-  display: flex;
-  align-items: center;
-  /* Alinha a pesquisa e o perfil verticalmente */
-  gap: 15px;
-  /* Espaçamento entre a pesquisa e o ícone de perfil */
+    display: flex;
+    align-items: center;
+    /* Alinha a pesquisa e o perfil verticalmente */
+    gap: 15px;
+    /* Espaçamento entre a pesquisa e o ícone de perfil */
 }
 
 /* Estilização da Barra de Pesquisa */
 .header-search {
-  display: flex;
-  /* Alinha o input e o botão */
-  align-items: center;
-  border: 1px solid #ccc;
-  border-radius: 25px;
-  /* Deixa bem redondo */
-  overflow: hidden;
-  /* Para esconder as bordas do input */
-  background-color: #f7f7f7;
-  width: 450px;
+    display: flex;
+    /* Alinha o input e o botão */
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    /* Deixa bem redondo */
+    overflow: hidden;
+    /* Para esconder as bordas do input */
+    background-color: #f7f7f7;
+    width: 450px;
 }
 
 .header-search input[type="search"] {
-  border: none;
-  outline: none;
-  padding: 8px 12px;
-  /* Altura do campo */
-  font-size: 0.9rem;
-  font-family: 'Lato', sans-serif;
-  /* Fonte mais legível para input */
-  background-color: transparent;
-  width: 410px;
-  /* Largura padrão */
-  transition: width 0.3s ease-in-out;
+    border: none;
+    outline: none;
+    padding: 8px 12px;
+    /* Altura do campo */
+    font-size: 0.9rem;
+    font-family: 'Lato', sans-serif;
+    /* Fonte mais legível para input */
+    background-color: transparent;
+    width: 410px;
+    /* Largura padrão */
+    transition: width 0.3s ease-in-out;
 }
+
+/* Efeito de expandir a barra quando clicada */
 
 /* Remove o 'x' de limpar do input de pesquisa */
 .header-search input[type="search"]::-webkit-search-cancel-button {
-  -webkit-appearance: none;
-  appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
 }
 
 .header-search button[type="submit"] {
-  background: transparent;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding-right: 12px;
-  /* Espaçamento do ícone */
-  color: #555;
-  font-size: 0.9rem;
-  /* Tamanho do ícone de lupa */
-  display: flex;
-  /* Ajuda a centralizar o ícone */
-  align-items: center;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding-right: 12px;
+    /* Espaçamento do ícone */
+    color: #555;
+    font-size: 0.9rem;
+    /* Tamanho do ícone de lupa */
+    display: flex;
+    /* Ajuda a centralizar o ícone */
+    align-items: center;
 }
 
 .header-search button[type="submit"]:hover {
-  color: #023975;
-  /* Usando sua cor de link */
+    color: #023975;
+    /* Usando sua cor de link */
+}
+
+.area-cliente {
+    display: flex; /* NOVO: Para alinhar o perfil e o favorito lado a lado */
+    gap: 10px; /* NOVO: Espaçamento entre os ícones */
+    align-items: center;
+}
+
+.area-cliente .btn-favoritos {
+    font-size: 1.2rem;
+    color: #bb0303; /* Cor do ícone de coração */
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.area-cliente .btn-favoritos:hover {
+    background-color: #eb5151; /* Um tom de rosa claro no hover */
+    color: #bb0303;
 }
 
 /* Estilização e Posição do Ícone de Perfil */
 /* (Substitui suas regras .area-cliente a e .btn-login .fa-user) */
 .area-cliente .btn-login {
-  font-size: 1.2rem;
-  /* SEU TAMANHO DE ÍCONE ORIGINAL */
-  color: #333;
-  text-decoration: none;
-  /* Efeito de círculo para alinhar perfeitamente */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  /* Largura do círculo */
-  height: 36px;
-  /* Altura do círculo */
-  border-radius: 50%;
-  /* Transforma em círculo */
-  background-color: #f0f0f0;
-  transition: background-color 0.2s ease, color 0.2s ease;
+    font-size: 1.2rem;
+    /* SEU TAMANHO DE ÍCONE ORIGINAL */
+    color: #333;
+    text-decoration: none;
+    /* Efeito de círculo para alinhar perfeitamente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    /* Largura do círculo */
+    height: 36px;
+    /* Altura do círculo */
+    border-radius: 50%;
+    /* Transforma em círculo */
+    background-color: #f0f0f0;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .area-cliente .btn-login:hover {
-  background-color: #e0e0e0;
-  color: #023975;
-  /* Usando sua cor de link */
+    background-color: #e0e0e0;
+    color: #023975;
+    /* Usando sua cor de link */
 }
+
 
 
 /* ─────────────────────────────────────────────────────── */
