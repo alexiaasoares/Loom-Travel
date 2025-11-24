@@ -42,8 +42,14 @@
           <a href="favoritos.html" class="btn-favoritos" title="Favoritos" aria-label="Página de Favoritos">
           <i class="fa-regular fa-heart fa-lg" style="color: #3d5ab2;"></i>
         </a>
-        <a href="login.html" class="btn-login" title="Login" aria-label="Página de Login"> <i
-            class="fa-solid fa-circle-user fa-xl" style="color: #3d5ab2;"></i></a>
+
+        <!-- Mudar o comportamento do botão de login -->
+        <div class="area-cliente">
+          <a href="#" id="btn-usuario" class="btn-login" title="Minha Conta" aria-label="Minha Conta">
+            <i class="fa-solid fa-circle-user fa-xl" style="color: #3d5ab2;"></i>
+          </a>
+        </div>
+
       </div>
     </div>
   </header> <br>
@@ -293,6 +299,35 @@
     </section>
 
   </main>
+
+  <!-- Colocar em todas as telas -->
+ <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const btnUsuario = document.getElementById('btn-usuario');
+        
+        if (btnUsuario) {
+            const usuarioLogado = localStorage.getItem('usuarioLogado');
+            
+            if (usuarioLogado) {
+                btnUsuario.title = "Meu Perfil";
+                btnUsuario.setAttribute('aria-label', 'Ir para Meu Perfil');
+            } else {
+                btnUsuario.title = "Login";
+                btnUsuario.setAttribute('aria-label', 'Página de Login');
+            }
+
+            btnUsuario.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                if (usuarioLogado) {
+                    window.location.href = '/pages/perfil.html';
+                } else {
+                    window.location.href = '/pages/login.html';
+                }
+            });
+        }
+    });
+</script>
 
   <footer class="main-footer">
     <div class="footer-container">
