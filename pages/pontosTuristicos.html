@@ -328,6 +328,18 @@
             <p>CNPJ: 00.000.000/0001-00 | Rua Exemplo, 123 - São Paulo/SP</p>
         </div>
     </footer>
+
+    <script>
+    // Verifica login ao carregar qualquer página protegida
+    document.addEventListener('DOMContentLoaded', function() {
+        const usuarioLogado = localStorage.getItem('usuarioLogado');
+        if (!usuarioLogado) {
+            alert("Você precisa estar logado para acessar esta página.");
+            window.location.href = '/pages/login.html';
+        }
+    });
+</script>
+
 </body>
 
 </html>
