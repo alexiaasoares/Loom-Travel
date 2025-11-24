@@ -1,219 +1,209 @@
 <!DOCTYPE html>
- 
+
 <html lang="pt-br">
- 
- 
- 
+
+
+
 <head>
-<meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sua Agência de Viagens - Explore o Brasil 01</title>
-  <meta name="description"
-    content="Encontre os melhores pacotes de viagem para o Nordeste, Sudeste, Sul, Norte e Centro-Oeste." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sedgwick+Ave&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
- 
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sua Agência de Viagens - Explore o Brasil 01</title>
+    <meta name="description"
+        content="Encontre os melhores pacotes de viagem para o Nordeste, Sudeste, Sul, Norte e Centro-Oeste." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sedgwick+Ave&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
     <link rel="stylesheet" href="/css/aluguel.css">
- 
+
 </head>
- 
+
 <style>
     body {
- 
+
         margin: 0;
- 
+
         font-family: 'Segoe UI', sans-serif;
- 
+
         background: #f5f5f5;
- 
+
         color: #333;
- 
+
     }
- 
- 
- 
+
+
+
     /* Div externa para mover tudo */
- 
+
     .wrapper {
- 
+
         display: flex;
- 
+
         justify-content: flex-start;
- 
+
         /* tudo no canto esquerdo */
- 
+
         padding: 40px;
- 
+
     }
- 
- 
- 
+
+
+
     /* Container com bordas arredondadas */
- 
+
     .container {
- 
+
         display: flex;
- 
+
         flex-wrap: wrap;
- 
+
         max-width: 900px;
- 
+
         background: white;
- 
+
         border-radius: 15px;
- 
+
         overflow: hidden;
- 
+
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
- 
+
     }
- 
- 
- 
+
+
+
     /* Painéis */
- 
+
     .left-panel,
- 
+
     .right-panel {
- 
+
         flex: 1;
- 
+
         padding: 20px;
- 
+
     }
- 
- 
- 
+
+
+
     .left-panel {
- 
+
         background: linear-gradient(to right, #b30000, #ff4d4d);
- 
+
         color: white;
- 
+
         text-align: center;
- 
+
         border-top-left-radius: 15px;
- 
+
         border-bottom-left-radius: 15px;
- 
+
     }
- 
- 
- 
+
+
+
     .left-panel img {
- 
+
         max-width: 100%;
- 
+
         height: auto;
- 
+
         margin-bottom: 20px;
- 
+
     }
- 
- 
- 
+
+
+
     .left-panel h1 {
- 
+
         font-size: 2em;
- 
+
         margin: 0;
- 
+
     }
- 
- 
- 
+
+
+
     .right-panel {
- 
+
         background-color: #fff;
- 
+
         border-top-right-radius: 15px;
- 
+
         border-bottom-right-radius: 15px;
- 
+
     }
- 
- 
- 
+
+
+
     .right-panel ul {
- 
+
         list-style: none;
- 
+
         padding: 0;
- 
+
     }
- 
- 
- 
+
+
+
     .right-panel li {
- 
+
         font-size: 1.1em;
- 
+
         margin: 10px 0;
- 
+
         border-bottom: 1px solid #ddd;
- 
+
         padding-bottom: 5px;
- 
+
     }
 </style>
- 
- 
- 
+
+
+
 <body class="fundo">
- 
+
     <header>
-    <div class="logo"> <img src="/assets/logoloom.png" alt="Logo Loom" onclick="window.location.href='index.html'" />
-    </div>
-    <nav class="navegacao-principal">
-      <ul>
-        <li><a href="index.html">HOME</a></li>
-        <li><a href="pacotes.html">PACOTES</a></li>
-        <li><a href="aloomgueis.html">ALUGUEL</a></li>
-        <li><a href="passagens.html">PASSAGENS</a></li>
-        <li><a href="pontosTuristicos.html">PONTOS TURÍSTICOS</a></li>
-      </ul>
-    </nav>
-    <div class="header-utils">
-      <form class="header-search" action="/buscar" method="get" role="search"> <input type="search" name="q"      
-          placeholder="Pesquisar destinos..." aria-label="Pesquisar destinos" /> <i          
-          class="fa-solid fa-magnifying-glass fa-xl" style="color: #3d5ab2;"></i>
-      </form>
-      <div class="area-cliente">
-          <a href="favoritos.html" class="btn-favoritos" title="Favoritos" aria-label="Página de Favoritos">
-          <i class="fa-regular fa-heart fa-lg" style="color: #3d5ab2;"></i>
-        </a>
-        <a href="login.html" class="btn-login" title="Login" aria-label="Página de Login"> <i          
-            class="fa-solid fa-circle-user fa-xl" style="color: #3d5ab2;"></i></a>
-      </div>
-    </div>
-  </header>  <br><br><br><br>
- 
+        <div class="logo"> <img src="/assets/logoloom.png" alt="Logo Loom"
+                onclick="window.location.href='index.html'" />
+        </div>
+        <nav class="navegacao-principal">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="pacotes.html">PACOTES</a></li>
+                <li><a href="aloomgueis.html">ALUGUEL</a></li>
+                <li><a href="passagens.html">PASSAGENS</a></li>
+                <li><a href="pontosTuristicos.html">PONTOS TURÍSTICOS</a></li>
+            </ul>
+        </nav>
+        <div class="header-utils">
+            <form class="header-search" action="/buscar" method="get" role="search"> <input type="search" name="q"
+                    placeholder="Pesquisar destinos..." aria-label="Pesquisar destinos" /> <i
+                    class="fa-solid fa-magnifying-glass fa-xl" style="color: #3d5ab2;"></i>
+            </form>
+            <div class="area-cliente">
+                <a href="favoritos.html" class="btn-favoritos" title="Favoritos" aria-label="Página de Favoritos">
+                    <i class="fa-regular fa-heart fa-lg" style="color: #3d5ab2;"></i>
+                </a>
+                <a href="login.html" class="btn-login" title="Login" aria-label="Página de Login"> <i
+                        class="fa-solid fa-circle-user fa-xl" style="color: #3d5ab2;"></i></a>
+            </div>
+        </div>
+    </header> <br><br><br><br>
+
     <section>
- 
-     <div class="tudo-carros">
+
+        <div class="tudo-carros">
             <div>
                 <h1 class="nome-carros">CARROS</h1>
             </div>
- 
+
             <br><br><br>
- 
+
             <!-- Primeiro card -->
-<<<<<<< HEAD
-        <div class="margin">
-            <div class="wrapper">
- 
-                <div class="container-card-horizontal">
- 
-                    <div class="card--horizontal">
- 
-                        <img src="/assets/carro-2.png" alt="mobi 2025">
- 
-=======
             <div class="margin">
                 <div class="wrapper">
 
@@ -223,158 +213,164 @@
 
                             <img src="/assets/carro-2.png" alt="mobi 2025">
 
+                            <div class="margin">
+                                <div class="wrapper">
+
+                                    <div class="container-card-horizontal">
+
+                                        <div class="card--horizontal">
+
+                                            <img src="/assets/carro-2.png" alt="mobi 2025">
+
+                                        </div>
+
+                                        <div class="card--horizontal">
+
+                                            <ul>
+
+                                                <li><strong>Modelo:</strong> Mobi</li>
+
+                                                <li><strong>Ano:</strong> 2025</li>
+
+                                                <li><strong>Lugares:</strong> 5</li>
+
+                                                <li><strong>Capacidade:</strong> 3 malas</li>
+
+                                                <li><strong>Câmbio:</strong> Automático</li>
+
+                                                <li><strong>Ar-condicionado:</strong> Digital</li>
+
+                                                <li><strong>Caução:</strong> No cartão</li>
+
+                                                <li><strong>Seguro:</strong> Incluso</li>
+
+                                            </ul>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="card--horizontal">
+
+                                        <ul>
+
+                                            <li><strong>Modelo:</strong> Mobi</li>
+
+                                            <li><strong>Ano:</strong> 2025</li>
+
+                                            <li><strong>Lugares:</strong> 5</li>
+
+                                            <li><strong>Capacidade:</strong> 3 malas</li>
+
+                                            <li><strong>Câmbio:</strong> Automático</li>
+
+                                            <li><strong>Ar-condicionado:</strong> Digital</li>
+
+                                            <li><strong>Caução:</strong> No cartão</li>
+
+                                            <li><strong>Seguro:</strong> Incluso</li>
+
+                                        </ul>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="wrapper">
+
+                                <div class="container-card-horizontal">
+
+                                    <div class="card--horizontal">
+
+                                        <img src="/assets/3.png" alt="mobi 2025">
+
+                                    </div>
+
+                                    <div class="card--horizontal">
+
+                                        <ul>
+
+                                            <li><strong>Modelo:</strong> Mobi</li>
+
+                                            <li><strong>Ano:</strong> 2025</li>
+
+                                            <li><strong>Lugares:</strong> 5</li>
+
+                                            <li><strong>Capacidade:</strong> 3 malas</li>
+
+                                            <li><strong>Câmbio:</strong> Automático</li>
+
+                                            <li><strong>Ar-condicionado:</strong> Digital</li>
+
+                                            <li><strong>Caução:</strong> No cartão</li>
+
+                                            <li><strong>Seguro:</strong> Incluso</li>
+
+                                        </ul>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+
+
+
+
+
+
+
+
+
+                            <!-- Mobi -->
+
+                            <div class="wrapper">
+
+
+
+                                <div class="container-card-horizontal">
+
+                                    <div class="card--horizontal">
+
+                                        <img src="/assets/carro-1.png" alt="mobi 2025">
+
+                                    </div>
+
+                                    <div class="card--horizontal">
+
+                                        <ul>
+
+                                            <li><strong>Modelo:</strong> Mobi</li>
+
+                                            <li><strong>Ano:</strong> 2025</li>
+
+                                            <li><strong>Lugares:</strong> 5</li>
+
+                                            <li><strong>Capacidade:</strong> 3 malas</li>
+
+                                            <li><strong>Câmbio:</strong> Automático</li>
+
+                                            <li><strong>Ar-condicionado:</strong> Digital</li>
+
+                                            <li><strong>Caução:</strong> No cartão</li>
+
+                                            <li><strong>Seguro:</strong> Incluso</li>
+
+                                        </ul>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
                         </div>
-
-                        <div class="card--horizontal">
-
-                            <ul>
-
-                                <li><strong>Modelo:</strong> Mobi</li>
-
-                                <li><strong>Ano:</strong> 2025</li>
-
-                                <li><strong>Lugares:</strong> 5</li>
-
-                                <li><strong>Capacidade:</strong> 3 malas</li>
-
-                                <li><strong>Câmbio:</strong> Automático</li>
-
-                                <li><strong>Ar-condicionado:</strong> Digital</li>
-
-                                <li><strong>Caução:</strong> No cartão</li>
-
-                                <li><strong>Seguro:</strong> Incluso</li>
-
-                        </ul>
-
-                        </div>
-
->>>>>>> 403199b86cacff64eb033ab6c6a239e5d061fa9d
                     </div>
- 
-                    <div class="card--horizontal">
- 
-                        <ul>
- 
-                            <li><strong>Modelo:</strong> Mobi</li>
- 
-                            <li><strong>Ano:</strong> 2025</li>
- 
-                            <li><strong>Lugares:</strong> 5</li>
- 
-                            <li><strong>Capacidade:</strong> 3 malas</li>
- 
-                            <li><strong>Câmbio:</strong> Automático</li>
- 
-                            <li><strong>Ar-condicionado:</strong> Digital</li>
- 
-                            <li><strong>Caução:</strong> No cartão</li>
- 
-                            <li><strong>Seguro:</strong> Incluso</li>
- 
-                        </ul>
- 
-                    </div>
-<<<<<<< HEAD
- 
+
+
                 </div>
- 
-            </div>
- 
-            <div class="wrapper">
- 
-                <div class="container-card-horizontal">
- 
-                    <div class="card--horizontal">
- 
-                        <img src="/assets/3.png" alt="mobi 2025">
- 
-                    </div>
- 
-                    <div class="card--horizontal">
- 
-                        <ul>
- 
-                            <li><strong>Modelo:</strong> Mobi</li>
- 
-                            <li><strong>Ano:</strong> 2025</li>
- 
-                            <li><strong>Lugares:</strong> 5</li>
- 
-                            <li><strong>Capacidade:</strong> 3 malas</li>
- 
-                            <li><strong>Câmbio:</strong> Automático</li>
- 
-                            <li><strong>Ar-condicionado:</strong> Digital</li>
- 
-                            <li><strong>Caução:</strong> No cartão</li>
- 
-                            <li><strong>Seguro:</strong> Incluso</li>
- 
-                        </ul>
- 
-                    </div>
-                </div>
- 
-            </div>
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-            <!-- Mobi -->
- 
-            <div class="wrapper">
- 
- 
- 
-                <div class="container-card-horizontal">
- 
-                    <div class="card--horizontal">
- 
-                        <img src="/assets/carro-1.png" alt="mobi 2025">
- 
-                    </div>
- 
-                    <div class="card--horizontal">
- 
-                        <ul>
- 
-                            <li><strong>Modelo:</strong> Mobi</li>
- 
-                            <li><strong>Ano:</strong> 2025</li>
- 
-                            <li><strong>Lugares:</strong> 5</li>
- 
-                            <li><strong>Capacidade:</strong> 3 malas</li>
- 
-                            <li><strong>Câmbio:</strong> Automático</li>
- 
-                            <li><strong>Ar-condicionado:</strong> Digital</li>
- 
-                            <li><strong>Caução:</strong> No cartão</li>
- 
-                            <li><strong>Seguro:</strong> Incluso</li>
- 
-                        </ul>
- 
-                    </div>
- 
-                </div>
- 
-            </div>
-        </div>
-    </div>
- 
-=======
-
-            </div>
 
 
 
@@ -426,134 +422,116 @@
 
                     </div>
 
+                </div>
             </div>
         </div>
-    </div>
 
->>>>>>> 403199b86cacff64eb033ab6c6a239e5d061fa9d
         <!-- Imgagem da spin  -->
         <div class="imagem-direita">
             <img src="/assets/5.png">
         </div>
- 
+
     </section>
- 
- 
- 
+
+
+
     <!-- FOOTER -->
- 
+
     <footer class="main-footer">
- 
+
         <div class="footer-container">
- 
+
             <!-- Seção Institucional -->
- 
+
             <div class="footer-section">
- 
+
                 <h4>Institucional</h4>
- 
+
                 <ul>
- 
+
                     <li><a href="#">Sobre Nós</a></li>
- 
+
                     <li><a href="#">Nossa História</a></li>
- 
+
                     <li><a href="#">Trabalhe Conosco</a></li>
- 
+
                     <li><a href="#">Imprensa</a></li>
- 
+
                 </ul>
- 
+
             </div>
- 
- 
- 
+
+
+
             <!-- Seção Ajuda e Suporte -->
- 
+
             <div class="footer-section">
- 
+
                 <h4>Ajuda e Suporte</h4>
- 
+
                 <ul>
- 
+
                     <li><a href="#">Central de Atendimento</a></li>
- 
+
                     <li><a href="#">Política de Privacidade</a></li>
- 
+
                     <li><a href="#">Termos de Uso</a></li>
- 
+
                     <li><a href="#">Cancelamentos e Reembolsos</a></li>
- 
+
                 </ul>
- 
+
             </div>
- 
- 
- 
+
+
+
             <!-- Seção Contato -->
- 
+
             <div class="footer-section">
- 
+
                 <h4>Contato</h4>
- 
+
                 <ul>
- 
+
                     <li>Email: contato@loomviagens.com.br</li>
- 
+
                     <li>Telefone: (11) 99999-9999</li>
- 
+
                     <li>WhatsApp: (11) 98888-7777</li>
- 
+
                     <li>Horário de Atendimento: Seg-Sex 9h às 18h</li>
- 
+
                 </ul>
- 
+
             </div>
- 
- 
- 
+
+
+
             <!-- Seção Newsletter -->
- 
+
             <div class="footer-section">
- 
+
                 <h4>Receba Novidades</h4>
- 
+
                 <p>Inscreva-se e receba promoções exclusivas!</p>
- 
+
                 <form class="newsletter-form">
- 
+
                     <input type="email" placeholder="Seu melhor e-mail" required />
- 
+
                     <button type="submit">Enviar</button>
- 
+
                 </form>
- 
+
             </div>
- 
+
         </div>
- 
- 
- 
+
+
+
         <!-- Redes Sociais -->
- 
+
         <div class="footer-social">
-<<<<<<< HEAD
- 
-            <h4>Siga-nos</h4>
- 
-            <div class="social-icons">
- 
-                <a href="#" aria-label="Siga-nos no Facebook" target="_blank">📘</a>
- 
-                <a href="#" aria-label="Siga-nos no Instagram" target="_blank"></a>
- 
-                <a href="#" aria-label="Siga-nos no LinkedIn" target="_blank">💼</a>
- 
-                <a href="#" aria-label="Siga-nos no YouTube" target="_blank">▶️</a>
- 
-            </div>
- 
-=======
             <h4>Siga-nos</h4>
             <div class="social-icons">
                 <a href="#" aria-label="Siga-nos no Facebook" target="_blank"><i class="fa-solid fa-book"
@@ -565,33 +543,32 @@
                 <a href="#" aria-label="Siga-nos no YouTube" target="_blank"><i class="fa-brands fa-youtube"
                         style="color: #ffffff;"></i></a>
             </div>
->>>>>>> 403199b86cacff64eb033ab6c6a239e5d061fa9d
         </div>
- 
- 
- 
+
+
+
         <!-- Informações Legais -->
- 
+
         <div class="footer-legal">
- 
+
             <p>© 2025 Loom Viagens. Todos os direitos reservados.</p>
- 
+
             <p>CNPJ: 00.000.000/0001-00 | Rua Exemplo, 123 - São Paulo/SP</p>
- 
+
         </div>
- 
+
     </footer>
- 
- 
- 
- 
- 
- 
- 
- 
- 
+
+
+
+
+
+
+
+
+
 </body>
- 
- 
- 
+
+
+
 </html>
