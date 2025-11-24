@@ -338,6 +338,10 @@ button,
     text-align: center;
 }
 
+.hero-content h2 {
+padding: 15px;
+}
+
 /* mantém seu estilo do formulário */
 .busca-pacotes {
     display: flex;
