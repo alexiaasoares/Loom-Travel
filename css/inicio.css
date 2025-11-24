@@ -175,6 +175,13 @@ h2 {
   text-align: center;
 }
 
+.europa {
+   color: #365db5;
+  font-weight: bold;
+  text-align: center;
+  font-size: 20px;
+}
+
 #asiaImg {
   height: 200px;
 } 
