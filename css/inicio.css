@@ -196,6 +196,10 @@ h2 {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+.salvadorInfo {
+  margin-right: 8px;
+}
+
 .salvador:hover{
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   transform: scale(1.15);
@@ -209,7 +213,7 @@ h2 {
 
 .infoSalvador {
   padding: 10px;
-  margin-left: 20px;
+  margin-left: 10px;
 }
 
 .salvadorInfo {
