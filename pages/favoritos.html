@@ -15,7 +15,7 @@
     rel="stylesheet">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-  <link rel="stylesheet" href="/css/passagens.css" />
+  <link rel="stylesheet" href="/css/favoritos.css" />
 </head>
 
 <body>
@@ -32,31 +32,201 @@
       </ul>
     </nav>
     <div class="header-utils">
-      <form class="header-search" action="/buscar" method="get" role="search"> <input type="search" name="q"      
-          placeholder="Pesquisar destinos..." aria-label="Pesquisar destinos" /> <i          
+      <form class="header-search" action="/buscar" method="get" role="search"> <input type="search" name="q"
+          placeholder="Pesquisar destinos..." aria-label="Pesquisar destinos" /> <i
           class="fa-solid fa-magnifying-glass fa-xl" style="color: #3d5ab2;"></i>
       </form>
       <div class="area-cliente">
-          <a href="favoritos.html" class="btn-favoritos" title="Favoritos" aria-label="Página de Favoritos">
+        <a href="favoritos.html" class="btn-favoritos" title="Favoritos" aria-label="Página de Favoritos">
           <i class="fa-regular fa-heart fa-lg" style="color: #3d5ab2;"></i>
         </a>
-        <a href="login.html" class="btn-login" title="Login" aria-label="Página de Login"> <i          
+        <a href="login.html" class="btn-login" title="Login" aria-label="Página de Login"> <i
             class="fa-solid fa-circle-user fa-xl" style="color: #3d5ab2;"></i></a>
       </div>
     </div>
   </header> <br><br><br><br>
 
   <main>
-    
+
+    <section id="destinos-procurados" class="secao-carrossel">
+      <h2 class="titulo">Meus Lugares Favoritos</h2>
+
+      <div class="container-cards">
+        <!-- 1 -->
+        <div class="card-destino">
+          <img src="/assets/torre-eiffel.webp" alt="Torre Eiffel" />
+
+          <input type="checkbox" id="fav-1" class="fav-checkbox" hidden>
+          <label for="fav-1" class="btn-favorito" aria-label="Adicionar aos favoritos">
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-heart"></i>
+          </label>
+
+          <div class="info-destino">
+            <h2>Torre Eiffel</h2>
+            <p>Paris, França</p>
+            <a class="destaque">Ver Mais</a>
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="card-destino">
+          <img src="/assets/estatua-da-liberdade.webp" alt="Estátua da Liberdade" />
+
+          <input type="checkbox" id="fav-estatua-liberdade" class="fav-checkbox" hidden>
+          <label for="fav-estatua-liberdade" class="btn-favorito">
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-heart"></i>
+          </label>
+
+          <div class="info-destino">
+            <h2>Estátua da Liberdade</h2>
+            <p>Nova York, Estados Unidos</p>
+            <a class="destaque">Ver Mais</a>
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="card-destino">
+          <img src="/assets/coliseu.webp" alt="Coliseu" />
+
+          <input type="checkbox" id="fav-coliseu" class="fav-checkbox" hidden>
+          <label for="fav-coliseu" class="btn-favorito">
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-heart"></i>
+          </label>
+
+          <div class="info-destino">
+            <h2>Coliseu</h2>
+            <p>Roma, Itália</p>
+            <a class="destaque">Ver Mais</a>
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="card-destino">
+          <img src="/assets/machu-picchu.jpg" alt="Machu Picchu" />
+
+          <input type="checkbox" id="fav-machu" class="fav-checkbox" hidden>
+          <label for="fav-machu" class="btn-favorito">
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-heart"></i>
+          </label>
+
+          <div class="info-destino">
+            <h2>Machu Picchu</h2>
+            <p>Peru</p>
+            <a class="destaque">Ver Mais</a>
+          </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="card-destino">
+          <img src="/assets/taj-mahal.png" alt="Taj Mahal" />
+
+          <input type="checkbox" id="fav-taj" class="fav-checkbox" hidden>
+          <label for="fav-taj" class="btn-favorito">
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-heart"></i>
+          </label>
+
+          <div class="info-destino">
+            <h2>Taj Mahal</h2>
+            <p>Índia</p>
+            <a class="destaque">Ver Mais</a>
+          </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="card-destino">
+          <img src="/assets/muralha-da-china.jpg" alt="Grande Muralha da China" />
+
+          <input type="checkbox" id="fav-muralha" class="fav-checkbox" hidden>
+          <label for="fav-muralha" class="btn-favorito">
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-heart"></i>
+          </label>
+
+          <div class="info-destino">
+            <h2>Grande Muralha da China</h2>
+            <p>China</p>
+            <a class="destaque">Ver Mais</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Pacotes Favs -->
+    <section id="destinos-procurados" class="secao-carrossel">
+      <h2 class="titulo">Meus Pacotes Favoritos</h2>
+
+      <div class="container-cards">
+        <!-- 1 -->
+        <div class="card-destino">
+          <img src="/assets/MonteVerde.jpg" alt="Monte Verde" />
+
+          <input type="checkbox" id="fav-gize" class="fav-checkbox" hidden>
+          <label for="fav-gize" class="btn-favorito">
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-heart"></i>
+          </label>
+
+          <div class="info-destino">
+            <h2>Monte Verde</h2>
+            <p>Saída de São Paulo</p>
+            <p>Hotel, Passeio</p>
+            <p>1-4 Pessoas</p>
+            <p>12/12 - 21/12</p>
+            <a class="destaque">Ver Mais</a>
+          </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="card-destino">
+          <img src="/assets/premium_photo-1661914240950-b0124f20a5c1.jpg" alt="Tóquio" />
+
+          <input type="checkbox" id="fav-sagrada" class="fav-checkbox" hidden>
+          <label for="fav-sagrada" class="btn-favorito">
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-heart"></i>
+          </label>
+
+          <div class="info-destino">
+            <h2>Tóquio</h2>
+            <p>Saída de Florianópolis</p>
+            <p>Hotel, Transporte</p>
+            <p>1-4 Pessoas</p>
+            <p>24/12 - 03/01</p>
+            <a class="destaque">Ver Mais</a>
+          </div>
+        </div>
+
+        <!-- 9 -->
+        <div class="card-destino">
+          <img src="/assets/29581ba3c89a845.jpg" alt="Buenos" />
+
+          <input type="checkbox" id="fav-stone" class="fav-checkbox" hidden>
+          <label for="fav-stone" class="btn-favorito">
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-heart"></i>
+          </label>
+
+          <div class="info-destino">
+            <h2>Buenos Aires</h2>
+            <p>Saída de Alagoas</p>
+            <p>Hotel, Transporte</p>
+            <p>1-2 Pessoas</p>
+            <p>01/12 - 16/12</p>
+            <a class="destaque">Ver Mais</a>
+          </div>
+        </div>
 
 
-
-
-
-
-
-
-
+      </div>
+    </section>
+    </div>
+    </section>
 
 
 
@@ -145,10 +315,14 @@
     <div class="footer-social">
       <h4>Siga-nos</h4>
       <div class="social-icons">
-        <a href="#" aria-label="Siga-nos no Facebook" target="_blank"><i class="fa-solid fa-book" style="color: #ffffff;"></i></a>
-        <a href="#" aria-label="Siga-nos no Instagram" target="_blank"><i class="fa-solid fa-camera" style="color: #ffffff;"></i></a>
-        <a href="#" aria-label="Siga-nos no LinkedIn" target="_blank"><i class="fa-solid fa-suitcase" style="color: #ffffff;"></i></a>
-        <a href="#" aria-label="Siga-nos no YouTube" target="_blank"><i class="fa-brands fa-youtube" style="color: #ffffff;"></i></a>
+        <a href="#" aria-label="Siga-nos no Facebook" target="_blank"><i class="fa-solid fa-book"
+            style="color: #ffffff;"></i></a>
+        <a href="#" aria-label="Siga-nos no Instagram" target="_blank"><i class="fa-solid fa-camera"
+            style="color: #ffffff;"></i></a>
+        <a href="#" aria-label="Siga-nos no LinkedIn" target="_blank"><i class="fa-solid fa-suitcase"
+            style="color: #ffffff;"></i></a>
+        <a href="#" aria-label="Siga-nos no YouTube" target="_blank"><i class="fa-brands fa-youtube"
+            style="color: #ffffff;"></i></a>
       </div>
     </div>
 
