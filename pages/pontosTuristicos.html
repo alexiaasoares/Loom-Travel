@@ -18,6 +18,7 @@
 
 <body>
     <header>
+<<<<<<< HEAD
     <div class="logo"> <img src="/assets/logoloom.png" alt="Logo Loom" onclick="window.location.href='index.html'" />
     </div>
     <nav class="navegacao-principal">
@@ -43,6 +44,34 @@
       </div>
     </div>
   </header> <br><br><br><br>
+=======
+        <div class="logo"> <img src="/assets/logoloom.png" alt="Logo Loom"
+                onclick="window.location.href='index.html'" />
+        </div>
+        <nav class="navegacao-principal">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="pacotes.html">PACOTES</a></li>
+                <li><a href="aloomgueis.html">ALUGUEL</a></li>
+                <li><a href="passagens.html">PASSAGENS</a></li>
+                <li><a href="pontosTuristicos.html">PONTOS TURÍSTICOS</a></li>
+            </ul>
+        </nav>
+        <div class="header-utils">
+            <form class="header-search" action="/buscar" method="get" role="search"> <input type="search" name="q"      
+                    placeholder="Pesquisar destinos..." aria-label="Pesquisar destinos" /> <i          
+                    class="fa-solid fa-magnifying-glass fa-xl" style="color: #3d5ab2;"></i>
+            </form>
+            <div class="area-cliente">
+                  <a href="favoritos.html" class="btn-favoritos" title="Favoritos" aria-label="Página de Favoritos">
+                    <i class="fa-regular fa-heart fa-lg" style="color: #3d5ab2;"></i>
+                </a>
+                <a href="login.html" class="btn-login" title="Login" aria-label="Página de Login"> <i          
+                        class="fa-solid fa-circle-user fa-xl" style="color: #3d5ab2;"></i></a>
+            </div>
+        </div>
+    </header> <br><br><br><br>
+>>>>>>> c59bf17fbbaee6b81d241d881136dba4b558a8b9
 
     <main>
 
@@ -71,6 +100,13 @@
                 <!-- 2 -->
                 <div class="card-destino">
                     <img src="/assets/estatua-da-liberdade.webp" alt="Estátua da Liberdade" />
+
+                    <input type="checkbox" id="fav-estatua-liberdade" class="fav-checkbox" hidden>
+                    <label for="fav-estatua-liberdade" class="btn-favorito">
+                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-solid fa-heart"></i>
+                    </label>
+
                     <div class="info-destino">
                         <h2>Estátua da Liberdade</h2>
                         <p>Nova York, Estados Unidos</p>
@@ -81,6 +117,13 @@
                 <!-- 3 -->
                 <div class="card-destino">
                     <img src="/assets/coliseu.webp" alt="Coliseu" />
+
+                    <input type="checkbox" id="fav-coliseu" class="fav-checkbox" hidden>
+                    <label for="fav-coliseu" class="btn-favorito">
+                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-solid fa-heart"></i>
+                    </label>
+
                     <div class="info-destino">
                         <h2>Coliseu</h2>
                         <p>Roma, Itália</p>
@@ -91,6 +134,13 @@
                 <!-- 4 -->
                 <div class="card-destino">
                     <img src="/assets/machu-picchu.jpg" alt="Machu Picchu" />
+
+                    <input type="checkbox" id="fav-machu" class="fav-checkbox" hidden>
+                    <label for="fav-machu" class="btn-favorito">
+                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-solid fa-heart"></i>
+                    </label>
+
                     <div class="info-destino">
                         <h2>Machu Picchu</h2>
                         <p>Peru</p>
@@ -101,6 +151,13 @@
                 <!-- 5 -->
                 <div class="card-destino">
                     <img src="/assets/taj-mahal.png" alt="Taj Mahal" />
+
+                    <input type="checkbox" id="fav-taj" class="fav-checkbox" hidden>
+                    <label for="fav-taj" class="btn-favorito">
+                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-solid fa-heart"></i>
+                    </label>
+
                     <div class="info-destino">
                         <h2>Taj Mahal</h2>
                         <p>Índia</p>
@@ -111,6 +168,13 @@
                 <!-- 6 -->
                 <div class="card-destino">
                     <img src="/assets/muralha-da-china.jpg" alt="Grande Muralha da China" />
+
+                    <input type="checkbox" id="fav-muralha" class="fav-checkbox" hidden>
+                    <label for="fav-muralha" class="btn-favorito">
+                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-solid fa-heart"></i>
+                    </label>
+
                     <div class="info-destino">
                         <h2>Grande Muralha da China</h2>
                         <p>China</p>
@@ -121,6 +185,13 @@
                 <!-- 7 -->
                 <div class="card-destino">
                     <img src="/assets/piramides-gize.jpg" alt="Pirâmides de Gizé" />
+
+                    <input type="checkbox" id="fav-gize" class="fav-checkbox" hidden>
+                    <label for="fav-gize" class="btn-favorito">
+                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-solid fa-heart"></i>
+                    </label>
+
                     <div class="info-destino">
                         <h2>Pirâmides de Gizé</h2>
                         <p>Egito</p>
@@ -131,6 +202,13 @@
                 <!-- 8 -->
                 <div class="card-destino">
                     <img src="/assets/Sagrada-Familia.jpeg" alt="Sagrada Família" />
+
+                    <input type="checkbox" id="fav-sagrada" class="fav-checkbox" hidden>
+                    <label for="fav-sagrada" class="btn-favorito">
+                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-solid fa-heart"></i>
+                    </label>
+
                     <div class="info-destino">
                         <h2>Igreja da Sagrada Família</h2>
                         <p>Barcelona, Espanha</p>
@@ -141,6 +219,13 @@
                 <!-- 9 -->
                 <div class="card-destino">
                     <img src="/assets/stonehenge.webp" alt="Stonehenge" />
+
+                    <input type="checkbox" id="fav-stone" class="fav-checkbox" hidden>
+                    <label for="fav-stone" class="btn-favorito">
+                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-solid fa-heart"></i>
+                    </label>
+
                     <div class="info-destino">
                         <h2>Stonehenge</h2>
                         <p>Reino Unido</p>
@@ -151,6 +236,13 @@
                 <!-- 10 -->
                 <div class="card-destino">
                     <img src="/assets/cristo-redentor.webp" alt="Cristo Redentor" />
+
+                    <input type="checkbox" id="fav-cristo" class="fav-checkbox" hidden>
+                    <label for="fav-cristo" class="btn-favorito">
+                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-solid fa-heart"></i>
+                    </label>
+
                     <div class="info-destino">
                         <h2>Cristo Redentor</h2>
                         <p>Rio de Janeiro, Brasil</p>
@@ -161,6 +253,13 @@
                 <!-- 11 -->
                 <div class="card-destino">
                     <img src="/assets/Catedral-de-Milao.webp" alt="Catedral de Milão" />
+
+                    <input type="checkbox" id="fav-milao" class="fav-checkbox" hidden>
+                    <label for="fav-milao" class="btn-favorito">
+                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-solid fa-heart"></i>
+                    </label>
+
                     <div class="info-destino">
                         <h2>Catedral de Milão</h2>
                         <p>Milão, Itália</p>
@@ -171,6 +270,13 @@
                 <!-- 12 -->
                 <div class="card-destino">
                     <img src="/assets/aparceida-do-norte.jpg" alt="Acrópole" />
+
+                    <input type="checkbox" id="fav-aparecida" class="fav-checkbox" hidden>
+                    <label for="fav-aparecida" class="btn-favorito">
+                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-solid fa-heart"></i>
+                    </label>
+
                     <div class="info-destino">
                         <h2>Aparecida do Norte</h2>
                         <p>São Paulo, Brasil</p>
@@ -250,6 +356,18 @@
             <p>CNPJ: 00.000.000/0001-00 | Rua Exemplo, 123 - São Paulo/SP</p>
         </div>
     </footer>
+
+    <script>
+    // Verifica login ao carregar qualquer página protegida
+    document.addEventListener('DOMContentLoaded', function() {
+        const usuarioLogado = localStorage.getItem('usuarioLogado');
+        if (!usuarioLogado) {
+            alert("Você precisa estar logado para acessar esta página.");
+            window.location.href = '/pages/login.html';
+        }
+    });
+</script>
+
 </body>
 
 </html>

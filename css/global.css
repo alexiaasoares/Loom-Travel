@@ -6,124 +6,6 @@
 */
 
 /* ─────────────────────────────────────────────────────── */
-/* 1. VARIÁVEIS GLOBAIS */
-/* ─────────────────────────────────────────────────────── */
-:root {
-  /* Cores principais */
-  --cor-principal-azul: #365DB5;
-  --cor-detalhes-vermelho: #F12B23;
-  --cor-secundaria-branco: #FFFFFF;
-  --cor-fundo-azul-claro: #EFF4FF;
-  --cor-texto: #060606;
-  --cor-texto-secundario: #555;
-  --cor-link: #023975;
-  --cor-hover: #bb0303;
-  --cor-preco-promo: #249a3f;
-  --cor-preco-antigo: #888;
-  --cor-sombra: rgba(0, 0, 0, 0.1);
-  --cor-sombra-forte: rgba(0, 0, 0, 0.15);
-
-  /* Fontes */
-  --fonte-principal: 'Poppins', sans-serif;
-  --fonte-titulos: 'Playfair Display', serif;
-  --fonte-input: 'Lato', sans-serif;
-
-  /* Espaçamentos */
-  --espaco-xs: 5px;
-  --espaco-sm: 10px;
-  --espaco-md: 20px;
-  --espaco-lg: 40px;
-  --espaco-xl: 60px;
-
-  /* Bordas e sombras */
-  --borda-radius-sm: 5px;
-  --borda-radius-md: 8px;
-  --borda-radius-lg: 12px;
-  --borda-radius-full: 50%;
-  --sombra-card: 0 6px 20px var(--cor-sombra);
-  --sombra-card-leve: 0 4px 8px var(--cor-sombra);
-
-  /* Transições */
-  --transicao-padrao: 0.3s ease;
-  --transicao-rapida: 0.2s ease;
-}
-
-/* ─────────────────────────────────────────────────────── */
-/* 2. RESET E CONFIGURAÇÕES BASE */
-/* ─────────────────────────────────────────────────────── */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: var(--fonte-principal);
-  line-height: 1.6;
-  color: var(--cor-texto);
-  background-color: var(--cor-secundaria-branco);
-  overflow-x: hidden;
-  /* evita scroll horizontal acidental */
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-a {
-  text-decoration: none;
-  color: var(--cor-link);
-  transition: color var(--transicao-padrao);
-}
-
-ul {
-  list-style: none;
-}
-
-button,
-input,
-select {
-  font-family: inherit;
-}
-
-/* ─────────────────────────────────────────────────────── */
-/* 3. LAYOUT GERAL */
-/* ─────────────────────────────────────────────────────── */
-.main-container {
-  padding-top: 100px;
-  /* compensa header fixo */
-  min-height: calc(100vh - 100px);
-}
-
-/* Seções comuns */
-section {
-  padding: var(--espaco-lg) var(--espaco-md);
-  text-align: center;
-}
-
-section h2,
-section h3 {
-  margin-bottom: var(--espaco-md);
-  color: var(--cor-texto);
-}
-
-section h2 {
-  font-family: var(--fonte-titulos);
-  font-size: 2rem;
-}
-
-section h3 {
-  font-size: 1.5rem;
-  margin-top: var(--espaco-lg);
-}
-
-/* ─────────────────────────────────────────────────────── */
 /* 4. CABEÇALHO (HEADER) — FIXO EM TODAS AS PÁGINAS */
 /* ─────────────────────────────────────────────────────── */
 * {
@@ -423,6 +305,108 @@ button,
     color: #023975;
     /* Usando sua cor de link */
 }
+
+/* ─────────────────────────────────────────────────────── */
+/* 1. VARIÁVEIS GLOBAIS */
+/* ─────────────────────────────────────────────────────── */
+:root {
+  /* Cores principais */
+  --cor-principal-azul: #365DB5;
+  --cor-detalhes-vermelho: #F12B23;
+  --cor-secundaria-branco: #FFFFFF;
+  --cor-fundo-azul-claro: #EFF4FF;
+  --cor-texto: #060606;
+  --cor-texto-secundario: #555;
+  --cor-link: #023975;
+  --cor-hover: #bb0303;
+  --cor-preco-promo: #249a3f;
+  --cor-preco-antigo: #888;
+  --cor-sombra: rgba(0, 0, 0, 0.1);
+  --cor-sombra-forte: rgba(0, 0, 0, 0.15);
+
+  /* Fontes */
+  --fonte-principal: 'Poppins', sans-serif;
+  --fonte-titulos: 'Playfair Display', serif;
+  --fonte-input: 'Lato', sans-serif;
+
+  /* Espaçamentos */
+  --espaco-xs: 5px;
+  --espaco-sm: 10px;
+  --espaco-md: 20px;
+  --espaco-lg: 40px;
+  --espaco-xl: 60px;
+
+  /* Bordas e sombras */
+  --borda-radius-sm: 5px;
+  --borda-radius-md: 8px;
+  --borda-radius-lg: 12px;
+  --borda-radius-full: 50%;
+  --sombra-card: 0 6px 20px var(--cor-sombra);
+  --sombra-card-leve: 0 4px 8px var(--cor-sombra);
+
+  /* Transições */
+  --transicao-padrao: 0.3s ease;
+  --transicao-rapida: 0.2s ease;
+}
+
+/* ─────────────────────────────────────────────────────── */
+/* 2. RESET E CONFIGURAÇÕES BASE */
+/* ─────────────────────────────────────────────────────── */
+
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: var(--cor-link);
+  transition: color var(--transicao-padrao);
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select {
+  font-family: inherit;
+}
+
+/* ─────────────────────────────────────────────────────── */
+/* 3. LAYOUT GERAL */
+/* ─────────────────────────────────────────────────────── */
+.main-container {
+  padding-top: 100px;
+  /* compensa header fixo */
+  min-height: calc(100vh - 100px);
+}
+
+
+section h2,
+section h3 {
+  margin-bottom: var(--espaco-md);
+  color: var(--cor-texto);
+}
+
+section h2 {
+  font-family: var(--fonte-titulos);
+  font-size: 2rem;
+}
+
+section h3 {
+  font-size: 1.5rem;
+  margin-top: var(--espaco-lg);
+}
+
+
+
 
 
 

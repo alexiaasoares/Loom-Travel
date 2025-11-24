@@ -1,17 +1,5 @@
-/* --- 1. CONFIGURAÇÕES GLOBAIS (RESET BÁSICO) --- */
-/* Isso garante que todos os navegadores comecem "do zero" */
+/* Nav Bar */
 
-/* CÓDIGOS PALETA DE CORES:
-
-
- --cor-principal-azul: #365DB5;
- --cor-detalhes-vermelho: #F12B23;
- --cor-secundária-branco: #FFFFFF;
- --cor-fundo-azul-claro - #EFF4FF
- }
-
-
-*/
 * {
     margin: 0;
     padding: 0;
@@ -311,192 +299,157 @@ button,
 }
 
 
-/* ▲▲▲ FIM DAS NOVAS REGRAS ▲▲▲ */
+/*lugares*/
 
-
-
-/* --- 3. SEÇÃO HERO E BARRA DE BUSCA (ESTILIZADA) --- */
-.hero {
-
-    padding: 50px 0;
-    display: flex;
-    justify-content: center;
-}
-
-.hero-card {
-    background:  #1e49ad;
-    width: 85%;              /* largura reduzida */
-    max-width: 1200px;       /* limite estilo “card grande” */
-    border-radius: 14px;     /* bordas iguais ao exemplo */
-    padding: 30px 40px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.hero-content h2,
-.hero-content p {
-    color: white;
-    text-align: center;
-}
-
-.hero-content h2 {
-padding: 15px;
-}
-
-/* mantém seu estilo do formulário */
-.busca-pacotes {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 25px;
-    flex-wrap: wrap;
-    background-color: rgb(255, 255, 255); 
-    padding: 20px;
-    border-radius: 8px;
+.secao-carrossel {
+  background-color: #EFF4FF;
+  /* Fundo levemente cinza para destacar os cards */
 }
 
 
-.form-group {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-/* Os labels (Destino, Ida, Volta) */
-.form-group label {
-    margin-bottom: 5px;
-    font-size: 0.9em;
-    font-weight: bold;
-    /* NOVO: Deixa o label mais forte */
-
-}
-
-.busca-pacotes input[type="text"],
-.busca-pacotes input[type="date"] {
-    font-family: 'Inter', sans-serif;
-    /* Fonte legível */
-    font-size: 1rem;
-    /* Tamanho do texto dentro do campo */
-    color: #333;
-    /* Cor do texto digitado */
-    padding: 10px 12px;
-    /* Deixa o campo mais alto */
-    border: 1px solid #ccc;
-    /* Borda sutil */
-    border-radius: 5px;
-    /* Cantos arredondados */
-    min-width: 200px;
-    /* Largura mínima para cada campo */
-    box-sizing: border-box;
-    /* Garante que o padding não quebre o layout */
-}
-
-/* (Opcional) Remove o ícone padrão do calendário em campos de data */
-.busca-pacotes input[type="date"]::-webkit-calendar-picker-indicator {
-    opacity: 0.5;
-    cursor: pointer;
-}
-
-
-/* O botão "Buscar Pacotes" */
-button,
-.btn-buscar {
-  margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #cfedff;
-    color: rgb(33, 76, 192);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    font-family: 'Inter', sans-serif;
-    /* NOVO: Fonte */
-    height: 40px;
-    /* NOVO: Alinha a altura com os inputs */
-    transition: background-color 0.2s ease;
-    /* NOVO: Efeito de hover */
-}
-
-/* NOVO: Efeito hover no botão */
-.btn-buscar:hover {
-    background-color: #2c76d6;
-    /* Um vermelho mais escuro */
-}
-
+/* Container dos 3 cards */
+/* Container dos cards em grade */
 .container-cards {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    flex-wrap: wrap;
-    max-width: 1600px;
-    margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-/* Estilo de cada card (com imagem lateralizada) */
+/* Estilo de cada card */
 .card-destino {
-    display: flex;
-    width: 380px;
-    /* Largura controlada para caber 3 em linha */
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
 
+
+
+.card-details {
+  font-size: 12px;
+  color: #666;
+}
+
+
+.card-destino:hover {
+  transform: scale(1.03);
+}
+
+/* Imagem do card */
 .card-destino img {
-    width: 40%;
-    /* Imagem ocupa 40% da largura do card */
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
 }
 
+/* Informações do destino */
 .info-destino {
-    width: 60%;
-    /* Informações ocupam 60% */
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  padding: 15px;
+  text-align: center;
 }
 
 .info-destino h2 {
-    color: #2c3e50;
-    font-size: 18px;
-    margin-bottom: 10px;
+  color: #2c3e50;
+  font-size: 18px;
+  margin-bottom: 8px;
 }
 
 .info-destino p {
-    color: #555;
-    font-size: 14px;
-    line-height: 1.5;
-    margin-bottom: 12px;
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 12px;
 }
 
 .destaque {
-    background-color: #3498db;
-    color: white;
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 13px;
-    display: inline-block;
-    align-self: flex-start;
-
-  
-  margin: 0 auto;
+  background-color: transparent;
+  color: #bb0303;
+  padding: 6px 12px;
+  border: 1px solid #bb0303;
+  border-radius: 20px;
+  font-size: 13px;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: 'Inter';
 }
 
-.titulo-procurado {
-    margin-top: 100px;
+.destaque:hover {
+  background-color: #bb0303;
+  color: white;
+}
+
+.destaque-2 {
+  background-color: transparent;
+  color: #bb0303;
+  padding: 6px 12px;
+  border: 1px solid #bb0303;
+  border-radius: 20px;
+  font-size: 13px;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: 'Inter';
+}
+
+.destaque-2:hover {
+  background-color: #bb0303;
+  color: white;
 }
 
 
-/* --- 6. RODAPÉ --- */
+.titulo {
+  color: #023975;
+  margin-top: 15px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* CSS */
+button {
+  align-items: center;
+  background: #FFFFFF;
+  border: 0 solid #E2E8F0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+  color: #1A202C;
+  display: inline-flex;
+  font-family: Inter, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  height: 56px;
+  justify-content: center;
+  line-height: 24px;
+  overflow-wrap: break-word;
+  padding: 24px;
+  text-decoration: none;
+  width: auto;
+  border-radius: 8px;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+button:hover {
+  background: #f1f5f8;
+  box-shadow: 0 6px 8px -2px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  transform: scale(1.03);
+}
+
 .main-footer {
   background-color: #1c1c1c;
   color: #f0f0f0;
   padding: 40px 20px;
   font-family: 'Segoe UI', sans-serif;
 }
- 
+
 /* Container principal */
 .footer-container {
   display: flex;
@@ -506,54 +459,54 @@ button,
   max-width: 1200px;
   margin: 0 auto;
 }
- 
+
 /* Seções individuais */
 .footer-section {
   flex: 1 1 220px;
   min-width: 200px;
 }
- 
+
 .footer-section h4 {
   font-size: 1.2em;
   margin-bottom: 15px;
   color: #ffffff;
 }
- 
+
 .footer-section ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
- 
+
 .footer-section ul li {
   margin-bottom: 10px;
   font-size: 0.95em;
 }
- 
+
 .footer-section ul li a {
   color: #cccccc;
   text-decoration: none;
   transition: color 0.3s ease;
 }
- 
+
 .footer-section ul li a:hover {
   color: #ffffff;
 }
- 
+
 /* Newsletter */
 .newsletter-form {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
- 
+
 .newsletter-form input[type="email"] {
   padding: 10px;
   border: none;
   border-radius: 5px;
   font-size: 0.95em;
 }
- 
+
 .newsletter-form button {
   padding: 10px;
   background-color: #ff4d4d;
@@ -564,22 +517,22 @@ button,
   font-weight: bold;
   transition: background-color 0.3s ease;
 }
- 
+
 .newsletter-form button:hover {
   background-color: #e60000;
 }
- 
+
 /* Redes sociais */
 .footer-social {
   text-align: center;
   margin-top: 40px;
 }
- 
+
 .footer-social h4 {
   font-size: 1.2em;
   margin-bottom: 10px;
 }
- 
+
 .social-icons a {
   font-size: 1.5em;
   margin: 0 10px;
@@ -587,11 +540,11 @@ button,
   text-decoration: none;
   transition: transform 0.3s ease;
 }
- 
+
 .social-icons a:hover {
   transform: scale(1.2);
 }
- 
+
 /* Informações legais */
 .footer-legal {
   text-align: center;
@@ -599,7 +552,7 @@ button,
   font-size: 0.85em;
   color: #aaaaaa;
 }
- 
+
 /* Responsividade */
 @media (max-width: 768px) {
   .footer-container {
@@ -607,122 +560,290 @@ button,
     align-items: center;
     text-align: center;
   }
- 
+
   .footer-section {
     flex: 1 1 100%;
   }
- 
+
   .newsletter-form {
     align-items: center;
   }
- 
+
   .newsletter-form input,
   .newsletter-form button {
     width: 100%;
     max-width: 300px;
   }
 }
- 
- 
- 
-html {
-  scroll-behavior: smooth;
+
+/* Checkbox oculto (não mexe no layout) */
+.fav-checkbox {
+  display: none;
 }
 
-/* === ESTILO DOS BILHETES DE PASSAGEM === */
-.tickets {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-  margin-top: 30px;
-}
-
-.ticket {
-  background: #fff;
-  border: 2px dashed #ccc;
-  border-radius: 16px;
-  width: 330px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: transform 0.2s, box-shadow 0.2s;
-  position: relative;
-}
-
-.ticket::before,
-.ticket::after {
-
+/* Estilo do botão de favorito */
+.btn-favorito {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   position: absolute;
-  top: 50%;
-  width: 20px;
-  height: 20px;
-  background: #f5f5f5;
+  top: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  /* Fundo branco translúcido — MANTER */
+  border: none;
   border-radius: 50%;
-  transform: translateY(-50%);
-}
-
-.ticket::before {
-  left: -10px;
-}
-.ticket::after {
-  right: -10px;
-}
-
-.ticket:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-}
-
-.ticket-header {
-  background: linear-gradient(135deg, #2a45c0, #7387e2);
-  color: white;
+  width: 35px;
+  height: 35px;
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 14px;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  z-index: 10;
+  padding: 0;
 }
 
-.ticket-header i {
-  font-size: 20px;
+.btn-favorito:hover {
+  transform: scale(1.15);
+  background: rgba(255, 255, 255, 1);
+  /* Branco mais opaco ao passar o mouse */
 }
 
-.ticket-body {
-  padding: 15px;
+/* Ícones de coração */
+.btn-favorito i {
+  font-size: 1.2em;
+  pointer-events: none;
+  /* Evita interferência de clique nos ícones */
+}
+
+/* Cor padrão (não favoritado) */
+.btn-favorito .fa-regular.fa-heart {
+  color: #365db5;
+  display: inline;
+}
+
+.btn-favorito .fa-solid.fa-heart {
+  color: #365db5;
+  display: none;
+}
+
+/* Estado favoritado (quando checkbox está checked) */
+.fav-checkbox:checked+.btn-favorito .fa-regular.fa-heart {
+  display: none;
+}
+
+.fav-checkbox:checked+.btn-favorito .fa-solid.fa-heart {
+  display: inline;
+}
+
+.fav-checkbox:checked+.btn-favorito {
+  background: rgba(255, 255, 255, 1);
+  transform: scale(1.15);
+}
+
+/* Garantir posicionamento absoluto dentro do card */
+.card-destino {
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+
+.main-footer {
+  background-color: #1c1c1c;
+  color: #f0f0f0;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Container principal */
+.footer-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.ticket-info p {
-  margin: 5px 0;
-  font-size: 14px;
-  color: #333;
+/* Seções individuais */
+.footer-section {
+  flex: 1 1 220px;
+  min-width: 200px;
 }
 
-.ticket-price {
-  text-align: right;
+.footer-section h4 {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  color: #ffffff;
 }
 
-.ticket-price span {
-  font-size: 20px;
-  font-weight: bold;
-  color: #0027d7;
-  display: block;
-  margin-bottom: 8px;
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.btn-comprar {
-    font-family: 'Poppins';
-  background: #2c36c7;
+.footer-section ul li {
+  margin-bottom: 10px;
+  font-size: 0.95em;
+}
+
+.footer-section ul li a {
+  color: #cccccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #ffffff;
+}
+
+/* Newsletter */
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.newsletter-form input[type="email"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.95em;
+}
+
+.newsletter-form button {
+  padding: 10px;
+  background-color: #ff4d4d;
   color: white;
   border: none;
-  border-radius: 6px;
-  padding: 6px 12px;
+  border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
-  transition: background 0.3s;
+  transition: background-color 0.3s ease;
 }
 
-.btn-comprar:hover {
-  background: #005fa3;
+.newsletter-form button:hover {
+  background-color: #e60000;
+}
+
+/* Redes sociais */
+.footer-social {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.footer-social h4 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.social-icons a {
+  font-size: 1.5em;
+  margin: 0 10px;
+  color: #f0f0f0;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+
+/* Informações legais */
+.footer-legal {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.85em;
+  color: #aaaaaa;
 }

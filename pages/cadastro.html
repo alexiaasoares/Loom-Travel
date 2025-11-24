@@ -1,61 +1,179 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Loom - Cadastro</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sedgwick+Ave&display=swap"
-        rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sedgwick+Ave&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="/css/cadastro.css">
 </head>
+
 <body>
   <div class="container">
     <div class="imagem">
       <img src="/assets/fotofamilia.png" alt="Família na praia">
     </div>
- 
+
     <div class="formulario">
       <img src="/assets/logoloom.png" alt="Logo Loom" class="logo"> <!-- substitua pela sua logo -->
       <h2>Cadastro</h2>
- 
-      <form>
-        <input type="email" placeholder="E-mail" required>
+
+      <form id="form-cadastro">
+        <input type="email" placeholder="E-mail" required id="cad-email">
+        <input type="tel" placeholder="Telefone (ex: (11) 99999-9999)" required id="cad-telefone">
+
         <div class="input-senha">
-          <input type="password" placeholder="Senha" required>
-          <span class="icone">👁️</span>
+          <input type="password" placeholder="Senha" required id="cad-senha">
+          <span class="icone-toggle" id="toggle-senha">
+            <i class="fas fa-eye-slash"></i>
+          </span>
         </div>
+
         <div class="input-senha">
-          <input type="password" placeholder="Confirmar Senha" required>
-          <span class="icone">👁️</span>
+          <input type="password" placeholder="Confirmar Senha" required id="cad-confirmar-senha">
+          <span class="icone-toggle" id="toggle-confirmar-senha">
+            <i class="fas fa-eye-slash"></i>
+          </span>
         </div>
- 
+
         <p class="ou">ou</p>
- 
+
         <button type="button" class="google">
           <img src="/assets/google.svg" alt=""> Cadastrar com Google
         </button>
- 
+
         <button type="button" class="apple">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt=""> Cadastrar com Apple
+          <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt=""> Cadastrar com
+          Apple
         </button>
- 
+
         <button type="button" class="login">
           <a href="/pages/login.html">Já tem login? Conecte-se à sua conta!</a>
         </button>
- 
-        <button type="submit" class="entrar">
-          <a href="/pages/index.html">Entrar</a>
+
+        <button type="button" class="entrar" id="btn-cadastrar">
+          Cadastrar
         </button>
       </form>
- 
+
       <p class="footer">Seu Trajeto <span>em Nossas Mãos</span></p>
     </div>
   </div>
+
+<script>
+    // Função para validar telefone (opcional, mas útil)
+    function validarTelefone(telefone) {
+        const digitos = telefone.replace(/\D/g, '');
+        return digitos.length >= 10 && digitos.length <= 11; // 10 (fixo) ou 11 (celular)
+    }
+
+    document.getElementById('btn-cadastrar').addEventListener('click', function () {
+        const email = document.getElementById('cad-email').value;
+        const telefone = document.getElementById('cad-telefone').value; // ✅ novo campo
+        const senha = document.getElementById('cad-senha').value;
+        const confirmarSenha = document.getElementById('cad-confirmar-senha').value;
+
+        // Validação básica
+        if (!email || !telefone || !senha || !confirmarSenha) {
+            alert("Por favor, preencha todos os campos.");
+            return;
+        }
+
+        // ✅ Validação do telefone
+        if (!validarTelefone(telefone)) {
+            alert("Telefone inválido. Digite no formato (11) 99999-9999.");
+            return;
+        }
+
+        if (senha !== confirmarSenha) {
+            alert("As senhas não coincidem.");
+            return;
+        }
+
+        // Recupera os usuários existentes
+        const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+
+        // Verifica se o e-mail já está cadastrado
+        if (usuarios.some(u => u.email === email)) {
+            alert("Este e-mail já está cadastrado. Faça login ou use outro e-mail.");
+            return;
+        }
+
+        // Sugere nome mais bonito (ex: ana.silva → Ana Silva)
+        const nomeSugerido = email.split('@')[0]
+            .split('.')
+            .map(p => p.charAt(0).toUpperCase() + p.slice(1))
+            .join(' ');
+
+        // ✅ Inclui o telefone no objeto do usuário
+        const novoUsuario = {
+            email: email,
+            senha: senha,
+            telefone: telefone, // ✅ salva o telefone
+            nome: nomeSugerido,
+            dataCadastro: new Date().toISOString()
+        };
+
+        // Salva no localStorage
+        usuarios.push(novoUsuario);
+        localStorage.setItem('usuarios', JSON.stringify(usuarios));
+
+        alert("Cadastro realizado com sucesso! Agora você pode fazer login.");
+        window.location.href = '/pages/login.html';
+    });
+
+    // ✅ Máscara de telefone automática (boa prática!)
+    document.getElementById('cad-telefone').addEventListener('input', function (e) {
+        let valor = e.target.value.replace(/\D/g, ''); // Remove tudo que não é número
+        if (valor.length > 11) valor = valor.slice(0, 11);
+
+        let formatado = '';
+        if (valor.length > 0) formatado = '(' + valor.substring(0, 2);
+        if (valor.length >= 2) formatado += ') ';
+        if (valor.length >= 3) {
+            if (valor.length > 7) {
+                formatado += valor.substring(2, 7) + '-' + valor.substring(7);
+            } else {
+                formatado += valor.substring(2);
+            }
+        }
+        e.target.value = formatado;
+    });
+</script>
+
+  <script>
+    function togglePasswordVisibility(inputId, iconId) {
+      const input = document.getElementById(inputId);
+      const icon = document.getElementById(iconId).querySelector('i');
+
+      if (input.type === 'password') {
+        input.type = 'text';
+        icon.classList.remove('fa-eye-slash');
+        icon.classList.add('fa-eye');
+      } else {
+        input.type = 'password';
+        icon.classList.remove('fa-eye');
+        icon.classList.add('fa-eye-slash');
+      }
+    }
+
+    // Aplica aos dois campos de senha
+    document.getElementById('toggle-senha').addEventListener('click', function () {
+      togglePasswordVisibility('cad-senha', 'toggle-senha');
+    });
+
+    document.getElementById('toggle-confirmar-senha').addEventListener('click', function () {
+      togglePasswordVisibility('cad-confirmar-senha', 'toggle-confirmar-senha');
+    });
+  </script>
+
 </body>
+
 </html>
- 
- 
