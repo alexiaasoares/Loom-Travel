@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <link rel="stylesheet" href="/css/style.css" />
   <link rel="stylesheet" href="/css/inicio.css">
+  <link rel="stylesheet" href="/css/Essenciais/coracaoFavoritos.css">
 </head>
 
 <body>
@@ -34,14 +35,14 @@
     </nav>
     <div class="header-utils">
       <form class="header-search" action="/buscar" method="get" role="search"> <input type="search" name="q"
-          placeholder="Pesquisar destinos..." aria-label="Pesquisar destinos" /> <i 
+          placeholder="Pesquisar destinos..." aria-label="Pesquisar destinos" /> <i
           class="fa-solid fa-magnifying-glass fa-xl" style="color: #3d5ab2;"></i>
       </form>
       <div class="area-cliente">
           <a href="favoritos.html" class="btn-favoritos" title="Favoritos" aria-label="Página de Favoritos">
           <i class="fa-regular fa-heart fa-lg" style="color: #3d5ab2;"></i>
         </a>
-        <a href="login.html" class="btn-login" title="Login" aria-label="Página de Login"> <i 
+        <a href="login.html" class="btn-login" title="Login" aria-label="Página de Login"> <i
             class="fa-solid fa-circle-user fa-xl" style="color: #3d5ab2;"></i></a>
       </div>
     </div>
@@ -138,6 +139,13 @@
 
       <div class="salvador" id="salvador1">
         <img src="/assets/salvador.png" alt>
+
+        <input type="checkbox" id="fav-salvador" class="fav-checkbox" hidden>
+        <label for="fav-salvador" class="btn-favorito">
+          <i class="fa-regular fa-heart"></i>
+          <i class="fa-solid fa-heart"></i>
+        </label>
+
         <div class="infoSalvador">
           <h3 class="salvadorInfo">SALVADOR - BA</h3>
           <h4 class="salvadorInfo">Saída de São Paulo</h4>
@@ -156,6 +164,13 @@
 
       <div class="salvador" id="salvador1">
         <img src="/assets/bali.png" alt>
+
+        <input type="checkbox" id="fav-bali" class="fav-checkbox" hidden>
+        <label for="fav-bali" class="btn-favorito">
+          <i class="fa-regular fa-heart"></i>
+          <i class="fa-solid fa-heart"></i>
+        </label>
+
         <div class="infoSalvador">
           <h3 class="salvadorInfo">BALI - INDONÉSIA</h3>
           <h4 class="salvadorInfo">Saída de São Paulo</h4>
@@ -173,6 +188,13 @@
 
       <div class="salvador">
         <img src="/assets/maldivas.png" alt>
+
+        <input type="checkbox" id="fav-maldivas" class="fav-checkbox" hidden>
+        <label for="fav-maldivas" class="btn-favorito">
+          <i class="fa-regular fa-heart"></i>
+          <i class="fa-solid fa-heart"></i>
+        </label>
+
         <div class="infoSalvador">
           <h3 class="salvadorInfo">ILHAS MALDIVAS</h3>
           <h4 class="salvadorInfo">Saída dos EUA</h4>
@@ -200,6 +222,13 @@
 
       <div class="salvador" id="salvador1">
         <img src="/assets/peru(1).png" alt>
+
+        <input type="checkbox" id="fav-peru" class="fav-checkbox" hidden>
+        <label for="fav-peru" class="btn-favorito">
+          <i class="fa-regular fa-heart"></i>
+          <i class="fa-solid fa-heart"></i>
+        </label>
+
         <div class="infoSalvador">
           <h3 class="salvadorInfo">RAINBOW MOUNTAINS - PE</h3>
           <h4 class="salvadorInfo">Saída do México</h4>
@@ -217,6 +246,13 @@
 
       <div class="salvador" id="salvador1">
         <img src="/assets/tajMahal.png" alt>
+
+        <input type="checkbox" id="fav-mahal" class="fav-checkbox" hidden>
+        <label for="fav-mahal" class="btn-favorito">
+          <i class="fa-regular fa-heart"></i>
+          <i class="fa-solid fa-heart"></i>
+        </label>
+
         <div class="infoSalvador">
           <h3 class="salvadorInfo">TAJ MAHAL - ÍNDIA</h3>
           <h4 class="salvadorInfo">Saída de São Paulo</h4>
@@ -233,6 +269,13 @@
 
       <div class="salvador">
         <img src="/assets/gize.png" alt>
+
+        <input type="checkbox" id="fav-piramide" class="fav-checkbox" hidden>
+        <label for="fav-piramide" class="btn-favorito">
+          <i class="fa-regular fa-heart"></i>
+          <i class="fa-solid fa-heart"></i>
+        </label>
+
         <div class="infoSalvador">
           <h3 class="salvadorInfo">PIRÂMIDES DE GIZÉ</h3>
           <h4 class="salvadorInfo">Saída do Rio de Janeiro</h4>
