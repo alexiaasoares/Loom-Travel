@@ -32,7 +32,7 @@
       </ul>
     </nav>
     <div class="header-utils">
-      <form class="header-search" action="/buscar" method="get" role="search"> <input type="search" name="q" 
+      <form class="header-search" action="/buscar" method="get" role="search"> <input type="search" name="q"
           placeholder="Pesquisar destinos..." aria-label="Pesquisar destinos" /> <i          
           class="fa-solid fa-magnifying-glass fa-xl" style="color: #3d5ab2;"></i>
       </form>
@@ -48,29 +48,7 @@
 
   <main>
 
-    <div class="busca-container">
-      <form class="busca-pacotes">
-        <h2>Pacotes de viagens</h2>
-        
-        <div class="form-group">
-          <label for="destino">Destino</label>
-          <input type="text" id="destino" placeholder="Para onde você quer ir?" />
-        </div>
-        <div class="form-group">
-          <label for="data-ida">Ida</label>
-          <input type="date" id="data-ida" />
-        </div>
-        <div class="form-group">
-          <label for="data-volta">Volta</label>
-          <input type="date" id="data-volta" />
-        </div>
-        <div class="form-group">
-          <label for="data-volta">Quartos</label>
-          <input type="date" id="data-volta" />
-        </div>
-        <button type="submit" class="btn-buscar">Buscar Passagens</button>
-      </form>
-    </div>
+
     <div class="container">
       <!-- Imagens -->
       <div class="image-section">
@@ -85,35 +63,30 @@
           <p><strong>Companhia:</strong> Azul</p>
           <p><strong>Ida:</strong> 04/12</p>
           <p><strong>Volta:</strong> 11/12</p>
-        </div>
+          <hr>
 
-        <div class="card">
           <h3>Estadia</h3>
           <p><strong>Local:</strong> Residência Andrade</p>
-        </div>
+          <hr>
 
-        <div class="card">
           <h3>Incluso no Pacote</h3>
           <ul>
             <li><strong>Passeio:</strong> Passeio Cultural</li>
             <li><strong>Passeio:</strong> Canoagem</li>
           </ul>
-        </div>
-
-        <div class="card">
+          <hr>
+          
           <h3>Pagamento</h3>
-          <div class="payment">
-            <input type="text" placeholder="Número do Cartão">
-            <input type="text" placeholder="Nome no Cartão">
-            <input type="text" placeholder="MM / AA">
-            <input type="text" placeholder="Código de Segurança">
-            <button class="pay-button">Pagar Pacote</button>
-          </div>
+          <input type="text" placeholder="Número do Cartão">
+          <input type="text" placeholder="Nome no Cartão">
+          <input type="text" placeholder="MM / AA">
+          <input type="text" placeholder="Código de Segurança">
+          <button class="pay-button">Pagar Pacote</button>
+
           <br>
           <p class="centro"><strong>PIX:</strong></p>
           <div class="pix-section">
-            <img src="https://cdn.pixabay.com/photo/2023/02/28/01/50/qr-code-7819652_1280.jpg" alt="QR Code PIX"
-              width="150">
+            <img src="/assets/My_Gallery.png" alt="QR Code PIX" width="150">
             <p class="price">R$ 1879,00</p>
           </div>
         </div>
