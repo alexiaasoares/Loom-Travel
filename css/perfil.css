@@ -574,3 +574,20 @@ input:checked + .slider:before {
         height: 120px;
     }
 }
+
+.btn-sair {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.btn-sair:hover {
+  background: #c0392b;
+}

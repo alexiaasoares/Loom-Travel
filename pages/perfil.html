@@ -65,89 +65,69 @@
 
         <section class="perfil-tabs">
             <button class="tab-btn active" data-tab="dados">Dados Pessoais</button>
-            <button class="tab-btn" data-tab="favoritos">Favoritos</button>
             <button class="tab-btn" data-tab="historico">Histórico de Compras</button>
-            <button class="tab-btn" data-tab="configuracoes">Configurações</button>
         </section>
 
         <!-- Aba: Dados Pessoais -->
         <section id="dados" class="tab-content active">
             <h2>Dados Pessoais</h2>
+
+            <br>
+
             <form class="perfil-form">
                 <div class="form-group">
                     <label for="nome">Nome Completo</label>
-                    <input type="text" id="nome" value="Ana Silva" required>
+                    <input type="text" id="nome" required>
                 </div>
                 <div class="form-group">
                     <label for="email">E-mail</label>
-                    <input type="email" id="email" value="ana.silva@email.com" required>
+                    <input type="email" id="email" required>
                 </div>
                 <div class="form-group">
                     <label for="telefone">Telefone</label>
-                    <input type="tel" id="telefone" value="(11) 98765-4321">
+                    <input type="tel" id="telefone">
+                </div>
+                <div class="form-group">
+                    <label for="cpf">CPF</label>
+                    <input type="text" id="cpf" readonly>
                 </div>
                 <div class="form-group">
                     <label for="data-nasc">Data de Nascimento</label>
-                    <input type="date" id="data-nasc" value="1990-05-15">
+                    <input type="date" id="data-nasc">
                 </div>
                 <div class="form-group">
-                    <label for="endereco">Endereço</label>
-                    <input type="text" id="endereco" value="Rua das Flores, 123 - São Paulo/SP">
+                    <label for="cep">CEP</label>
+                    <input type="text" id="cep" readonly>
                 </div>
-
                 <div class="form-group">
-                    <label for="telefone">Telefone</label>
-                    <input type="tel" id="telefone" value="Carregando..." disabled>
+                    <label for="logradouro">Logradouro</label>
+                    <input type="text" id="logradouro" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="numero">Número</label>
+                    <input type="text" id="numero">
+                </div>
+                <div class="form-group">
+                    <label for="complemento">Complemento</label>
+                    <input type="text" id="complemento">
+                </div>
+                <div class="form-group">
+                    <label for="bairro">Bairro</label>
+                    <input type="text" id="bairro" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="cidade">Cidade</label>
+                    <input type="text" id="cidade" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="uf">UF</label>
+                    <input type="text" id="uf" maxlength="2" readonly>
                 </div>
 
-                <button type="submit" class="btn-salvar">Salvar Alterações</button>
+                <button type="button" class="btn-sair" id="btn-logout-perfil">
+                    Sair da Conta
+                </button>
             </form>
-        </section>
-
-        <!-- Aba: Favoritos -->
-        <section id="favoritos" class="tab-content">
-            <h2>Seus Destinos Favoritos ❤️</h2>
-            <div class="favoritos-grid">
-                <!-- Exemplo 1 -->
-                <div class="card-favorito">
-                    <img src="/assets/torre-eiffel.webp" alt="Torre Eiffel" />
-                    <div class="info-favorito">
-                        <h3>Torre Eiffel</h3>
-                        <p>Paris, França</p>
-                        <a href="pontosTuristicos.html" class="btn-ver-mais">Ver Mais</a>
-                    </div>
-                    <button class="btn-favorito ativo">
-                        <i class="fa-solid fa-heart"></i>
-                    </button>
-                </div>
-
-                <!-- Exemplo 2 -->
-                <div class="card-favorito">
-                    <img src="/assets/cristo-redentor.webp" alt="Cristo Redentor" />
-                    <div class="info-favorito">
-                        <h3>Cristo Redentor</h3>
-                        <p>Rio de Janeiro, Brasil</p>
-                        <a href="pontosTuristicos.html" class="btn-ver-mais">Ver Mais</a>
-                    </div>
-                    <button class="btn-favorito ativo">
-                        <i class="fa-solid fa-heart"></i>
-                    </button>
-                </div>
-
-                <!-- Exemplo 3 -->
-                <div class="card-favorito">
-                    <img src="/assets/machu-picchu.jpg" alt="Machu Picchu" />
-                    <div class="info-favorito">
-                        <h3>Machu Picchu</h3>
-                        <p>Peru</p>
-                        <a href="pontosTuristicos.html" class="btn-ver-mais">Ver Mais</a>
-                    </div>
-                    <button class="btn-favorito ativo">
-                        <i class="fa-solid fa-heart"></i>
-                    </button>
-                </div>
-            </div>
-            <p class="no-favorites" style="display: none;">Você ainda não adicionou nenhum destino aos favoritos.</p>
         </section>
 
         <!-- Aba: Histórico de Compras -->
@@ -176,31 +156,6 @@
             </div>
         </section>
 
-        <!-- Aba: Configurações -->
-        <section id="configuracoes" class="tab-content">
-            <h2>Configurações da Conta</h2>
-            <div class="config-options">
-                <div class="config-item">
-                    <h3>Alterar Senha</h3>
-                    <button class="btn-config">Alterar</button>
-                </div>
-                <div class="config-item">
-                    <h3>Notificações</h3>
-                    <label class="switch">
-                        <input type="checkbox" checked>
-                        <span class="slider"></span>
-                    </label>
-                </div>
-                <div class="config-item">
-                    <h3>Privacidade</h3>
-                    <button class="btn-config">Gerenciar</button>
-                </div>
-                <div class="config-item">
-                    <h3>Sair da Conta</h3>
-                    <button class="btn-config btn-sair" id="btn-logout">Sair</button>
-                </div>
-            </div>
-        </section>
     </main>
 
     <footer class="main-footer">
@@ -274,16 +229,113 @@
     </script>
 
     <script>
-        document.getElementById('btn-logout').addEventListener('click', function () {
+        // Botão de sair dentro da aba de Dados Pessoais
+        document.getElementById('btn-logout-perfil')?.addEventListener('click', function () {
             if (confirm('Tem certeza que deseja sair?')) {
-                localStorage.removeItem('usuarioLogado'); // Remove o login
+                localStorage.removeItem('usuarioLogado');
                 alert('Você saiu da conta.');
-                window.location.href = 'index.html';
+                window.location.href = '/pages/index.html';
             }
         });
     </script>
 
     <script src="/Javascript/perfil.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Verifica login
+            const usuarioLogadoStr = localStorage.getItem('usuarioLogado');
+            if (!usuarioLogadoStr) {
+                alert("Você precisa estar logado para acessar esta página.");
+                window.location.href = '/pages/login.html';
+                return;
+            }
+
+            const usuario = JSON.parse(usuarioLogadoStr);
+
+            // Atualiza cabeçalho
+            document.querySelector('.user-info h1').textContent = `Olá, ${usuario.nome || 'Usuário'} 👋`;
+
+            // Formata e exibe data de cadastro
+            if (usuario.dataCadastro) {
+                const data = new Date(usuario.dataCadastro);
+                const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
+                document.querySelector('.user-info p').textContent =
+                    `Usuário desde ${data.toLocaleDateString('pt-BR', options)}`;
+            }
+
+            // Preenche o formulário
+            document.getElementById('nome').value = usuario.nome || '';
+            document.getElementById('email').value = usuario.email || '';
+            document.getElementById('telefone').value = usuario.telefone || '';
+            document.getElementById('cpf').value = usuario.cpf
+                ? usuario.cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4')
+                : '';
+            document.getElementById('data-nasc').value = usuario.dataNascimento || '';
+
+            // Endereço (se tiver — você pode salvar no cadastro futuramente)
+            // Por enquanto, deixa em branco ou usa dados fictícios
+            // Se quiser, posso te ajudar a salvar o endereço no cadastro também!
+
+            // Botão de sair
+            document.getElementById('btn-logout')?.addEventListener('click', function () {
+                if (confirm('Sair da conta?')) {
+                    localStorage.removeItem('usuarioLogado');
+                    window.location.href = '/index.html';
+                }
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const usuarioLogadoStr = localStorage.getItem('usuarioLogado');
+            if (!usuarioLogadoStr) {
+                alert("Você precisa estar logado para acessar esta página.");
+                window.location.href = '/pages/login.html';
+                return;
+            }
+
+            const usuario = JSON.parse(usuarioLogadoStr);
+
+            // Atualiza cabeçalho
+            document.querySelector('.user-info h1').textContent = `Olá, ${usuario.nome || 'Usuário'} 👋`;
+
+            // Formata data de cadastro
+            if (usuario.dataCadastro) {
+                const data = new Date(usuario.dataCadastro);
+                const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
+                document.querySelector('.user-info p').textContent =
+                    `Usuário desde ${data.toLocaleDateString('pt-BR', options)}`;
+            }
+
+            // Preenche formulário
+            document.getElementById('nome').value = usuario.nome || '';
+            document.getElementById('email').value = usuario.email || '';
+            document.getElementById('telefone').value = usuario.telefone || '';
+            document.getElementById('cpf').value = usuario.cpf
+                ? usuario.cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4')
+                : '';
+            document.getElementById('data-nasc').value = usuario.dataNascimento || '';
+
+            // ✅ PREENCHE ENDEREÇO
+            document.getElementById('cep').value = usuario.cep || '';
+            document.getElementById('logradouro').value = usuario.logradouro || '';
+            document.getElementById('numero').value = usuario.numero || '';
+            document.getElementById('complemento').value = usuario.complemento || '';
+            document.getElementById('bairro').value = usuario.bairro || '';
+            document.getElementById('cidade').value = usuario.cidade || '';
+            document.getElementById('uf').value = usuario.uf || '';
+
+            // Botão de sair
+            document.getElementById('btn-logout')?.addEventListener('click', function () {
+                if (confirm('Sair da conta?')) {
+                    localStorage.removeItem('usuarioLogado');
+                    window.location.href = '/index.html';
+                }
+            });
+        });
+    </script>
 
 </body>
 
