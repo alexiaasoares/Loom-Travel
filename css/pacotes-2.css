@@ -811,6 +811,11 @@ li {
     gap: 10px;
 }
 
+.busca-container h2 {
+    color: white;
+    
+}
+
 
 input {
     padding: 10px;

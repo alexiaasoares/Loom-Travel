@@ -419,6 +419,7 @@ button,
 /* NOVO: Efeito hover no botão */
 .btn-buscar:hover {
     background-color: #2c76d6;
+    color: white;
     /* Um vermelho mais escuro */
 }
 
