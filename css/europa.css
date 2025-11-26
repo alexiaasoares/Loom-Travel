@@ -373,6 +373,10 @@ button,
   font-family: 'Inter';
 }
 
+p {
+  text-align: center;
+}
+
 .destaque:hover {
   background-color: #bb0303;
   color: white;
@@ -397,10 +401,19 @@ button,
 }
 
 
+.sub-titulo {
+  color: #023975;
+  margin-top: 15px;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
 .titulo {
   color: #023975;
   margin-top: 15px;
   font-family: 'Poppins', sans-serif;
+  text-align: center;
+  font-size: 55px;
 }
 
 /* CSS */
@@ -585,7 +598,7 @@ button:hover {
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-  
+  margin: 0 auto;
 }
  
 .carousel-inner {
@@ -615,6 +628,7 @@ button:hover {
   height: 500px;
   object-fit: cover;
   display: block;
+
 }
  
 .carousel-caption {
@@ -678,4 +692,9 @@ button:hover {
  
 .carousel-control span {
   line-height: 1;
+}
+
+hr {
+  color: #2c3e50;
+  border: 2px solid;
 }
