@@ -377,7 +377,7 @@ button,
   display: inline-block;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
-  font-family: 'Inter';
+  font-family: 'Poppins', sans-serif;
 }
 
 .destaque:hover {
