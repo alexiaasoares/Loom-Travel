@@ -1,73 +1,64 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Perfil | L·oM</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+    <title>Meu Perfil | Loom</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/perfil.css">
-    <link rel="stylesheet" href="/css/Essenciais/Footer.css">
-    <link rel="stylesheet" href="/css/Essenciais/navbar.css">
 </head>
-
 <body>
-    <!-- Header -->
+    <!-- Header (simplificado) -->
     <header>
-        <div class="logo"> <img src="/assets/logoloom.png" alt="Logo Loom"
-                onclick="window.location.href='index.html'" />
+        <div class="logo">
+            <img src="/assets/logoloom.png" alt="Logo Loom" onclick="window.location.href='/index.html'" />
         </div>
         <nav class="navegacao-principal">
             <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="pacotes.html">PACOTES</a></li>
-                <li><a href="aloomgueis.html">ALUGUEL</a></li>
-                <li><a href="passagens.html">PASSAGENS</a></li>
-                <li><a href="pontosTuristicos.html">PONTOS TURÍSTICOS</a></li>
+                <li><a href="/index.html">HOME</a></li>
+                <li><a href="/pages/pacotes.html">PACOTES</a></li>
+                <li><a href="/pages/alugueis.html">ALUGUEL</a></li>
+                <li><a href="/pages/passagens.html">PASSAGENS</a></li>
             </ul>
         </nav>
         <div class="header-utils">
-            <form class="header-search" action="/buscar" method="get" role="search"> <input type="search" name="q"
-                    placeholder="Pesquisar destinos..." aria-label="Pesquisar destinos" /> <i
-                    class="fa-solid fa-magnifying-glass fa-xl" style="color: #3d5ab2;"></i>
+            <form class="header-search" role="search">
+                <input type="search" placeholder="Pesquisar destinos..." />
+                <i class="fa-solid fa-magnifying-glass" style="color: #3d5ab2; margin-left: 8px;"></i>
             </form>
             <div class="area-cliente">
-                  <a href="favoritos.html" class="btn-favoritos" title="Favoritos" aria-label="Página de Favoritos">
+                <a href="/pages/favoritos.html" class="btn-favoritos" title="Favoritos">
                     <i class="fa-regular fa-heart fa-lg" style="color: #3d5ab2;"></i>
                 </a>
-                <a href="login.html" class="btn-login" title="Login" aria-label="Página de Login"> <i
-                        class="fa-solid fa-circle-user fa-xl" style="color: #3d5ab2;"></i></a>
+                <a href="/pages/login.html" class="btn-login" title="Login">
+                    <i class="fa-solid fa-circle-user fa-xl" style="color: #3d5ab2;"></i>
+                </a>
             </div>
         </div>
-    </header> <br>
-
+    </header>
 
     <main class="perfil-main">
+        <!-- Cabeçalho com foto, nome e data -->
         <section class="perfil-header">
             <div class="avatar">
                 <i class="fa-solid fa-user fa-4x"></i>
             </div>
             <div class="user-info">
-                <h1>Olá, Ana Silva 👋</h1>
-                <p>Usuário desde 15/03/2024</p>
+                <h1>Olá, <span id="nome-usuario">Carregando...</span> 👋</h1>
+                <p id="data-cadastro">Carregando data de cadastro...</p>
                 <div class="user-stats">
                     <span><strong>3</strong> Favoritos</span>
-                    <span><strong>2</strong> Viagens Realizadas</span>
-                    <span><strong>R$ 8.990,00</strong> Gastos Totais</span>
+                    <span><strong>2</strong> Viagens</span>
+                    <span><strong>R$ 8.990,00</strong> Gastos</span>
                 </div>
             </div>
         </section>
 
+        <!-- Abas -->
         <section class="perfil-tabs">
             <button class="tab-btn active" data-tab="dados">Dados Pessoais</button>
-            <button class="tab-btn" data-tab="favoritos">Favoritos</button>
             <button class="tab-btn" data-tab="historico">Histórico de Compras</button>
-            <button class="tab-btn" data-tab="configuracoes">Configurações</button>
         </section>
 
         <!-- Aba: Dados Pessoais -->
@@ -76,78 +67,56 @@
             <form class="perfil-form">
                 <div class="form-group">
                     <label for="nome">Nome Completo</label>
-                    <input type="text" id="nome" value="Ana Silva" required>
+                    <input type="text" id="nome" readonly>
                 </div>
                 <div class="form-group">
                     <label for="email">E-mail</label>
-                    <input type="email" id="email" value="ana.silva@email.com" required>
+                    <input type="email" id="email" readonly>
                 </div>
                 <div class="form-group">
                     <label for="telefone">Telefone</label>
-                    <input type="tel" id="telefone" value="(11) 98765-4321">
+                    <input type="tel" id="telefone" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="cpf">CPF</label>
+                    <input type="text" id="cpf" readonly>
                 </div>
                 <div class="form-group">
                     <label for="data-nasc">Data de Nascimento</label>
-                    <input type="date" id="data-nasc" value="1990-05-15">
+                    <input type="date" id="data-nasc" readonly>
                 </div>
                 <div class="form-group">
-                    <label for="endereco">Endereço</label>
-                    <input type="text" id="endereco" value="Rua das Flores, 123 - São Paulo/SP">
+                    <label for="cep">CEP</label>
+                    <input type="text" id="cep" readonly>
                 </div>
-
                 <div class="form-group">
-                    <label for="telefone">Telefone</label>
-                    <input type="tel" id="telefone" value="Carregando..." disabled>
+                    <label for="logradouro">Logradouro</label>
+                    <input type="text" id="logradouro" readonly>
                 </div>
-
-                <button type="submit" class="btn-salvar">Salvar Alterações</button>
+                <div class="form-group">
+                    <label for="numero">Número</label>
+                    <input type="text" id="numero" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="complemento">Complemento</label>
+                    <input type="text" id="complemento" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="bairro">Bairro</label>
+                    <input type="text" id="bairro" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="cidade">Cidade</label>
+                    <input type="text" id="cidade" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="uf">UF</label>
+                    <input type="text" id="uf" maxlength="2" readonly>
+                </div>
+                <button type="button" class="btn-sair" id="btn-logout-perfil">
+                    Sair da Conta
+                </button>
             </form>
-        </section>
-
-        <!-- Aba: Favoritos -->
-        <section id="favoritos" class="tab-content">
-            <h2>Seus Destinos Favoritos ❤️</h2>
-            <div class="favoritos-grid">
-                <!-- Exemplo 1 -->
-                <div class="card-favorito">
-                    <img src="/assets/torre-eiffel.webp" alt="Torre Eiffel" />
-                    <div class="info-favorito">
-                        <h3>Torre Eiffel</h3>
-                        <p>Paris, França</p>
-                        <a href="pontosTuristicos.html" class="btn-ver-mais">Ver Mais</a>
-                    </div>
-                    <button class="btn-favorito ativo">
-                        <i class="fa-solid fa-heart"></i>
-                    </button>
-                </div>
-
-                <!-- Exemplo 2 -->
-                <div class="card-favorito">
-                    <img src="/assets/cristo-redentor.webp" alt="Cristo Redentor" />
-                    <div class="info-favorito">
-                        <h3>Cristo Redentor</h3>
-                        <p>Rio de Janeiro, Brasil</p>
-                        <a href="pontosTuristicos.html" class="btn-ver-mais">Ver Mais</a>
-                    </div>
-                    <button class="btn-favorito ativo">
-                        <i class="fa-solid fa-heart"></i>
-                    </button>
-                </div>
-
-                <!-- Exemplo 3 -->
-                <div class="card-favorito">
-                    <img src="/assets/machu-picchu.jpg" alt="Machu Picchu" />
-                    <div class="info-favorito">
-                        <h3>Machu Picchu</h3>
-                        <p>Peru</p>
-                        <a href="pontosTuristicos.html" class="btn-ver-mais">Ver Mais</a>
-                    </div>
-                    <button class="btn-favorito ativo">
-                        <i class="fa-solid fa-heart"></i>
-                    </button>
-                </div>
-            </div>
-            <p class="no-favorites" style="display: none;">Você ainda não adicionou nenhum destino aos favoritos.</p>
         </section>
 
         <!-- Aba: Histórico de Compras -->
@@ -155,7 +124,7 @@
             <h2>Histórico de Compras</h2>
             <div class="compras-lista">
                 <div class="compra-item">
-                    <img src="/assets/salvador-ba.jpg" alt="Salvador - BA" />
+                    <img src="https://via.placeholder.com/100x80/e0e0e0/333?text=Salvador" alt="Salvador">
                     <div class="compra-detalhes">
                         <h3>Salvador - BA</h3>
                         <p>01/12 – 15/12 • 1-4 pessoas</p>
@@ -165,7 +134,7 @@
                 </div>
 
                 <div class="compra-item">
-                    <img src="/assets/bali-indonesia.jpg" alt="Bali - Indonésia" />
+                    <img src="https://via.placeholder.com/100x80/e0e0e0/333?text=Bali" alt="Bali">
                     <div class="compra-detalhes">
                         <h3>Bali - Indonésia</h3>
                         <p>12/12 – 21/12 • 1-2 pessoas</p>
@@ -175,116 +144,64 @@
                 </div>
             </div>
         </section>
-
-        <!-- Aba: Configurações -->
-        <section id="configuracoes" class="tab-content">
-            <h2>Configurações da Conta</h2>
-            <div class="config-options">
-                <div class="config-item">
-                    <h3>Alterar Senha</h3>
-                    <button class="btn-config">Alterar</button>
-                </div>
-                <div class="config-item">
-                    <h3>Notificações</h3>
-                    <label class="switch">
-                        <input type="checkbox" checked>
-                        <span class="slider"></span>
-                    </label>
-                </div>
-                <div class="config-item">
-                    <h3>Privacidade</h3>
-                    <button class="btn-config">Gerenciar</button>
-                </div>
-                <div class="config-item">
-                    <h3>Sair da Conta</h3>
-                    <button class="btn-config btn-sair" id="btn-logout">Sair</button>
-                </div>
-            </div>
-        </section>
     </main>
 
-    <footer class="main-footer">
-        <div class="footer-container">
-            <div class="footer-section">
-                <h4>Institucional</h4>
-                <ul>
-                    <li><a href="#">Sobre Nós</a></li>
-                    <li><a href="#">Nossa História</a></li>
-                    <li><a href="#">Trabalhe Conosco</a></li>
-                    <li><a href="#">Imprensa</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Ajuda e Suporte</h4>
-                <ul>
-                    <li><a href="#">Central de Atendimento</a></li>
-                    <li><a href="#">Política de Privacidade</a></li>
-                    <li><a href="#">Termos de Uso</a></li>
-                    <li><a href="#">Cancelamentos e Reembolsos</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Contato</h4>
-                <ul>
-                    <li>Email: contato@loomviagens.com.br</li>
-                    <li>Telefone: (11) 99999-9999</li>
-                    <li>WhatsApp: (11) 98888-7777</li>
-                    <li>Horário de Atendimento: Seg-Sex 9h às 18h</li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Receba Novidades</h4>
-                <p>Inscreva-se e receba promoções exclusivas!</p>
-                <form class="newsletter-form">
-                    <input type="email" placeholder="Seu melhor e-mail" required />
-                    <button type="submit">Enviar</button>
-                </form>
-            </div>
-        </div>
-        <div class="footer-social">
-            <h4>Siga-nos</h4>
-            <div class="social-icons">
-                <a href="#" aria-label="Siga-nos no Facebook" target="_blank">📘</a>
-                <a href="#" aria-label="Siga-nos no Instagram" target="_blank">📷</a>
-                <a href="#" aria-label="Siga-nos no LinkedIn" target="_blank">💼</a>
-                <a href="#" aria-label="Siga-nos no YouTube" target="_blank">▶️</a>
-            </div>
-        </div>
-        <div class="footer-legal">
-            <p>© 2025 Loom Viagens. Todos os direitos reservados.</p>
-            <p>CNPJ: 00.000.000/0001-00 | Rua Exemplo, 123 - São Paulo/SP</p>
-        </div>
-    </footer>
-
     <script>
-        // Verifica se o usuário está logado ao carregar a página
         document.addEventListener('DOMContentLoaded', function () {
-            const usuarioLogado = localStorage.getItem('usuarioLogado');
-
-            if (!usuarioLogado) {
-                // Se não estiver logado, redireciona para login com mensagem
+            // Verifica login
+            const usuarioLogadoStr = localStorage.getItem('usuarioLogado');
+            if (!usuarioLogadoStr) {
                 alert("Você precisa estar logado para acessar esta página.");
                 window.location.href = '/pages/login.html';
-            } else {
-                // Atualiza o nome no cabeçalho (opcional)
-                const usuario = JSON.parse(usuarioLogado);
-                document.querySelector('.user-info h1').textContent = `Olá, ${usuario.nome} 👋`;
+                return;
             }
+
+            const usuario = JSON.parse(usuarioLogadoStr);
+
+            // Atualiza cabeçalho
+            document.getElementById('nome-usuario').textContent = usuario.nome || 'Usuário';
+            if (usuario.dataCadastro) {
+                const data = new Date(usuario.dataCadastro);
+                document.getElementById('data-cadastro').textContent = 
+                    `Usuário desde ${data.toLocaleDateString('pt-BR')}`;
+            }
+
+            // Preenche formulário
+            document.getElementById('nome').value = usuario.nome || '';
+            document.getElementById('email').value = usuario.email || '';
+            document.getElementById('telefone').value = usuario.telefone || '';
+            document.getElementById('cpf').value = usuario.cpf 
+                ? usuario.cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4') 
+                : '';
+            document.getElementById('data-nasc').value = usuario.dataNascimento || '';
+            document.getElementById('cep').value = usuario.cep || '';
+            document.getElementById('logradouro').value = usuario.logradouro || '';
+            document.getElementById('numero').value = usuario.numero || '';
+            document.getElementById('complemento').value = usuario.complemento || '';
+            document.getElementById('bairro').value = usuario.bairro || '';
+            document.getElementById('cidade').value = usuario.cidade || '';
+            document.getElementById('uf').value = usuario.uf || '';
+
+            // Tabs
+            document.querySelectorAll('.tab-btn').forEach(button => {
+                button.addEventListener('click', () => {
+                    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                    button.classList.add('active');
+                    const tab = button.getAttribute('data-tab');
+                    document.getElementById(tab).classList.add('active');
+                });
+            });
+
+            // Botão de sair
+            document.getElementById('btn-logout-perfil').addEventListener('click', function () {
+                if (confirm('Tem certeza que deseja sair?')) {
+                    localStorage.removeItem('usuarioLogado');
+                    alert('Você saiu da conta.');
+                    window.location.href = '/index.html';
+                }
+            });
         });
     </script>
-
-    <script>
-        document.getElementById('btn-logout').addEventListener('click', function () {
-            if (confirm('Tem certeza que deseja sair?')) {
-                localStorage.removeItem('usuarioLogado'); // Remove o login
-                alert('Você saiu da conta.');
-                window.location.href = 'index.html';
-            }
-        });
-    </script>
-
-    <script src="/Javascript/perfil.js"></script>
-
 </body>
-
 </html>
