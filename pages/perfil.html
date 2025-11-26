@@ -64,9 +64,13 @@
         <!-- Aba: Dados Pessoais -->
         <section id="dados" class="tab-content active">
             <h2>Dados Pessoais</h2>
+
+            <br>
+
             <form class="perfil-form">
                 <div class="form-group">
                     <label for="nome">Nome Completo</label>
+<<<<<<< HEAD
                     <input type="text" id="nome" readonly>
                 </div>
                 <div class="form-group">
@@ -76,6 +80,17 @@
                 <div class="form-group">
                     <label for="telefone">Telefone</label>
                     <input type="tel" id="telefone" readonly>
+=======
+                    <input type="text" id="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" id="telefone">
+>>>>>>> e3b9cdc8fc9fbc2b2bc5ed8c5b35564209033075
                 </div>
                 <div class="form-group">
                     <label for="cpf">CPF</label>
@@ -83,7 +98,11 @@
                 </div>
                 <div class="form-group">
                     <label for="data-nasc">Data de Nascimento</label>
+<<<<<<< HEAD
                     <input type="date" id="data-nasc" readonly>
+=======
+                    <input type="date" id="data-nasc">
+>>>>>>> e3b9cdc8fc9fbc2b2bc5ed8c5b35564209033075
                 </div>
                 <div class="form-group">
                     <label for="cep">CEP</label>
@@ -92,6 +111,7 @@
                 <div class="form-group">
                     <label for="logradouro">Logradouro</label>
                     <input type="text" id="logradouro" readonly>
+<<<<<<< HEAD
                 </div>
                 <div class="form-group">
                     <label for="numero">Número</label>
@@ -113,6 +133,30 @@
                     <label for="uf">UF</label>
                     <input type="text" id="uf" maxlength="2" readonly>
                 </div>
+=======
+                </div>
+                <div class="form-group">
+                    <label for="numero">Número</label>
+                    <input type="text" id="numero">
+                </div>
+                <div class="form-group">
+                    <label for="complemento">Complemento</label>
+                    <input type="text" id="complemento">
+                </div>
+                <div class="form-group">
+                    <label for="bairro">Bairro</label>
+                    <input type="text" id="bairro" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="cidade">Cidade</label>
+                    <input type="text" id="cidade" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="uf">UF</label>
+                    <input type="text" id="uf" maxlength="2" readonly>
+                </div>
+
+>>>>>>> e3b9cdc8fc9fbc2b2bc5ed8c5b35564209033075
                 <button type="button" class="btn-sair" id="btn-logout-perfil">
                     Sair da Conta
                 </button>
@@ -144,6 +188,10 @@
                 </div>
             </div>
         </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> e3b9cdc8fc9fbc2b2bc5ed8c5b35564209033075
     </main>
 
     <script>
@@ -203,5 +251,118 @@
             });
         });
     </script>
+<<<<<<< HEAD
+=======
+
+    <script>
+        // Botão de sair dentro da aba de Dados Pessoais
+        document.getElementById('btn-logout-perfil')?.addEventListener('click', function () {
+            if (confirm('Tem certeza que deseja sair?')) {
+                localStorage.removeItem('usuarioLogado');
+                alert('Você saiu da conta.');
+                window.location.href = '/pages/index.html';
+            }
+        });
+    </script>
+
+    <script src="/Javascript/perfil.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Verifica login
+            const usuarioLogadoStr = localStorage.getItem('usuarioLogado');
+            if (!usuarioLogadoStr) {
+                alert("Você precisa estar logado para acessar esta página.");
+                window.location.href = '/pages/login.html';
+                return;
+            }
+
+            const usuario = JSON.parse(usuarioLogadoStr);
+
+            // Atualiza cabeçalho
+            document.querySelector('.user-info h1').textContent = `Olá, ${usuario.nome || 'Usuário'} 👋`;
+
+            // Formata e exibe data de cadastro
+            if (usuario.dataCadastro) {
+                const data = new Date(usuario.dataCadastro);
+                const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
+                document.querySelector('.user-info p').textContent =
+                    `Usuário desde ${data.toLocaleDateString('pt-BR', options)}`;
+            }
+
+            // Preenche o formulário
+            document.getElementById('nome').value = usuario.nome || '';
+            document.getElementById('email').value = usuario.email || '';
+            document.getElementById('telefone').value = usuario.telefone || '';
+            document.getElementById('cpf').value = usuario.cpf
+                ? usuario.cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4')
+                : '';
+            document.getElementById('data-nasc').value = usuario.dataNascimento || '';
+
+            // Endereço (se tiver — você pode salvar no cadastro futuramente)
+            // Por enquanto, deixa em branco ou usa dados fictícios
+            // Se quiser, posso te ajudar a salvar o endereço no cadastro também!
+
+            // Botão de sair
+            document.getElementById('btn-logout')?.addEventListener('click', function () {
+                if (confirm('Sair da conta?')) {
+                    localStorage.removeItem('usuarioLogado');
+                    window.location.href = '/index.html';
+                }
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const usuarioLogadoStr = localStorage.getItem('usuarioLogado');
+            if (!usuarioLogadoStr) {
+                alert("Você precisa estar logado para acessar esta página.");
+                window.location.href = '/pages/login.html';
+                return;
+            }
+
+            const usuario = JSON.parse(usuarioLogadoStr);
+
+            // Atualiza cabeçalho
+            document.querySelector('.user-info h1').textContent = `Olá, ${usuario.nome || 'Usuário'} 👋`;
+
+            // Formata data de cadastro
+            if (usuario.dataCadastro) {
+                const data = new Date(usuario.dataCadastro);
+                const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
+                document.querySelector('.user-info p').textContent =
+                    `Usuário desde ${data.toLocaleDateString('pt-BR', options)}`;
+            }
+
+            // Preenche formulário
+            document.getElementById('nome').value = usuario.nome || '';
+            document.getElementById('email').value = usuario.email || '';
+            document.getElementById('telefone').value = usuario.telefone || '';
+            document.getElementById('cpf').value = usuario.cpf
+                ? usuario.cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4')
+                : '';
+            document.getElementById('data-nasc').value = usuario.dataNascimento || '';
+
+            // ✅ PREENCHE ENDEREÇO
+            document.getElementById('cep').value = usuario.cep || '';
+            document.getElementById('logradouro').value = usuario.logradouro || '';
+            document.getElementById('numero').value = usuario.numero || '';
+            document.getElementById('complemento').value = usuario.complemento || '';
+            document.getElementById('bairro').value = usuario.bairro || '';
+            document.getElementById('cidade').value = usuario.cidade || '';
+            document.getElementById('uf').value = usuario.uf || '';
+
+            // Botão de sair
+            document.getElementById('btn-logout')?.addEventListener('click', function () {
+                if (confirm('Sair da conta?')) {
+                    localStorage.removeItem('usuarioLogado');
+                    window.location.href = '/index.html';
+                }
+            });
+        });
+    </script>
+
+>>>>>>> e3b9cdc8fc9fbc2b2bc5ed8c5b35564209033075
 </body>
 </html>

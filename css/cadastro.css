@@ -85,6 +85,7 @@ input {
     color: #3d5ab2;
 }
 
+<<<<<<< HEAD
 .ou {
     text-align: center;
     color: #333;
@@ -177,3 +178,48 @@ button {
   width: 350px;
 }
 
+=======
+/* Novo: agrupamento de campos de endereço */
+.endereco-group,
+.cidade-estado {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.endereco-group input,
+.cidade-estado input {
+  flex: 1;
+  min-width: 150px;
+}
+
+#cad-cep {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background-color: #e8f0fc;
+  font-size: 1rem;
+  width: 100%;
+}
+
+/* Feedback visual durante carregamento */
+.carregando::after {
+  content: " ⏳";
+}
+
+/* Estilo para o campo de data (alguns navegadores não estilizam bem por padrão) */
+#cad-data-nasc {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background-color: #e8f0fc;
+  font-size: 1rem;
+  width: 100%;
+}
+
+/* Destaque para erro */
+.input-error {
+  border: 2px solid #e74c3c !important;
+  background-color: #fdf2f2;
+}
+>>>>>>> e3b9cdc8fc9fbc2b2bc5ed8c5b35564209033075

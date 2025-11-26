@@ -510,7 +510,7 @@ button,
   padding: 15px;
   border-radius: 8px;
   display: flex;
-  background-color: #f1f1f1;
+  background-color: #ffffff;
  justify-content: center;
   gap: 10px;
 }
@@ -881,9 +881,7 @@ main {
   }
 }
 
-.tio {
-  
-}
+
 
 .img {
   height: 300px;
@@ -912,7 +910,7 @@ main {
   color: #FFFFFF;
   cursor: pointer;
   display: inline-block;
-  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 14px;
   font-weight: 500;
   height: 40px;
