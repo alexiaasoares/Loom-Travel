@@ -20,6 +20,85 @@
 }
 
 body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f5f5f5;
+    color: #333;
+
+}
+
+/* Div externa para mover tudo */
+.wrapper {
+    /* display: flex; */
+    justify-content: flex-start;
+    /* tudo no canto esquerdo */
+    padding: 40px;
+}
+
+
+/* Container com bordas arredondadas */
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 900px;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Painéis */
+.left-panel,
+.right-panel {
+    flex: 1;
+    padding: 20px;
+}
+
+.left-panel {
+    background: linear-gradient(to right, #b30000, #ff4d4d);
+    color: white;
+    text-align: center;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.left-panel img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.left-panel h1 {
+    font-size: 2em;
+    margin: 0;
+}
+
+
+
+.right-panel {
+    background-color: #fff;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+
+
+.right-panel ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+
+.right-panel li {
+    font-size: 1.1em;
+    margin: 10px 0;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+body {
     font-family: 'Segoe UI', sans-serif;
     background: #f5f5f5;
     color: #333;
@@ -29,30 +108,21 @@ body {
     color: #060606;
 }
 
-
-.wrapper {
-    padding: 40px;
-}
-
-.left-panel {
-    background: linear-gradient(right, #b30000, #ff4d4d);
-    color: white;
-    text-align: center;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
-}
-
 .logo {
     width: 199px;
     height: auto;
     cursor: pointer;
 }
 
+#lupa {
+    width: 50px;
+    margin-left: 190px;
+}
+
 img {
     max-width: 100%;
     /* Garante que as imagens nunca "vazem" do seu container */
     display: block;
-    border-radius: 1px solid red;
 }
 
 a {
@@ -70,14 +140,17 @@ section {
     /* Centraliza títulos de seção */
 }
 
+section h2 {
+    margin-bottom: -15px;
+    /* Espaço abaixo dos títulos H2 */
+}
 
 /* --- 2. CABEÇALHO E NAVEGAÇÃO --- */
 header {
     display: flex;
     /* ALTERADO: Mudei para 'center' para tentar centralizar a NAV. */
     /* O 'space-between' será substituído por margens automáticas na NAV para o equilíbrio. */
-    justify-content: space-between;
-    /* Mantenho este para separar os blocos */
+    justify-content: space-between; /* Mantenho este para separar os blocos */
     align-items: center;
     padding: 15px;
     background-color: #ffffff;
@@ -93,10 +166,35 @@ header {
 
 /* nav bar */
 .navegacao-principal {
+    /* MANTIDO: Permite que ela ocupe espaço no centro. */
+    flex: 1;
     display: flex;
+    /* NOVO: Adiciona margens automáticas para empurrar os itens laterais */
+    margin: 0 auto; 
+    /* ALTERADO: Mudei para 'center' (já estava assim, mantido). */
+    justify-content: center; 
+    max-width: 60%; /* Adicionei um limite para não forçar demais as laterais */
 }
 
+header .logo {
+    flex-shrink: 0;
+}
 
+button,
+.btn-buscar {
+    padding: 10px 20px;
+    background-color: #bb0303;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+    /* NOVO: Fonte */
+    height: 44px;
+    /* NOVO: Alinha a altura com os inputs */
+    transition: background-color 0.2s ease;
+    /* NOVO: Efeito de hover */
+}
 
 /* cada item da navbar */
 .navegacao-principal ul li {
@@ -109,6 +207,8 @@ header {
 
 /* nav bar */
 .navegacao-principal {
+    flex: 1;
+    display: flex;
     justify-content: center;
     /* centraliza os links */
 }
@@ -238,17 +338,14 @@ header {
 }
 
 .area-cliente {
-    display: flex;
-    /* NOVO: Para alinhar o perfil e o favorito lado a lado */
-    gap: 10px;
-    /* NOVO: Espaçamento entre os ícones */
+    display: flex; /* NOVO: Para alinhar o perfil e o favorito lado a lado */
+    gap: 10px; /* NOVO: Espaçamento entre os ícones */
     align-items: center;
 }
 
 .area-cliente .btn-favoritos {
     font-size: 1.2rem;
-    color: #bb0303;
-    /* Cor do ícone de coração */
+    color: #bb0303; /* Cor do ícone de coração */
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -261,8 +358,7 @@ header {
 }
 
 .area-cliente .btn-favoritos:hover {
-    background-color: #eb5151;
-    /* Um tom de rosa claro no hover */
+    background-color: #eb5151; /* Um tom de rosa claro no hover */
     color: #bb0303;
 }
 
@@ -294,10 +390,6 @@ header {
 }
 
 
-/* ▲▲▲ FIM DAS NOVAS REGRAS ▲▲▲ */
-
-
-
 /* --- 3. SEÇÃO HERO E BARRA DE BUSCA (ESTILIZADA) --- */
 .hero {
     background-color: #082569;
@@ -322,7 +414,10 @@ header {
     border-radius: 8px;
 }
 
-#lupa {}
+#lupa {
+    width: 50px;
+    margin-left: 190px;
+}
 
 .form-group {
     display: flex;
@@ -574,11 +669,6 @@ button,
     text-decoration: line-through;
 }
 
-/* SUAS REGRAS ANTIGAS PARA O ÍCONE FORAM REMOVIDAS
-   .area-cliente a { ... }
-   .btn-login .fa-user { ... }
-   ELAS FORAM SUBSTITUÍDAS PELO NOVO .area-cliente .btn-login LÁ EM CIMA
-*/
 
 .btn-ver-pacote {
     display: inline-block;
@@ -698,10 +788,7 @@ html {
     scroll-behavior: smooth;
 }
 
-
-
 /* aluguel de carro */
-
 .escrita-carros {
     text-align: center;
     color: #365DB5;
@@ -780,73 +867,40 @@ html {
 
 /* Card horizontal (imagem à esquerda) */
 .card--horizontal {
-
     display: flex;
-
     width: 380px;
-
-
     /* Largura controlada para caber 3 em linha */
-
     background: white;
-
     border-radius: 12px;
-
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-
     overflow: hidden;
-
 }
 
 
 
 .card--horizontal img {
-
     width: 100%;
-
     height: 100%;
-
-
-
 }
 
-
-
 .card--horizontal .card__content {
-
     width: 60%;
-
     padding: var(--espaco-md);
-
     display: flex;
-
     flex-direction: column;
-
     justify-content: center;
-
     justify-content: space-around;
-
 }
 
 
 
 .container-card-horizontal {
-
     display: flex;
-
     background-color: #fff;
-
     border-radius: 8px;
-
     overflow: hidden;
-
-    /* transition: all 0.3s ease-in-out; */
-
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-
-
-
-
+    /* transition: all 0.3s ease-in-out; */
 }
 
 
@@ -854,22 +908,13 @@ html {
 
 
 .container-card {
-
     max-width: 1000px;
-
     border: 1px solid blue;
-
     width: 100%;
-
     margin: 0 auto;
-
     display: flex;
-
     flex-wrap: wrap;
-
     flex-direction: row-reverse;
-
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 
 }
 
@@ -950,7 +995,6 @@ html {
     gap: 10px;
 }
 
-/* para colocar o email no footer */
 .newsletter-form input[type="email"] {
     padding: 10px;
     border: none;
@@ -969,7 +1013,6 @@ html {
     transition: background-color 0.3s ease;
 }
 
-/* botão do footer */
 .newsletter-form button:hover {
     background-color: #e60000;
 }
@@ -985,7 +1028,6 @@ html {
     margin-bottom: 10px;
 }
 
-/* tamanho dos icones do footer */
 .social-icons a {
     font-size: 1.5em;
     margin: 0 10px;
@@ -994,6 +1036,9 @@ html {
     transition: transform 0.3s ease;
 }
 
+.social-icons a:hover {
+    transform: scale(1.2);
+}
 
 /* Informações legais */
 /* escritas de baixo do footer */
@@ -1012,17 +1057,26 @@ html {
         text-align: center;
     }
 
-   
+    .footer-section {
+        flex: 1 1 100%;
+    }
 
-   }
-/* imagem da direita */
+    .newsletter-form {
+        align-items: center;
+    }
+
+    .newsletter-form input,
+    .newsletter-form button {
+        width: 100%;
+        max-width: 300px;
+    }
+}
 
 .carroeBanner {
     display: flex;
     justify-content: space-around;
 }
 
-/* imagem da direita */
 .imagem-direita img {
     width: 97%;
     margin-top: 37px;
@@ -1032,31 +1086,41 @@ html {
 
 }
 
-
-/* escrita carros */
-.nome-carros {
-    padding-left: 878px;
-    color: #365DB5;
-    justify-content: center;
+.cars {
+    margin-left: 70px;
 }
 
-/* espaço da escrita "CARROS" e os cards */
+.nome-carros {
+    padding-left: 869px;
+    color: #365DB5;
+    justify-content: center;
+
+}
+
 .margin {
     margin-top: -90px;
 }
 
-/* escrita de preço dos cards */
-#preco {
+.preco {
     display: flex;
     justify-content: space-between;
-    margin-left: 200px;
-    text-align: right;
-    font-size: 20px;
-    font-weight: bold;
-    color: #3A5B9E;
+}
+
+#preco {
+    margin-left: 85px;
+}
+
+.wrapper {
+    /* Apply transition to all properties */
+    height: 375px;
+    display: block;
 
 }
-.wrapper {
-  height: 375px;
-    display: block;
+
+/* .wrapper:hover {
+    transform: translateY(-5px);
+} */
+
+#spin {
+    margin-left: 100px;
 }

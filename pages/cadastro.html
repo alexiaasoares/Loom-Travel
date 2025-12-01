@@ -1,13 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loom - Cadastro</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/cadastro.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loom - Login</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/cadastro.css">
+  <style>
+    .social-buttons {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: 10px;
+      height: 50px;
+    }
+
+    .social-buttons button {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: #e0e0e0;
+    }
+
+    .social-buttons img {
+      height: 20px;
+      margin-right: 8px;
+    }
+  </style>
 </head>
+
 <body>
     <div class="container">
         <div class="imagem">
@@ -64,6 +92,7 @@
             <p class="footer">Seu Trajeto <span>em Nossas Mãos</span></p>
         </div>
     </div>
+  </div>
 
 
     <script>
@@ -208,4 +237,5 @@
         document.getElementById('apple')?.addEventListener('click', () => alert('Apple login em desenvolvimento'));
     </script>
 </body>
+
 </html>

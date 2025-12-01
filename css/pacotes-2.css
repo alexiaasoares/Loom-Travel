@@ -29,7 +29,6 @@ body {
 img {
     max-width: 100%;
     /* Garante que as imagens nunca "vazem" do seu container */
-    display: block;
 }
 
 a {
@@ -918,7 +917,7 @@ input {
     background: #fff;
     border-radius: 10px;
     padding: 20px 30px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-bottom: 30px;
     border: 1px solid #ddd;
 }
@@ -946,7 +945,12 @@ input {
     flex: 1;
     min-width: 140px;
 }
-.big-box { flex: 2; } /* Caixa maior para Origem/Destino */
+
+.big-box {
+    flex: 2;
+}
+
+/* Caixa maior para Origem/Destino */
 
 .input-box label {
     display: block;
@@ -957,7 +961,9 @@ input {
     text-align: left;
 }
 
-.route-display, .date-display, .room-display {
+.route-display,
+.date-display,
+.room-display {
     display: flex;
     align-items: center;
     font-weight: bold;
@@ -965,7 +971,11 @@ input {
     color: #333;
     justify-content: space-between;
 }
-.room-display { justify-content: flex-start; gap: 15px; }
+
+.room-display {
+    justify-content: flex-start;
+    gap: 15px;
+}
 
 .btn-search-action {
     background-color: #3b5998;
@@ -973,7 +983,8 @@ input {
     border: none;
     border-radius: 5px;
     padding: 0 25px;
-    height: 55px; /* Altura para alinhar com os inputs */
+    height: 55px;
+    /* Altura para alinhar com os inputs */
     font-weight: bold;
     cursor: pointer;
     display: flex;
@@ -990,7 +1001,13 @@ input {
     font-size: 12px;
     font-weight: bold;
 }
-.search-footer-links a { color: #333; display: flex; align-items: center; gap: 5px; }
+
+.search-footer-links a {
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
 
 /* 3. Grid Principal (Esquerda e Direita) */
 .content-grid {
@@ -1019,7 +1036,7 @@ input {
     height: 450px;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .photo-frame img {
@@ -1036,8 +1053,10 @@ input {
 }
 
 .travel-card {
-    background: #e6f0fa; /* Azul claro */
-    border: 3px solid #3b5998; /* Borda grossa */
+    background: #e6f0fa;
+    /* Azul claro */
+    border: 3px solid #3b5998;
+    /* Borda grossa */
     border-radius: 15px;
     padding: 20px;
     position: relative;
@@ -1052,7 +1071,10 @@ input {
     text-align: left;
 }
 
-.center-content .card-header { text-align: center; }
+.center-content {
+    text-align: center;
+    justify-content: center;
+}
 
 .ver-mais {
     position: absolute;
@@ -1075,19 +1097,67 @@ input {
     gap: 15px;
     width: fit-content;
 }
-.azul-logo { font-weight: 900; color: #0f265c; font-size: 16px; margin-right: 10px;}
-.dates p { margin: 0; font-size: 11px; color: #3b5998; font-weight: bold; }
 
-.stay-info { display: flex; align-items: center; gap: 15px; }
-.stay-info img { width: 100px; height: 70px; border-radius: 10px; object-fit: cover; }
-.stay-info h4 { color: #3b5998; font-weight: 800; font-size: 16px; text-transform: uppercase; }
+.azul-logo {
+    font-weight: 900;
+    color: #0f265c;
+    font-size: 16px;
+    margin-right: 10px;
+}
 
-.tags-container { display: flex; justify-content: center; gap: 10px; }
-.pill-tag { background: #3b5998; color: white; padding: 8px 20px; border-radius: 20px; font-weight: bold; font-size: 11px; }
+.dates p {
+    margin: 0;
+    font-size: 11px;
+    color: #3b5998;
+    font-weight: bold;
+}
+
+.stay-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.stay-info img {
+    width: 100px;
+    height: 70px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.stay-info h4 {
+    color: #3b5998;
+    font-weight: 800;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.tags-container {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;}
+
+.pill-tag {
+    background: #3b5998;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 11px;
+}
 
 /* Pagamento */
-.payment-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 15px; }
-.credit-card-form { display: flex; flex-direction: column; gap: 8px; }
+.payment-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 15px;
+}
+
+.credit-card-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
 
 .blue-input {
     background: #4a69bd;
@@ -1099,7 +1169,10 @@ input {
     font-weight: bold;
     text-transform: uppercase;
 }
-.blue-input::placeholder { color: rgba(255,255,255,0.7); }
+
+.blue-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
 
 .btn-pay-final {
     background: #3b5998;
@@ -1114,37 +1187,66 @@ input {
     box-shadow: 0 4px 0 #2a4070;
 }
 
-.pix-area { display: flex; flex-direction: column; align-items: center; text-align: center; }
+.pix-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
 .qr-code-box {
-    background: white; padding: 10px; border: 2px solid #000;
-    width: 90px; height: 90px; display: flex; align-items: center; justify-content: center;
+    background: white;
+    padding: 10px;
+    border: 2px solid #000;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 5px;
 }
-.final-price { font-size: 20px; font-weight: 900; color: #3b5998; }
+
+.final-price {
+    font-size: 20px;
+    font-weight: 900;
+    color: #3b5998;
+}
 
 /* Mobile */
 @media (max-width: 768px) {
-    .content-grid { grid-template-columns: 1fr; }
-    .payment-grid { grid-template-columns: 1fr; }
-    .search-inputs-row { flex-direction: column; }
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .payment-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .search-inputs-row {
+        flex-direction: column;
+    }
 }
 
 /* --- Atualização do Card Pagamento (PIX embaixo) --- */
 
 .payment-grid {
-    display: flex;           /* Mudamos de grid para flex */
-    flex-direction: column;  /* Coloca um item embaixo do outro */
+    display: flex;
+    /* Mudamos de grid para flex */
+    flex-direction: column;
+    /* Coloca um item embaixo do outro */
     gap: 20px;
 }
 
 .pix-area {
     display: flex;
     flex-direction: column;
-    align-items: center;     /* Centraliza o QR Code e o preço */
+    align-items: center;
+    /* Centraliza o QR Code e o preço */
     /* Se quiser alinhado a esquerda igual sua imagem, mude 'center' para 'flex-start' */
     margin-top: 10px;
     padding-top: 20px;
-    border-top: 2px dashed #ccc; /* Uma linha pontilhada para separar (opcional) */
+    border-top: 2px dashed #ccc;
+    /* Uma linha pontilhada para separar (opcional) */
 }
 
 /* Ajustando o tamanho do QR Code */
@@ -1152,7 +1254,8 @@ input {
     background: white;
     padding: 10px;
     border: 2px solid #000;
-    width: 120px;            /* Um pouco maior para facilitar leitura */
+    width: 120px;
+    /* Um pouco maior para facilitar leitura */
     height: 120px;
     display: flex;
     align-items: center;
@@ -1164,7 +1267,8 @@ input {
 .final-price {
     font-size: 24px;
     font-weight: 900;
-    color: #249a3f;          /* Verde forte */
+    color: #249a3f;
+    /* Verde forte */
 }
 
 /* Garante que o botão ocupe a largura toda */
