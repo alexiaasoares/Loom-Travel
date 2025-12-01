@@ -112,8 +112,12 @@ button {
 .entrar {
     background-color: #e63528;
     color: white;
-    font-weight: bold;
     transition: 0.3s;
+    text-decoration: none;
+    text-align: center;
+    padding-top: 10px;
+    height: 40px;
+    border-radius: 20px;
 }
 
 .entrar:hover {
@@ -177,3 +181,13 @@ button {
   width: 350px;
 }
 
+<<<<<<< HEAD
+.ou {
+    text-align: center;
+}
+
+.senha {
+    margin-top: 15px;
+}
+=======
+>>>>>>> 493a7a1c00ce617243a28861fa5a2b8f914d7436
