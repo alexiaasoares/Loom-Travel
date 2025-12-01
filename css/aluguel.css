@@ -99,10 +99,12 @@ body {
 }
 
 body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f5f5f5;
+    color: #333;
     font-family: 'poppins';
     line-height: 1.6;
     background-color: #EFF4FF;
-    /* Um cinza bem claro para o fundo */
     color: #060606;
 }
 
@@ -146,24 +148,32 @@ section h2 {
 /* --- 2. CABEÇALHO E NAVEGAÇÃO --- */
 header {
     display: flex;
-    /* A MÁGICA: alinha os filhos (logo, nav, header-utils) lado a lado */
-    justify-content: space-between;
-    /* Espaça eles (um na esquerda, um no meio, um na direita) */
+    /* ALTERADO: Mudei para 'center' para tentar centralizar a NAV. */
+    /* O 'space-between' será substituído por margens automáticas na NAV para o equilíbrio. */
+    justify-content: space-between; /* Mantenho este para separar os blocos */
     align-items: center;
-    /* Centraliza verticalmente */
     padding: 15px;
     background-color: #ffffff;
     border-bottom: 2px solid #eee;
-    /* Linha sutil abaixo do header */
     position: fixed;
     z-index: 500;
     width: 100%;
-    /* Fundo de imagem do mundo na navba */
     background-image: url('/assets/navbar.png');
     background-size: cover;
     background-position: center;
-    margin-left: 100px;
-    width: 90%;
+    /* As correções de margin-left e width 90% já foram feitas na resposta anterior e estão mantidas aqui (implicitamente, removidas). */
+}
+
+/* nav bar */
+.navegacao-principal {
+    /* MANTIDO: Permite que ela ocupe espaço no centro. */
+    flex: 1;
+    display: flex;
+    /* NOVO: Adiciona margens automáticas para empurrar os itens laterais */
+    margin: 0 auto; 
+    /* ALTERADO: Mudei para 'center' (já estava assim, mantido). */
+    justify-content: center; 
+    max-width: 60%; /* Adicionei um limite para não forçar demais as laterais */
 }
 
 header .logo {
@@ -218,7 +228,6 @@ button,
 /* --- EFEITO HOVER NAVEGAÇÃO (OPÇÃO 2: SUBLINHADO MODERNO) --- */
 /* Base do link da navegação (Pai) */
 .navegacao-principal a {
-    color: #023975;
     padding-bottom: 5px;
     /* Espaço para o sublinhado */
     position: relative;
@@ -328,6 +337,31 @@ button,
     /* Usando sua cor de link */
 }
 
+.area-cliente {
+    display: flex; /* NOVO: Para alinhar o perfil e o favorito lado a lado */
+    gap: 10px; /* NOVO: Espaçamento entre os ícones */
+    align-items: center;
+}
+
+.area-cliente .btn-favoritos {
+    font-size: 1.2rem;
+    color: #bb0303; /* Cor do ícone de coração */
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.area-cliente .btn-favoritos:hover {
+    background-color: #eb5151; /* Um tom de rosa claro no hover */
+    color: #bb0303;
+}
+
 /* Estilização e Posição do Ícone de Perfil */
 /* (Substitui suas regras .area-cliente a e .btn-login .fa-user) */
 .area-cliente .btn-login {
@@ -354,6 +388,7 @@ button,
     color: #023975;
     /* Usando sua cor de link */
 }
+
 
 /* --- 3. SEÇÃO HERO E BARRA DE BUSCA (ESTILIZADA) --- */
 .hero {
@@ -949,10 +984,11 @@ html {
 }
 
 .footer-section ul li a:hover {
-    color: #ffffff;
+    color: #4228b8;
 }
 
 /* Newsletter */
+/* tamanho do botão do footer */
 .newsletter-form {
     display: flex;
     flex-direction: column;
@@ -1005,6 +1041,7 @@ html {
 }
 
 /* Informações legais */
+/* escritas de baixo do footer */
 .footer-legal {
     text-align: center;
     margin-top: 30px;
@@ -1054,9 +1091,10 @@ html {
 }
 
 .nome-carros {
-    padding-left: 791px;
+    padding-left: 869px;
     color: #365DB5;
     justify-content: center;
+
 }
 
 .margin {

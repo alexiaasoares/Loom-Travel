@@ -1,324 +1,403 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sua Agência de Viagens - Explore o Brasil 01</title>
-    <meta name="description"
-      content="Encontre os melhores pacotes de viagem para o Nordeste, Sudeste, Sul, Norte e Centro-Oeste." />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins&display=swap"
-      rel="stylesheet" />
-    <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/inicio.css">
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sua Agência de Viagens - Explore o Brasil 01</title>
+  <meta name="description"
+    content="Encontre os melhores pacotes de viagem para o Nordeste, Sudeste, Sul, Norte e Centro-Oeste." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sedgwick+Ave&display=swap"
+    rel="stylesheet" />
 
-  <body>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/inicio.css">
+  <link rel="stylesheet" href="/css/Essenciais/coracaoFavoritos.css">
+</head>
 
-    <header>
-      <div class="logo"> <img src="/assets/logoloom.png" alt="Logo Loom"
-          onclick="window.location.href='index.html'" />
-      </div>
-      <nav class="navegacao-principal">
-        <ul>
-          <li><a href="pacotes.html">PACOTES</a></li>
-          <li><a href="aloomgueis.html">ALUGUEL</a></li>
-          <li><a href="passagens.html">PASSAGENS</a></li>
-          <li><a href="pontosTuristicos.html">PONTOS TURÍSTICOS</a></li>
-        </ul>
-      </nav>
-      <div class="header-utils">
-        <form class="header-search" action="/buscar" method="get" role="search">
-          <input type="search" name="q"
-            placeholder="Pesquisar destinos..."
-            aria-label="Pesquisar destinos" /> <i
-            class="fa-solid fa-magnifying-glass fa-xl"
-            style="color: #3d5ab2;"></i> </form>
-        <div class="area-cliente"> <a href="login.html" class="btn-login"
-            title="Login" aria-label="Página de Login"> <i
-              class="fa-solid fa-circle-user fa-xl"
-              style="color: #3d5ab2;"></i></a> </div>
-      </div>
-    </header> <br>
+<body>
 
-    <main>
+  <header>
+    <div class="logo"> <img src="/assets/logoloom.png" alt="Logo Loom" onclick="window.location.href='index.html'" />
+    </div>
+    <nav class="navegacao-principal">
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="pacotes.html">PACOTES</a></li>
+        <li><a href="aloomgueis.html">ALUGUEL</a></li>
+        <li><a href="passagens.html">PASSAGENS</a></li>
+        <li><a href="pontosTuristicos.html">PONTOS TURÍSTICOS</a></li>
+      </ul>
+    </nav>
+    <div class="header-utils">
+      <form class="header-search" action="/buscar" method="get" role="search"> <input type="search" name="q"
+          placeholder="Pesquisar destinos..." aria-label="Pesquisar destinos" /> <i
+          class="fa-solid fa-magnifying-glass fa-xl" style="color: #3d5ab2;"></i>
+      </form>
+      <div class="area-cliente">
+          <a href="favoritos.html" class="btn-favoritos" title="Favoritos" aria-label="Página de Favoritos">
+          <i class="fa-regular fa-heart fa-lg" style="color: #3d5ab2;"></i>
+        </a>
 
-      <br><br>
-
-      <section class="paginaInicial">
-        <img src="/assets/banner.png" class="banner" alt="Banner de viagem">
-        <br> <br>
-
-        <h2 class="titulos"> MAIS PROCURADOS </h2>
-        <br>
-        <div class="carrossel-track" id="carrosselTrack">
-          <div class="card-destino">
-            <!-- Imagem da paisagem -->
-            <img src="/assets/disney.png" alt="DISNEYLAND" />
-
-            <!-- Informações do destino -->
-            <div class="info-destino">
-              <h2>DISNEY</h2>
-              <p>FAÇA UMA VIAGEM DOS SONHOS PARA O MUNDO ENCANTADO COM A LoM</p>
-              <a href="#" class="btn-ver-pacote">VER MAIS</a>
-            </div>
-          </div>
-
-          <div class="card-destino">
-            <img src="/assets/paris.png" alt="Paris" />
-            <div class="info-destino">
-              <h2>PARIS</h2>
-              <p>VIAJE PARA A CIDADE MAIS ROMÂNTICA DO MUNDO COM A LoM</p>
-              <a href="#" class="btn-ver-pacote">VER MAIS</a>
-            </div>
-          </div>
-
-          <div class="card-destino">
-            <img src="/assets/peru.png" alt="Machu Picchu" />
-            <div class="info-destino">
-              <h2>MACHU PICCHU</h2>
-              <p>CONHEÇA UMA DAS MARAVILHAS DO MUNDO COM A LoM</p>
-              <a href="#" class="btn-ver-pacote">VER MAIS</a>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      <h2 class="titulos"> CONTINENTES </h2>
-
-      <section>
-
-        <div class="continentes">
-          <br>
-
-          <div class="carrossel-track" id="amSul">
-            <div class="continente">
-              <img class="continentesSilhueta" src="/assets/americaSul.png"
-                alt="Disney" />
-              <h3 class="h3">AMÉRICA DO SUL</h3>
-            </div>
-          </div>
-
-          <div class="carrossel-track" id="asia">
-            <div class="continente">
-              <img class="continentesSilhueta" id="asiaImg"
-                src="/assets/asia.png" alt="Disney" />
-              <h3 class="h3">ÁSIA</h3>
-            </div>
-          </div>
-
-          <div class="carrossel-track" id="amNor">
-            <div class="continente">
-              <img class="continentesSilhueta" src="/assets/americaNorte.png"
-                alt="Disney" />
-              <h3 class="h3">AMÉRICA DO NORTE</h3>
-            </div>
-          </div>
-
-          <div class="carrossel-track" id="eur">
-            <div class="continente">
-              <img class="continentesSilhueta" src="/assets/europa.png"
-                alt="Disney" />
-              <h3 class="h3"><a href="europa.html">EUROPA</a></h3>
-            </div>
-          </div>
-
+        <!-- Mudar o comportamento do botão de login -->
+        <div class="area-cliente">
+          <a href="#" id="btn-usuario" class="btn-login" title="Minha Conta" aria-label="Minha Conta">
+            <i class="fa-solid fa-circle-user fa-xl" style="color: #3d5ab2;"></i>
+          </a>
         </div>
 
-      </section>
+      </div>
+    </div>
+  </header> <br>
 
-      <h2 class="titulos">PACOTES</h2>
+  <main>
 
-      <section class="pacotes">
-        
+    <br><br>
+
+    <section class="paginaInicial">
+      <img src="/assets/banner.png" class="banner" alt="Banner de viagem">
+      <br> <br>
+
+      <h2 class="titulos"> MAIS PROCURADOS </h2>
+      <br>
+      <div class="carrossel-track" id="carrosselTrack">
+        <div class="card-destino">
+          <!-- Imagem da paisagem -->
+          <img src="/assets/disney.png" alt="DISNEYLAND" />
+
+          <!-- Informações do destino -->
+          <div class="info-destino">
+            <h2>DISNEY</h2>
+            <p>FAÇA UMA VIAGEM DOS SONHOS PARA O MUNDO ENCANTADO COM A LoM</p>
+            <a href="#" class="btn-ver-pacote">VER MAIS</a>
+          </div>
+        </div>
+
+        <div class="card-destino">
+          <img src="/assets/paris.png" alt="Paris" />
+          <div class="info-destino">
+            <h2>PARIS</h2>
+            <p>VIAJE PARA A CIDADE MAIS ROMÂNTICA DO MUNDO COM A LoM</p>
+            <a href="#" class="btn-ver-pacote">VER MAIS</a>
+          </div>
+        </div>
+
+        <div class="card-destino">
+          <img src="/assets/peru.png" alt="Machu Picchu" />
+          <div class="info-destino">
+            <h2>MACHU PICCHU</h2>
+            <p>CONHEÇA UMA DAS MARAVILHAS DO MUNDO COM A LoM</p>
+            <a href="#" class="btn-ver-pacote">VER MAIS</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <h2 class="titulos"> CONTINENTES </h2>
+
+    <section>
+
+      <div class="continentes">
         <br>
 
-        <div class="salvador" id="salvador1">
-          <img src="/assets/salvador.png" alt>
-          <div class="infoSalvador">
-            <h3 class="salvadorInfo">SALVADOR - BA</h3>
-            <h4 class="salvadorInfo">Saída de São Paulo</h4>
-            <ul class="descricao">
-              <li>Transporte</li>
-              <li>Hotel</li>
-              <li>Passeio</li>
-              <li>1-4 pessoas</li>
-              <div class="preco">
-                <li>01/12 - 15/12</li>
-                <p id="preco">R$ 2.329,00</p>
-              </ul>
-            </div>
+        <div class="carrossel-track" id="amSul">
+          <div class="continente">
+            <img class="continentesSilhueta" src="/assets/americaSul.png" alt="Disney" />
+            <h3 class="h3">AMÉRICA DO SUL</h3>
           </div>
         </div>
 
-        <div class="salvador" id="salvador1">
-          <img src="/assets/bali.png" alt>
-          <div class="infoSalvador">
-            <h3 class="salvadorInfo">BALI - INDONÉSIA</h3>
-            <h4 class="salvadorInfo">Saída de São Paulo</h4>
-            <ul class="descricao">
-              <li>Hotel</li>
-              <li>Passeio</li>
-              <li>1-2 pessoas</li>
-              <div class="preco">
-                <li>12/12 - 21/12</li>
-                <p id="preco">R$ 12.500,00</p>
-              </ul>
-            </div>
+        <div class="carrossel-track" id="asia">
+          <div class="continente">
+            <img class="continentesSilhueta" id="asiaImg" src="/assets/asia.png" alt="Disney" />
+            <h3 class="h3">ÁSIA</h3>
           </div>
         </div>
 
-        <div class="salvador">
-          <img src="/assets/maldivas.png" alt>
-          <div class="infoSalvador">
-            <h3 class="salvadorInfo">ILHAS MALDIVAS</h3>
-            <h4 class="salvadorInfo">Saída dos EUA</h4>
-            <ul class="descricao">
-              <li>Hotel</li>
-              <li>Passeio</li>
-              <li>1-3 pessoas</li>
-              <div class="preco">
-                <li>04/12 - 15/12</li>
-                <p id="preco">R$ 14.000,00</p>
-              </ul>
-            </div>
+        <div class="carrossel-track" id="amNor">
+          <div class="continente">
+            <img class="continentesSilhueta" src="/assets/americaNorte.png" alt="Disney" />
+            <h3 class="h3">AMÉRICA DO NORTE</h3>
           </div>
         </div>
 
-      </section>
+        <div class="carrossel-track" id="eur">
+          <div class="continente">
+            <img class="continentesSilhueta" src="/assets/europa.png" alt="Disney" />
+            <a class="europa" href="europa.html">EUROPA</a>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <h2 class="titulos">PACOTES</h2>
+
+    <section class="pacotes">
 
       <br>
 
-      <h2 class="titulos">MAIS BARATOS</h2>
+      <div class="salvador" id="salvador1">
+        <img src="/assets/salvador.png" alt>
 
-      <section class="pacotes">
-        
-        <br>
+        <input type="checkbox" id="fav-salvador" class="fav-checkbox" hidden>
+        <label for="fav-salvador" class="btn-favorito">
+          <i class="fa-regular fa-heart"></i>
+          <i class="fa-solid fa-heart"></i>
+        </label>
 
-        <div class="salvador" id="salvador1">
-          <img src="/assets/peru(1).png" alt>
-          <div class="infoSalvador">
-            <h3 class="salvadorInfo">RAINBOW MOUNTAINS - PE</h3>
-            <h4 class="salvadorInfo">Saída do México</h4>
-            <ul class="descricao">
-              <li>Transporte</li>
-              <li>Hotel</li>
-              <li>1-5 pessoas</li>
-              <div class="preco">
-                <li>29/12 - 05/01</li>
-                <p id="preco">R$ 6.000,00</p>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="salvador" id="salvador1">
-          <img src="/assets/tajMahal.png" alt>
-          <div class="infoSalvador">
-            <h3 class="salvadorInfo">TAJ MAHAL - ÍNDIA</h3>
-            <h4 class="salvadorInfo">Saída de São Paulo</h4>
-            <ul class="descricao">
-              <li>Passeio</li>
-              <li>1-4 pessoas</li>
-              <div class="preco">
-                <li>12/12 - 21/12</li>
-                <p id="preco">R$ 9.200,00</p>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="salvador">
-          <img src="/assets/gize.png" alt>
-          <div class="infoSalvador">
-            <h3 class="salvadorInfo">PIRÂMIDES DE GIZÉ</h3>
-            <h4 class="salvadorInfo">Saída do Rio de Janeiro</h4>
-            <ul class="descricao">
-              <li>Passeio com fotos</li>
-              <li>1-3 pessoas</li>
-              <div class="preco">
-                <li>04/12 - 15/12</li>
-                <p id="preco">R$ 6.000,00</p>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-      </section>
-
-    </main>
-
-    <footer class="main-footer">
-      <div class="footer-container">
-        <!-- Seção Institucional -->
-        <div class="footer-section">
-          <h4>Institucional</h4>
-          <ul>
-            <li><a href="#">Sobre Nós</a></li>
-            <li><a href="#">Nossa História</a></li>
-            <li><a href="#">Trabalhe Conosco</a></li>
-            <li><a href="#">Imprensa</a></li>
+        <div class="infoSalvador">
+          <h3 class="salvadorInfo">SALVADOR - BA</h3>
+          <h4 class="salvadorInfo">Saída de São Paulo</h4>
+          <ul class="descricao">
+            <li>Transporte</li>
+            <li>Hotel</li>
+            <li>Passeio</li>
+            <li>1-4 pessoas</li>
+            <div class="preco">
+              <li>01/12 - 15/12</li>
+              <p id="preco">R$ 2.329,00</p>
           </ul>
-        </div>
-
-        <!-- Seção Ajuda e Suporte -->
-        <div class="footer-section">
-          <h4>Ajuda e Suporte</h4>
-          <ul>
-            <li><a href="#">Central de Atendimento</a></li>
-            <li><a href="#">Política de Privacidade</a></li>
-            <li><a href="#">Termos de Uso</a></li>
-            <li><a href="#">Cancelamentos e Reembolsos</a></li>
-          </ul>
-        </div>
-
-        <!-- Seção Contato -->
-        <div class="footer-section">
-          <h4>Contato</h4>
-          <ul>
-            <li>Email: contato@loomviagens.com.br</li>
-            <li>Telefone: (11) 99999-9999</li>
-            <li>WhatsApp: (11) 98888-7777</li>
-            <li>Horário de Atendimento: Seg-Sex 9h às 18h</li>
-          </ul>
-        </div>
-
-        <!-- Seção Newsletter -->
-        <div class="footer-section">
-          <h4>Receba Novidades</h4>
-          <p>Inscreva-se e receba promoções exclusivas!</p>
-          <form class="newsletter-form">
-            <input type="email" placeholder="Seu melhor e-mail" required />
-            <button type="submit">Enviar</button>
-          </form>
         </div>
       </div>
+      </div>
 
-      <!-- Redes Sociais -->
-      <div class="footer-social">
-      <h4>Siga-nos</h4>
-      <div class="social-icons">
-        <a href="#" aria-label="Siga-nos no Facebook" target="_blank"><i class="fa-solid fa-book" style="color: #ffffff;"></i></a>
-        <a href="#" aria-label="Siga-nos no Instagram" target="_blank"><i class="fa-solid fa-camera" style="color: #ffffff;"></i></a>
-        <a href="#" aria-label="Siga-nos no LinkedIn" target="_blank"><i class="fa-solid fa-suitcase" style="color: #ffffff;"></i></a>
-        <a href="#" aria-label="Siga-nos no YouTube" target="_blank"><i class="fa-brands fa-youtube" style="color: #ffffff;"></i></a>
+      <div class="salvador" id="salvador1">
+        <img src="/assets/bali.png" alt>
+
+        <input type="checkbox" id="fav-bali" class="fav-checkbox" hidden>
+        <label for="fav-bali" class="btn-favorito">
+          <i class="fa-regular fa-heart"></i>
+          <i class="fa-solid fa-heart"></i>
+        </label>
+
+        <div class="infoSalvador">
+          <h3 class="salvadorInfo">BALI - INDONÉSIA</h3>
+          <h4 class="salvadorInfo">Saída de São Paulo</h4>
+          <ul class="descricao">
+            <li>Hotel</li>
+            <li>Passeio</li>
+            <li>1-2 pessoas</li>
+            <div class="preco">
+              <li>12/12 - 21/12</li>
+              <p id="preco">R$ 12.500,00</p>
+          </ul>
+        </div>
+      </div>
+      </div>
+
+      <div class="salvador">
+        <img src="/assets/maldivas.png" alt>
+
+        <input type="checkbox" id="fav-maldivas" class="fav-checkbox" hidden>
+        <label for="fav-maldivas" class="btn-favorito">
+          <i class="fa-regular fa-heart"></i>
+          <i class="fa-solid fa-heart"></i>
+        </label>
+
+        <div class="infoSalvador">
+          <h3 class="salvadorInfo">ILHAS MALDIVAS</h3>
+          <h4 class="salvadorInfo">Saída dos EUA</h4>
+          <ul class="descricao">
+            <li>Hotel</li>
+            <li>Passeio</li>
+            <li>1-3 pessoas</li>
+            <div class="preco">
+              <li>04/12 - 15/12</li>
+              <p id="preco">R$ 14.000,00</p>
+          </ul>
+        </div>
+      </div>
+      </div>
+
+    </section>
+
+    <br>
+
+    <h2 class="titulos">MAIS BARATOS</h2>
+
+    <section class="pacotes">
+
+      <br>
+
+      <div class="salvador" id="salvador1">
+        <img src="/assets/peru(1).png" alt>
+
+        <input type="checkbox" id="fav-peru" class="fav-checkbox" hidden>
+        <label for="fav-peru" class="btn-favorito">
+          <i class="fa-regular fa-heart"></i>
+          <i class="fa-solid fa-heart"></i>
+        </label>
+
+        <div class="infoSalvador">
+          <h3 class="salvadorInfo">RAINBOW MOUNTAINS - PE</h3>
+          <h4 class="salvadorInfo">Saída do México</h4>
+          <ul class="descricao">
+            <li>Transporte</li>
+            <li>Hotel</li>
+            <li>1-5 pessoas</li>
+            <div class="preco">
+              <li>29/12 - 05/01</li>
+              <p id="preco">R$ 6.000,00</p>
+          </ul>
+        </div>
+      </div>
+      </div>
+
+      <div class="salvador" id="salvador1">
+        <img src="/assets/tajMahal.png" alt>
+
+        <input type="checkbox" id="fav-mahal" class="fav-checkbox" hidden>
+        <label for="fav-mahal" class="btn-favorito">
+          <i class="fa-regular fa-heart"></i>
+          <i class="fa-solid fa-heart"></i>
+        </label>
+
+        <div class="infoSalvador">
+          <h3 class="salvadorInfo">TAJ MAHAL - ÍNDIA</h3>
+          <h4 class="salvadorInfo">Saída de São Paulo</h4>
+          <ul class="descricao">
+            <li>Passeio</li>
+            <li>1-4 pessoas</li>
+            <div class="preco">
+              <li>12/12 - 21/12</li>
+              <p id="preco">R$ 9.200,00</p>
+          </ul>
+        </div>
+      </div>
+      </div>
+
+      <div class="salvador">
+        <img src="/assets/gize.png" alt>
+
+        <input type="checkbox" id="fav-piramide" class="fav-checkbox" hidden>
+        <label for="fav-piramide" class="btn-favorito">
+          <i class="fa-regular fa-heart"></i>
+          <i class="fa-solid fa-heart"></i>
+        </label>
+
+        <div class="infoSalvador">
+          <h3 class="salvadorInfo">PIRÂMIDES DE GIZÉ</h3>
+          <h4 class="salvadorInfo">Saída do Rio de Janeiro</h4>
+          <ul class="descricao">
+            <li>Passeio com fotos</li>
+            <li>1-3 pessoas</li>
+            <div class="preco">
+              <li>04/12 - 15/12</li>
+              <p id="preco">R$ 6.000,00</p>
+          </ul>
+        </div>
+      </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Colocar em todas as telas -->
+ <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const btnUsuario = document.getElementById('btn-usuario');
+        
+        if (btnUsuario) {
+            const usuarioLogado = localStorage.getItem('usuarioLogado');
+            
+            if (usuarioLogado) {
+                btnUsuario.title = "Meu Perfil";
+                btnUsuario.setAttribute('aria-label', 'Ir para Meu Perfil');
+            } else {
+                btnUsuario.title = "Login";
+                btnUsuario.setAttribute('aria-label', 'Página de Login');
+            }
+
+            btnUsuario.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                if (usuarioLogado) {
+                    window.location.href = '/pages/perfil.html';
+                } else {
+                    window.location.href = '/pages/login.html';
+                }
+            });
+        }
+    });
+</script>
+
+  <footer class="main-footer">
+    <div class="footer-container">
+      <!-- Seção Institucional -->
+      <div class="footer-section">
+        <h4>Institucional</h4>
+        <ul>
+          <li><a href="#">Sobre Nós</a></li>
+          <li><a href="#">Nossa História</a></li>
+          <li><a href="#">Trabalhe Conosco</a></li>
+          <li><a href="#">Imprensa</a></li>
+        </ul>
+      </div>
+
+      <!-- Seção Ajuda e Suporte -->
+      <div class="footer-section">
+        <h4>Ajuda e Suporte</h4>
+        <ul>
+          <li><a href="#">Central de Atendimento</a></li>
+          <li><a href="#">Política de Privacidade</a></li>
+          <li><a href="#">Termos de Uso</a></li>
+          <li><a href="#">Cancelamentos e Reembolsos</a></li>
+        </ul>
+      </div>
+
+      <!-- Seção Contato -->
+      <div class="footer-section">
+        <h4>Contato</h4>
+        <ul>
+          <li>Email: contato@loomviagens.com.br</li>
+          <li>Telefone: (11) 99999-9999</li>
+          <li>WhatsApp: (11) 98888-7777</li>
+          <li>Horário de Atendimento: Seg-Sex 9h às 18h</li>
+        </ul>
+      </div>
+
+      <!-- Seção Newsletter -->
+      <div class="footer-section">
+        <h4>Receba Novidades</h4>
+        <p>Inscreva-se e receba promoções exclusivas!</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Seu melhor e-mail" required />
+          <button type="submit">Enviar</button>
+        </form>
       </div>
     </div>
 
-      <!-- Informações Legais -->
-      <div class="footer-legal">
-        <p>© 2025 Loom Viagens. Todos os direitos reservados.</p>
-        <p>CNPJ: 00.000.000/0001-00 | Rua Exemplo, 123 - São Paulo/SP</p>
+    <!-- Redes Sociais -->
+    <div class="footer-social">
+      <h4>Siga-nos</h4>
+      <div class="social-icons">
+        <a href="#" aria-label="Siga-nos no Facebook" target="_blank"><i class="fa-solid fa-book"
+            style="color: #ffffff;"></i></a>
+        <a href="#" aria-label="Siga-nos no Instagram" target="_blank"><i class="fa-solid fa-camera"
+            style="color: #ffffff;"></i></a>
+        <a href="#" aria-label="Siga-nos no LinkedIn" target="_blank"><i class="fa-solid fa-suitcase"
+            style="color: #ffffff;"></i></a>
+        <a href="#" aria-label="Siga-nos no YouTube" target="_blank"><i class="fa-brands fa-youtube"
+            style="color: #ffffff;"></i></a>
       </div>
-    </footer>
-    <script src="/js/script.js"></script>
+    </div>
 
-  </body>
+    <!-- Informações Legais -->
+    <div class="footer-legal">
+      <p>© 2025 Loom Viagens. Todos os direitos reservados.</p>
+      <p>CNPJ: 00.000.000/0001-00 | Rua Exemplo, 123 - São Paulo/SP</p>
+    </div>
+  </footer>
+  <script src="/js/script.js"></script>
+
+</body>
 
 </html>

@@ -2,10 +2,6 @@
   margin: 0 auto;
 }
 
-.header-utils {
-  margin-right: 50px;
-}
-
 header {
   justify-content: center;
 }
@@ -48,7 +44,7 @@ h2 {
 
 #amSul {
   width: 13%;
-  margin-right: %;
+  margin-right: 0%;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 1000px;
 }
@@ -63,7 +59,7 @@ h2 {
 
 #asia {
   width: 20%;
-  margin-right: %;
+  margin-right: 0%;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 1000px;
 }
@@ -78,7 +74,7 @@ h2 {
 
 #amNor {
   width: 15%;
-  margin-left: %;
+  margin-left: 0%;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 100px;
 }
@@ -93,7 +89,7 @@ h2 {
 
 #eur {
   width: 20%;
-  margin-left: %;
+  margin-left: 0%;
 }
 
 .logo {
@@ -175,6 +171,13 @@ h2 {
   text-align: center;
 }
 
+.europa {
+   color: #365db5;
+  font-weight: bold;
+  text-align: center;
+  font-size: 20px;
+}
+
 #asiaImg {
   height: 200px;
 } 
@@ -187,6 +190,10 @@ h2 {
   cursor: pointer;
   transition: transform 0.2s ease;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.salvadorInfo {
+  margin-right: 8px;
 }
 
 .salvador:hover{
@@ -202,7 +209,7 @@ h2 {
 
 .infoSalvador {
   padding: 10px;
-  margin-left: 20px;
+  margin-left: 10px;
 }
 
 .salvadorInfo {
