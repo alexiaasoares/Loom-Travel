@@ -44,10 +44,10 @@ Como o site é totalmente estático, não é necessário servidor ou instalaçõ
 
 
 git clone https://github.com/alexiaasoares/Loom-Travel.git
+
 Acesse a pasta do projeto:
 
-bash
-Copiar código
+
 cd Loom-Travel
 Abra o arquivo principal:
 
