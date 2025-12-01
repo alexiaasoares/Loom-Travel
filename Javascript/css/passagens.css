@@ -1,0 +1,785 @@
+/* Reset básico: remove margens/paddings padrões e faz o box-sizing incluir o padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Faz o padding não alterar o tamanho final dos elementos */
+}
+
+/* Definições principais do corpo: fonte, altura de linha, cor de fundo e cor do texto */
+body {
+    font-family: 'poppins';
+    line-height: 1.6;
+    background-color: #EFF4FF;
+    /* Cor de fundo do site (azul bem claro) */
+    color: #060606;
+    /* Cor padrão do texto */
+}
+
+/* Tamanho e comportamento do logo (clicável) */
+.logo {
+    width: 199px;
+    height: auto;
+    cursor: pointer;
+}
+
+/* Tamanho e espaçamento do ícone de lupa */
+#lupa {
+    width: 50px;
+    margin-left: 190px;
+}
+
+/* Garante que imagens se ajustem ao contêiner e não deixem espaços inesperados */
+img {
+    max-width: 100%;
+    /* Faz a imagem nunca exceder o contêiner */
+    display: block;
+    /* Remove espaços embaixo das imagens */
+}
+
+/* Estilo base dos links: remove sublinhado e define cor padrão */
+a {
+    text-decoration: none;
+    /* Remove o sublinhado padrão */
+    color: #023975;
+    /* Cor padrão dos links */
+    /*--------- cor da parte da nav bar */
+}
+
+/* Espaçamento padrão para seções da página e centralização de conteúdo */
+section {
+    padding: 40px 20px;
+    /* Espaço interno: 40px em cima/baixo e 20px nas laterais */
+    text-align: center;
+    /* Centraliza títulos e textos dentro das seções */
+}
+
+/* Espaçamento específico abaixo de h2 dentro das seções */
+section h2 {
+    margin-bottom: -15px;
+    /* Ajuste fino do espaçamento inferior do título */
+}
+
+/* --- Cabeçalho e navegação: layout principal do header --- */
+header {
+    display: flex;
+    /* Organiza o header em linha com flexbox */
+    /* ALTERADO: Mudei para 'center' para tentar centralizar a NAV. */
+    /* O 'space-between' será substituído por margens automáticas na NAV para o equilíbrio. */
+    justify-content: space-between; /* Mantenho este para separar os blocos */
+    align-items: center;
+    padding: 15px;
+    background-color: #ffffff;
+    border-bottom: 2px solid #eee;
+    position: fixed;
+    z-index: 500;
+    width: 100%;
+    background-image: url('/assets/navbar.png');
+    background-size: cover;
+    background-position: center;
+    /* Mantém o header fixo no topo com imagem de fundo */
+    /* As correções de margin-left e width 90% já foram feitas na resposta anterior e estão mantidas aqui (implicitamente, removidas). */
+}
+
+/* Área da barra de navegação principal: centraliza e limita a largura */
+.navegacao-principal {
+    /* Permite que ela ocupe espaço no centro. */
+    flex: 1;
+    display: flex;
+    /* Adiciona margens automáticas para empurrar os itens laterais */
+    margin: 0 auto; 
+    /* Centraliza o conteúdo horizontalmente */
+    /* JUSTIFICAÇÃO: centraliza os links */
+    justify-content: center; 
+    max-width: 60%; /* Limita a largura máxima da navegação */
+}
+
+/* Impede que a logo encolha quando o espaço estiver limitado */
+header .logo {
+    flex-shrink: 0;
+}
+
+/* Estilo base para botões: padding, cor, borda e interação */
+button,
+.btn-buscar {
+    padding: 10px 20px;
+    background-color: #bb0303;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+    /* Fonte utilizada nos botões */
+    height: 44px;
+    /* Altura consistente com inputs */
+    transition: background-color 0.2s ease;
+    /* Transição suave ao alterar cor de fundo */
+}
+
+/* Espaçamento entre itens da lista da navbar */
+.navegacao-principal ul li {
+    margin-left: 80px;
+}
+
+/* Texto dos links da navbar em negrito */
+.navegacao-principal ul li a {
+    font-weight: bold;
+}
+
+/* Declarações repetidas da navbar (mantendo consistência) */
+.navegacao-principal {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    /* Centraliza os links */
+}
+
+/* Lista horizontal dentro da navegação */
+.navegacao-principal ul {
+    display: flex;
+    /* Deixa os itens em linha */
+    list-style: none;
+    /* Remove marcadores da lista */
+}
+
+/* Espaçamento padrão entre itens da navbar */
+.navegacao-principal li {
+    margin-left: 20px;
+    /* Espaço entre cada item */
+}
+
+/* --- Efeito hover na navegação: sublinhado animado --- */
+/* Base do link: prepara o elemento para receber o sublinhado animado */
+.navegacao-principal a {
+    color: #023975;
+    padding-bottom: 5px;
+    /* Espaço reservado para o sublinhado */
+    position: relative;
+    /* Necessário para posicionar o ::after */
+    overflow: hidden;
+    /* Evita que a linha exceda o link */
+    transition: color 0.3s ease;
+}
+
+/* Linha que aparece embaixo do link (invisível inicialmente) */
+.navegacao-principal a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #bb0303;
+    /* Cor da linha animada */
+    transform: scaleX(0);
+    /* Começa escondida (escala X 0) */
+    transform-origin: left;
+    /* Cresce da esquerda para a direita */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Ao passar o mouse, muda a cor do texto */
+.navegacao-principal a:hover {
+    color: #bb0303;
+}
+
+/* A linha animada expande quando o link recebe hover */
+.navegacao-principal a:hover::after {
+    transform: scaleX(1);
+    /* Faz a linha ocupar 100% da largura */
+}
+
+/* Novo contêiner para utilitários do header: busca, perfil, favoritos */
+.header-utils {
+    display: flex;
+    align-items: center;
+    /* Alinha os itens verticalmente */
+    gap: 15px;
+    /* Espaçamento entre elementos */
+}
+
+/* Estilização da área de busca: contêiner arredondado com borda */
+.header-search {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    /* Formato arredondado */
+    overflow: hidden;
+    /* Esconde partes que ultrapassem */
+    background-color: #f7f7f7;
+    width: 450px;
+}
+
+/* Input de pesquisa: visual limpo, sem borda e com largura inicial */
+.header-search input[type="search"] {
+    border: none;
+    outline: none;
+    padding: 8px 12px;
+    /* Espaçamento interno do input */
+    font-size: 0.9rem;
+    font-family: 'Lato', sans-serif;
+    background-color: transparent;
+    width: 410px;
+    transition: width 0.3s ease-in-out;
+}
+
+/* Remove o botão de limpar padrão em navegadores WebKit */
+.header-search input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+/* Botão de envio da busca: transparente e alinhado ao centro */
+.header-search button[type="submit"] {
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding-right: 12px;
+    /* Espaço entre o ícone e a borda */
+    color: #555;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+}
+
+/* Mudança de cor ao passar o mouse no botão de busca */
+.header-search button[type="submit"]:hover {
+    color: #023975;
+    /* Usa a cor principal dos links */
+}
+
+/* Área do cliente: alinha ícones como perfil e favoritos */
+.area-cliente {
+    display: flex; /* Alinha horizontalmente */
+    gap: 10px; /* Espaçamento entre ícones */
+    align-items: center;
+}
+
+/* Estilo do botão de favoritos: tamanho, cor e formato de círculo */
+.area-cliente .btn-favoritos {
+    font-size: 1.2rem;
+    color: #bb0303;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Efeito ao passar o mouse no botão de favoritos */
+.area-cliente .btn-favoritos:hover {
+    background-color: #eb5151;
+    color: #bb0303;
+}
+
+/* Estilo do botão de login/perfil: círculo alinhado com ícones */
+.area-cliente .btn-login {
+    font-size: 1.2rem;
+    color: #333;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Hover do botão de login: muda leve cor de fundo e do ícone */
+.area-cliente .btn-login:hover {
+    background-color: #e0e0e0;
+    color: #023975;
+}
+
+/* --- Seção hero: área principal com destaque e card central --- */
+.hero {
+
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Card grande do hero: cor, largura e sombreamento */
+.hero-card {
+    background:  #1e49ad;
+    width: 85%;              /* largura reduzida */
+    max-width: 1200px;       /* limite estilo “card grande” */
+    border-radius: 14px;     /* bordas arredondadas */
+    padding: 30px 40px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Texto do hero em branco para contraste */
+.hero-content h2,
+.hero-content p {
+    color: white;
+    text-align: center;
+}
+
+/* Espaçamento interno adicional no título do hero */
+.hero-content h2 {
+padding: 15px;
+}
+
+/* Formulário de busca dentro do hero: layout flexível e responsivo */
+.busca-pacotes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+    background-color: rgb(255, 255, 255); 
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Cada grupo do formulário (label + input) empilhado verticalmente */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Estilo dos labels: pequeno espaço abaixo e texto em negrito */
+.form-group label {
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+/* Inputs do formulário: fonte, padding, borda e largura mínima */
+.busca-pacotes input[type="text"],
+.busca-pacotes input[type="date"] {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: #333;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    min-width: 200px;
+    box-sizing: border-box;
+}
+
+/* Ajuste visual do ícone do calendário nos inputs de data */
+.busca-pacotes input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+/* Botão principal de busca: aparência clara com hover */
+button,
+.btn-buscar {
+  margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #cfedff;
+    color: rgb(33, 76, 192);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+    height: 40px;
+    transition: background-color 0.2s ease;
+}
+
+/* Hover do botão de busca: muda cor de fundo e do texto */
+.btn-buscar:hover {
+    background-color: #2c76d6;
+    color: white;
+}
+
+/* Container de cards: centraliza e permite quebra de linha */
+.container-cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* Estilo do card de destino: cartão com imagem lateral */
+.card-destino {
+    display: flex;
+    width: 380px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Imagem do card: ocupa 40% e mantém proporção */
+.card-destino img {
+    width: 40%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Área de informação do destino: ocupa 60% e centraliza conteúdo */
+.info-destino {
+    width: 60%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Título e texto do card com tamanhos e cores definidas */
+.info-destino h2 {
+    color: #2c3e50;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.info-destino p {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+/* Destaque em formato de badge */
+.destaque {
+    background-color: #3498db;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    display: inline-block;
+    align-self: flex-start;
+    margin: 0 auto;
+}
+
+/* Espaçamento superior para título de seção "procurado" */
+.titulo-procurado {
+    margin-top: 100px;
+}
+
+/* --- Rodapé: cores, tipografia e estrutura --- */
+.main-footer {
+  background-color: #1c1c1c;
+  color: #f0f0f0;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+ 
+/* Container interno do rodapé: organiza colunas e responde */
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+ 
+/* Cada seção do rodapé ocupa espaço flexível */
+.footer-section {
+  flex: 1 1 220px;
+  min-width: 200px;
+}
+ 
+/* Título das seções do rodapé */
+.footer-section h4 {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+ 
+/* Lista sem estilo dentro do rodapé */
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+ 
+/* Itens da lista do rodapé com espaçamento */
+.footer-section ul li {
+  margin-bottom: 10px;
+  font-size: 0.95em;
+}
+ 
+/* Links do rodapé com cor neutra e transição */
+.footer-section ul li a {
+  color: #cccccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+ 
+/* Hover nos links do rodapé: clareia a cor */
+.footer-section ul li a:hover {
+  color: #ffffff;
+}
+ 
+/* Formulário de newsletter: coluna com espaçamento */
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+ 
+/* Input de e-mail do newsletter */
+.newsletter-form input[type="email"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.95em;
+}
+ 
+/* Botão do newsletter com cor de destaque */
+.newsletter-form button {
+  padding: 10px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+ 
+/* Hover do botão do newsletter */
+.newsletter-form button:hover {
+  background-color: #e60000;
+}
+ 
+/* Bloco de ícones de redes sociais */
+.footer-social {
+  text-align: center;
+  margin-top: 40px;
+}
+ 
+.footer-social h4 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+ 
+/* Ícones sociais com espaçamento e efeito de transformação */
+.social-icons a {
+  font-size: 1.5em;
+  margin: 0 10px;
+  color: #f0f0f0;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+ 
+/* Hover aumenta levemente o ícone */
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+ 
+/* Texto legal do rodapé */
+.footer-legal {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.85em;
+  color: #aaaaaa;
+}
+ 
+/* Responsividade do rodapé para telas menores */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+ 
+  .footer-section {
+    flex: 1 1 100%;
+  }
+ 
+  .newsletter-form {
+    align-items: center;
+  }
+ 
+  .newsletter-form input,
+  .newsletter-form button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+ 
+/* Suaviza a rolagem para âncoras internas */
+html {
+  scroll-behavior: smooth;
+}
+
+/* === Estilo visual dos bilhetes de passagem === */
+.tickets {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+/* Cartão do bilhete: borda tracejada, sombra e efeito hover */
+.ticket {
+  background: #fff;
+  border: 2px dashed #ccc;
+  border-radius: 16px;
+  width: 330px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+}
+
+/* Círculos laterais decorativos do bilhete (pseudo-elementos) */
+.ticket::before,
+.ticket::after {
+
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  background: #f5f5f5;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.ticket::before {
+  left: -10px;
+}
+.ticket::after {
+  right: -10px;
+}
+
+/* Efeito ao passar o mouse no bilhete: ele sobe e fica mais destacado */
+.ticket:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Cabeçalho do bilhete com gradiente e ícones alinhados */
+.ticket-header {
+  background: linear-gradient(135deg, #2a45c0, #7387e2);
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px;
+}
+
+.ticket-header i {
+  font-size: 20px;
+}
+
+/* Corpo do bilhete: informação e preço lado a lado */
+.ticket-body {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ticket-info p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Área do preço do bilhete alinhada à direita */
+.ticket-price {
+  text-align: right;
+}
+
+.ticket-price span {
+  font-size: 20px;
+  font-weight: bold;
+  color: #0027d7;
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* Botão de compra com estilo consistente */
+.btn-comprar {
+    font-family: 'Poppins';
+  background: #2c36c7;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+/* Hover do botão comprar: escurece o fundo */
+.btn-comprar:hover {
+  background: #005fa3;
+}
+
+/* css/autocomplete.css */
+#sugestoes-destino {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  max-height: 240px;
+  overflow-y: auto;
+  position: absolute;
+  z-index: 1000;
+  width: 100%;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  display: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.92rem;
+}
+
+#sugestoes-destino li {
+  padding: 12px 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.15s ease;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+#sugestoes-destino li:last-child {
+  border-bottom: none;
+}
+
+#sugestoes-destino li::before {
+  content: "✈️";
+  font-size: 0.9em;
+}
+
+#sugestoes-destino li:hover,
+#sugestoes-destino li:focus {
+  background-color: #f0f5ff;
+  color: #3d5ab2;
+  outline: none;
+  padding-left: 18px;
+}
+
+.form-group {
+  position: relative;
+}
+
+/* Scroll suave */
+#sugestoes-destino::-webkit-scrollbar {
+  width: 6px;
+}
+#sugestoes-destino::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+#sugestoes-destino::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+#sugestoes-destino::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}

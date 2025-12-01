@@ -95,6 +95,31 @@
                 alert("⚠️ Preencha e-mail e senha.");
             }
         });
+
+        // Função para alternar visibilidade
+        function toggleSenha(inputId, iconId) {
+            const input = document.getElementById(inputId);
+            const icon = document.getElementById(iconId).querySelector('i');
+
+            if (input.type === 'password') {
+                input.type = 'text';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                input.type = 'password';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            }
+        }
+
+        // Aplica aos dois campos
+        document.getElementById('toggle-senha').addEventListener('click', () =>
+            toggleSenha('senha', 'toggle-senha')
+        );
+
+        document.getElementById('toggle-confirmar').addEventListener('click', () =>
+            toggleSenha('confirmar-senha', 'toggle-confirmar')
+        );
     </script>
 </body>
 
