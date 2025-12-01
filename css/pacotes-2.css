@@ -5,14 +5,12 @@
     /* Faz o padding não alterar o tamanho final dos elementos */
 }
 
-
-
 body {
     font-family: 'poppins';
     line-height: 1.6;
     background-color: #EFF4FF;
     /* Um cinza bem claro para o fundo */
-    color: #060606;
+    color: #4b3939;
 }
 
 .logo {
@@ -26,9 +24,10 @@ body {
     margin-left: 190px;
 }
 
-img {
+.img {
     max-width: 100%;
     /* Garante que as imagens nunca "vazem" do seu container */
+    display: block;
 }
 
 a {
@@ -57,8 +56,7 @@ header {
     display: flex;
     /* ALTERADO: Mudei para 'center' para tentar centralizar a NAV. */
     /* O 'space-between' será substituído por margens automáticas na NAV para o equilíbrio. */
-    justify-content: space-between;
-    /* Mantenho este para separar os blocos */
+    justify-content: space-between; /* Mantenho este para separar os blocos */
     align-items: center;
     padding: 15px;
     background-color: #ffffff;
@@ -78,11 +76,10 @@ header {
     flex: 1;
     display: flex;
     /* NOVO: Adiciona margens automáticas para empurrar os itens laterais */
-    margin: 0 auto;
+    margin: 0 auto; 
     /* ALTERADO: Mudei para 'center' (já estava assim, mantido). */
-    justify-content: center;
-    max-width: 60%;
-    /* Adicionei um limite para não forçar demais as laterais */
+    justify-content: center; 
+    max-width: 60%; /* Adicionei um limite para não forçar demais as laterais */
 }
 
 header .logo {
@@ -137,7 +134,6 @@ button,
 /* --- EFEITO HOVER NAVEGAÇÃO (OPÇÃO 2: SUBLINHADO MODERNO) --- */
 /* Base do link da navegação (Pai) */
 .navegacao-principal a {
-    color: #023975;
     padding-bottom: 5px;
     /* Espaço para o sublinhado */
     position: relative;
@@ -248,17 +244,14 @@ button,
 }
 
 .area-cliente {
-    display: flex;
-    /* NOVO: Para alinhar o perfil e o favorito lado a lado */
-    gap: 10px;
-    /* NOVO: Espaçamento entre os ícones */
+    display: flex; /* NOVO: Para alinhar o perfil e o favorito lado a lado */
+    gap: 10px; /* NOVO: Espaçamento entre os ícones */
     align-items: center;
 }
 
 .area-cliente .btn-favoritos {
     font-size: 1.2rem;
-    color: #bb0303;
-    /* Cor do ícone de coração */
+    color: #bb0303; /* Cor do ícone de coração */
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -271,8 +264,7 @@ button,
 }
 
 .area-cliente .btn-favoritos:hover {
-    background-color: #eb5151;
-    /* Um tom de rosa claro no hover */
+    background-color: #eb5151; /* Um tom de rosa claro no hover */
     color: #bb0303;
 }
 
