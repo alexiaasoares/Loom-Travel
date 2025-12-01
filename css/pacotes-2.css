@@ -24,7 +24,7 @@ body {
     margin-left: 190px;
 }
 
-img {
+.img {
     max-width: 100%;
     /* Garante que as imagens nunca "vazem" do seu container */
     display: block;
