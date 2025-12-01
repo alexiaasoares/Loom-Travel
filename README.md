@@ -49,6 +49,7 @@ Acesse a pasta do projeto:
 
 
 cd Loom-Travel
+
 Abra o arquivo principal:
 
 Basta abrir o arquivo index.html diretamente no navegador:

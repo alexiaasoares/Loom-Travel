@@ -717,3 +717,69 @@ html {
 .btn-comprar:hover {
   background: #005fa3;
 }
+
+/* css/autocomplete.css */
+#sugestoes-destino {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  max-height: 240px;
+  overflow-y: auto;
+  position: absolute;
+  z-index: 1000;
+  width: 100%;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  display: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.92rem;
+}
+
+#sugestoes-destino li {
+  padding: 12px 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.15s ease;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+#sugestoes-destino li:last-child {
+  border-bottom: none;
+}
+
+#sugestoes-destino li::before {
+  content: "✈️";
+  font-size: 0.9em;
+}
+
+#sugestoes-destino li:hover,
+#sugestoes-destino li:focus {
+  background-color: #f0f5ff;
+  color: #3d5ab2;
+  outline: none;
+  padding-left: 18px;
+}
+
+.form-group {
+  position: relative;
+}
+
+/* Scroll suave */
+#sugestoes-destino::-webkit-scrollbar {
+  width: 6px;
+}
+#sugestoes-destino::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+#sugestoes-destino::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+#sugestoes-destino::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}

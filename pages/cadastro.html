@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Loom - Cadastro</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sedgwick+Ave&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="/css/cadastro.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loom - Cadastro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/cadastro.css">
 </head>
-
 <body>
+<<<<<<< HEAD
+    <div class="container">
+        <div class="imagem">
+            <img src="/assets/fotofamilia2.png" alt="Família na praia">
+=======
   <div class="container">
     <div class="imagem">
       <img src="/assets/fotofamilia.png" alt="Família na praia">
@@ -37,15 +35,58 @@
           <span class="icone-toggle" id="toggle-senha">
             <i class="fas fa-eye-slash"></i>
           </span>
+>>>>>>> e3b9cdc8fc9fbc2b2bc5ed8c5b35564209033075
         </div>
         <div id="feedback-senha" style="min-height: 80px; font-size: 0.85rem; margin-top: -10px;"></div>
 
-        <div class="input-senha">
-          <input type="password" placeholder="Confirmar Senha" required id="cad-confirmar-senha">
-          <span class="icone-toggle" id="toggle-confirmar-senha">
-            <i class="fas fa-eye-slash"></i>
-          </span>
+        <div class="formulario">
+            <img src="/assets/logoloom.png" alt="Logo Loom" class="logo">
+            <h2>Cadastro</h2>
+
+            <form id="form-cadastro">
+                <input type="email" placeholder="E-mail" required id="cad-email">
+
+                <div class="input-senha">
+                    <input type="password" placeholder="Senha" required id="cad-senha" oninput="atualizarFeedbackSenha()">
+                    <span class="icone-toggle" id="toggle-senha">
+                        <i class="fas fa-eye-slash"></i>
+                    </span>
+                </div>
+                <div id="feedback-senha" style="min-height: 80px; font-size: 0.85rem; margin-top: -10px;"></div>
+
+                <input type="text" id="cad-cep" placeholder="CEP (ex: 01001-000)" maxlength="9" required>
+                <input type="text" id="cad-logradouro" placeholder="Logradouro (Rua, Av., etc.)" readonly>
+                <input type="text" id="cad-numero" placeholder="Número" required>
+                <input type="text" id="cad-complemento" placeholder="Complemento (opcional)">
+                <input type="text" id="cad-bairro" placeholder="Bairro" readonly>
+                <div class="cidade-estado">
+                    <input type="text" id="cad-cidade" placeholder="Cidade" readonly>
+                    <input type="text" id="cad-uf" placeholder="UF" maxlength="2" readonly>
+                </div>
+
+                <p class="ou">ou</p>
+
+                <button type="button" class="google" id="google">
+                    <img src="/assets/google.svg" alt="Google"> Cadastrar com Google
+                </button>
+
+                <button type="button" class="apple" id="apple">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple"> Cadastrar com Apple
+                </button>
+
+                <button type="button" class="login">
+                    <a href="/pages/login.html">Já tem login? Conecte-se à sua conta!</a>
+                </button>
+
+                <button type="button" class="entrar" id="btn-cadastrar">
+                    Cadastrar
+                </button>
+            </form>
+
+            <p class="footer">Seu Trajeto <span>em Nossas Mãos</span></p>
         </div>
+<<<<<<< HEAD
+=======
 
         <!-- ✅ CEP (fora do grupo de endereço) -->
         <input type="text" id="cad-cep" placeholder="CEP (ex: 01001-000)" maxlength="9" required>
@@ -83,9 +124,115 @@
       </form>
 
       <p class="footer">Seu Trajeto <span>em Nossas Mãos</span></p>
+>>>>>>> e3b9cdc8fc9fbc2b2bc5ed8c5b35564209033075
     </div>
-  </div>
 
+<<<<<<< HEAD
+    <script>
+        // ========== MÁSCARA CEP ==========
+        document.getElementById('cad-cep').addEventListener('input', function (e) {
+            let v = e.target.value.replace(/\D/g, '');
+            if (v.length > 8) v = v.slice(0, 8);
+            e.target.value = v ? v.replace(/(\d{5})(\d{3})/, '$1-$2') : '';
+        });
+
+        // ========== BUSCA CEP ==========
+        document.getElementById('cad-cep').addEventListener('blur', buscarCEP);
+        document.getElementById('cad-cep').addEventListener('keyup', e => e.key === 'Enter' && buscarCEP());
+
+        function buscarCEP() {
+            const cepInput = document.getElementById('cad-cep');
+            let cep = cepInput.value.replace(/\D/g, '');
+            if (cep.length !== 8) return;
+
+            cepInput.classList.add('carregando');
+            fetch('https://viacep.com.br/ws/' + cep + '/json/')
+                .then(r => r.json())
+                .then(data => {
+                    cepInput.classList.remove('carregando');
+                    if (data.erro) {
+                        alert('❌ CEP não encontrado.');
+                        return;
+                    }
+                    document.getElementById('cad-logradouro').value = data.logradouro || '';
+                    document.getElementById('cad-bairro').value = data.bairro || '';
+                    document.getElementById('cad-cidade').value = data.localidade || '';
+                    document.getElementById('cad-uf').value = data.uf || '';
+                })
+                .catch(() => {
+                    cepInput.classList.remove('carregando');
+                    alert('⚠️ Erro ao buscar CEP.');
+                });
+        }
+
+        // ========== VALIDAÇÃO SENHA FORTE ==========
+        function validarSenhaForte(senha) {
+            const regras = {
+                min8: senha.length >= 8,
+                maiuscula: /[A-Z]/.test(senha),
+                minuscula: /[a-z]/.test(senha),
+                numero: /\d/.test(senha),
+                simbolo: /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(senha)
+            };
+            return Object.values(regras).every(ok => ok);
+        }
+
+        function atualizarFeedbackSenha() {
+            const senha = document.getElementById('cad-senha').value;
+            const feedback = document.getElementById('feedback-senha');
+            if (!feedback) return;
+
+            const regras = [
+                { ok: senha.length >= 8, texto: "Pelo menos 8 caracteres" },
+                { ok: /[A-Z]/.test(senha), texto: "Uma letra maiúscula" },
+                { ok: /[a-z]/.test(senha), texto: "Uma letra minúscula" },
+                { ok: /\d/.test(senha), texto: "Um número" },
+                { ok: /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(senha), texto: "Um símbolo (!@#$%&*)" }
+            ];
+
+            feedback.innerHTML = `
+                <small style="display: block; margin-top: 5px; font-size: 0.85rem;">
+                    ${regras.map(r => 
+                        `<span style="color: ${r.ok ? '#27ae60' : '#e74c3c'}">
+                            ${r.ok ? '✅' : '❌'} ${r.texto}
+                        </span><br>`
+                    ).join('')}
+                </small>
+            `;
+        }
+
+        // ========== TOGGLE SENHA ==========
+        function togglePass(idInput, idIcon) {
+            const input = document.getElementById(idInput);
+            const icon = document.getElementById(idIcon).querySelector('i');
+            if (input.type === 'password') {
+                input.type = 'text';
+                icon.classList.replace('fa-eye-slash', 'fa-eye');
+            } else {
+                input.type = 'password';
+                icon.classList.replace('fa-eye', 'fa-eye-slash');
+            }
+        }
+
+        document.getElementById('toggle-senha').onclick = () => togglePass('cad-senha', 'toggle-senha');
+
+        // ========== CADASTRO ==========
+        document.getElementById('btn-cadastrar').addEventListener('click', function () {
+            const email = document.getElementById('cad-email').value;
+            const senha = document.getElementById('cad-senha').value;
+            const cep = document.getElementById('cad-cep').value;
+
+            if (!email || !senha || !cep) {
+                alert("⚠️ Preencha e-mail, senha e CEP.");
+                return;
+            }
+
+            if (!validarSenhaForte(senha)) {
+                document.getElementById('cad-senha').classList.add('input-error');
+                alert("🔒 Sua senha deve ter:\n• 8+ caracteres\n• 1 letra maiúscula\n• 1 letra minúscula\n• 1 número\n• 1 símbolo (!@#$%&*)");
+                return;
+            }
+=======
   <script>
     // ========== MÁSCARAS AUTOMÁTICAS ==========
     document.getElementById('cad-telefone').addEventListener('input', function (e) {
@@ -315,7 +462,43 @@
     }
 
   </script>
+>>>>>>> e3b9cdc8fc9fbc2b2bc5ed8c5b35564209033075
 
+            const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+            if (usuarios.some(u => u.email === email)) {
+                alert("📧 Este e-mail já está cadastrado.");
+                return;
+            }
+
+            const nome = email.split('@')[0]
+                .split('.')
+                .map(p => p.charAt(0).toUpperCase() + p.slice(1))
+                .join(' ');
+
+            const novo = {
+                email,
+                senha,
+                nome,
+                dataCadastro: new Date().toISOString(),
+                cep,
+                logradouro: document.getElementById('cad-logradouro').value,
+                numero: document.getElementById('cad-numero').value,
+                complemento: document.getElementById('cad-complemento').value || '',
+                bairro: document.getElementById('cad-bairro').value,
+                cidade: document.getElementById('cad-cidade').value,
+                uf: document.getElementById('cad-uf').value
+            };
+
+            usuarios.push(novo);
+            localStorage.setItem('usuarios', JSON.stringify(usuarios));
+
+            alert(`🎉 Bem-vindo(a), ${nome}!\nCadastro realizado com sucesso!`);
+            window.location.href = '/pages/login.html';
+        });
+
+        // Google/Apple (simulação)
+        document.getElementById('google')?.addEventListener('click', () => alert('Google login em desenvolvimento'));
+        document.getElementById('apple')?.addEventListener('click', () => alert('Apple login em desenvolvimento'));
+    </script>
 </body>
-
 </html>
