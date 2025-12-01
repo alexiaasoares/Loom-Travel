@@ -32,8 +32,6 @@ h2 {
 }
 
 #eur:hover {
-  transform: scale(1.15);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
   cursor: pointer;
 }
 
@@ -50,26 +48,16 @@ h2 {
 }
 
 #amSul:hover {
-  transform: scale(1.15);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
   cursor: pointer;
-  width: 20%;
-  border-radius: 1000px;
 }
 
 #asia {
   width: 20%;
   margin-right: 0%;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-radius: 1000px;
 }
 
 #asia:hover {
-  transform: scale(1.15);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
   cursor: pointer;
-  width: 20%;
-  border-radius: 1000px;
 }
 
 #amNor {
@@ -80,11 +68,7 @@ h2 {
 }
 
 #amNor:hover {
-  transform: scale(1.15);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
   cursor: pointer;
-  width: 20%;
-  border-radius: 1000px;
 }
 
 #eur {
