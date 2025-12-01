@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Loom - Login</title>
+  <title>Loom - Cadastro</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/cadastro.css">
@@ -94,17 +94,43 @@
     });
 
     document.getElementById('cpf').addEventListener('input', function (e) {
-    let valor = e.target.value.replace(/\D/g, ''); // Remove tudo que não é número
-    if (valor.length > 11) valor = valor.slice(0, 11); // Máximo 11 dígitos
+      let valor = e.target.value.replace(/\D/g, ''); // Remove tudo que não é número
+      if (valor.length > 11) valor = valor.slice(0, 11); // Máximo 11 dígitos
 
-    // Formata como: 123.456.789-09
-    if (valor.length <= 11) {
+      // Formata como: 123.456.789-09
+      if (valor.length <= 11) {
         valor = valor.replace(/(\d{3})(\d)/, '$1.$2')
-                     .replace(/(\d{3})(\d)/, '$1.$2')
-                     .replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+          .replace(/(\d{3})(\d)/, '$1.$2')
+          .replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+      }
+      e.target.value = valor;
+    });
+
+    // Função para alternar visibilidade
+    function toggleSenha(inputId, iconId) {
+      const input = document.getElementById(inputId);
+      const icon = document.getElementById(iconId).querySelector('i');
+
+      if (input.type === 'password') {
+        input.type = 'text';
+        icon.classList.remove('fa-eye');
+        icon.classList.add('fa-eye-slash');
+      } else {
+        input.type = 'password';
+        icon.classList.remove('fa-eye-slash');
+        icon.classList.add('fa-eye');
+      }
     }
-    e.target.value = valor;
-});
+
+    // Aplica aos dois campos
+    document.getElementById('toggle-senha').addEventListener('click', () =>
+      toggleSenha('senha', 'toggle-senha')
+    );
+
+    document.getElementById('toggle-confirmar').addEventListener('click', () =>
+      toggleSenha('confirmar-senha', 'toggle-confirmar')
+    );
+
   </script>
 </body>
 
