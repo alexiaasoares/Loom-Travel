@@ -7,7 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (!cards.length) return;
 
-  const cardWidth = cards[0].offsetWidth + parseFloat(getComputedStyle(grid).gap);
+  const gap = parseFloat(getComputedStyle(grid).gap);
+  const cardWidth = cards[0].offsetWidth + gap;
+  const totalCards = cards.length;
+
   let currentIndex = 0;
 
   function updatePosition() {
@@ -16,16 +19,14 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   nextBtn.addEventListener('click', () => {
-    if (currentIndex < cards.length - 1) {
-      currentIndex++;
-      updatePosition();
-    }
+    currentIndex = (currentIndex + 1) % totalCards;
+    updatePosition();
   });
 
   prevBtn.addEventListener('click', () => {
-    if (currentIndex > 0) {
-      currentIndex--;
-      updatePosition();
-    }
+    currentIndex = (currentIndex - 1 + totalCards) % totalCards;
+    updatePosition();
   });
+
+  updatePosition();
 });
