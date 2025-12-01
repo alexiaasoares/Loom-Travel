@@ -5,6 +5,11 @@
     /* Faz o padding não alterar o tamanho final dos elementos */
 }
 
+.center-content {
+    text-align: center;
+    justify-content: center;
+}
+
 body {
     font-family: 'poppins';
     line-height: 1.6;
@@ -24,7 +29,7 @@ body {
     margin-left: 190px;
 }
 
-img {
+.img {
     max-width: 100%;
     /* Garante que as imagens nunca "vazem" do seu container */
     display: block;
@@ -134,7 +139,6 @@ button,
 /* --- EFEITO HOVER NAVEGAÇÃO (OPÇÃO 2: SUBLINHADO MODERNO) --- */
 /* Base do link da navegação (Pai) */
 .navegacao-principal a {
-    color: #ffffff;
     padding-bottom: 5px;
     /* Espaço para o sublinhado */
     position: relative;
@@ -476,6 +480,8 @@ button,
     height: 15px;
     background-color: white;
 }
+
+
 
 /* ======================================================= */
 /* ▼▼▼ A MÁGICA ESTÁ AQUI ▼▼▼ */
@@ -1187,10 +1193,6 @@ input {
     text-align: left;
 }
 
-.center-content {
-    text-align: center;
-    justify-content: center;
-}
 
 .ver-mais {
     position: absolute;
@@ -1391,4 +1393,170 @@ input {
 .btn-pay-final {
     width: 100%;
     margin-bottom: 10px;
+}
+
+/* ====== CONTAINER ====== */
+.checkout-wrapper {
+    max-width: 1200px;
+    margin: 120px auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+/* ====== CARDS ====== */
+.checkout-card {
+    background: #e6f0fa;
+    padding: 25px;
+    border-radius: 15px;
+    border: 3px solid #3b5998;
+}
+
+.checkout-section-title {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+/* ====== FORM ====== */
+.checkout-label {
+    font-size: 12px;
+    font-weight: 700;
+    margin: 10px 0 5px 0;
+    display: block;
+}
+
+.checkout-input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 2px solid #3b5998;
+    background: white;
+    outline: none;
+    font-size: 13px;
+}
+
+.checkout-input:focus {
+    border-color: #2a4580;
+}
+
+/* GRID */
+.checkout-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.checkout-grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+/* RADIO */
+.checkout-radio-row {
+    display: flex;
+    gap: 25px;
+    margin-top: 5px;
+}
+
+/* ====== RESUMO ====== */
+.checkout-resumo-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.checkout-resumo-row.total span:last-child {
+    font-size: 22px;
+    font-weight: 900;
+    color: #000;
+}
+
+.checkout-divider {
+    height: 1px;
+    background: #bbb;
+    border: none;
+    margin: 15px 0;
+}
+
+/* ====== BOTÃO ====== */
+.checkout-btn.pagar {
+    margin-top: 15px;
+    width: 100%;
+    padding: 14px;
+    background: #0a8a33;
+    color: white;
+    font-weight: 800;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.trip-route {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.trip-small {
+    font-size: 13px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.trip-subtitle {
+    font-weight: 800;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.trip-date {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.trip-company {
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.trip-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.trip-airport {
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.trip-hour {
+    font-size: 14px;
+    color: #444;
+}
+
+.trip-middle {
+    text-align: center;
+}
+
+.trip-direct {
+    font-size: 12px;
+    font-weight: 700;
+    color: #0a8a33;
+}
+
+.trip-line {
+    width: 110px;
+    height: 3px;
+    background: #3b5998;
+    margin: 6px auto;
+    border-radius: 2px;
+}
+
+.trip-duration {
+    font-size: 12px;
+    color: #444;
 }
