@@ -2,282 +2,140 @@
 <html lang="pt-BR">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Loom - Cadastro</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/cadastro.css">
-  <style>
-    .social-buttons {
-      display: flex;
-      justify-content: space-between;
-      gap: 10px;
-      margin-top: 10px;
-      height: 50px;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loom - Cadastro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/css/cadastro.css">
+    <style>
+        .social-buttons {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            margin-top: 10px;
+            height: 50px;
+        }
 
-    .social-buttons button {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 8px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      background-color: #e0e0e0;
-    }
+        .social-buttons button {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #e0e0e0;
+        }
 
-    .social-buttons img {
-      height: 20px;
-      margin-right: 8px;
-    }
-  </style>
+        .social-buttons img {
+            height: 20px;
+            margin-right: 8px;
+        }
+    </style>
 </head>
 
 <body>
     <div class="container">
         <div class="imagem">
-            <img src="/assets/fotofamilia2.png" alt="Família na praia">
+            <img src="/assets/fotofamilia.png" alt="Família na praia">
         </div>
 
         <div class="formulario">
             <img src="/assets/logoloom.png" alt="Logo Loom" class="logo">
             <h2>Cadastro</h2>
 
-            <form id="form-cadastro">
-                <input type="email" placeholder="E-mail" required id="cad-email">
-
+            <form id="form-login">
+                <input type="email" placeholder="E-mail" required id="email">
+                <input type="text" id="cpf" placeholder="CPF (ex: 123.456.789-09)" maxlength="14" required>
                 <div class="input-senha">
-                    <input type="password" placeholder="Senha" required id="cad-senha" oninput="atualizarFeedbackSenha()">
+                    <input type="password" placeholder="Senha" required id="senha">
                     <span class="icone-toggle" id="toggle-senha">
                         <i class="fas fa-eye-slash"></i>
                     </span>
                 </div>
 
-                <!-- AQUI É O ÚNICO feedback-senha -->
-                <div id="feedback-senha" style="min-height: 80px; font-size: 0.85rem; margin-top: -10px;"></div>
-
-                <input type="text" id="cad-cep" placeholder="CEP (ex: 01001-000)" maxlength="9" required>
-                <input type="text" id="cad-logradouro" placeholder="Logradouro (Rua, Av., etc.)" readonly>
-                <input type="text" id="cad-numero" placeholder="Número" required>
-                <input type="text" id="cad-complemento" placeholder="Complemento (opcional)">
-                <input type="text" id="cad-bairro" placeholder="Bairro" readonly>
-
-                <div class="cidade-estado">
-                    <input type="text" id="cad-cidade" placeholder="Cidade" readonly>
-                    <input type="text" id="cad-uf" placeholder="UF" maxlength="2" readonly>
-                </div>
+                <button type="submit" class="entrar">
+                    Entrar
+                </button>
 
                 <p class="ou">ou</p>
 
-                <button type="button" class="google" id="google">
-                    <img src="/assets/google.svg" alt="Google"> Cadastrar com Google
-                </button>
-
-                <button type="button" class="apple" id="apple">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple"> Cadastrar com Apple
-                </button>
+                <div class="social-buttons">
+                    <button type="button" class="google">
+                        <img src="/assets/google.svg" alt="Google"> Google
+                    </button>
+                    <button type="button" class="apple">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple">
+                        Apple
+                    </button>
+                </div>
 
                 <button type="button" class="login">
-                    <a href="/pages/login.html">Já tem login? Conecte-se à sua conta!</a>
-                </button>
-
-                <button type="button" class="entrar" id="btn-cadastrar">
-                    Cadastrar
+                    <a href="/pages/login.html">Já possui login? Conecte-se!</a>
                 </button>
             </form>
 
             <p class="footer">Seu Trajeto <span>em Nossas Mãos</span></p>
         </div>
     </div>
-  </div>
-
 
     <script>
-        // ========== MÁSCARA CEP ==========
-        document.getElementById('cad-cep').addEventListener('input', function (e) {
-            let v = e.target.value.replace(/\D/g, '');
-            if (v.length > 8) v = v.slice(0, 8);
-            e.target.value = v ? v.replace(/(\d{5})(\d{3})/, '$1-$2') : '';
+        document.getElementById('form-login').addEventListener('submit', function (e) {
+            e.preventDefault(); // impede recarregar
+
+            const email = document.getElementById('email').value.trim();
+            const senha = document.getElementById('senha').value.trim();
+
+            if (email && senha) {
+                // ✅ Só redireciona — sem validação
+                window.location.href = '/pages/index.html';
+            } else {
+                alert("⚠️ Preencha e-mail e senha.");
+            }
         });
 
-        // ========== BUSCA CEP ==========
-        document.getElementById('cad-cep').addEventListener('blur', buscarCEP);
-        document.getElementById('cad-cep').addEventListener('keyup', e => e.key === 'Enter' && buscarCEP());
+        // Função para alternar visibilidade
+        function toggleSenha(inputId, iconId) {
+            const input = document.getElementById(inputId);
+            const icon = document.getElementById(iconId).querySelector('i');
 
-<<<<<<< HEAD
-    document.getElementById('cpf').addEventListener('input', function (e) {
-      let valor = e.target.value.replace(/\D/g, ''); // Remove tudo que não é número
-      if (valor.length > 11) valor = valor.slice(0, 11); // Máximo 11 dígitos
-
-      // Formata como: 123.456.789-09
-      if (valor.length <= 11) {
-        valor = valor.replace(/(\d{3})(\d)/, '$1.$2')
-          .replace(/(\d{3})(\d)/, '$1.$2')
-          .replace(/(\d{3})(\d{1,2})$/, '$1-$2');
-      }
-      e.target.value = valor;
-    });
-
-    // Função para alternar visibilidade
-    function toggleSenha(inputId, iconId) {
-      const input = document.getElementById(inputId);
-      const icon = document.getElementById(iconId).querySelector('i');
-
-      if (input.type === 'password') {
-        input.type = 'text';
-        icon.classList.remove('fa-eye');
-        icon.classList.add('fa-eye-slash');
-      } else {
-        input.type = 'password';
-        icon.classList.remove('fa-eye-slash');
-        icon.classList.add('fa-eye');
-      }
-    }
-
-    // Aplica aos dois campos
-    document.getElementById('toggle-senha').addEventListener('click', () =>
-      toggleSenha('senha', 'toggle-senha')
-    );
-
-    document.getElementById('toggle-confirmar').addEventListener('click', () =>
-      toggleSenha('confirmar-senha', 'toggle-confirmar')
-    );
-
-  </script>
-=======
-        function buscarCEP() {
-            const cepInput = document.getElementById('cad-cep');
-            let cep = cepInput.value.replace(/\D/g, '');
-            if (cep.length !== 8) return;
-
-            cepInput.classList.add('carregando');
-            fetch('https://viacep.com.br/ws/' + cep + '/json/')
-                .then(r => r.json())
-                .then(data => {
-                    cepInput.classList.remove('carregando');
-                    if (data.erro) {
-                        alert('❌ CEP não encontrado.');
-                        return;
-                    }
-                    document.getElementById('cad-logradouro').value = data.logradouro || '';
-                    document.getElementById('cad-bairro').value = data.bairro || '';
-                    document.getElementById('cad-cidade').value = data.localidade || '';
-                    document.getElementById('cad-uf').value = data.uf || '';
-                })
-                .catch(() => {
-                    cepInput.classList.remove('carregando');
-                    alert('⚠️ Erro ao buscar CEP.');
-                });
-        }
-
-        // ========== VALIDAÇÃO SENHA FORTE ==========
-        function validarSenhaForte(senha) {
-            const regras = {
-                min8: senha.length >= 8,
-                maiuscula: /[A-Z]/.test(senha),
-                minuscula: /[a-z]/.test(senha),
-                numero: /\d/.test(senha),
-                simbolo: /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(senha)
-            };
-            return Object.values(regras).every(ok => ok);
-        }
-
-        function atualizarFeedbackSenha() {
-            const senha = document.getElementById('cad-senha').value;
-            const feedback = document.getElementById('feedback-senha');
-            if (!feedback) return;
-
-            const regras = [
-                { ok: senha.length >= 8, texto: "Pelo menos 8 caracteres" },
-                { ok: /[A-Z]/.test(senha), texto: "Uma letra maiúscula" },
-                { ok: /[a-z]/.test(senha), texto: "Uma letra minúscula" },
-                { ok: /\d/.test(senha), texto: "Um número" },
-                { ok: /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(senha), texto: "Um símbolo (!@#$%&*)" }
-            ];
-
-            feedback.innerHTML = `
-                <small style="display: block; margin-top: 5px; font-size: 0.85rem;">
-                    ${regras.map(r => 
-                        `<span style="color: ${r.ok ? '#27ae60' : '#e74c3c'}">
-                            ${r.ok ? '✅' : '❌'} ${r.texto}
-                        </span><br>`
-                    ).join('')}
-                </small>
-            `;
-        }
-
-        // ========== TOGGLE SENHA ==========
-        function togglePass(idInput, idIcon) {
-            const input = document.getElementById(idInput);
-            const icon = document.getElementById(idIcon).querySelector('i');
             if (input.type === 'password') {
                 input.type = 'text';
-                icon.classList.replace('fa-eye-slash', 'fa-eye');
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
             } else {
                 input.type = 'password';
-                icon.classList.replace('fa-eye', 'fa-eye-slash');
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
             }
         }
 
-        document.getElementById('toggle-senha').onclick = () => togglePass('cad-senha', 'toggle-senha');
+        // Aplica aos dois campos
+        document.getElementById('toggle-senha').addEventListener('click', () =>
+            toggleSenha('senha', 'toggle-senha')
+        );
 
-        // ========== CADASTRO ==========
-        document.getElementById('btn-cadastrar').addEventListener('click', function () {
-            const email = document.getElementById('cad-email').value;
-            const senha = document.getElementById('cad-senha').value;
-            const cep = document.getElementById('cad-cep').value;
+        document.getElementById('toggle-confirmar').addEventListener('click', () =>
+            toggleSenha('confirmar-senha', 'toggle-confirmar')
+        );
 
-            if (!email || !senha || !cep) {
-                alert("⚠️ Preencha e-mail, senha e CEP.");
-                return;
+        document.getElementById('cpf').addEventListener('input', function (e) {
+            let valor = e.target.value.replace(/\D/g, ''); // Remove tudo que não é número
+            if (valor.length > 11) valor = valor.slice(0, 11); // Máximo 11 dígitos
+
+            // Formata como: 123.456.789-09
+            if (valor.length <= 11) {
+                valor = valor.replace(/(\d{3})(\d)/, '$1.$2')
+                    .replace(/(\d{3})(\d)/, '$1.$2')
+                    .replace(/(\d{3})(\d{1,2})$/, '$1-$2');
             }
-
-            if (!validarSenhaForte(senha)) {
-                document.getElementById('cad-senha').classList.add('input-error');
-                alert("🔒 Sua senha deve ter:\n• 8+ caracteres\n• 1 letra maiúscula\n• 1 letra minúscula\n• 1 número\n• 1 símbolo (!@#$%&*)");
-                return;
-            }
-
-            const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
-            if (usuarios.some(u => u.email === email)) {
-                alert("📧 Este e-mail já está cadastrado.");
-                return;
-            }
-
-            const nome = email.split('@')[0]
-                .split('.')
-                .map(p => p.charAt(0).toUpperCase() + p.slice(1))
-                .join(' ');
-
-            const novo = {
-                email,
-                senha,
-                nome,
-                dataCadastro: new Date().toISOString(),
-                cep,
-                logradouro: document.getElementById('cad-logradouro').value,
-                numero: document.getElementById('cad-numero').value,
-                complemento: document.getElementById('cad-complemento').value || '',
-                bairro: document.getElementById('cad-bairro').value,
-                cidade: document.getElementById('cad-cidade').value,
-                uf: document.getElementById('cad-uf').value
-            };
-
-            usuarios.push(novo);
-            localStorage.setItem('usuarios', JSON.stringify(usuarios));
-
-            alert(`🎉 Bem-vindo(a), ${nome}!\nCadastro realizado com sucesso!`);
-            window.location.href = '/pages/login.html';
+            e.target.value = valor;
         });
 
-        // Google/Apple (simulação)
-        document.getElementById('google')?.addEventListener('click', () => alert('Google login em desenvolvimento'));
-        document.getElementById('apple')?.addEventListener('click', () => alert('Apple login em desenvolvimento'));
     </script>
->>>>>>> 8cde3038730e342fd249536a775bcd8d7c727ecc
 </body>
 
 </html>

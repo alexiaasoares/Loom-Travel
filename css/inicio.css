@@ -237,3 +237,100 @@ ul li {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+/* Carrossel de Continentes */
+.carrossel-continentes {
+  padding: 40px 20px;
+}
+
+.carrossel-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carrossel-track {
+  display: flex;
+  gap: 20px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  padding: 20px 0;
+  width: 100%;
+}
+
+.continente-item {
+  min-width: 200px;
+  text-align: center;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.continente-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+.continente-item img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+.continente-item h3 {
+  font-size: 1rem;
+  color: #3d5ab2;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Botões de navegação */
+.carrossel-btn {
+  background: #3d5ab2;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background 0.2s;
+  z-index: 10;
+}
+
+.carrossel-btn:hover {
+  background: #2c4a9c;
+}
+
+.carrossel-btn.prev {
+  margin-right: 15px;
+}
+
+.carrossel-btn.next {
+  margin-left: 15px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .carrossel-track {
+    gap: 15px;
+  }
+
+  .continente-item {
+    min-width: 150px;
+    padding: 15px;
+  }
+
+  .continente-item img {
+    height: 120px;
+  }
+}

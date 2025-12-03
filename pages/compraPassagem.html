@@ -21,7 +21,7 @@
 
   <header>
     <div class="logo">
-      <img src="/assets/logoloom.png" alt="Logo Loom" onclick="window.location.href='index.html'" />
+      <img class="img" src="/assets/logoloom.png" alt="Logo Loom" onclick="window.location.href='index.html'" />
     </div>
     <nav class="navegacao-principal">
       <ul>
@@ -46,84 +46,215 @@
         </a>
       </div>
     </div>
-  </header>
+  </header> <br>
 
-  <br><br><br><br>
+  <main class="checkout-wrapper">
 
-  <main>
-    <div class="layout-wrapper">
+    <section class="checkout-left">
 
-      <div class="content-grid">
+      <div class="checkout-card">
+        <h2 class="checkout-section-title">Quem viaja?</h2>
 
-        <div class="left-column">
-          <div class="photo-frame">
-            <img src="/assets/image 56.png" alt="Cidade com ponte">
+        <p class="checkout-label">Adulto</p>
+
+        <label class="checkout-label">Nome</label>
+        <input type="text" class="checkout-input" placeholder="Como está no documento">
+
+        <label class="checkout-label">Último sobrenome</label>
+        <input type="text" class="checkout-input" placeholder="Como está no documento">
+
+        <label class="checkout-label">País de residência</label>
+        <select class="checkout-input">
+          <option>Brasil</option>
+        </select>
+
+        <div class="checkout-grid-2">
+          <div>
+            <label class="checkout-label">Tipo de documento</label>
+            <select class="checkout-input">
+              <option>CPF</option>
+              <option>RG</option>
+              <option>Passaporte</option>
+            </select>
           </div>
-          <div class="photo-frame">
-            <img src="/assets/image 55.png" alt="Ponte sobre rio">
+
+          <div>
+            <label class="checkout-label">Telefone</label>
+            <input type="text" class="checkout-input" placeholder="Número">
           </div>
         </div>
 
-        <div class="right-column">
+        <label class="checkout-label">Data de Nascimento</label>
+        <div class="checkout-grid-3">
+          <select class="checkout-input">
+            <option>Dia</option>
+          </select>
+          <select class="checkout-input">
+            <option>Mês</option>
+          </select>
+          <select class="checkout-input">
+            <option>Ano</option>
+          </select>
+        </div>
 
-          <div class="travel-card">
-            <div class="card-header">TRANSPORTES</div>
-            <div class="transport-info">
-              <span class="azul-logo">Azul <i class="fa-solid fa-plane-up"></i></span>
-              <div class="dates">
-                <p><strong>IDA:</strong> 04/12</p>
-                <p><strong>VOLTA:</strong> 17/12</p>
-              </div>
-            </div>
-            <div class="ver-mais">VER MAIS</div>
+        <label class="checkout-label">Sexo</label>
+        <div class="checkout-radio-row">
+          <label><input type="radio" name="sexo"> Feminino</label>
+          <label><input type="radio" name="sexo"> Masculino</label>
+        </div>
+      </div>
+      <br>
+      <div class="checkout-card">
+        <h2 class="checkout-section-title">Complete com os dados do cartão</h2>
+
+        <label class="checkout-label">Número do cartão</label>
+        <input type="text" class="checkout-input" placeholder="Informe o número do cartão">
+
+        <label class="checkout-label">Titular</label>
+        <input type="text" class="checkout-input" placeholder="Como aparece no cartão">
+
+        <div class="checkout-grid-3">
+          <div>
+            <label class="checkout-label">Vencimento</label>
+            <input type="text" class="checkout-input" placeholder="MM/AA">
+          </div>
+          <div>
+            <label class="checkout-label">Cód. Segurança</label>
+            <input type="text" class="checkout-input" placeholder="CVV">
+          </div>
+          <div>
+            <label class="checkout-label">CPF</label>
+            <input type="text" class="checkout-input" placeholder="Ex.: 12345678900">
+          </div>
+        </div>
+
+        <label class="checkout-label">Em quantas parcelas?</label>
+        <select class="checkout-input">
+          <option>1x sem juros</option>
+          <option>2x</option>
+          <option>3x</option>
+          <option>4x</option>
+        </select>
+      </div>
+      <br>
+      <div class="checkout-card">
+        <h2 class="checkout-section-title">Para qual e-mail enviamos os vouchers?</h2>
+
+        <label class="checkout-label">E-mail</label>
+        <input type="email" class="checkout-input" placeholder="seuemail@exemplo.com">
+
+        <label class="checkout-label">Confirme o e-mail</label>
+        <input type="email" class="checkout-input" placeholder="seuemail@exemplo.com">
+      </div>
+      <br>
+
+
+      <div class="checkout-card">
+        <h2 class="checkout-section-title">Em nome de quem emitimos a nota fiscal?</h2>
+
+        <label class="checkout-label">Nome / Razão Social</label>
+        <input type="text" class="checkout-input" placeholder="Seu nome ou razão social">
+
+        <label class="checkout-label">CNPJ ou CPF</label>
+        <input type="text" class="checkout-input" placeholder="CNPJ ou CPF">
+
+        <label class="checkout-label">Endereço para emissão</label>
+        <input type="text" class="checkout-input" placeholder="Rua, número, cidade, UF">
+      </div>
+    </section>
+
+    <section class="checkout-right">
+      <div class="checkout-card">
+
+        <h2 class="checkout-section-title">Detalhe da compra</h2>
+
+        <p class="trip-route">São Paulo → Salvador</p>
+        <p class="trip-small">Ida e volta • 1 adulto</p>
+
+        <hr class="checkout-divider">
+
+        <!-- ===== IDA ===== -->
+        <h3 class="trip-subtitle">IDA</h3>
+
+        <p class="trip-date">Sex. 15 mai. 2026</p>
+        <p class="trip-company">Gol • Gol</p>
+
+        <div class="trip-flex">
+          <div>
+            <p class="trip-airport">VCP</p>
+            <p class="trip-hour">10:25</p>
           </div>
 
-          <div class="travel-card">
-            <div class="card-header">ESTADIAS</div>
-            <div class="stay-info">
-              <img
-                src="/assets/residencia-manaus.jpg "
-                alt="Hotel Room">
-              <h4>RESIDÊNCIA ANDRADE</h4>
-            </div>
-            <div class="ver-mais">VER MAIS</div>
+          <div class="trip-middle">
+            <p class="trip-direct">Direto</p>
+            <div class="trip-line"></div>
+            <p class="trip-duration">1h 05m</p>
           </div>
 
-          <div class="travel-card center-content">
-            <div class="card-header">INCLUSO NO PACOTE</div>
-            <div class="tags-container">
-              <span class="pill-tag">PASSEIO CULTURAL</span>
-              <span class="pill-tag">CANOAGEM</span>
-            </div>
+          <div>
+            <p class="trip-airport">GIG</p>
+            <p class="trip-hour">11:30</p>
+          </div>
+        </div>
+
+        <hr class="checkout-divider">
+
+        <!-- ===== VOLTA ===== -->
+        <h3 class="trip-subtitle">VOLTA</h3>
+
+        <p class="trip-date">Dom. 17 mai. 2026</p>
+        <p class="trip-company">Gol • Gol</p>
+
+        <div class="trip-flex">
+          <div>
+            <p class="trip-airport">GIG</p>
+            <p class="trip-hour">12:55</p>
           </div>
 
-          <div class="travel-card">
-            <div class="payment-grid">
-              <div class="credit-card-form">
-                <div class="card-header">CARTÃO DE CRÉDITO</div>
-                <input type="text" class="blue-input" placeholder="NÚMERO DO CARTÃO">
-                <input type="text" class="blue-input" placeholder="NOME NO CARTÃO">
-                <input type="text" class="blue-input" placeholder="MM // AA">
-                <input type="text" class="blue-input" placeholder="CÓDIGO DE SEGURANÇA">
-                <button class="btn-pay-final">PAGAR PACOTE</button>
-              </div>
-
-              <p><strong>PIX:</strong>
-              <div class="center-content">
-                <img src="/assets/My_Gallery.png" alt="QR Code PIX" width="150">
-                <p class="price">R$ 1879,00</p>
-              </div>
-
-            
-              </div>
-            </div>
+          <div class="trip-middle">
+            <p class="trip-direct">Direto</p>
+            <div class="trip-line"></div>
+            <p class="trip-duration">1h 10m</p>
           </div>
 
+          <div>
+            <p class="trip-airport">CGH</p>
+            <p class="trip-hour">14:05</p>
+          </div>
+        </div>
+
+      </div>
+
+      <br>
+
+      <div class="checkout-card">
+        <h2 class="checkout-section-title">Resumo</h2>
+
+        <div class="checkout-resumo-row">
+          <span>Voo para 1 pessoa</span>
+          <span>R$ 350</span>
+        </div>
+
+        <div class="checkout-resumo-row">
+          <span>Impostos e taxas</span>
+          <span>R$ 149</span>
+        </div>
+
+        <hr class="checkout-divider">
+
+        <div class="checkout-resumo-row total">
+          <span>Total</span>
+          <span>R$ 499</span>
         </div>
       </div>
 
-    </div>
+      <button class="checkout-btn pagar">Finalizar Compra</button>
+
+    </section>
+
+
   </main>
+
 
   <footer class="main-footer">
     <div class="footer-container">
