@@ -1,300 +1,14 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    /* Faz o padding não alterar o tamanho final dos elementos */
-}
-
-body {
-    font-family: 'poppins';
-    line-height: 1.6;
-    background-color: #EFF4FF;
-    /* Um cinza bem claro para o fundo */
-    color: #060606;
-}
-
-.logo {
-    width: 199px;
-    height: auto;
-    cursor: pointer;
-}
-
-#lupa {
-    width: 50px;
-    margin-left: 190px;
-}
-
-img {
-    max-width: 100%;
-    /* Garante que as imagens nunca "vazem" do seu container */
-    display: block;
-}
-
-a {
-    text-decoration: none;
-    /* Remove o sublinhado dos links */
-    color: #023975;
-    /* Um azul padrão para links */
-    /*--------- cor da parte da nav bar */
-}
-
-/* Define um espaçamento padrão para todas as seções */
-section {
-    padding: 40px 20px;
-    /* 40px em cima/baixo, 20px nas laterais */
-    text-align: center;
-    /* Centraliza títulos de seção */
-}
-
-section h2 {
-    margin-bottom: -15px;
-    /* Espaço abaixo dos títulos H2 */
-}
-
-/* --- 2. CABEÇALHO E NAVEGAÇÃO --- */
-header {
-    display: flex;
-    /* ALTERADO: Mudei para 'center' para tentar centralizar a NAV. */
-    /* O 'space-between' será substituído por margens automáticas na NAV para o equilíbrio. */
-    justify-content: space-between; /* Mantenho este para separar os blocos */
-    align-items: center;
-    padding: 15px;
-    background-color: #ffffff;
-    border-bottom: 2px solid #eee;
-    position: fixed;
-    z-index: 500;
-    width: 100%;
-    background-image: url('/assets/navbar.png');
-    background-size: cover;
-    background-position: center;
-    /* As correções de margin-left e width 90% já foram feitas na resposta anterior e estão mantidas aqui (implicitamente, removidas). */
-}
-
-/* nav bar */
-.navegacao-principal {
-    /* MANTIDO: Permite que ela ocupe espaço no centro. */
-    flex: 1;
-    display: flex;
-    /* NOVO: Adiciona margens automáticas para empurrar os itens laterais */
-    margin: 0 auto; 
-    /* ALTERADO: Mudei para 'center' (já estava assim, mantido). */
-    justify-content: center; 
-    max-width: 60%; /* Adicionei um limite para não forçar demais as laterais */
-}
-
-header .logo {
-    flex-shrink: 0;
-}
-
-button,
-.btn-buscar {
-    padding: 10px 20px;
-    background-color: #bb0303;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    font-family: 'Lato', sans-serif;
-    /* NOVO: Fonte */
-    height: 44px;
-    /* NOVO: Alinha a altura com os inputs */
-    transition: background-color 0.2s ease;
-    /* NOVO: Efeito de hover */
-}
-
-/* cada item da navbar */
-.navegacao-principal ul li {
-    margin-left: 80px;
-}
-
-.navegacao-principal ul li a {
-    font-weight: bold;
-}
-
-/* nav bar */
-.navegacao-principal {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    /* centraliza os links */
-}
-
-.navegacao-principal ul {
-    display: flex;
-    /* Alinha os links do menu lado a lado */
-    list-style: none;
-    /* Remove as "bolinhas" da lista */
-}
-
-.navegacao-principal li {
-    margin-left: 20px;
-    /* Espaçamento entre os itens do menu */
-}
-
-/* --- EFEITO HOVER NAVEGAÇÃO (OPÇÃO 2: SUBLINHADO MODERNO) --- */
-/* Base do link da navegação (Pai) */
-.navegacao-principal a {
-    color: #023975;
-    padding-bottom: 5px;
-    /* Espaço para o sublinhado */
-    position: relative;
-    /* Essencial para o sublinhado funcionar */
-    overflow: hidden;
-    /* Garante que o sublinhado não "vaze" */
-    transition: color 0.3s ease;
-}
-
-/* O sublinhado (Filho) - começa escondido */
-.navegacao-principal a::after {
-    content: '';
-    /* Sempre necessário */
-    position: absolute;
-    /* Posição relativa ao 'a' */
-    bottom: 0;
-    /* Fica na parte de baixo */
-    left: 0;
-    /* Começa na esquerda */
-    width: 100%;
-    /* Ocupa toda a largura */
-    height: 2px;
-    /* Grossura da linha */
-    background-color: #bb0303;
-    /* Cor da linha (vermelho) */
-    /* A Mágica da Animação (começa com largura 0) */
-    transform: scaleX(0);
-    transform-origin: left;
-    /* Animação cresce da esquerda para a direita */
-    transition: transform 0.3s ease-in-out;
-}
-
-/* O efeito ao passar o mouse */
-.navegacao-principal a:hover {
-    color: #bb0303;
-    /* Muda a cor do texto também */
-}
-
-.navegacao-principal a:hover::after {
-    transform: scaleX(1);
-    /* Faz a linha crescer para 100% */
-}
-
-/* ▼▼▼ REGRAS NOVAS ADICIONADAS AQUI ▼▼▼ */
-/* Novo contêiner para pesquisa e perfil */
-.header-utils {
-    display: flex;
-    align-items: center;
-    /* Alinha a pesquisa e o perfil verticalmente */
-    gap: 15px;
-    /* Espaçamento entre a pesquisa e o ícone de perfil */
-}
-
-/* Estilização da Barra de Pesquisa */
-.header-search {
-    display: flex;
-    /* Alinha o input e o botão */
-    align-items: center;
-    border: 1px solid #ccc;
-    border-radius: 25px;
-    /* Deixa bem redondo */
-    overflow: hidden;
-    /* Para esconder as bordas do input */
-    background-color: #f7f7f7;
-    width: 450px;
-}
-
-.header-search input[type="search"] {
-    border: none;
+/* --- ESTILO PARA ACESSIBILIDADE DE TECLADO (ACTIVE-SELECT) --- */
+/* Adiciona o estilo necessário para o JS indicar o item selecionado ao navegar com setas, sem mudar o design padrão */
+#sugestoes-origem li.active-select,
+#sugestoes-destino li.active-select {
+    background-color: #f0f5ff;
+    color: #3d5ab2;
     outline: none;
-    padding: 8px 12px;
-    /* Altura do campo */
-    font-size: 0.9rem;
-    font-family: 'Lato', sans-serif;
-    /* Fonte mais legível para input */
-    background-color: transparent;
-    width: 410px;
-    /* Largura padrão */
-    transition: width 0.3s ease-in-out;
+    padding-left: 18px;
 }
+/* --- FIM DO ESTILO ACTIVE-SELECT --- */
 
-/* Efeito de expandir a barra quando clicada */
-
-/* Remove o 'x' de limpar do input de pesquisa */
-.header-search input[type="search"]::-webkit-search-cancel-button {
-    -webkit-appearance: none;
-    appearance: none;
-}
-
-.header-search button[type="submit"] {
-    background: transparent;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding-right: 12px;
-    /* Espaçamento do ícone */
-    color: #555;
-    font-size: 0.9rem;
-    /* Tamanho do ícone de lupa */
-    display: flex;
-    /* Ajuda a centralizar o ícone */
-    align-items: center;
-}
-
-.header-search button[type="submit"]:hover {
-    color: #023975;
-    /* Usando sua cor de link */
-}
-
-.area-cliente {
-    display: flex; /* NOVO: Para alinhar o perfil e o favorito lado a lado */
-    gap: 10px; /* NOVO: Espaçamento entre os ícones */
-    align-items: center;
-}
-
-.area-cliente .btn-favoritos {
-    font-size: 1.2rem;
-    color: #bb0303; /* Cor do ícone de coração */
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background-color: #f0f0f0;
-    transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-.area-cliente .btn-favoritos:hover {
-    background-color: #eb5151; /* Um tom de rosa claro no hover */
-    color: #bb0303;
-}
-
-/* Estilização e Posição do Ícone de Perfil */
-/* (Substitui suas regras .area-cliente a e .btn-login .fa-user) */
-.area-cliente .btn-login {
-    font-size: 1.2rem;
-    /* SEU TAMANHO DE ÍCONE ORIGINAL */
-    color: #333;
-    text-decoration: none;
-    /* Efeito de círculo para alinhar perfeitamente */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 36px;
-    /* Largura do círculo */
-    height: 36px;
-    /* Altura do círculo */
-    border-radius: 50%;
-    /* Transforma em círculo */
-    background-color: #f0f0f0;
-    transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-.area-cliente .btn-login:hover {
-    background-color: #e0e0e0;
-    color: #023975;
-    /* Usando sua cor de link */
-}
 
 /* ▲▲▲ FIM DAS NOVAS REGRAS ▲▲▲ */
 .container {
@@ -303,15 +17,16 @@ button,
 }
 
 .search-container {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     margin-bottom: 25px;
+    border: 1px solid #3A5B9E ;
 }
 
 .search-header {
     background-color: #3A5B9E;
-    color: white;
+    color: rgb(255, 255, 255);
     padding: 12px 20px;
     border-radius: 10px 10px 0 0;
 }
@@ -323,10 +38,12 @@ button,
 
 .search-body {
     padding: 20px;
+
 }
 
 .search-form {
     display: grid;
+    /* Layout original para desktop */
     grid-template-columns: 2.5fr 2fr 1.5fr 1fr;
     gap: 20px;
     align-items: flex-end;
@@ -348,7 +65,8 @@ button,
 
 .origins-destinations {
     display: flex;
-    gap: 173px;
+    /* O gap de 173px não é responsivo. Vamos manter o flex grow nos inputs abaixo para desktop. */
+    gap: 173px; 
 }
 
 .origins-destinations label {
@@ -371,6 +89,8 @@ button,
     padding: 10px;
     background-color: #FDFDFD;
     flex: 1;
+    /* ✅ Adicionado: Necessário para o posicionamento correto da lista de sugestões (autocomplete) */
+    position: relative; 
 }
 
 .input-wrapper .icon {
@@ -414,7 +134,9 @@ button,
     display: flex;
     align-items: center;
     gap: 13px;
-    height: 44px;
+    /* Ajustado para não depender de padding grande para altura, facilitando a responsividade */
+    height: 44px; 
+    justify-content: center;
 }
 
 .search-button .icon {
@@ -473,9 +195,19 @@ button,
 }
 
 .promo-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    /* Removido display: grid original para evitar conflito com o carrossel flexbox */
+    display: flex; 
     gap: 20px;
+    /* Adicionado overflow-x para permitir arrastar no desktop e mobile */
+    overflow-x: scroll;
+    padding-bottom: 20px; /* Espaço para não cortar sombra ou barra de rolagem */
+    scrollbar-width: none; /* Oculta a barra de rolagem no Firefox */
+    -ms-overflow-style: none; /* Oculta a barra de rolagem no IE e Edge */
+}
+
+/* Oculta a barra de rolagem no WebKit (Chrome, Safari) */
+.promo-grid::-webkit-scrollbar {
+    display: none;
 }
 
 .promo-card {
@@ -485,6 +217,15 @@ button,
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    /* Configuração de Largura do Carrossel */
+    min-width: 300px;
+    flex: 0 0 auto; 
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.promo-card:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
 
 .promo-card img {
@@ -531,218 +272,142 @@ button,
     color: #3A5B9E;
 }
 
+/* O bloco .scroll-arrow não é mais usado, os botões .btn-carrossel o substituem */
 .scroll-arrow {
-    width: 44px;
-    height: 44px;
-    background-color: white;
-    border-radius: 50%;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    right: -22px;
-    top: 50%;
-    transform: translateY(50%);
-    cursor: pointer;
+    display: none; 
 }
-
-.scroll-arrow .icon {
-    width: 24px;
-    height: 24px;
-}
-
-.main-footer {
-  background-color: #1c1c1c;
-  color: #f0f0f0;
-  padding: 40px 20px;
-  font-family: 'Segoe UI', sans-serif;
-}
- 
-/* Container principal */
-.footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
- 
-/* Seções individuais */
-.footer-section {
-  flex: 1 1 220px;
-  min-width: 200px;
-}
- 
-.footer-section h4 {
-  font-size: 1.2em;
-  margin-bottom: 15px;
-  color: #ffffff;
-}
- 
-.footer-section ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
- 
-.footer-section ul li {
-  margin-bottom: 10px;
-  font-size: 0.95em;
-}
- 
-.footer-section ul li a {
-  color: #cccccc;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
- 
-.footer-section ul li a:hover {
-  color: #ffffff;
-}
- 
-/* Newsletter */
-.newsletter-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
- 
-.newsletter-form input[type="email"] {
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  font-size: 0.95em;
-}
- 
-.newsletter-form button {
-  padding: 10px;
-  background-color: #ff4d4d;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
- 
-.newsletter-form button:hover {
-  background-color: #e60000;
-}
- 
-/* Redes sociais */
-.footer-social {
-  text-align: center;
-  margin-top: 40px;
-}
- 
-.footer-social h4 {
-  font-size: 1.2em;
-  margin-bottom: 10px;
-}
- 
-.social-icons a {
-  font-size: 1.5em;
-  margin: 0 10px;
-  color: #f0f0f0;
-  text-decoration: none;
-  transition: transform 0.3s ease;
-}
- 
-.social-icons a:hover {
-  transform: scale(1.2);
-}
- 
-/* Informações legais */
-.footer-legal {
-  text-align: center;
-  margin-top: 30px;
-  font-size: 0.85em;
-  color: #aaaaaa;
-}
- 
+ 
 .carrossel {
-  position: relative;
-  max-width: 1200px;
-  margin: 2rem auto;
-  overflow: hidden;
+    position: relative;
+    max-width: 1200px;
+    margin: 2rem auto;
+    overflow: hidden; /* O overflow: hidden no carrossel esconde os botões .btn-carrossel se o max-width for atingido */
+    padding: 0 50px; /* Espaço adicionado para os botões ficarem visíveis fora do promo-grid */
 }
 
 .promo-grid {
-  display: flex;
-  gap: 1.5rem;
-  padding: 1rem;
-  transition: transform 0.4s ease-in-out;
-}
-
-.promo-card {
-  min-width: 300px; /* ajuste conforme seu design */
-  flex: 0 0 auto; /* não encolhe nem cresce */
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  overflow: hidden;
-}
-
-.promo-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.card-content {
-  padding: 1rem;
+    display: flex;
+    gap: 1.5rem;
+    padding: 0; /* Removido padding de 1rem que estava duplicado */
+    transition: transform 0.4s ease-in-out;
 }
 
 /* Botões de navegação */
 .btn-carrossel {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #fff;
-  border-radius: 50%;
-  width: 40px;
-  font-size: 1.5rem;
-  font-weight: bold;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 10;
-  transition: background 0.3s;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: background 0.3s;
+    outline: none; /* Acessibilidade: remove o outline feio e usa o :focus-visible */
 }
 
-.btn-carrossel:hover {
-  background: #faf9f9;
-  color: #000000;
+.btn-carrossel:hover,
+.btn-carrossel:focus-visible {
+    background: #f0f5ff;
+    color: #3d5ab2;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .btn-carrossel.prev {
-  left: 10px;
+    left: 10px;
 }
 
 .btn-carrossel.next {
-  right: 10px;
+    right: 10px;
 }
 
 .titulos {
-  text-align: center;
-  color: #365db5;
+    text-align: center;
+    color: #365db5;
 }
 
+/* Estilo .salvador não é usado nos promo-card, mas mantido. Ajuste a transição. */
 .salvador {
-  border-radius: 20px;
-  width: 300px;
-  border-radius: 20px;
-  margin-right: 8%;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 20px;
+    width: 300px;
+    margin-right: 8%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .salvador:hover{
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  transform: scale(1.15);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 8px 20px;
+    transform: scale(1.05); /* Diminuído para evitar que o elemento salte muito */
+}
+
+/* css/autocomplete.css (aplicado diretamente aqui) */
+/* Lista de sugestões de Autocompletar */
+#sugestoes-origem, /* ✅ Adicionado: Aplica o estilo também à origem */
+#sugestoes-destino {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    max-height: 240px;
+    overflow-y: auto;
+    /* ✅ Alteração: Posicionamento absoluto em relação ao .input-wrapper */
+    position: absolute; 
+    top: 100%; /* Fica logo abaixo do input */
+    left: -1px; /* Ajuste fino */
+    width: calc(100% + 2px); /* Ajuste fino */
+    z-index: 1000;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    display: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.92rem;
+}
+
+#sugestoes-origem li,
+#sugestoes-destino li {
+    padding: 12px 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.15s ease;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+#sugestoes-origem li:last-child,
+#sugestoes-destino li:last-child {
+    border-bottom: none;
+}
+
+#sugestoes-origem li::before,
+#sugestoes-destino li::before {
+    content: "✈️";
+    font-size: 0.9em;
+}
+
+/* Estilo de Hover e Foco (para mouse e teclado) */
+#sugestoes-origem li:hover,
+#sugestoes-destino li:hover,
+#sugestoes-origem li:focus, /* ✅ Adicionado: Foco para navegação de teclado */
+#sugestoes-destino li:focus {
+    background-color: #f0f5ff;
+    color: #3d5ab2;
+    outline: none;
+    padding-left: 18px;
+}
+
+.form-group {
+    position: relative;
 }
 

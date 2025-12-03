@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sua Agência de Viagens - Explore o Brasil 01</title>
+  <title>Sua Agência de Viagens - Explore o Brasil</title>
   <meta name="description"
     content="Encontre os melhores pacotes de viagem para o Nordeste, Sudeste, Sul, Norte e Centro-Oeste." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sedgwick+Ave&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <link rel="stylesheet" href="/css/pacotes.css" />
+  <link rel="stylesheet" href="/css/Essenciais/navbar.css">
+  <link rel="stylesheet" href="/css/Essenciais/Footer.css">
 </head>
-
 <body>
   <header>
-    <div class="logo"> <img src="/assets/logoloom.png" alt="Logo Loom" onclick="window.location.href='index.html'" />
+    <div class="logo">
+      <img src="/assets/logoloom.png" alt="Logo Loom" onclick="window.location.href='index.html'" />
     </div>
-    <nav class="navegacao-principal">
+    <nav class="navegacao-principal" aria-label="Navegação principal">
       <ul>
         <li><a href="index.html">HOME</a></li>
         <li><a href="pacotes.html">PACOTES</a></li>
@@ -31,83 +31,179 @@
       </ul>
     </nav>
     <div class="header-utils">
-      <form class="header-search" action="/buscar" method="get" role="search"> <input type="search" name="q"      
-          placeholder="Pesquisar destinos..." aria-label="Pesquisar destinos" /> <i          
-          class="fa-solid fa-magnifying-glass fa-xl" style="color: #3d5ab2;"></i>
+      <form class="header-search" action="/buscar" method="get" role="search">
+        <input type="search" name="q" placeholder="Pesquisar destinos..." aria-label="Pesquisar destinos" />
+        <i class="fa-solid fa-magnifying-glass fa-xl" style="color: #3d5ab2;" aria-hidden="true"></i>
       </form>
       <div class="area-cliente">
-          <a href="favoritos.html" class="btn-favoritos" title="Favoritos" aria-label="Página de Favoritos">
-          <i class="fa-regular fa-heart fa-lg" style="color: #3d5ab2;"></i>
+        <a href="favoritos.html" class="btn-favoritos" title="Favoritos" aria-label="Página de Favoritos">
+          <i class="fa-regular fa-heart fa-lg" style="color: #3d5ab2;" aria-hidden="true"></i>
         </a>
-        <a href="login.html" class="btn-login" title="Login" aria-label="Página de Login"> <i          
-            class="fa-solid fa-circle-user fa-xl" style="color: #3d5ab2;"></i></a>
+        <a href="login.html" class="btn-login" title="Login" aria-label="Página de Login">
+          <i class="fa-solid fa-circle-user fa-xl" style="color: #3d5ab2;" aria-hidden="true"></i>
+        </a>
       </div>
     </div>
-  </header> <br><br><br><br>
+  </header>
+
+  <br><br><br><br>
+
   <div class="container">
     <div class="search-container">
       <div class="search-header">
         <h2>PACOTES DE VIAGENS</h2>
       </div>
       <div class="search-body">
-        <form class="search-form">
+        <form class="search-form" novalidate>
           <div class="form-section location">
-            <div class="origins-destinations"> <label> ORIGEM</label> <label> DESTINO</label> </div>
-            <div class="input-group">
-              <div class="input-wrapper">
-                <div class="icon icon-pin"><i class="fa-regular fa-circle" style="color: #3d5ab2;"></i></div> <input
-                  type="text" placeholder="SÃO PAULO, CO...">
-              </div>
-              <div class="icon icon-swap"><i class="fa-solid fa-arrow-right-arrow-left fa-lg"
-                  style="color: #3d5ab2;"></i></div>
-              <div class="input-wrapper">
-                <div class="icon icon-pin"><i class="fa-solid fa-location-dot fa-lg" style="color: #3d5ab2;"></i></div>
-                <input type="text" placeholder="INSIRA UMA CI...">
-              </div>
+            <div class="origins-destinations">
+              <label for="origem">ORIGEM</label>
+              <label for="destino">DESTINO</label>
             </div>
-          </div>
-          <div class="form-section dates"> <label>DATAS</label>
             <div class="input-group">
               <div class="input-wrapper">
-                <div class="icon icon-calendar"><i class="fa-solid fa-calendar" style="color: #3d5ab2;"></i></div>
-                <input type="text" placeholder="ENTRADA">
+                <div class="icon icon-pin" aria-hidden="true">
+                  <i class="fa-regular fa-circle" style="color: #3d5ab2;"></i>
+                </div>
+                <input 
+                  type="text" 
+                  id="origem" 
+                  name="origem"
+                  placeholder="SÃO PAULO, CO..." 
+                  autocomplete="off"
+                  aria-autocomplete="list"
+                  aria-controls="sugestoes-origem"
+                  aria-expanded="false"
+                >
+                <ul id="sugestoes-origem" class="sugestoes" role="listbox" aria-label="Sugestões de origem"></ul>
               </div>
-              <div class="input-wrapper">
-                <div class="icon icon-calendar"><i class="fa-solid fa-calendar" style="color: #3d5ab2;"></i></div>
-                <input type="text" placeholder="SAÍDA">
-              </div>
-            </div>
-          </div>
-          <div class="form-section rooms"> <label>QUARTOS</label>
-            <div class="input-group">
-              <div class="input-wrapper">
 
-                <div class="icon icon-person"><i class="fa-solid fa-bed fa-sm" style="color: #3d5ab2;"></i></div><input
-                  type="text" placeholder="1">
+              <div class="icon icon-swap" role="button" tabindex="0" aria-label="Trocar origem e destino">
+                <i class="fa-solid fa-arrow-right-arrow-left fa-lg" style="color: #3d5ab2;"></i>
               </div>
+
               <div class="input-wrapper">
-                <div class="icon icon-people"><i class="fa-solid fa-person fa-lg" style="color: #3d5ab2;"></i></div>
-                <input type="text" placeholder="2">
+                <div class="icon icon-pin" aria-hidden="true">
+                  <i class="fa-solid fa-location-dot fa-lg" style="color: #3d5ab2;"></i>
+                </div>
+                <input 
+                  type="text" 
+                  id="destino" 
+                  name="destino"
+                  placeholder="INSIRA UMA CI..." 
+                  autocomplete="off"
+                  aria-autocomplete="list"
+                  aria-controls="sugestoes-destino"
+                  aria-expanded="false"
+                >
+                <ul id="sugestoes-destino" class="sugestoes" role="listbox" aria-label="Sugestões de destino"></ul>
               </div>
             </div>
-          </div> <button type="submit" class="search-button"><i class="fa-solid fa-magnifying-glass fa-xl"
-              style="color: #ffffff;"></i>
-            <div class="icon icon-search">BUSCAR</div>
+          </div>
+
+          <!-- ✅ CAMPOS DE DATA ATUALIZADOS (com date picker customizado) -->
+          <div class="form-section dates">
+            <label>DATAS</label>
+            <div class="input-group">
+              <div class="input-wrapper">
+                <div class="icon icon-calendar" aria-hidden="true">
+                  <i class="fa-solid fa-calendar" style="color: #3d5ab2;"></i>
+                </div>
+                <input 
+                  type="text" 
+                  id="entrada" 
+                  name="entrada"
+                  placeholder="ENTRADA"
+                  readonly
+                  aria-label="Data de entrada"
+                  aria-haspopup="dialog"
+                  aria-expanded="false"
+                >
+              </div>
+              <div class="input-wrapper">
+                <div class="icon icon-calendar" aria-hidden="true">
+                  <i class="fa-solid fa-calendar" style="color: #3d5ab2;"></i>
+                </div>
+                <input 
+                  type="text" 
+                  id="saida" 
+                  name="saida"
+                  placeholder="SAÍDA"
+                  readonly
+                  aria-label="Data de saída"
+                  aria-haspopup="dialog"
+                  aria-expanded="false"
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="form-section rooms">
+            <label>QUARTOS E PESSOAS</label>
+            <div class="input-group">
+              <!-- Quartos -->
+              <div class="input-wrapper numeric-control">
+                <div class="icon icon-person" aria-hidden="true">
+                  <i class="fa-solid fa-bed fa-sm" style="color: #3d5ab2;"></i>
+                </div>
+                <input 
+                  type="text" 
+                  id="quartos" 
+                  name="quartos"
+                  value="1"
+                  inputmode="numeric"
+                  pattern="[0-9]*"
+                  aria-label="Número de quartos (máximo 5)"
+                  readonly
+                >
+                <div class="stepper">
+                  <button type="button" class="step-up" aria-label="Aumentar número de quartos">▲</button>
+                  <button type="button" class="step-down" aria-label="Diminuir número de quartos">▼</button>
+                </div>
+              </div>
+
+              <!-- Pessoas -->
+              <div class="input-wrapper numeric-control">
+                <div class="icon icon-people" aria-hidden="true">
+                  <i class="fa-solid fa-person fa-lg" style="color: #3d5ab2;"></i>
+                </div>
+                <input 
+                  type="text" 
+                  id="pessoas" 
+                  name="pessoas"
+                  value="2"
+                  inputmode="numeric"
+                  pattern="[0-9]*"
+                  aria-label="Número de pessoas (máximo 10)"
+                  readonly
+                >
+                <div class="stepper">
+                  <button type="button" class="step-up" aria-label="Aumentar número de pessoas">▲</button>
+                  <button type="button" class="step-down" aria-label="Diminuir número de pessoas">▼</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="search-button" aria-label="Buscar pacotes de viagem">
+            <i class="fa-solid fa-magnifying-glass fa-xl" style="color: #ffffff;" aria-hidden="true"></i>
+            <span class="icon icon-search">BUSCAR</span>
           </button>
         </form>
       </div>
-    </div> <img class="banner" src="/assets/8.png" alt="" class="hero">
+    </div>
+
+    <img class="banner" src="/assets/8.png" alt="Banner de promoções" />
+
     <section class="promotions">
       <br>
       <h2 class="titulos">DESTINOS IMPERDÍVEIS</h2>
       <div class="carrossel" id="carrossel">
-        <button class="btn-carrossel prev" aria-label="Anterior"><i
-            class="fa-solid fa-arrow-down fa-rotate-90"></i></button>
+        <button class="btn-carrossel prev" aria-label="Destino anterior">
+          <i class="fa-solid fa-arrow-down fa-rotate-90" aria-hidden="true"></i>
+        </button>
         <div class="promo-grid" id="promoGrid">
-          <!-- Seus cards aqui (já estão prontos!) -->
-
           <a href="pacotes-passagem.html">
-
             <div class="promo-card">
               <img src="/assets/MonteVerde.jpg" alt="Monte Verde">
               <div class="card-content">
@@ -123,7 +219,6 @@
               </div>
             </div>
           </a>
-
           <a href="pacotes-passagem.html">
             <div class="promo-card">
               <img src="/assets/manaus.webp" alt="Manaus">
@@ -140,7 +235,6 @@
               </div>
             </div>
           </a>
-
           <a href="pacotes-passagem.html">
             <div class="promo-card">
               <img src="/assets/Aparecida.jpg" alt="Aparecida">
@@ -157,7 +251,6 @@
               </div>
             </div>
           </a>
-
           <a href="pacotes-passagem.html">
             <div class="promo-card">
               <img src="/assets/premium_photo-1661914240950-b0124f20a5c1.jpg" alt="Tóquio">
@@ -174,7 +267,6 @@
               </div>
             </div>
           </a>
-
           <a href="pacotes-passagem.html">
             <div class="promo-card">
               <img src="/assets/29581ba3c89a845.jpg" alt="Buenos Aires">
@@ -192,17 +284,15 @@
             </div>
           </a>
         </div>
-        <button class="btn-carrossel next" aria-label="Próximo"><i
-            class="fa-solid fa-arrow-down fa-rotate-270"></i></button>
+        <button class="btn-carrossel next" aria-label="Próximo destino">
+          <i class="fa-solid fa-arrow-down fa-rotate-270" aria-hidden="true"></i>
+        </button>
       </div>
-
-
-
     </section>
   </div>
-  <footer class="main-footer">
+
+  <footer class="main-footer" role="contentinfo">
     <div class="footer-container">
-      <!-- Seção Institucional -->
       <div class="footer-section">
         <h4>Institucional</h4>
         <ul>
@@ -212,8 +302,6 @@
           <li><a href="#">Imprensa</a></li>
         </ul>
       </div>
-
-      <!-- Seção Ajuda e Suporte -->
       <div class="footer-section">
         <h4>Ajuda e Suporte</h4>
         <ul>
@@ -223,8 +311,6 @@
           <li><a href="#">Cancelamentos e Reembolsos</a></li>
         </ul>
       </div>
-
-      <!-- Seção Contato -->
       <div class="footer-section">
         <h4>Contato</h4>
         <ul>
@@ -234,40 +320,30 @@
           <li>Horário de Atendimento: Seg-Sex 9h às 18h</li>
         </ul>
       </div>
-
-      <!-- Seção Newsletter -->
       <div class="footer-section">
         <h4>Receba Novidades</h4>
         <p>Inscreva-se e receba promoções exclusivas!</p>
         <form class="newsletter-form">
-          <input type="email" placeholder="Seu melhor e-mail" required />
+          <input type="email" placeholder="Seu melhor e-mail" required aria-label="E-mail para newsletter" />
           <button type="submit">Enviar</button>
         </form>
       </div>
     </div>
-
-    <!-- Redes Sociais -->
     <div class="footer-social">
       <h4>Siga-nos</h4>
       <div class="social-icons">
-        <a href="#" aria-label="Siga-nos no Facebook" target="_blank"><i class="fa-solid fa-book"
-            style="color: #ffffff;"></i></a>
-        <a href="#" aria-label="Siga-nos no Instagram" target="_blank"><i class="fa-solid fa-camera"
-            style="color: #ffffff;"></i></a>
-        <a href="#" aria-label="Siga-nos no LinkedIn" target="_blank"><i class="fa-solid fa-suitcase"
-            style="color: #ffffff;"></i></a>
-        <a href="#" aria-label="Siga-nos no YouTube" target="_blank"><i class="fa-brands fa-youtube"
-            style="color: #ffffff;"></i></a>
+        <a href="#" aria-label="Siga-nos no Facebook" target="_blank"><i class="fa-solid fa-book" style="color: #ffffff;" aria-hidden="true"></i></a>
+        <a href="#" aria-label="Siga-nos no Instagram" target="_blank"><i class="fa-solid fa-camera" style="color: #ffffff;" aria-hidden="true"></i></a>
+        <a href="#" aria-label="Siga-nos no LinkedIn" target="_blank"><i class="fa-solid fa-suitcase" style="color: #ffffff;" aria-hidden="true"></i></a>
+        <a href="#" aria-label="Siga-nos no YouTube" target="_blank"><i class="fa-brands fa-youtube" style="color: #ffffff;" aria-hidden="true"></i></a>
       </div>
     </div>
-
-    <!-- Informações Legais -->
     <div class="footer-legal">
       <p>© 2025 Loom Viagens. Todos os direitos reservados.</p>
       <p>CNPJ: 00.000.000/0001-00 | Rua Exemplo, 123 - São Paulo/SP</p>
     </div>
   </footer>
+
   <script src="/Javascript/pacotes.js"></script>
 </body>
-
 </html>
