@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="/css/cadastro.css">
-    <style>
+    <style> <!--Estilização-->
         .social-buttons {
             display: flex;
             justify-content: space-between;
@@ -38,31 +38,31 @@
 </head>
 
 <body>
-    <div class="container">
+<div class="container">    <!-- Imagem da familia -->
         <div class="imagem">
             <img src="/assets/fotofamilia.png" alt="Família na praia">
         </div>
 
-        <div class="formulario">
-            <img src="/assets/logoloom.png" alt="Logo Loom" class="logo">
+        <div class="formulario"> <!--Div do formulario  -->
+          <img src="/assets/logoloom.png" alt="Logo Loom" class="logo">  <!-- logo -->
             <h2>Cadastro</h2>
 
             <form id="form-login">
-                <input type="email" placeholder="E-mail" required id="email">
-                <input type="text" id="cpf" placeholder="CPF (ex: 123.456.789-09)" maxlength="14" required>
+                <input type="email" placeholder="E-mail" required id="email"><!-- campo para colocar o e-mail   -->
+                <input type="text" id="cpf" placeholder="CPF (ex: 123.456.789-09)" maxlength="14" required> <!--campo para colocar o cpf  -->
                 <div class="input-senha">
-                    <input type="password" placeholder="Senha" required id="senha">
+                    <input type="password" placeholder="Senha" required id="senha"> <!--campo para colocar a senha  -->
                     <span class="icone-toggle" id="toggle-senha">
-                        <i class="fas fa-eye-slash"></i>
+                         <i class="fas fa-eye-slash"></i><!--olhinho para permitir que veja senha  -->
                     </span>
                 </div>
 
-                <button type="submit" class="entrar">
+                <button type="submit" class="entrar"> <!--botão de entrar  -->
                     Entrar
                 </button>
 
                 <p class="ou">ou</p>
-
+                <!-- Botões para dar a opção de fazer cadastro se conectando a alguma conta -->
                 <div class="social-buttons">
                     <button type="button" class="google">
                         <img src="/assets/google.svg" alt="Google"> Google
@@ -72,12 +72,12 @@
                         Apple
                     </button>
                 </div>
-
+                 
                 <button type="button" class="login">
                     <a href="/pages/login.html">Já possui login? Conecte-se!</a>
                 </button>
             </form>
-
+           <!-- escrita simbolica -->
             <p class="footer">Seu Trajeto <span>em Nossas Mãos</span></p>
         </div>
     </div>
