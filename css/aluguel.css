@@ -18,6 +18,7 @@
     box-sizing: border-box;
     /* Faz o padding não alterar o tamanho final dos elementos */
 }
+
 /* Container com bordas arredondadas */
 .container {
     display: flex;
@@ -28,8 +29,6 @@
     overflow: hidden;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
-
 
 .left-panel {
     background: linear-gradient(to right, #b30000, #ff4d4d);
@@ -170,6 +169,7 @@ header {
     color: #bb0303;
     /* Muda a cor do texto também */
 }
+
 .navegacao-principal a:hover::after {
     transform: scaleX(1);
     /* Faz a linha crescer para 100% */
@@ -226,7 +226,6 @@ header {
     align-items: center;
 }
 
-
 .area-cliente {
     display: flex; /* NOVO: Para alinhar o perfil e o favorito lado a lado */
     gap: 10px; /* NOVO: Espaçamento entre os ícones */
@@ -247,8 +246,6 @@ header {
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-
-
 /* Container dos 3 cards */
 .container-cards {
     display: flex;
@@ -257,17 +254,14 @@ header {
     flex-wrap: wrap;
     max-width: 1600px;
     margin: 0 auto;
-
 }
 
 .container-card-horizontal:hover {
     transition: transform 0.3s ease-in-out;
     transform: translateY(-5px);
-
 }
 
 /* Estilo de cada card (com imagem lateralizada) */
-
 .destino-card {
     /* Define o tamanho de cada card */
     flex: 0 0 300px;
@@ -282,7 +276,6 @@ header {
     text-align: left;
     display: flex;
     flex-direction: column;
-
 }
 
 .btn-ver-pacote {
@@ -324,45 +317,7 @@ header {
 }
 
 
-/* --- 6. RODAPÉ --- */
-footer {
-    color: #f4f4f4;
-    padding: 40px 20px;
-    margin-top: 30px;
-}
 
-.footer-container {
-    display: flex;
-    justify-content: space-around;
-    /* Espalha as colunas */
-    gap: 20px;
-    flex-wrap: wrap;
-    /* Quebra de linha em telas pequenas */
-    margin-bottom: 20px;
-    text-align: left;
-}
-
-.footer-container h4 {
-    margin-bottom: 15px;
-    color: #ffffff;
-}
-
-.footer-container ul {
-    list-style: none;
-}
-
-.footer-container a {
-    color: #f4f4f4;
-    display: block;
-    margin-bottom: 5px;
-}
-
-.footer-copyright {
-    text-align: center;
-    border-top: 1px solid #555;
-    padding-top: 20px;
-    font-size: 0.9em;
-}
 
 
 
@@ -406,6 +361,7 @@ html {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    cursor: pointer;
     /* transition: all 0.3s ease-in-out; */
 }
 
@@ -419,6 +375,45 @@ html {
 }
 
 /* FOOTER GERAL ---------------------*/
+/* --- 6. RODAPÉ --- */
+footer {
+    color: #f4f4f4;
+    padding: 40px 20px;
+    margin-top: 30px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    /* Espalha as colunas */
+    gap: 20px;
+    flex-wrap: wrap;
+    /* Quebra de linha em telas pequenas */
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.footer-container h4 {
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.footer-container ul {
+    list-style: none;
+}
+
+.footer-container a {
+    color: #f4f4f4;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.footer-copyright {
+    text-align: center;
+    border-top: 1px solid #555;
+    padding-top: 20px;
+    font-size: 0.9em;
+}
 .main-footer {
     background-color: #1c1c1c;
     color: #f0f0f0;
@@ -587,5 +582,3 @@ html {
     margin-left: 85px;
     color: #365bb5;
 }
-
-
