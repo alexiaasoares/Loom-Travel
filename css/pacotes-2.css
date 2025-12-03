@@ -1,3 +1,4 @@
+/* CSS */
 * {
     margin: 0;
     padding: 0;
@@ -24,7 +25,7 @@ body {
     margin-left: 190px;
 }
 
-.img {
+img {
     max-width: 100%;
     /* Garante que as imagens nunca "vazem" do seu container */
     display: block;
@@ -183,8 +184,6 @@ button,
     display: flex;
     align-items: center;
     /* Alinha a pesquisa e o perfil verticalmente */
-    gap: 15px;
-    /* Espaçamento entre a pesquisa e o ícone de perfil */
 }
 
 /* Estilização da Barra de Pesquisa */
@@ -294,6 +293,7 @@ button,
     color: #023975;
     /* Usando sua cor de link */
 }
+
 
 /* ▲▲▲ FIM DAS NOVAS REGRAS ▲▲▲ */
 

@@ -196,7 +196,7 @@ button,
     display: flex;
     align-items: center;
     /* Alinha a pesquisa e o perfil verticalmente */
-    gap: 15px;
+
     /* Espaçamento entre a pesquisa e o ícone de perfil */
 }
 
@@ -595,6 +595,14 @@ color:#365db5;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.item-estadia:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .item-estadia img {

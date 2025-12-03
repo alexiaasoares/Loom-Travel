@@ -9,10 +9,10 @@
     content="Encontre os melhores pacotes de viagem para o Nordeste, Sudeste, Sul, Norte e Centro-Oeste." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sedgwick+Ave&display=swap"
     rel="stylesheet" />
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <link rel="stylesheet" href="/css/style.css" />
   <link rel="stylesheet" href="/css/inicio.css">
@@ -100,58 +100,68 @@
 
     <h2 class="titulos"> CONTINENTES </h2>
 
-<section class="carrossel-continentes">
-  <div class="carrossel-container">
-    <button class="carrossel-btn prev"><i class="fas fa-chevron-left"></i></button>
+    <section class="carrossel-continentes">
+      <div class="carrossel-container">
+        <button class="carrossel-btn prev"><i class="fas fa-chevron-left"></i></button>
 
-    <div class="carrossel-track" id="continentesTrack">
-      <div class="continente-item">
-        <img src="/assets/americaSul.png" alt="América do Sul">
-        <h3>AMÉRICA DO SUL</h3>
+        <div class="carrossel-track" id="continentesTrack">
+          <div class="continente-item">
+            <img src="/assets/americaSul.png" alt="América do Suls">
+            <h3>AMÉRICA DO SUL</h3>
+          </div>
+
+          <div class="continente-item">
+            <img src="/assets/americaSul.png" alt="América do Sul">
+            <h3>AMÉRICA DO SUL</h3>
+          </div>
+
+          <div class="continente-item">
+            <img src="/assets/americaSul.png" alt="América do Sul">
+            <h3>AMÉRICA DO SUL</h3>
+          </div>
+
+          <div class="continente-item">
+            <img src="/assets/asia.png" alt="Ásia">
+            <h3>ÁSIA</h3>
+          </div>
+
+          <div class="continente-item">
+            <img src="/assets/americaNorte.png" alt="América do Norte">
+            <h3>AMÉRICA DO NORTE</h3>
+          </div>
+
+          <div class="continente-item">
+            <a href="europa.html">
+              <img src="/assets/europa.png" alt="Europa">
+              <h3>EUROPA</h3>
+            </a>
+          </div>
+
+          <div class="continente-item">
+            <a href="africa.html">
+              <img src="/assets/africa.png" alt="África">
+              <h3>ÁFRICA</h3>
+            </a>
+          </div>
+
+          <div class="continente-item">
+            <a href="oceania.html">
+              <img src="/assets/oceania.png" alt="Oceania">
+              <h3>OCEANIA</h3>
+            </a>
+          </div>
+
+          <div class="continente-item">
+            <a href="americaCentral.html">
+              <img src="/assets/americaCentro.png" alt="América Central">
+              <h3>AMÉRICA CENTRAL</h3>
+            </a>
+          </div>
+        </div>
+
+        <button class="carrossel-btn next"><i class="fas fa-chevron-right"></i></button>
       </div>
-
-      <div class="continente-item">
-        <img src="/assets/asia.png" alt="Ásia">
-        <h3>ÁSIA</h3>
-      </div>
-
-      <div class="continente-item">
-        <img src="/assets/americaNorte.png" alt="América do Norte">
-        <h3>AMÉRICA DO NORTE</h3>
-      </div>
-
-      <div class="continente-item">
-        <a href="europa.html">
-          <img src="/assets/europa.png" alt="Europa">
-          <h3>EUROPA</h3>
-        </a>
-      </div>
-
-      <div class="continente-item">
-        <a href="africa.html">
-          <img src="/assets/africa.png" alt="África">
-          <h3>ÁFRICA</h3>
-        </a>
-      </div>
-
-      <div class="continente-item">
-        <a href="oceania.html">
-          <img src="/assets/oceania.png" alt="Oceania">
-          <h3>OCEANIA</h3>
-        </a>
-      </div>
-
-      <div class="continente-item">
-        <a href="americaCentral.html">
-          <img src="/assets/americaCentro.png" alt="América Central">
-          <h3>AMÉRICA CENTRAL</h3>
-        </a>
-      </div>
-    </div>
-
-    <button class="carrossel-btn next"><i class="fas fa-chevron-right"></i></button>
-  </div>
-</section>
+    </section>
 
     <h2 class="titulos">PACOTES</h2>
 
@@ -345,37 +355,37 @@
     });
 
     // Carrossel de Continentes
-document.addEventListener('DOMContentLoaded', function () {
-    const track = document.getElementById('continentesTrack');
-    const btnPrev = document.querySelector('.carrossel-btn.prev');
-    const btnNext = document.querySelector('.carrossel-btn.next');
+    document.addEventListener('DOMContentLoaded', function () {
+      const track = document.getElementById('continentesTrack');
+      const btnPrev = document.querySelector('.carrossel-btn.prev');
+      const btnNext = document.querySelector('.carrossel-btn.next');
 
-    // Largura de cada item + gap
-    const itemWidth = 220; // 200px + 20px de gap
+      // Largura de cada item + gap
+      const itemWidth = 220; // 200px + 20px de gap
 
-    btnPrev.addEventListener('click', () => {
+      btnPrev.addEventListener('click', () => {
         track.scrollBy({
-            left: -itemWidth,
-            behavior: 'smooth'
+          left: -itemWidth,
+          behavior: 'smooth'
         });
-    });
+      });
 
-    btnNext.addEventListener('click', () => {
+      btnNext.addEventListener('click', () => {
         track.scrollBy({
-            left: itemWidth,
-            behavior: 'smooth'
+          left: itemWidth,
+          behavior: 'smooth'
         });
-    });
+      });
 
-    // Opcional: Scroll com mouse wheel
-    track.addEventListener('wheel', (e) => {
+      // Opcional: Scroll com mouse wheel
+      track.addEventListener('wheel', (e) => {
         e.preventDefault();
         track.scrollBy({
-            left: e.deltaY * 2,
-            behavior: 'smooth'
+          left: e.deltaY * 2,
+          behavior: 'smooth'
         });
+      });
     });
-});
   </script>
 
   <footer class="main-footer">
