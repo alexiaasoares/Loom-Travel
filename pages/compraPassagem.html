@@ -19,11 +19,11 @@
 
 <body>
 
-  <header>
+  <header><!--Navbar------- Logo -->
     <div class="logo"> <img src="/assets/logoloom.png" alt="Logo Loom" onclick="window.location.href='index.html'" />
     </div>
     <nav class="navegacao-principal">
-      <ul>
+      <ul><!--Navbar-------Opções de coisas -->
         <li><a href="index.html">HOME</a></li>
         <li><a href="pacotes.html">PACOTES</a></li>
         <li><a href="aloomgueis.html">ALUGUEL</a></li>
@@ -32,23 +32,26 @@
       </ul>
     </nav>
     <div class="header-utils">
+      <!-- Navbar-----------Barra de pesquisa -->
       <form class="header-search" action="/buscar" method="get" role="search"> <input type="search" name="q"      
           placeholder="Pesquisar destinos..." aria-label="Pesquisar destinos" /> <i          
           class="fa-solid fa-magnifying-glass fa-xl" style="color: #3d5ab2;"></i>
       </form>
+      <!--Navbar------------ favoritos -->
       <div class="area-cliente">
           <a href="favoritos.html" class="btn-favoritos" title="Favoritos" aria-label="Página de Favoritos">
           <i class="fa-regular fa-heart fa-lg" style="color: #3d5ab2;"></i>
         </a>
+        <!-- Navbar--------login/cadastro -->
         <a href="login.html" class="btn-login" title="Login" aria-label="Página de Login"> <i          
             class="fa-solid fa-circle-user fa-xl" style="color: #3d5ab2;"></i></a>
       </div>
     </div>
   </header> <br>
 
-  <main class="checkout-wrapper">
+  <main class="checkout-wrapper">  <!--Div principal dos cards -->
 
-    <section class="checkout-left">
+    <section class="checkout-left">  <!--card da esquerda -->
 
       <div class="checkout-card">
         <h2 class="checkout-section-title">Quem viaja?</h2>
@@ -102,7 +105,7 @@
         </div>
       </div>
       <br>
-      <div class="checkout-card">
+    <div class="checkout-card">  <!--segundo card da esquerda-->
         <h2 class="checkout-section-title">Complete com os dados do cartão</h2>
 
         <label class="checkout-label">Número do cartão</label>
@@ -147,7 +150,7 @@
       <br>
 
 
-      <div class="checkout-card">
+       <div class="checkout-card"><!--terceiro card da esquerda  -->
         <h2 class="checkout-section-title">Em nome de quem emitimos a nota fiscal?</h2>
 
         <label class="checkout-label">Nome / Razão Social</label>
@@ -161,7 +164,7 @@
       </div>
     </section>
 
-    <section class="checkout-right">
+  <section class="checkout-right">   <!-- card da direita -->
       <div class="checkout-card">
 
         <h2 class="checkout-section-title">Detalhe da compra</h2>

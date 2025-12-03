@@ -18,13 +18,13 @@
     <link rel="stylesheet" href="/css/aluguel.css" />
 </head>
 
-<body class="fundo">
-    <header>
+<body class="fundo"> <!-- Para podeer estilizar o fundo  -->
+    <header> <!--Navbar----------Logo -->
         <div class="logo"> <img src="/assets/logoloom.png" alt="Logo Loom"
                 onclick="window.location.href='index.html'" />
         </div>
         <nav class="navegacao-principal">
-            <ul>
+            <ul><!--Navbar-------Opções de coisas -->
                 <li><a href="index.html">HOME</a></li>
                 <li><a href="pacotes.html">PACOTES</a></li>
                 <li><a href="aloomgueis.html">ALUGUEL</a></li>
@@ -33,35 +33,39 @@
             </ul>
         </nav>
         <div class="header-utils">
+             <!-- Navbar-----------Barra de pesquisa -->
             <form class="header-search" action="/buscar" method="get" role="search"> <input type="search" name="q"      
                     placeholder="Pesquisar destinos..." aria-label="Pesquisar destinos" /> <i          
                     class="fa-solid fa-magnifying-glass fa-xl" style="color: #3d5ab2;"></i>
             </form>
+            <!--Navbar------------ favoritos -->
             <div class="area-cliente">
                   <a href="favoritos.html" class="btn-favoritos" title="Favoritos" aria-label="Página de Favoritos">
                     <i class="fa-regular fa-heart fa-lg" style="color: #3d5ab2;"></i>
                 </a>
+                <!-- Navbar-----------Login/cadastro -->
                 <a href="login.html" class="btn-login" title="Login" aria-label="Página de Login"> <i          
                         class="fa-solid fa-circle-user fa-xl" style="color: #3d5ab2;"></i></a>
             </div>
         </div>
     </header> <br><br><br><br>
     <section>
-        <div class="tudo-carros">
+         <div class="tudo-carros">  <!--Parte que está todos os cards -->
             <div>
-                <h1 class="nome-carros">CARROS</h1>
+               <h1 class="nome-carros">CARROS</h1> <!-- Parte da escrita -->
             </div>
             <br><br><br>
             <!-- Primeiro card -->
-            <div class="margin">
-                <div class="carroeBanner">
-                    <div class="wrapper">
-                        <div class="container-card-horizontal">
-                            <div class="card--horizontal">
+             <!-- JEEP COMPASS 2025 -->
+             <div class="margin"> <!--div principal dos cards -->
+                <div class="carroeBanner"><!-- Para deixar os cards bonitinhos, cada um no seu quadrado  -->
+                    <div class="wrapper">  <!--Para deixar a foto do lado esquerdo no lugar e os cards um abaixo do outro -->
+                      <div class="container-card-horizontal">   <!--card dos carros -->
+                           <div class="card--horizontal">   <!--div das fotos dos cards  -->
                                 <img src="/assets/carro-2.png" alt="mobi 2025">
                             </div>
                             <div class="card--horizontal">
-                                <ul>
+                               <ul>  <!--Informações do carro -->
                                     <li><strong>Modelo:</strong> Jeep Compass</li>
                                     <li><strong>Ano:</strong> 2025</li>
                                     <li><strong>Lugares:</strong> 5</li>
@@ -76,12 +80,13 @@
                             </div>
                         </div>
                         <br><br>
-                        <div class="container-card-horizontal">
-                            <div class="card--horizontal">
+                        <!-- MOBI 2025 -->
+                        <div class="container-card-horizontal"> <!--card dos carros -->
+                            <div class="card--horizontal"><!--div das fotos dos cards  -->
                                 <img src="/assets/3.png" alt="mobi 2025">
                             </div>
                             <div class="card--horizontal">
-                                <ul>
+                                <ul> <!--Informações do carro -->
                                     <li><strong>Modelo:</strong> Mobi</li>
                                     <li><strong>Ano:</strong> 2025</li>
                                     <li><strong>Lugares:</strong> 5</li>
@@ -96,12 +101,12 @@
                             </div>
                         </div>
                         <br><br>
-                        <div class="container-card-horizontal">
-                            <div class="card--horizontal">
-                                <img src="/assets/carro-1.png" alt="mobi 2025">
+                        <div class="container-card-horizontal"><!--card dos carros -->
+                            <div class="card--horizontal"><!--div das fotos dos cards  -->
+                                <img src="/assets/carro-1.png" alt="Spin 2025">
                             </div>
                             <div class="card--horizontal">
-                                <ul>
+                                <ul>  <!--Informações do carro-->
                                     <li><strong>Modelo:</strong> Spin</li>
                                     <li><strong>Ano:</strong> 2025</li>
                                     <li><strong>Lugares:</strong> 7</li>
@@ -117,12 +122,11 @@
                         </div>
                     </div>
                     <br><br>
+                    <!-- Imagem de propaganda que está a esquerda -->
                     <div class="imagem-direita">
                         <img src="/assets/5.png">
                 </div>
             </div>
-                   
-            
             </div>
         </div>
         </div>
@@ -133,7 +137,7 @@
     <!-- FOOTER -->
     <footer class="main-footer">
         <div class="footer-container">
-            <!-- Seção Institucional -->
+            <!-- Sessão Institucional -->
             <div class="footer-section">
                 <h4>Institucional</h4>
                 <ul>
@@ -144,7 +148,7 @@
                 </ul>
             </div>
 
-            <!-- Seção Ajuda e Suporte -->
+            <!-- Sessão Ajuda e Suporte do Footer -->
             <div class="footer-section">
                 <h4>Ajuda e Suporte</h4>
                 <ul>
@@ -155,7 +159,7 @@
                 </ul>
             </div>
 
-            <!-- Seção Contato -->
+            <!-- Sessão Contato do Footer-->
             <div class="footer-section">
                 <h4>Contato</h4>
                 <ul>
@@ -166,7 +170,7 @@
                 </ul>
             </div>
 
-            <!-- Seção Newsletter -->
+            <!-- Sessão Newsletter do Footer -->
             <div class="footer-section">
                 <h4>Receba Novidades</h4>
                 <p>Inscreva-se e receba promoções exclusivas!</p>
@@ -177,7 +181,7 @@
             </div>
         </div>
 
-        <!-- Redes Sociais -->
+         <!-- Redes Sociais/icones -->
         <div class="footer-social">
             <h4>Siga-nos</h4>
             <div class="social-icons">
@@ -191,6 +195,7 @@
                         style="color: #ffffff;"></i></a>
             </div>
         </div>
+        <!-- Informações básicas -->
         <div class="footer-legal">
             <p>© 2025 Loom Viagens. Todos os direitos reservados.</p>
             <p>CNPJ: 00.000.000/0001-00 | Rua Exemplo, 123 - São Paulo/SP</p>
