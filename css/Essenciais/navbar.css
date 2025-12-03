@@ -169,7 +169,7 @@ button,
 /* --- EFEITO HOVER NAVEGAÇÃO (OPÇÃO 2: SUBLINHADO MODERNO) --- */
 /* Base do link da navegação (Pai) */
 .navegacao-principal a {
-    color: #3A5B9E;
+    color: #ffffff;
     padding-bottom: 5px;
     /* Espaço para o sublinhado */
     position: relative;
@@ -219,8 +219,6 @@ button,
     display: flex;
     align-items: center;
     /* Alinha a pesquisa e o perfil verticalmente */
-    gap: 15px;
-    /* Espaçamento entre a pesquisa e o ícone de perfil */
 }
 
 /* Estilização da Barra de Pesquisa */

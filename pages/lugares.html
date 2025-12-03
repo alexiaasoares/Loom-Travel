@@ -13,9 +13,6 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sedgwick+Ave&display=swap"
     rel="stylesheet" />
-     <link
-    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <link rel="stylesheet" href="/css/lugares.css">
 </head>
@@ -24,7 +21,7 @@
 
 
 
-  <header>
+  <header> <!--  /* Navbar padrão para todas as páginas */ -->
     <div class="logo"> <img src="/assets/logoloom.png" alt="Logo Loom" onclick="window.location.href='index.html'" />
     </div>
     <nav class="navegacao-principal">
@@ -61,13 +58,13 @@
 
 
     <!-- Parte de busca de pacotes -->
-    <div class="search-container">
-      <div class="search-header">
+    <div class="search-container"> <!-- Container de busca -->
+      <div class="search-header"> <!-- Cabeçalho da busca -->
         <h2>PACOTES DE VIAGENS</h2>
       </div>
-      <div class="search-body">
-        <form class="search-form">
-          <div class="form-section location">
+      <div class="search-body"> <!-- Corpo da busca -->
+        <form class="search-form"> <!-- Formulário de busca -->
+          <div class="form-section location"> <!-- Seção de localizações -->
             <div class="origins-destinations"> <label> ORIGEM</label> <label> DESTINO</label> </div>
             <div class="input-group">
               <div class="input-wrapper">
@@ -82,7 +79,7 @@
               </div>
             </div>
           </div>
-          <div class="form-section dates"> <label>DATAS</label>
+          <div class="form-section dates"> <label>DATAS</label> <!-- Seção de datas -->
             <div class="input-group">
               <div class="input-wrapper">
                 <div class="icon icon-calendar"><i class="fa-solid fa-calendar" style="color: #3d5ab2;"></i></div>
@@ -94,7 +91,7 @@
               </div>
             </div>
           </div>
-          <div class="form-section rooms"> <label>QUARTOS</label>
+          <div class="form-section rooms"> <label>QUARTOS</label> <!-- Seção de quartos -->
             <div class="input-group">
               <div class="input-wrapper">
 
@@ -121,12 +118,12 @@
       </div>
 
       <!-- Transportes -->
-      <div class="pai">
+      <div class="pai"> <!-- Container pai para transportes e estadias -->
         <div class="img">
           <img src="/assets/relogio.png" id="fotoAparecida" alt="Imagem Aparecida">
         </div>
-        <div class="tio">
-          <section class="caixa-transportes">
+        <div class="tio"> <!-- Container tio para transportes e estadias -->
+          <section class="caixa-transportes"> <!-- Seção de transportes -->
             <h3>TRANSPORTES</h3>
             <div class="lista-transportes">
               <div class="item-transporte">
@@ -166,7 +163,7 @@
               </div>
 
               <button class="button-1" role="button">
-              VER MAIS
+                VER MAIS
               </button>
           </section>
 
@@ -178,33 +175,37 @@
         </div>
       </div>
 
-    <!-- Estadias -->
-    <section class="caixa-estadias">
-      <h3>ESTADIAS</h3>
-      <div class="lista-estadias">
-        <div class="item-estadia">
-          <img src="/assets/hotel-rainha.jpg" alt="Hotel Rainha do Brasil">
-          <div class="nome-estadia"><a href="https://www.google.com/aclk?sa=L&ai=DChsSEwizuM272v6QAxVtV0gAHeOhADQYACICCAEQAxoCY2U&co=1&ase=2&gclid=CjwKCAiA8vXIBhAtEiwAf3B-gwhL1o88kY--KbNreY3y6Fur2aQt4kPid-z48WKxw3U4dk8JyGSrhhoCO5EQAvD_BwE&ei=9_kdacC5IenU5OUPqNGZmQY&cid=CAASugHkaNf2WZ8cH9Sxih9qFCWazcmZ4A5NOeJTc_ixpJ587NMqFduXgUHSmdggCFN0QeACKYAd9GxL4fimSnR6tc6UcTPP3pw161f2_QvjDCp1Jv6SS-zHsUZhgmyh2r4g0Del76sn6smcdVbeQaWCcpoBgY0VC1h2JWUkQ8EHHcvHDLEo1fzTAvO3ADtfA_iTBGKHCgLhvEwslpr-GUzWi0iw6_dJW9V23JHw_uqsXi1HnXwt_rphbGc7OiY&cce=2&category=acrcp_v1_32&sig=AOD64_37pH0XJRWHf3Qbjgo8LxR2NOYOWw&q&sqi=2&nis=4&adurl&ved=2ahUKEwiAkca72v6QAxVpKrkGHahoJmMQ0Qx6BAgYEAE">HOTEL RAINHA DO BRASIL</a></div>
+      <!-- Estadias -->
+      <section class="caixa-estadias"> <!-- Seção de estadias -->
+        <h3>ESTADIAS</h3>
+        <div class="lista-estadias"> <!-- Lista de estadias -->
+          <div class="item-estadia"> 
+            <img src="/assets/hotel-rainha.jpg" alt="Hotel Rainha do Brasil">
+            <div class="nome-estadia"><a
+                href="https://www.google.com/aclk?sa=L&ai=DChsSEwizuM272v6QAxVtV0gAHeOhADQYACICCAEQAxoCY2U&co=1&ase=2&gclid=CjwKCAiA8vXIBhAtEiwAf3B-gwhL1o88kY--KbNreY3y6Fur2aQt4kPid-z48WKxw3U4dk8JyGSrhhoCO5EQAvD_BwE&ei=9_kdacC5IenU5OUPqNGZmQY&cid=CAASugHkaNf2WZ8cH9Sxih9qFCWazcmZ4A5NOeJTc_ixpJ587NMqFduXgUHSmdggCFN0QeACKYAd9GxL4fimSnR6tc6UcTPP3pw161f2_QvjDCp1Jv6SS-zHsUZhgmyh2r4g0Del76sn6smcdVbeQaWCcpoBgY0VC1h2JWUkQ8EHHcvHDLEo1fzTAvO3ADtfA_iTBGKHCgLhvEwslpr-GUzWi0iw6_dJW9V23JHw_uqsXi1HnXwt_rphbGc7OiY&cce=2&category=acrcp_v1_32&sig=AOD64_37pH0XJRWHf3Qbjgo8LxR2NOYOWw&q&sqi=2&nis=4&adurl&ved=2ahUKEwiAkca72v6QAxVpKrkGHahoJmMQ0Qx6BAgYEAE">HOTEL
+                RAINHA DO BRASIL</a></div>
+          </div>
+          <div class="item-estadia">
+            <img src="/assets/casa-temporada.webp" alt="Casa de Temporada">
+            <div class="nome-estadia"><a
+                href="https://www.airbnb.com.br/rooms/45580758?check_in=2025-12-24&check_out=2025-12-29&guests=1&adults=1&s=67&unique_share_id=21768c89-cb99-4d10-bab0-12a588f10878">CASA
+                DE TEMPORADA</a></div>
+          </div>
+          <div class="item-estadia">
+            <img src="/assets/bom-jesus.jpg" alt="Hotel Cathedral">
+            <div class="nome-estadia"> <a href="https://www.pousadadobomjesus.com/">HOTEL BOM JESUS</a></div>
+          </div>
+          <div class="item-estadia">
+            <img src="/assets/casa-2.webp" alt="Casa em Jardim Paraíba">
+            <div class="nome-estadia"> <a href="#"></a>CASA EM JARDIM PARAÍBA</a></div>
+          </div>
         </div>
-        <div class="item-estadia">
-          <img src="/assets/casa-temporada.webp" alt="Casa de Temporada">
-          <div class="nome-estadia"><a href="https://www.airbnb.com.br/rooms/45580758?check_in=2025-12-24&check_out=2025-12-29&guests=1&adults=1&s=67&unique_share_id=21768c89-cb99-4d10-bab0-12a588f10878">CASA DE TEMPORADA</a></div>
-        </div>
-        <div class="item-estadia">
-          <img src="/assets/bom-jesus.jpg" alt="Hotel Cathedral">
-          <div class="nome-estadia"> <a href="https://www.pousadadobomjesus.com/">HOTEL BOM JESUS</a></div>
-        </div>
-        <div class="item-estadia">
-          <img src="/assets/casa-2.webp" alt="Casa em Jardim Paraíba">
-          <div class="nome-estadia"> <a href="#"></a>CASA EM JARDIM PARAÍBA</a></div>
-        </div>
-      </div>
   </main>
   <br><br><br>
 
 
-  <footer class="main-footer">
-    <div class="footer-container">
+  <footer class="main-footer"> <!-- Rodapé padrão para todas as páginas -->
+    <div class="footer-container"> <!-- Container do rodapé -->
       <!-- Seção Institucional -->
       <div class="footer-section">
         <h4>Institucional</h4>
@@ -253,10 +254,14 @@
     <div class="footer-social">
       <h4>Siga-nos</h4>
       <div class="social-icons">
-        <a href="#" aria-label="Siga-nos no Facebook" target="_blank"><i class="fa-solid fa-book" style="color: #ffffff;"></i></a>
-        <a href="#" aria-label="Siga-nos no Instagram" target="_blank"><i class="fa-solid fa-camera" style="color: #ffffff;"></i></a>
-        <a href="#" aria-label="Siga-nos no LinkedIn" target="_blank"><i class="fa-solid fa-suitcase" style="color: #ffffff;"></i></a>
-        <a href="#" aria-label="Siga-nos no YouTube" target="_blank"><i class="fa-brands fa-youtube" style="color: #ffffff;"></i></a>
+        <a href="#" aria-label="Siga-nos no Facebook" target="_blank"><i class="fa-solid fa-book"
+            style="color: #ffffff;"></i></a>
+        <a href="#" aria-label="Siga-nos no Instagram" target="_blank"><i class="fa-solid fa-camera"
+            style="color: #ffffff;"></i></a>
+        <a href="#" aria-label="Siga-nos no LinkedIn" target="_blank"><i class="fa-solid fa-suitcase"
+            style="color: #ffffff;"></i></a>
+        <a href="#" aria-label="Siga-nos no YouTube" target="_blank"><i class="fa-brands fa-youtube"
+            style="color: #ffffff;"></i></a>
       </div>
     </div>
 

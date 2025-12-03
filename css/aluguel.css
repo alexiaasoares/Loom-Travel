@@ -18,6 +18,7 @@
     box-sizing: border-box;
     /* Faz o padding não alterar o tamanho final dos elementos */
 }
+
 /* Container com bordas arredondadas */
 .container {
     display: flex;
@@ -28,8 +29,6 @@
     overflow: hidden;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
-
 
 .left-panel {
     background: linear-gradient(to right, #b30000, #ff4d4d);
@@ -54,14 +53,15 @@
     padding-bottom: 5px;
 }
 
+
+
+
 body {
-    font-family: 'Segoe UI', sans-serif;
-    background: #f5f5f5;
-    color: #333;
     font-family: 'poppins';
     line-height: 1.6;
     background-color: #EFF4FF;
-    color: #060606;
+    /* Um cinza bem claro para o fundo */
+    color: #4b3939;
 }
 
 .logo {
@@ -70,7 +70,10 @@ body {
     cursor: pointer;
 }
 
-
+#lupa {
+    width: 50px;
+    margin-left: 190px;
+}
 
 img {
     max-width: 100%;
@@ -90,7 +93,13 @@ a {
 section {
     padding: 40px 20px;
     /* 40px em cima/baixo, 20px nas laterais */
+    text-align: center;
     /* Centraliza títulos de seção */
+}
+
+section h2 {
+    margin-bottom: -15px;
+    /* Espaço abaixo dos títulos H2 */
 }
 
 /* --- 2. CABEÇALHO E NAVEGAÇÃO --- */
@@ -112,7 +121,37 @@ header {
     /* As correções de margin-left e width 90% já foram feitas na resposta anterior e estão mantidas aqui (implicitamente, removidas). */
 }
 
+/* nav bar */
+.navegacao-principal {
+    /* MANTIDO: Permite que ela ocupe espaço no centro. */
+    flex: 1;
+    display: flex;
+    /* NOVO: Adiciona margens automáticas para empurrar os itens laterais */
+    margin: 0 auto; 
+    /* ALTERADO: Mudei para 'center' (já estava assim, mantido). */
+    justify-content: center; 
+    max-width: 60%; /* Adicionei um limite para não forçar demais as laterais */
+}
 
+header .logo {
+    flex-shrink: 0;
+}
+
+button,
+.btn-buscar {
+    padding: 10px 20px;
+    background-color: #bb0303;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+    /* NOVO: Fonte */
+    height: 44px;
+    /* NOVO: Alinha a altura com os inputs */
+    transition: background-color 0.2s ease;
+    /* NOVO: Efeito de hover */
+}
 
 /* cada item da navbar */
 .navegacao-principal ul li {
@@ -123,11 +162,24 @@ header {
     font-weight: bold;
 }
 
+/* nav bar */
+.navegacao-principal {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    /* centraliza os links */
+}
+
 .navegacao-principal ul {
     display: flex;
     /* Alinha os links do menu lado a lado */
     list-style: none;
     /* Remove as "bolinhas" da lista */
+}
+
+.navegacao-principal li {
+    margin-left: 20px;
+    /* Espaçamento entre os itens do menu */
 }
 
 /* --- EFEITO HOVER NAVEGAÇÃO (OPÇÃO 2: SUBLINHADO MODERNO) --- */
@@ -170,16 +222,18 @@ header {
     color: #bb0303;
     /* Muda a cor do texto também */
 }
+
 .navegacao-principal a:hover::after {
     transform: scaleX(1);
     /* Faz a linha crescer para 100% */
 }
+
+/* ▼▼▼ REGRAS NOVAS ADICIONADAS AQUI ▼▼▼ */
+/* Novo contêiner para pesquisa e perfil */
 .header-utils {
     display: flex;
     align-items: center;
     /* Alinha a pesquisa e o perfil verticalmente */
-    gap: 15px;
-    /* Espaçamento entre a pesquisa e o ícone de perfil */
 }
 
 /* Estilização da Barra de Pesquisa */
@@ -210,6 +264,13 @@ header {
     transition: width 0.3s ease-in-out;
 }
 
+/* Efeito de expandir a barra quando clicada */
+
+/* Remove o 'x' de limpar do input de pesquisa */
+.header-search input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+}
 
 .header-search button[type="submit"] {
     background: transparent;
@@ -226,7 +287,14 @@ header {
     align-items: center;
 }
 
+<<<<<<< HEAD
+=======
+.header-search button[type="submit"]:hover {
+    color: #023975;
+    /* Usando sua cor de link */
+}
 
+>>>>>>> 56d6b25d7e935de069aa8ff7079491af54e71c74
 .area-cliente {
     display: flex; /* NOVO: Para alinhar o perfil e o favorito lado a lado */
     gap: 10px; /* NOVO: Espaçamento entre os ícones */
@@ -247,8 +315,44 @@ header {
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
+<<<<<<< HEAD
+=======
+.area-cliente .btn-favoritos:hover {
+    background-color: #eb5151; /* Um tom de rosa claro no hover */
+    color: #bb0303;
+}
+
+/* Estilização e Posição do Ícone de Perfil */
+/* (Substitui suas regras .area-cliente a e .btn-login .fa-user) */
+.area-cliente .btn-login {
+    font-size: 1.2rem;
+    /* SEU TAMANHO DE ÍCONE ORIGINAL */
+    color: #333;
+    text-decoration: none;
+    /* Efeito de círculo para alinhar perfeitamente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    /* Largura do círculo */
+    height: 36px;
+    /* Altura do círculo */
+    border-radius: 50%;
+    /* Transforma em círculo */
+    background-color: #f0f0f0;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.area-cliente .btn-login:hover {
+    background-color: #e0e0e0;
+    color: #023975;
+    /* Usando sua cor de link */
+}
 
 
+
+
+>>>>>>> 56d6b25d7e935de069aa8ff7079491af54e71c74
 /* Container dos 3 cards */
 .container-cards {
     display: flex;
@@ -257,17 +361,14 @@ header {
     flex-wrap: wrap;
     max-width: 1600px;
     margin: 0 auto;
-
 }
 
 .container-card-horizontal:hover {
     transition: transform 0.3s ease-in-out;
     transform: translateY(-5px);
-
 }
 
 /* Estilo de cada card (com imagem lateralizada) */
-
 .destino-card {
     /* Define o tamanho de cada card */
     flex: 0 0 300px;
@@ -282,7 +383,6 @@ header {
     text-align: left;
     display: flex;
     flex-direction: column;
-
 }
 
 .btn-ver-pacote {
@@ -324,45 +424,7 @@ header {
 }
 
 
-/* --- 6. RODAPÉ --- */
-footer {
-    color: #f4f4f4;
-    padding: 40px 20px;
-    margin-top: 30px;
-}
 
-.footer-container {
-    display: flex;
-    justify-content: space-around;
-    /* Espalha as colunas */
-    gap: 20px;
-    flex-wrap: wrap;
-    /* Quebra de linha em telas pequenas */
-    margin-bottom: 20px;
-    text-align: left;
-}
-
-.footer-container h4 {
-    margin-bottom: 15px;
-    color: #ffffff;
-}
-
-.footer-container ul {
-    list-style: none;
-}
-
-.footer-container a {
-    color: #f4f4f4;
-    display: block;
-    margin-bottom: 5px;
-}
-
-.footer-copyright {
-    text-align: center;
-    border-top: 1px solid #555;
-    padding-top: 20px;
-    font-size: 0.9em;
-}
 
 
 
@@ -406,6 +468,7 @@ html {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    cursor: pointer;
     /* transition: all 0.3s ease-in-out; */
 }
 
@@ -419,6 +482,45 @@ html {
 }
 
 /* FOOTER GERAL ---------------------*/
+/* --- 6. RODAPÉ --- */
+footer {
+    color: #f4f4f4;
+    padding: 40px 20px;
+    margin-top: 30px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    /* Espalha as colunas */
+    gap: 20px;
+    flex-wrap: wrap;
+    /* Quebra de linha em telas pequenas */
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.footer-container h4 {
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.footer-container ul {
+    list-style: none;
+}
+
+.footer-container a {
+    color: #f4f4f4;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.footer-copyright {
+    text-align: center;
+    border-top: 1px solid #555;
+    padding-top: 20px;
+    font-size: 0.9em;
+}
 .main-footer {
     background-color: #1c1c1c;
     color: #f0f0f0;
@@ -587,5 +689,3 @@ html {
     margin-left: 85px;
     color: #365bb5;
 }
-
-

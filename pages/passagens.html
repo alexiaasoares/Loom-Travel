@@ -9,20 +9,18 @@
     content="Encontre os melhores pacotes de viagem para o Nordeste, Sudeste, Sul, Norte e Centro-Oeste." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
-
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sedgwick+Ave&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <link rel="stylesheet" href="/css/passagens.css" />
-  <!-- ✅ Estilos do autocomplete (arquivo externo) -->
   <link rel="stylesheet" href="/css/autocomplete.css" />
 </head>
 
 <body>
-  <header>
-    <div class="logo">
-      <img src="/assets/logoloom.png" alt="Logo Loom" onclick="window.location.href='index.html'" />
+  <header> <!-- Navbar padrão para todas as páginas -->
+    <div class="logo"> <img src="/assets/logoloom.png" alt="Logo Loom" onclick="window.location.href='index.html'" />
     </div>
     <nav class="navegacao-principal">
       <ul>
@@ -34,30 +32,29 @@
       </ul>
     </nav>
     <div class="header-utils">
-      <form class="header-search" action="/buscar" method="get" role="search">
-        <input type="search" name="q" placeholder="Pesquisar destinos..." aria-label="Pesquisar destinos" />
-        <i class="fa-solid fa-magnifying-glass fa-xl" style="color: #3d5ab2;"></i>
+      <form class="header-search" action="/buscar" method="get" role="search"> <input type="search" name="q"      
+          placeholder="Pesquisar destinos..." aria-label="Pesquisar destinos" /> <i          
+          class="fa-solid fa-magnifying-glass fa-xl" style="color: #3d5ab2;"></i>
       </form>
       <div class="area-cliente">
-        <a href="favoritos.html" class="btn-favoritos" title="Favoritos" aria-label="Página de Favoritos">
+          <a href="favoritos.html" class="btn-favoritos" title="Favoritos" aria-label="Página de Favoritos">
           <i class="fa-regular fa-heart fa-lg" style="color: #3d5ab2;"></i>
         </a>
-        <a href="login.html" class="btn-login" title="Login" aria-label="Página de Login">
-          <i class="fa-solid fa-circle-user fa-xl" style="color: #3d5ab2;"></i>
-        </a>
+        <a href="login.html" class="btn-login" title="Login" aria-label="Página de Login"> <i          
+            class="fa-solid fa-circle-user fa-xl" style="color: #3d5ab2;"></i></a>
       </div>
     </div>
   </header>
   <br><br><br><br>
 
   <main>
-    <section class="hero">
-      <div class="hero-card">
-        <div class="hero-content">
+    <section class="hero"> <!-- Seção principal de busca de passagens -->
+      <div class="hero-card"> <!-- Cartão principal da seção hero -->
+        <div class="hero-content"> <!-- Conteúdo do cartão -->
           <h2>ENCONTRE SUA PRÓXIMA AVENTURA</h2>
           <p>Busque as melhores passagens, para seu destino dos sonhos!</p>
 
-          <form class="busca-pacotes">
+          <form class="busca-pacotes"> <!-- Formulário de busca de passagens -->
             <div class="form-group">
               <label for="destino">Destino</label>
               <input type="text" id="destino" placeholder="Para onde você quer ir?" autocomplete="off" />
@@ -78,15 +75,15 @@
     </section>
 
     <!-- ✈️ PASSAGENS AÉREAS -->
-    <section id="passagens" class="text-tickets">
+    <section id="passagens" class="text-tickets"> <!-- Seção de sugestões de passagens aéreas -->
       <h2>Sugestões de Passagens Aéreas</h2>
-      <div class="container-cards tickets">
-        <div class="ticket">
-          <div class="ticket-header">
+      <div class="container-cards tickets"> <!-- Container de cartões de passagens aéreas -->
+        <div class="ticket"> <!-- Cartão de passagem aérea -->
+          <div class="ticket-header"> <!-- Cabeçalho do cartão de passagem aérea -->
             <i class="fa-solid fa-plane-departure"></i>
             <h3>Passagem Aérea</h3>
           </div>
-          <div class="ticket-body">
+          <div class="ticket-body"> <!-- Corpo do cartão de passagem aérea -->
             <div class="ticket-info">
               <p><strong>Origem:</strong> São Paulo (GRU)</p>
               <p><strong>Destino:</strong> Salvador (SSA)</p>
@@ -99,12 +96,12 @@
           </div>
         </div>
 
-        <div class="ticket">
-          <div class="ticket-header">
+        <div class="ticket"> <!-- Cartão de passagem aérea -->
+          <div class="ticket-header"> <!-- Cabeçalho do cartão de passagem aérea -->
             <i class="fa-solid fa-plane"></i>
             <h3>Passagem Aérea</h3>
           </div>
-          <div class="ticket-body">
+          <div class="ticket-body"> <!-- Corpo do cartão de passagem aérea -->
             <div class="ticket-info">
               <p><strong>Origem:</strong> Rio de Janeiro (GIG)</p>
               <p><strong>Destino:</strong> Fortaleza (FOR)</p>
@@ -117,13 +114,13 @@
           </div>
         </div>
 
-        <div class="ticket">
-          <div class="ticket-header">
+        <div class="ticket"> <!-- Cartão de passagem aérea -->
+          <div class="ticket-header"> <!-- Cabeçalho do cartão de passagem aérea -->
             <i class="fa-solid fa-plane-arrival"></i>
             <h3>Passagem Aérea</h3>
           </div>
-          <div class="ticket-body">
-            <div class="ticket-info">
+          <div class="ticket-body"> <!-- Corpo do cartão de passagem aérea -->
+            <div class="ticket-info"> 
               <p><strong>Origem:</strong> Brasília (BSB)</p>
               <p><strong>Destino:</strong> Recife (REC)</p>
               <p><strong>Data:</strong> 05/01/2026</p>
@@ -139,13 +136,13 @@
       <!-- 🚌 PASSAGENS DE ÔNIBUS -->
       <section id="passagens-onibus">
         <h2>Sugestões de Passagens de Ônibus</h2>
-        <div class="container-cards tickets">
-          <div class="ticket">
-            <div class="ticket-header bus">
+        <div class="container-cards tickets"> <!-- Container de cartões de passagens de ônibus -->
+          <div class="ticket"> <!-- Cartão de passagem de ônibus -->
+            <div class="ticket-header bus"> <!-- Cabeçalho do cartão de passagem de ônibus -->
               <i class="fa-solid fa-bus"></i>
               <h3>Passagem de Ônibus</h3>
             </div>
-            <div class="ticket-body">
+            <div class="ticket-body"> <!-- Corpo do cartão de passagem de ônibus -->
               <div class="ticket-info">
                 <p><strong>Origem:</strong> Rio de Janeiro (RJ)</p>
                 <p><strong>Destino:</strong> Belo Horizonte (MG)</p>
@@ -158,12 +155,12 @@
             </div>
           </div>
 
-          <div class="ticket">
-            <div class="ticket-header bus">
+          <div class="ticket"> <!-- Cartão de passagem de ônibus -->
+            <div class="ticket-header bus"> <!-- Cabeçalho do cartão de passagem de ônibus -->
               <i class="fa-solid fa-bus-simple"></i>
               <h3>Passagem de Ônibus</h3>
             </div>
-            <div class="ticket-body">
+            <div class="ticket-body"> <!-- Corpo do cartão de passagem de ônibus -->
               <div class="ticket-info">
                 <p><strong>Origem:</strong> Curitiba (PR)</p>
                 <p><strong>Destino:</strong> Florianópolis (SC)</p>
@@ -176,12 +173,12 @@
             </div>
           </div>
 
-          <div class="ticket">
-            <div class="ticket-header bus">
+          <div class="ticket"> <!-- Cartão de passagem de ônibus -->
+            <div class="ticket-header bus"> <!-- Cabeçalho do cartão de passagem de ônibus -->
               <i class="fa-solid fa-bus"></i>
               <h3>Passagem de Ônibus</h3>
             </div>
-            <div class="ticket-body">
+            <div class="ticket-body"> <!-- Corpo do cartão de passagem de ônibus -->
               <div class="ticket-info">
                 <p><strong>Origem:</strong> São Paulo (SP)</p>
                 <p><strong>Destino:</strong> Campinas (SP)</p>
@@ -198,14 +195,14 @@
 
       <!-- 🚢 PASSAGENS MARÍTIMAS -->
       <section id="passagens-maritimas">
-        <h2>Sugestões de Passagens Marítimas</h2>
-        <div class="container-cards tickets">
-          <div class="ticket">
-            <div class="ticket-header ship">
+        <h2>Sugestões de Passagens Marítimas</h2> 
+        <div class="container-cards tickets"> <!-- Container de cartões de passagens marítimas -->
+          <div class="ticket"> <!-- Cartão de passagem marítima -->
+            <div class="ticket-header ship"> <!-- Cabeçalho do cartão de passagem marítima -->
               <i class="fa-solid fa-ship"></i>
               <h3>Passagem Marítima</h3>
             </div>
-            <div class="ticket-body">
+            <div class="ticket-body">  <!-- Corpo do cartão de passagem marítima -->
               <div class="ticket-info">
                 <p><strong>Origem:</strong> Santos (SP)</p>
                 <p><strong>Destino:</strong> Ilha Bela (SP)</p>
@@ -218,12 +215,12 @@
             </div>
           </div>
 
-          <div class="ticket">
-            <div class="ticket-header ship">
+          <div class="ticket"> <!-- Cartão de passagem marítima -->
+            <div class="ticket-header ship"> <!-- Cabeçalho do cartão de passagem marítima -->
               <i class="fa-solid fa-anchor"></i>
               <h3>Passagem Marítima</h3>
             </div>
-            <div class="ticket-body">
+            <div class="ticket-body">   <!-- Corpo do cartão de passagem marítima -->
               <div class="ticket-info">
                 <p><strong>Origem:</strong> Rio de Janeiro (RJ)</p>
                 <p><strong>Destino:</strong> Búzios (RJ)</p>
@@ -236,12 +233,12 @@
             </div>
           </div>
 
-          <div class="ticket">
-            <div class="ticket-header ship">
+          <div class="ticket"> <!-- Cartão de passagem marítima -->
+            <div class="ticket-header ship"> <!-- Cabeçalho do cartão de passagem marítima -->
               <i class="fa-solid fa-ship"></i>
               <h3>Passagem Marítima</h3>
             </div>
-            <div class="ticket-body">
+            <div class="ticket-body">   <!-- Corpo do cartão de passagem marítima -->
               <div class="ticket-info">
                 <p><strong>Origem:</strong> Fortaleza (CE)</p>
                 <p><strong>Destino:</strong> Natal (RN)</p>
@@ -258,9 +255,9 @@
     </section>
   </main>
 
-  <footer class="main-footer">
-    <div class="footer-container">
-      <div class="footer-section">
+  <footer class="main-footer"> <!-- Rodapé padrão para todas as páginas -->
+    <div class="footer-container"> <!-- Container do rodapé -->
+      <div class="footer-section"> <!-- Seção Institucional -->
         <h4>Institucional</h4>
         <ul>
           <li><a href="#">Sobre Nós</a></li>
@@ -269,7 +266,7 @@
           <li><a href="#">Imprensa</a></li>
         </ul>
       </div>
-      <div class="footer-section">
+      <div class="footer-section"> <!-- Seção Ajuda e Suporte -->
         <h4>Ajuda e Suporte</h4>
         <ul>
           <li><a href="#">Central de Atendimento</a></li>
@@ -278,7 +275,7 @@
           <li><a href="#">Cancelamentos e Reembolsos</a></li>
         </ul>
       </div>
-      <div class="footer-section">
+      <div class="footer-section"> <!-- Seção de contato -->
         <h4>Contato</h4>
         <ul>
           <li>Email: contato@loomviagens.com.br</li>
@@ -287,7 +284,7 @@
           <li>Horário de Atendimento: Seg-Sex 9h às 18h</li>
         </ul>
       </div>
-      <div class="footer-section">
+      <div class="footer-section"> <!-- Seção de newsletter -->
         <h4>Receba Novidades</h4>
         <p>Inscreva-se e receba promoções exclusivas!</p>
         <form class="newsletter-form">
@@ -297,7 +294,7 @@
       </div>
     </div>
 
-    <div class="footer-social">
+    <div class="footer-social"> <!-- Seção de redes sociais -->
       <h4>Siga-nos</h4>
       <div class="social-icons">
         <a href="#" aria-label="Siga-nos no Facebook" target="_blank"><i class="fa-solid fa-book"
@@ -311,14 +308,14 @@
       </div>
     </div>
 
-    <div class="footer-legal">
+    <div class="footer-legal"> <!-- Informações legais -->
       <p>© 2025 Loom Viagens. Todos os direitos reservados.</p>
       <p>CNPJ: 00.000.000/0001-00 | Rua Exemplo, 123 - São Paulo/SP</p>
     </div>
   </footer>
 
   <script src="/Javascript/passagens.js"></script>
-  
+
 
 </body>
 

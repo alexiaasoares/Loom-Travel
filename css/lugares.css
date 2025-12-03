@@ -196,7 +196,7 @@ button,
     display: flex;
     align-items: center;
     /* Alinha a pesquisa e o perfil verticalmente */
-    gap: 15px;
+
     /* Espaçamento entre a pesquisa e o ícone de perfil */
 }
 
