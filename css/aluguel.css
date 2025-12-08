@@ -98,8 +98,9 @@ section {
 }
 
 section h2 {
-    margin-bottom: -15px;
-    /* Espaço abaixo dos títulos H2 */
+    margin-bottom: 25px;
+    margin-top: -10px;
+    color: #365db5;
 }
 
 /* --- 2. CABEÇALHO E NAVEGAÇÃO --- */
@@ -287,14 +288,6 @@ button,
     align-items: center;
 }
 
-<<<<<<< HEAD
-=======
-.header-search button[type="submit"]:hover {
-    color: #023975;
-    /* Usando sua cor de link */
-}
-
->>>>>>> 56d6b25d7e935de069aa8ff7079491af54e71c74
 .area-cliente {
     display: flex; /* NOVO: Para alinhar o perfil e o favorito lado a lado */
     gap: 10px; /* NOVO: Espaçamento entre os ícones */
@@ -315,44 +308,6 @@ button,
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-<<<<<<< HEAD
-=======
-.area-cliente .btn-favoritos:hover {
-    background-color: #eb5151; /* Um tom de rosa claro no hover */
-    color: #bb0303;
-}
-
-/* Estilização e Posição do Ícone de Perfil */
-/* (Substitui suas regras .area-cliente a e .btn-login .fa-user) */
-.area-cliente .btn-login {
-    font-size: 1.2rem;
-    /* SEU TAMANHO DE ÍCONE ORIGINAL */
-    color: #333;
-    text-decoration: none;
-    /* Efeito de círculo para alinhar perfeitamente */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 36px;
-    /* Largura do círculo */
-    height: 36px;
-    /* Altura do círculo */
-    border-radius: 50%;
-    /* Transforma em círculo */
-    background-color: #f0f0f0;
-    transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-.area-cliente .btn-login:hover {
-    background-color: #e0e0e0;
-    color: #023975;
-    /* Usando sua cor de link */
-}
-
-
-
-
->>>>>>> 56d6b25d7e935de069aa8ff7079491af54e71c74
 /* Container dos 3 cards */
 .container-cards {
     display: flex;
@@ -673,7 +628,7 @@ footer {
 .nome-carros {
     color: #365DB5;
     justify-content: center;
-
+    margin-bottom: 35px;
 }
 
 .margin {

@@ -56,8 +56,9 @@ section {
 
 /* Espaçamento específico abaixo de h2 dentro das seções */
 section h2 {
-    margin-bottom: -15px;
-    /* Ajuste fino do espaçamento inferior do título */
+    margin-bottom: 25px;
+    margin-top: -10px;
+    color: #365db5;
 }
 
 /* --- Cabeçalho e navegação: layout principal do header --- */
