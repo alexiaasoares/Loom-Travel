@@ -910,6 +910,14 @@ html {
     scroll-behavior: smooth;
 }
 
+.TituloPag{
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: -125px;
+    font-size: 2.5em;
+    color: #023975;
+}
+
 .pacote-viagem {
     align-items: center;
     margin-left: 50px;
