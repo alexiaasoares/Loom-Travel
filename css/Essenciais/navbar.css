@@ -169,7 +169,6 @@ button,
 /* --- EFEITO HOVER NAVEGAÇÃO (OPÇÃO 2: SUBLINHADO MODERNO) --- */
 /* Base do link da navegação (Pai) */
 .navegacao-principal a {
-    color: #ffffff;
     padding-bottom: 5px;
     /* Espaço para o sublinhado */
     position: relative;
