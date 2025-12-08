@@ -21,9 +21,12 @@
 
 <body>
 
+  <!-- Cabeçalho -->
   <header>
     <div class="logo"> <img src="/assets/logoloom.png" alt="Logo Loom" onclick="window.location.href='index.html'" />
     </div>
+
+    <!-- navbar -->
     <nav class="navegacao-principal">
       <ul>
         <li><a href="index.html">HOME</a></li>
@@ -33,17 +36,21 @@
         <li><a href="pontosTuristicos.html">PONTOS TURÍSTICOS</a></li>
       </ul>
     </nav>
+
+    <!-- Barra de Pesquisa -->
     <div class="header-utils">
       <form class="header-search" action="/buscar" method="get" role="search"> <input type="search" name="q"
           placeholder="Pesquisar destinos..." aria-label="Pesquisar destinos" /> <i
           class="fa-solid fa-magnifying-glass fa-xl" style="color: #3d5ab2;"></i>
       </form>
+
+      <!-- Favoritos (coração) -->
       <div class="area-cliente">
           <a href="favoritos.html" class="btn-favoritos" title="Favoritos" aria-label="Página de Favoritos">
           <i class="fa-regular fa-heart fa-lg" style="color: #3d5ab2;"></i>
         </a>
 
-        <!-- Mudar o comportamento do botão de login -->
+        <!-- Login (Silhueta) -->
         <div class="area-cliente">
           <a href="#" id="btn-usuario" class="btn-login" title="Minha Conta" aria-label="Minha Conta">
             <i class="fa-solid fa-circle-user fa-xl" style="color: #3d5ab2;"></i>
@@ -102,6 +109,8 @@
 
     <section class="carrossel-continentes"> <!-- Seção do carrossel de continentes -->
       <div class="carrossel-container"> <!-- Container do carrossel -->
+
+        <!-- Seta - Carrossel -->
         <button class="carrossel-btn prev"><i class="fas fa-chevron-left"></i></button>
 
         <div class="carrossel-track" id="continentesTrack"> <!-- Track do carrossel -->
@@ -159,6 +168,8 @@
           </div>
         </div>
 
+
+        <!-- Seta - Carrosel -->
         <button class="carrossel-btn next"><i class="fas fa-chevron-right"></i></button>
       </div>
     </section>
@@ -178,6 +189,7 @@
           <i class="fa-solid fa-heart"></i>
         </label>
 
+        <!-- Descrição do pacote -->
         <div class="infoSalvador">
           <h3 class="salvadorInfo">SALVADOR - BA</h3>
           <h4 class="salvadorInfo">Saída de São Paulo</h4>
@@ -203,6 +215,7 @@
           <i class="fa-solid fa-heart"></i>
         </label>
 
+        <!-- Descrição do pacote -->
         <div class="infoSalvador">
           <h3 class="salvadorInfo">BALI - INDONÉSIA</h3>
           <h4 class="salvadorInfo">Saída de São Paulo</h4>
@@ -227,6 +240,7 @@
           <i class="fa-solid fa-heart"></i>
         </label>
 
+        <!-- Descrição do pacote -->
         <div class="infoSalvador">
           <h3 class="salvadorInfo">ILHAS MALDIVAS</h3>
           <h4 class="salvadorInfo">Saída dos EUA</h4>
@@ -261,6 +275,7 @@
           <i class="fa-solid fa-heart"></i>
         </label>
 
+        <!-- Descrição do pacote -->
         <div class="infoSalvador">
           <h3 class="salvadorInfo">RAINBOW MOUNTAINS - PE</h3>
           <h4 class="salvadorInfo">Saída do México</h4>
@@ -285,6 +300,7 @@
           <i class="fa-solid fa-heart"></i>
         </label>
 
+        <!-- Descrição do pacote -->
         <div class="infoSalvador">
           <h3 class="salvadorInfo">TAJ MAHAL - ÍNDIA</h3>
           <h4 class="salvadorInfo">Saída de São Paulo</h4>
@@ -308,6 +324,7 @@
           <i class="fa-solid fa-heart"></i>
         </label>
 
+        <!-- Descrição do pacote -->
         <div class="infoSalvador">
           <h3 class="salvadorInfo">PIRÂMIDES DE GIZÉ</h3>
           <h4 class="salvadorInfo">Saída do Rio de Janeiro</h4>
@@ -326,68 +343,7 @@
 
   </main>
 
-  <!-- Colocar em todas as telas -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const btnUsuario = document.getElementById('btn-usuario');
-
-      if (btnUsuario) {
-        const usuarioLogado = localStorage.getItem('usuarioLogado');
-
-        if (usuarioLogado) {
-          btnUsuario.title = "Meu Perfil";
-          btnUsuario.setAttribute('aria-label', 'Ir para Meu Perfil');
-        } else {
-          btnUsuario.title = "Login";
-          btnUsuario.setAttribute('aria-label', 'Página de Login');
-        }
-
-        btnUsuario.addEventListener('click', function (e) {
-          e.preventDefault();
-
-          if (usuarioLogado) {
-            window.location.href = '/pages/login.html';
-          } else {
-            window.location.href = '/pages/login.html';
-          }
-        });
-      }
-    });
-
-    // Carrossel de Continentes
-    document.addEventListener('DOMContentLoaded', function () {
-      const track = document.getElementById('continentesTrack');
-      const btnPrev = document.querySelector('.carrossel-btn.prev');
-      const btnNext = document.querySelector('.carrossel-btn.next');
-
-      // Largura de cada item + gap
-      const itemWidth = 220; // 200px + 20px de gap
-
-      btnPrev.addEventListener('click', () => {
-        track.scrollBy({
-          left: -itemWidth,
-          behavior: 'smooth'
-        });
-      });
-
-      btnNext.addEventListener('click', () => {
-        track.scrollBy({
-          left: itemWidth,
-          behavior: 'smooth'
-        });
-      });
-
-      // Opcional: Scroll com mouse wheel
-      track.addEventListener('wheel', (e) => {
-        e.preventDefault();
-        track.scrollBy({
-          left: e.deltaY * 2,
-          behavior: 'smooth'
-        });
-      });
-    });
-  </script>
-
+<!-- Rodapé -->
   <footer class="main-footer">
     <div class="footer-container">
       <!-- Seção Institucional -->
@@ -455,7 +411,8 @@
       <p>CNPJ: 00.000.000/0001-00 | Rua Exemplo, 123 - São Paulo/SP</p>
     </div>
   </footer>
-  <script src="/js/script.js"></script>
+  
+  <script src="/Javascript/script.js"></script>
 
 </body>
 
