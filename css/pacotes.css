@@ -207,6 +207,7 @@ header {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   margin-bottom: 25px;
   border: 1px solid #3A5B9E;
+  padding: 0px;
 }
 
 .search-header {
@@ -214,6 +215,7 @@ header {
   color: #ffffff;
   padding: 12px 20px;
   border-radius: 10px 10px 0 0;
+  
 }
 
 .search-header h2 {
